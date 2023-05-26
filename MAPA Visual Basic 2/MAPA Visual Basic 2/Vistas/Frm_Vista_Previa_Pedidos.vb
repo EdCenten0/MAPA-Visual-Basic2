@@ -133,7 +133,7 @@ Public Class Frm_Vista_Previa_Pedidos
     End Sub
 
     Private Sub bt_agregar_materiales_Click(sender As Object, e As EventArgs) Handles bt_agregar_materiales.Click
-        abrirFromularioHijo(New Frm_Materiales)
+        abrirFromularioHijo(New Frm_Materiales_de_Pedidos)
     End Sub
 
     Private Sub cb_seleccion_pedido_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cb_seleccion_pedido.SelectedIndexChanged
