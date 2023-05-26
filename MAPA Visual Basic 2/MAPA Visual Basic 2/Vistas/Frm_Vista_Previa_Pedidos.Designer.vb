@@ -22,6 +22,7 @@ Partial Class Frm_Vista_Previa_Pedidos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.bt_imprimir_informe = New System.Windows.Forms.Button()
         Me.bt_finalizar_pedido = New System.Windows.Forms.Button()
         Me.tb_fecha = New System.Windows.Forms.TextBox()
@@ -37,7 +38,12 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.tb_index = New System.Windows.Forms.TextBox()
         Me.tb_cliente = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
+        Me.PedidosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PedidosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.pedidosTableAdapter()
         Me.Panel1.SuspendLayout()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PedidosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'bt_imprimir_informe
@@ -64,6 +70,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         '
         'tb_fecha
         '
+        Me.tb_fecha.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PedidosBindingSource, "fecha_pedido", True))
         Me.tb_fecha.Font = New System.Drawing.Font("Inter", 10.2!)
         Me.tb_fecha.Location = New System.Drawing.Point(455, 288)
         Me.tb_fecha.Name = "tb_fecha"
@@ -72,6 +79,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         '
         'tb_pedido
         '
+        Me.tb_pedido.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PedidosBindingSource, "descripcion", True))
         Me.tb_pedido.Font = New System.Drawing.Font("Inter", 10.2!)
         Me.tb_pedido.Location = New System.Drawing.Point(455, 119)
         Me.tb_pedido.Multiline = True
@@ -140,11 +148,15 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.cb_seleccion_pedido.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cb_seleccion_pedido.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.PedidosBindingSource, "id_cliente", True))
+        Me.cb_seleccion_pedido.DataSource = Me.PedidosBindingSource
+        Me.cb_seleccion_pedido.DisplayMember = "descripcion"
         Me.cb_seleccion_pedido.FormattingEnabled = True
         Me.cb_seleccion_pedido.Location = New System.Drawing.Point(3, 91)
         Me.cb_seleccion_pedido.Name = "cb_seleccion_pedido"
         Me.cb_seleccion_pedido.Size = New System.Drawing.Size(274, 24)
         Me.cb_seleccion_pedido.TabIndex = 1
+        Me.cb_seleccion_pedido.ValueMember = "id_pedido"
         '
         'Label1
         '
@@ -173,6 +185,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         'tb_index
         '
         Me.tb_index.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_index.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PedidosBindingSource, "id_cliente", True))
         Me.tb_index.Font = New System.Drawing.Font("Inter", 10.2!)
         Me.tb_index.Location = New System.Drawing.Point(926, 53)
         Me.tb_index.Name = "tb_index"
@@ -199,6 +212,20 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "Cliente:"
         '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PedidosBindingSource
+        '
+        Me.PedidosBindingSource.DataMember = "pedidos"
+        Me.PedidosBindingSource.DataSource = Me.MAPADataSet
+        '
+        'PedidosTableAdapter
+        '
+        Me.PedidosTableAdapter.ClearBeforeFill = True
+        '
         'Frm_Vista_Previa_Pedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -220,6 +247,8 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.Text = "Frm_Vista_Previa_Pedidos"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PedidosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -240,4 +269,7 @@ Partial Class Frm_Vista_Previa_Pedidos
     Friend WithEvents tb_index As TextBox
     Friend WithEvents tb_cliente As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents MAPADataSet As MAPADataSet
+    Friend WithEvents PedidosBindingSource As BindingSource
+    Friend WithEvents PedidosTableAdapter As MAPADataSetTableAdapters.pedidosTableAdapter
 End Class
