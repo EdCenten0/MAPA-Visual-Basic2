@@ -91,7 +91,7 @@ Partial Class Frm_Proveedores
         Me.bt_refrescar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_refrescar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_refrescar.Location = New System.Drawing.Point(802, 294)
-        Me.bt_refrescar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_refrescar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_refrescar.Name = "bt_refrescar"
         Me.bt_refrescar.Size = New System.Drawing.Size(207, 36)
         Me.bt_refrescar.TabIndex = 48
@@ -106,7 +106,7 @@ Partial Class Frm_Proveedores
         Me.Textbox_catalogo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "catalogo", True))
         Me.Textbox_catalogo.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.Textbox_catalogo.Location = New System.Drawing.Point(135, 279)
-        Me.Textbox_catalogo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Textbox_catalogo.Margin = New System.Windows.Forms.Padding(4)
         Me.Textbox_catalogo.Name = "Textbox_catalogo"
         Me.Textbox_catalogo.Size = New System.Drawing.Size(646, 62)
         Me.Textbox_catalogo.TabIndex = 45
@@ -141,7 +141,7 @@ Partial Class Frm_Proveedores
         Me.Textbox_direccion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "direccion", True))
         Me.Textbox_direccion.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.Textbox_direccion.Location = New System.Drawing.Point(135, 209)
-        Me.Textbox_direccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Textbox_direccion.Margin = New System.Windows.Forms.Padding(4)
         Me.Textbox_direccion.Name = "Textbox_direccion"
         Me.Textbox_direccion.Size = New System.Drawing.Size(646, 62)
         Me.Textbox_direccion.TabIndex = 43
@@ -155,7 +155,7 @@ Partial Class Frm_Proveedores
         Me.Textbox_telefono.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "telefono", True))
         Me.Textbox_telefono.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.Textbox_telefono.Location = New System.Drawing.Point(137, 126)
-        Me.Textbox_telefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Textbox_telefono.Margin = New System.Windows.Forms.Padding(4)
         Me.Textbox_telefono.Name = "Textbox_telefono"
         Me.Textbox_telefono.Size = New System.Drawing.Size(417, 24)
         Me.Textbox_telefono.TabIndex = 39
@@ -178,7 +178,7 @@ Partial Class Frm_Proveedores
         Me.Textbox_ruc.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "ruc", True))
         Me.Textbox_ruc.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.Textbox_ruc.Location = New System.Drawing.Point(136, 165)
-        Me.Textbox_ruc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Textbox_ruc.Margin = New System.Windows.Forms.Padding(4)
         Me.Textbox_ruc.Name = "Textbox_ruc"
         Me.Textbox_ruc.Size = New System.Drawing.Size(417, 24)
         Me.Textbox_ruc.TabIndex = 41
@@ -202,7 +202,7 @@ Partial Class Frm_Proveedores
         Me.Textbox_email.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "email", True))
         Me.Textbox_email.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.Textbox_email.Location = New System.Drawing.Point(137, 90)
-        Me.Textbox_email.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Textbox_email.Margin = New System.Windows.Forms.Padding(4)
         Me.Textbox_email.Name = "Textbox_email"
         Me.Textbox_email.Size = New System.Drawing.Size(417, 24)
         Me.Textbox_email.TabIndex = 35
@@ -233,8 +233,8 @@ Partial Class Frm_Proveedores
         '
         Me.bt_vaciar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_vaciar.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.bt_vaciar.Location = New System.Drawing.Point(802, 225)
-        Me.bt_vaciar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_vaciar.Location = New System.Drawing.Point(802, 250)
+        Me.bt_vaciar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_vaciar.Name = "bt_vaciar"
         Me.bt_vaciar.Size = New System.Drawing.Size(207, 36)
         Me.bt_vaciar.TabIndex = 34
@@ -245,8 +245,8 @@ Partial Class Frm_Proveedores
         '
         Me.bt_guardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_guardar.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.bt_guardar.Location = New System.Drawing.Point(802, 8)
-        Me.bt_guardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_guardar.Location = New System.Drawing.Point(802, 114)
+        Me.bt_guardar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_guardar.Name = "bt_guardar"
         Me.bt_guardar.Size = New System.Drawing.Size(207, 36)
         Me.bt_guardar.TabIndex = 31
@@ -257,8 +257,8 @@ Partial Class Frm_Proveedores
         '
         Me.bt_editar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_editar.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.bt_editar.Location = New System.Drawing.Point(802, 156)
-        Me.bt_editar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_editar.Location = New System.Drawing.Point(802, 202)
+        Me.bt_editar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_editar.Name = "bt_editar"
         Me.bt_editar.Size = New System.Drawing.Size(207, 36)
         Me.bt_editar.TabIndex = 33
@@ -272,7 +272,7 @@ Partial Class Frm_Proveedores
         Me.Textbox_id.Enabled = False
         Me.Textbox_id.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.Textbox_id.Location = New System.Drawing.Point(136, 6)
-        Me.Textbox_id.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Textbox_id.Margin = New System.Windows.Forms.Padding(4)
         Me.Textbox_id.Name = "Textbox_id"
         Me.Textbox_id.ReadOnly = True
         Me.Textbox_id.Size = New System.Drawing.Size(93, 24)
@@ -282,8 +282,8 @@ Partial Class Frm_Proveedores
         '
         Me.bt_eliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_eliminar.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.bt_eliminar.Location = New System.Drawing.Point(802, 78)
-        Me.bt_eliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_eliminar.Location = New System.Drawing.Point(802, 158)
+        Me.bt_eliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_eliminar.Name = "bt_eliminar"
         Me.bt_eliminar.Size = New System.Drawing.Size(207, 36)
         Me.bt_eliminar.TabIndex = 32
@@ -308,7 +308,7 @@ Partial Class Frm_Proveedores
         Me.Textbox_nombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "nombre", True))
         Me.Textbox_nombre.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.Textbox_nombre.Location = New System.Drawing.Point(137, 49)
-        Me.Textbox_nombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Textbox_nombre.Margin = New System.Windows.Forms.Padding(4)
         Me.Textbox_nombre.Name = "Textbox_nombre"
         Me.Textbox_nombre.Size = New System.Drawing.Size(417, 24)
         Me.Textbox_nombre.TabIndex = 29
@@ -333,7 +333,7 @@ Partial Class Frm_Proveedores
         Me.Panel_Proveedor.Controls.Add(Me.Panel2)
         Me.Panel_Proveedor.Controls.Add(Me.Label4)
         Me.Panel_Proveedor.Location = New System.Drawing.Point(0, -1)
-        Me.Panel_Proveedor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel_Proveedor.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel_Proveedor.Name = "Panel_Proveedor"
         Me.Panel_Proveedor.Size = New System.Drawing.Size(1045, 693)
         Me.Panel_Proveedor.TabIndex = 29
@@ -348,7 +348,7 @@ Partial Class Frm_Proveedores
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdproveedorDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CatalogoDataGridViewTextBoxColumn, Me.RucDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ProveedoresBindingSource2
         Me.DataGridView1.Location = New System.Drawing.Point(16, 441)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(1013, 235)
@@ -436,7 +436,7 @@ Partial Class Frm_Proveedores
         Me.Panel2.Controls.Add(Me.Textbox_nombre)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(16, 46)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1013, 347)
         Me.Panel2.TabIndex = 28
@@ -451,7 +451,7 @@ Partial Class Frm_Proveedores
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1045, 690)
         Me.Controls.Add(Me.Panel_Proveedor)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Frm_Proveedores"
         Me.Text = "Form3"
         CType(Me.ProveedoresBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()

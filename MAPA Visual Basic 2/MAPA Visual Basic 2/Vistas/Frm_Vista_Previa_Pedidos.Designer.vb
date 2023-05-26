@@ -110,7 +110,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Inter Medium", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(121, 41)
+        Me.Label1.Location = New System.Drawing.Point(93, 50)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(96, 24)
@@ -218,7 +218,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.lb_materiales_agregados.Cursor = System.Windows.Forms.Cursors.Default
         Me.lb_materiales_agregados.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.lb_materiales_agregados.ForeColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.lb_materiales_agregados.Location = New System.Drawing.Point(79, 464)
+        Me.lb_materiales_agregados.Location = New System.Drawing.Point(79, 460)
         Me.lb_materiales_agregados.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lb_materiales_agregados.Name = "lb_materiales_agregados"
         Me.lb_materiales_agregados.Size = New System.Drawing.Size(162, 17)

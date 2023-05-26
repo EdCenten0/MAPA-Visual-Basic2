@@ -49,7 +49,7 @@ Partial Class Frm_Principal
         Me.panel_contenedor.Location = New System.Drawing.Point(227, 0)
         Me.panel_contenedor.MinimumSize = New System.Drawing.Size(955, 853)
         Me.panel_contenedor.Name = "panel_contenedor"
-        Me.panel_contenedor.Size = New System.Drawing.Size(955, 953)
+        Me.panel_contenedor.Size = New System.Drawing.Size(1155, 971)
         Me.panel_contenedor.TabIndex = 3
         '
         'Panel_lateral
@@ -69,7 +69,7 @@ Partial Class Frm_Principal
         Me.Panel_lateral.ImeMode = System.Windows.Forms.ImeMode.Off
         Me.Panel_lateral.Location = New System.Drawing.Point(0, 0)
         Me.Panel_lateral.Name = "Panel_lateral"
-        Me.Panel_lateral.Size = New System.Drawing.Size(227, 953)
+        Me.Panel_lateral.Size = New System.Drawing.Size(227, 971)
         Me.Panel_lateral.TabIndex = 2
         Me.Panel_lateral.TabStop = True
         '
@@ -166,7 +166,7 @@ Partial Class Frm_Principal
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 880)
+        Me.Panel3.Location = New System.Drawing.Point(0, 898)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(227, 73)
         Me.Panel3.TabIndex = 9
@@ -287,10 +287,10 @@ Partial Class Frm_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1182, 953)
+        Me.ClientSize = New System.Drawing.Size(1382, 971)
         Me.Controls.Add(Me.panel_contenedor)
         Me.Controls.Add(Me.Panel_lateral)
-        Me.MinimumSize = New System.Drawing.Size(1200, 1000)
+        Me.MinimumSize = New System.Drawing.Size(1400, 1018)
         Me.Name = "Frm_Principal"
         Me.Text = "Frm_Principal"
         Me.Panel_lateral.ResumeLayout(False)
