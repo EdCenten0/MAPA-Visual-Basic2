@@ -24,14 +24,14 @@ Partial Class Frm_Taller
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.TallerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.lblEmail = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.lbl_email = New System.Windows.Forms.Label()
         Me.btn_vaciar_campos = New System.Windows.Forms.Button()
         Me.btn_eliminar = New System.Windows.Forms.Button()
         Me.btn_editar = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.lblDireccion = New System.Windows.Forms.TextBox()
-        Me.lblNombre = New System.Windows.Forms.TextBox()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
+        Me.txtDireccion = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.btn_guardar = New System.Windows.Forms.Button()
         Me.lbl_telefono = New System.Windows.Forms.Label()
         Me.lbl_direccion = New System.Windows.Forms.Label()
@@ -39,28 +39,39 @@ Partial Class Frm_Taller
         Me.lblTelefono = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
+        Me.TallerBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TallerTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.tallerTableAdapter()
+        Me.TallerBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IdtallerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdtiendaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.TallerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblTelefono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TallerBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TallerBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TallerBindingSource
         '
         Me.TallerBindingSource.DataMember = "taller"
         '
-        'lblEmail
+        'txtEmail
         '
-        Me.lblEmail.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.txtEmail.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblEmail.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.lblEmail.Location = New System.Drawing.Point(127, 157)
-        Me.lblEmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(417, 24)
-        Me.lblEmail.TabIndex = 11
+        Me.txtEmail.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TallerBindingSource1, "email", True))
+        Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(341, 27)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(177, 22)
+        Me.txtEmail.TabIndex = 11
         '
         'lbl_email
         '
@@ -112,41 +123,41 @@ Partial Class Frm_Taller
         Me.btn_editar.Text = "Editar"
         Me.btn_editar.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'txtTelefono
         '
-        Me.TextBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtTelefono.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox3.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.TextBox3.Location = New System.Drawing.Point(127, 255)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(417, 24)
-        Me.TextBox3.TabIndex = 6
+        Me.txtTelefono.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TallerBindingSource1, "telefono", True))
+        Me.txtTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelefono.Location = New System.Drawing.Point(94, 184)
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(125, 22)
+        Me.txtTelefono.TabIndex = 6
         '
-        'lblDireccion
+        'txtDireccion
         '
-        Me.lblDireccion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtDireccion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblDireccion.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.lblDireccion.Location = New System.Drawing.Point(127, 204)
-        Me.lblDireccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.lblDireccion.Name = "lblDireccion"
-        Me.lblDireccion.Size = New System.Drawing.Size(417, 24)
-        Me.lblDireccion.TabIndex = 5
+        Me.txtDireccion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TallerBindingSource1, "direccion", True))
+        Me.txtDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDireccion.Location = New System.Drawing.Point(94, 108)
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Size = New System.Drawing.Size(192, 22)
+        Me.txtDireccion.TabIndex = 5
         '
-        'lblNombre
+        'txtNombre
         '
-        Me.lblNombre.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtNombre.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblNombre.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.lblNombre.Location = New System.Drawing.Point(127, 105)
-        Me.lblNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(417, 24)
-        Me.lblNombre.TabIndex = 4
+        Me.txtNombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TallerBindingSource1, "nombre", True))
+        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Location = New System.Drawing.Point(94, 29)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(125, 22)
+        Me.txtNombre.TabIndex = 4
         '
         'btn_guardar
         '
@@ -205,9 +216,11 @@ Partial Class Frm_Taller
         Me.lblTelefono.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblTelefono.AutoGenerateColumns = False
         Me.lblTelefono.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.lblTelefono.Location = New System.Drawing.Point(16, 314)
-        Me.lblTelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lblTelefono.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdtallerDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.IdtiendaDataGridViewTextBoxColumn})
+        Me.lblTelefono.DataSource = Me.TallerBindingSource1
+        Me.lblTelefono.Location = New System.Drawing.Point(12, 255)
         Me.lblTelefono.Name = "lblTelefono"
         Me.lblTelefono.RowHeadersWidth = 51
         Me.lblTelefono.Size = New System.Drawing.Size(1013, 362)
@@ -218,15 +231,14 @@ Partial Class Frm_Taller
         Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.lblEmail)
+        Me.Panel2.Controls.Add(Me.txtEmail)
         Me.Panel2.Controls.Add(Me.lbl_email)
         Me.Panel2.Controls.Add(Me.btn_vaciar_campos)
         Me.Panel2.Controls.Add(Me.btn_eliminar)
         Me.Panel2.Controls.Add(Me.btn_editar)
-        Me.Panel2.Controls.Add(Me.TextBox3)
-        Me.Panel2.Controls.Add(Me.lblDireccion)
-        Me.Panel2.Controls.Add(Me.lblNombre)
+        Me.Panel2.Controls.Add(Me.txtTelefono)
+        Me.Panel2.Controls.Add(Me.txtDireccion)
+        Me.Panel2.Controls.Add(Me.txtNombre)
         Me.Panel2.Controls.Add(Me.btn_guardar)
         Me.Panel2.Controls.Add(Me.lbl_telefono)
         Me.Panel2.Controls.Add(Me.lbl_direccion)
@@ -248,16 +260,67 @@ Partial Class Frm_Taller
         Me.Panel1.Size = New System.Drawing.Size(1045, 690)
         Me.Panel1.TabIndex = 1
         '
-        'Label4
+        'MAPADataSet
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Inter Medium", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(16, 10)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(109, 40)
-        Me.Label4.TabIndex = 26
-        Me.Label4.Text = "Taller"
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TallerBindingSource1
+        '
+        Me.TallerBindingSource1.DataMember = "taller"
+        Me.TallerBindingSource1.DataSource = Me.MAPADataSet
+        '
+        'TallerTableAdapter
+        '
+        Me.TallerTableAdapter.ClearBeforeFill = True
+        '
+        'TallerBindingSource2
+        '
+        Me.TallerBindingSource2.DataMember = "taller"
+        Me.TallerBindingSource2.DataSource = Me.MAPADataSet
+        '
+        'IdtallerDataGridViewTextBoxColumn
+        '
+        Me.IdtallerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IdtallerDataGridViewTextBoxColumn.DataPropertyName = "id_taller"
+        Me.IdtallerDataGridViewTextBoxColumn.HeaderText = "id_taller"
+        Me.IdtallerDataGridViewTextBoxColumn.Name = "IdtallerDataGridViewTextBoxColumn"
+        Me.IdtallerDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        '
+        'EmailDataGridViewTextBoxColumn
+        '
+        Me.EmailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "email"
+        Me.EmailDataGridViewTextBoxColumn.HeaderText = "email"
+        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
+        '
+        'IdtiendaDataGridViewTextBoxColumn
+        '
+        Me.IdtiendaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IdtiendaDataGridViewTextBoxColumn.DataPropertyName = "id_tienda"
+        Me.IdtiendaDataGridViewTextBoxColumn.HeaderText = "id_tienda"
+        Me.IdtiendaDataGridViewTextBoxColumn.Name = "IdtiendaDataGridViewTextBoxColumn"
         '
         'Frm_Taller
         '
@@ -273,19 +336,22 @@ Partial Class Frm_Taller
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TallerBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TallerBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents TallerBindingSource As BindingSource
-    Friend WithEvents lblEmail As TextBox
+    Friend WithEvents txtEmail As TextBox
     Friend WithEvents lbl_email As Label
     Friend WithEvents btn_vaciar_campos As Button
     Friend WithEvents btn_eliminar As Button
     Friend WithEvents btn_editar As Button
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents lblDireccion As TextBox
-    Friend WithEvents lblNombre As TextBox
+    Friend WithEvents txtTelefono As TextBox
+    Friend WithEvents txtDireccion As TextBox
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents btn_guardar As Button
     Friend WithEvents lbl_telefono As Label
     Friend WithEvents lbl_direccion As Label
@@ -293,5 +359,14 @@ Partial Class Frm_Taller
     Friend WithEvents lblTelefono As DataGridView
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label4 As Label
+    Friend WithEvents MAPADataSet As MAPADataSet
+    Friend WithEvents TallerBindingSource1 As BindingSource
+    Friend WithEvents TallerTableAdapter As MAPADataSetTableAdapters.tallerTableAdapter
+    Friend WithEvents TallerBindingSource2 As BindingSource
+    Friend WithEvents IdtallerDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdtiendaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
