@@ -36,10 +36,14 @@ Partial Class Frm_Usuarios
         Me.bt_editar = New System.Windows.Forms.Button()
         Me.bt_eliminar = New System.Windows.Forms.Button()
         Me.txt_correo = New System.Windows.Forms.TextBox()
+        Me.UsuariosBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MAPADataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txt_clave = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cb_rol = New System.Windows.Forms.ComboBox()
+        Me.RolesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_id = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -47,17 +51,13 @@ Partial Class Frm_Usuarios
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.UsuariosBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MAPADataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
-        Me.UsuariosBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.UsuariosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.usuariosTableAdapter()
         Me.IdusuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClaveDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CorreoelectronicoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdrolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RolesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UsuariosBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UsuariosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.usuariosTableAdapter()
         Me.RolesTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.rolesTableAdapter()
         CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuariosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,13 +65,13 @@ Partial Class Frm_Usuarios
         CType(Me.UsuariosBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuariosBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.UsuariosBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UsuariosBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RolesBindingSource
@@ -196,6 +196,21 @@ Partial Class Frm_Usuarios
         Me.txt_correo.Size = New System.Drawing.Size(491, 20)
         Me.txt_correo.TabIndex = 39
         '
+        'UsuariosBindingSource4
+        '
+        Me.UsuariosBindingSource4.DataMember = "usuarios"
+        Me.UsuariosBindingSource4.DataSource = Me.MAPADataSetBindingSource
+        '
+        'MAPADataSetBindingSource
+        '
+        Me.MAPADataSetBindingSource.DataSource = Me.MAPADataSet
+        Me.MAPADataSetBindingSource.Position = 0
+        '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -239,6 +254,11 @@ Partial Class Frm_Usuarios
         Me.cb_rol.Size = New System.Drawing.Size(491, 21)
         Me.cb_rol.TabIndex = 36
         Me.cb_rol.ValueMember = "id_rol"
+        '
+        'RolesBindingSource1
+        '
+        Me.RolesBindingSource1.DataMember = "roles"
+        Me.RolesBindingSource1.DataSource = Me.MAPADataSetBindingSource
         '
         'Label3
         '
@@ -317,30 +337,6 @@ Partial Class Frm_Usuarios
         Me.DataGridView2.Size = New System.Drawing.Size(760, 269)
         Me.DataGridView2.TabIndex = 30
         '
-        'UsuariosBindingSource4
-        '
-        Me.UsuariosBindingSource4.DataMember = "usuarios"
-        Me.UsuariosBindingSource4.DataSource = Me.MAPADataSetBindingSource
-        '
-        'MAPADataSetBindingSource
-        '
-        Me.MAPADataSetBindingSource.DataSource = Me.MAPADataSet
-        Me.MAPADataSetBindingSource.Position = 0
-        '
-        'MAPADataSet
-        '
-        Me.MAPADataSet.DataSetName = "MAPADataSet"
-        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'UsuariosBindingSource3
-        '
-        Me.UsuariosBindingSource3.DataMember = "usuarios"
-        Me.UsuariosBindingSource3.DataSource = Me.MAPADataSet
-        '
-        'UsuariosTableAdapter
-        '
-        Me.UsuariosTableAdapter.ClearBeforeFill = True
-        '
         'IdusuarioDataGridViewTextBoxColumn
         '
         Me.IdusuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -377,10 +373,14 @@ Partial Class Frm_Usuarios
         Me.IdrolDataGridViewTextBoxColumn.HeaderText = "id_rol"
         Me.IdrolDataGridViewTextBoxColumn.Name = "IdrolDataGridViewTextBoxColumn"
         '
-        'RolesBindingSource1
+        'UsuariosBindingSource3
         '
-        Me.RolesBindingSource1.DataMember = "roles"
-        Me.RolesBindingSource1.DataSource = Me.MAPADataSetBindingSource
+        Me.UsuariosBindingSource3.DataMember = "usuarios"
+        Me.UsuariosBindingSource3.DataSource = Me.MAPADataSet
+        '
+        'UsuariosTableAdapter
+        '
+        Me.UsuariosTableAdapter.ClearBeforeFill = True
         '
         'RolesTableAdapter
         '
@@ -402,14 +402,14 @@ Partial Class Frm_Usuarios
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuariosBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MAPADataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.UsuariosBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RolesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UsuariosBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
