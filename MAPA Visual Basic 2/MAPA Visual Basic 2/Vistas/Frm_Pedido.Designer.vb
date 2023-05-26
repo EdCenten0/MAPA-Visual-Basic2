@@ -22,6 +22,7 @@ Partial Class Frm_Pedido
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.tb_index = New System.Windows.Forms.TextBox()
         Me.tb_cliente = New System.Windows.Forms.TextBox()
@@ -39,9 +40,19 @@ Partial Class Frm_Pedido
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
+        Me.PedidosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PedidosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.pedidosTableAdapter()
+        Me.IdpedidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechapedidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdclienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdestadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PedidosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -71,6 +82,7 @@ Partial Class Frm_Pedido
         'tb_index
         '
         Me.tb_index.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_index.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PedidosBindingSource, "id_cliente", True))
         Me.tb_index.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.tb_index.Location = New System.Drawing.Point(617, 183)
         Me.tb_index.Name = "tb_index"
@@ -104,6 +116,7 @@ Partial Class Frm_Pedido
         '
         Me.DateTimePicker1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DateTimePicker1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PedidosBindingSource, "fecha_pedido", True))
         Me.DateTimePicker1.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.DateTimePicker1.Location = New System.Drawing.Point(165, 52)
         Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4)
@@ -127,6 +140,7 @@ Partial Class Frm_Pedido
         '
         Me.RichTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RichTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PedidosBindingSource, "descripcion", True))
         Me.RichTextBox1.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.RichTextBox1.Location = New System.Drawing.Point(165, 110)
         Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4)
@@ -187,6 +201,7 @@ Partial Class Frm_Pedido
         Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.BackColor = System.Drawing.Color.White
+        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PedidosBindingSource, "id_pedido", True))
         Me.TextBox1.Enabled = False
         Me.TextBox1.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.TextBox1.Location = New System.Drawing.Point(165, 12)
@@ -235,7 +250,10 @@ Partial Class Frm_Pedido
         Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdpedidoDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.FechapedidoDataGridViewTextBoxColumn, Me.IdclienteDataGridViewTextBoxColumn, Me.IdestadoDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.PedidosBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(16, 279)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
@@ -254,6 +272,61 @@ Partial Class Frm_Pedido
         Me.Panel1.Size = New System.Drawing.Size(1082, 665)
         Me.Panel1.TabIndex = 32
         '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PedidosBindingSource
+        '
+        Me.PedidosBindingSource.DataMember = "pedidos"
+        Me.PedidosBindingSource.DataSource = Me.MAPADataSet
+        '
+        'PedidosTableAdapter
+        '
+        Me.PedidosTableAdapter.ClearBeforeFill = True
+        '
+        'IdpedidoDataGridViewTextBoxColumn
+        '
+        Me.IdpedidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IdpedidoDataGridViewTextBoxColumn.DataPropertyName = "id_pedido"
+        Me.IdpedidoDataGridViewTextBoxColumn.HeaderText = "id_pedido"
+        Me.IdpedidoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdpedidoDataGridViewTextBoxColumn.Name = "IdpedidoDataGridViewTextBoxColumn"
+        Me.IdpedidoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DescripcionDataGridViewTextBoxColumn
+        '
+        Me.DescripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
+        '
+        'FechapedidoDataGridViewTextBoxColumn
+        '
+        Me.FechapedidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.FechapedidoDataGridViewTextBoxColumn.DataPropertyName = "fecha_pedido"
+        Me.FechapedidoDataGridViewTextBoxColumn.HeaderText = "fecha_pedido"
+        Me.FechapedidoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.FechapedidoDataGridViewTextBoxColumn.Name = "FechapedidoDataGridViewTextBoxColumn"
+        '
+        'IdclienteDataGridViewTextBoxColumn
+        '
+        Me.IdclienteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IdclienteDataGridViewTextBoxColumn.DataPropertyName = "id_cliente"
+        Me.IdclienteDataGridViewTextBoxColumn.HeaderText = "id_cliente"
+        Me.IdclienteDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdclienteDataGridViewTextBoxColumn.Name = "IdclienteDataGridViewTextBoxColumn"
+        '
+        'IdestadoDataGridViewTextBoxColumn
+        '
+        Me.IdestadoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IdestadoDataGridViewTextBoxColumn.DataPropertyName = "id_estado"
+        Me.IdestadoDataGridViewTextBoxColumn.HeaderText = "id_estado"
+        Me.IdestadoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdestadoDataGridViewTextBoxColumn.Name = "IdestadoDataGridViewTextBoxColumn"
+        '
         'Frm_Pedido
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -268,6 +341,8 @@ Partial Class Frm_Pedido
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PedidosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -289,4 +364,12 @@ Partial Class Frm_Pedido
     Friend WithEvents Label4 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents MAPADataSet As MAPADataSet
+    Friend WithEvents PedidosBindingSource As BindingSource
+    Friend WithEvents PedidosTableAdapter As MAPADataSetTableAdapters.pedidosTableAdapter
+    Friend WithEvents IdpedidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechapedidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdclienteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdestadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
