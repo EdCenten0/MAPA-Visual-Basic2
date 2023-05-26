@@ -22,7 +22,7 @@ Public Class Frm_Vista_Previa_Pedidos
     End Sub
 
 
-    Private Sub tb_index_TextChanged(sender As Object, e As EventArgs)
+    Private Sub tb_index_TextChanged(sender As Object, e As EventArgs) Handles tb_index.TextChanged
         If Not String.IsNullOrEmpty(tb_index.Text) Then
             ' Obtener el id_cliente del TextBox
             Dim idCliente As Integer = Convert.ToInt32(tb_index.Text)

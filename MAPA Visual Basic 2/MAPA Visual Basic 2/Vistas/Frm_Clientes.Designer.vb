@@ -55,6 +55,7 @@ Partial Class Frm_Clientes
         Me.Button6 = New System.Windows.Forms.Button()
         Me.RichTextBox8 = New System.Windows.Forms.RichTextBox()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -207,7 +208,7 @@ Partial Class Frm_Clientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id_tienda", True))
         Me.RichTextBox6.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.RichTextBox6.Location = New System.Drawing.Point(135, 319)
+        Me.RichTextBox6.Location = New System.Drawing.Point(144, 375)
         Me.RichTextBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox6.Name = "RichTextBox6"
         Me.RichTextBox6.Size = New System.Drawing.Size(454, 24)
@@ -220,7 +221,7 @@ Partial Class Frm_Clientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label6.Location = New System.Drawing.Point(48, 319)
+        Me.Label6.Location = New System.Drawing.Point(57, 375)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(85, 20)
@@ -233,7 +234,7 @@ Partial Class Frm_Clientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id_cliente", True))
         Me.RichTextBox7.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.RichTextBox7.Location = New System.Drawing.Point(135, 15)
+        Me.RichTextBox7.Location = New System.Drawing.Point(144, 71)
         Me.RichTextBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox7.Name = "RichTextBox7"
         Me.RichTextBox7.ReadOnly = True
@@ -248,7 +249,7 @@ Partial Class Frm_Clientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label7.Location = New System.Drawing.Point(48, 15)
+        Me.Label7.Location = New System.Drawing.Point(57, 71)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(30, 20)
@@ -261,7 +262,7 @@ Partial Class Frm_Clientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "nombre", True))
         Me.RichTextBox5.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.RichTextBox5.Location = New System.Drawing.Point(135, 55)
+        Me.RichTextBox5.Location = New System.Drawing.Point(144, 111)
         Me.RichTextBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox5.Name = "RichTextBox5"
         Me.RichTextBox5.Size = New System.Drawing.Size(453, 24)
@@ -274,7 +275,7 @@ Partial Class Frm_Clientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "cedula", True))
         Me.RichTextBox4.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.RichTextBox4.Location = New System.Drawing.Point(136, 159)
+        Me.RichTextBox4.Location = New System.Drawing.Point(145, 215)
         Me.RichTextBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox4.Name = "RichTextBox4"
         Me.RichTextBox4.Size = New System.Drawing.Size(453, 24)
@@ -287,7 +288,7 @@ Partial Class Frm_Clientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "telefono", True))
         Me.RichTextBox3.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.RichTextBox3.Location = New System.Drawing.Point(136, 267)
+        Me.RichTextBox3.Location = New System.Drawing.Point(145, 323)
         Me.RichTextBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox3.Name = "RichTextBox3"
         Me.RichTextBox3.Size = New System.Drawing.Size(453, 24)
@@ -300,7 +301,7 @@ Partial Class Frm_Clientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "email", True))
         Me.RichTextBox2.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.RichTextBox2.Location = New System.Drawing.Point(136, 214)
+        Me.RichTextBox2.Location = New System.Drawing.Point(145, 270)
         Me.RichTextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(453, 24)
@@ -313,7 +314,7 @@ Partial Class Frm_Clientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "apellido", True))
         Me.RichTextBox1.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.RichTextBox1.Location = New System.Drawing.Point(135, 106)
+        Me.RichTextBox1.Location = New System.Drawing.Point(144, 162)
         Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(453, 24)
@@ -326,7 +327,7 @@ Partial Class Frm_Clientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label4.Location = New System.Drawing.Point(48, 214)
+        Me.Label4.Location = New System.Drawing.Point(57, 270)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(57, 20)
@@ -339,7 +340,7 @@ Partial Class Frm_Clientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label5.Location = New System.Drawing.Point(48, 265)
+        Me.Label5.Location = New System.Drawing.Point(57, 321)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(84, 20)
@@ -352,7 +353,7 @@ Partial Class Frm_Clientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label3.Location = New System.Drawing.Point(48, 106)
+        Me.Label3.Location = New System.Drawing.Point(57, 162)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(79, 20)
@@ -365,7 +366,7 @@ Partial Class Frm_Clientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label2.Location = New System.Drawing.Point(48, 55)
+        Me.Label2.Location = New System.Drawing.Point(57, 111)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 20)
@@ -378,7 +379,7 @@ Partial Class Frm_Clientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label1.Location = New System.Drawing.Point(48, 159)
+        Me.Label1.Location = New System.Drawing.Point(57, 215)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(71, 20)
@@ -421,11 +422,23 @@ Partial Class Frm_Clientes
         Me.Button5.Text = "Buscar"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Inter Medium", 19.8!, System.Drawing.FontStyle.Bold)
+        Me.Label8.Location = New System.Drawing.Point(54, 9)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(153, 40)
+        Me.Label8.TabIndex = 105
+        Me.Label8.Text = "Clientes"
+        '
         'Frm_Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1045, 690)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.RichTextBox8)
         Me.Controls.Add(Me.Button5)
@@ -490,4 +503,5 @@ Partial Class Frm_Clientes
     Friend WithEvents Button6 As Button
     Friend WithEvents RichTextBox8 As RichTextBox
     Friend WithEvents Button5 As Button
+    Friend WithEvents Label8 As Label
 End Class
