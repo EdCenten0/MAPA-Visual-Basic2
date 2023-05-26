@@ -22,7 +22,7 @@ Public Class Frm_Vista_Previa_Pedidos
     End Sub
 
 
-    Private Sub tb_index_TextChanged(sender As Object, e As EventArgs) Handles tb_index.TextChanged
+    Private Sub tb_index_TextChanged(sender As Object, e As EventArgs)
         If Not String.IsNullOrEmpty(tb_index.Text) Then
             ' Obtener el id_cliente del TextBox
             Dim idCliente As Integer = Convert.ToInt32(tb_index.Text)
@@ -132,11 +132,15 @@ Public Class Frm_Vista_Previa_Pedidos
         lb_materiales_agregados.ForeColor = Color.Black
     End Sub
 
-    Private Sub bt_agregar_materiales_Click(sender As Object, e As EventArgs) Handles bt_agregar_materiales.Click
+    Private Sub bt_agregar_materiales_Click(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub cb_seleccion_pedido_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cb_seleccion_pedido.SelectedIndexChanged
         lb_materiales_agregados.Text = obtenerMaterialesAgregados() & " materiales agregados..."
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
+
     End Sub
 End Class

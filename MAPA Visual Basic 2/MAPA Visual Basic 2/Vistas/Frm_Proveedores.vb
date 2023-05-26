@@ -18,6 +18,8 @@
         Me.Textbox_catalogo.Text = ""
         Me.Textbox_ruc.Text = ""
 
+
+
     End Function
 
     Private Sub bt_vaciar_Click(sender As Object, e As EventArgs) Handles bt_vaciar.Click

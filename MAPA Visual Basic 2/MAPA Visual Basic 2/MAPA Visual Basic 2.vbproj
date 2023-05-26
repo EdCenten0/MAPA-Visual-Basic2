@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CD247494-1C20-48DC-B3CA-1799782E154A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>MAPA_Visual_Basic_2.My.MyApplication</StartupObject>
+    <StartupObject>MAPA_Visual_Basic_2.Frm_Principal</StartupObject>
     <RootNamespace>MAPA_Visual_Basic_2</RootNamespace>
     <AssemblyName>MAPA Visual Basic 2</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -175,12 +175,6 @@
     <Compile Include="Vistas\Frm_Usuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Frm_Pedidos.Designer.vb">
-      <DependentUpon>Frm_Pedidos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Frm_Pedidos.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Vistas\Frm_Clientes.Designer.vb">
       <DependentUpon>Frm_Clientes.vb</DependentUpon>
     </Compile>
@@ -230,9 +224,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Usuarios.resx">
       <DependentUpon>Frm_Usuarios.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Frm_Pedidos.resx">
-      <DependentUpon>Frm_Pedidos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Clientes.resx">
       <DependentUpon>Frm_Clientes.vb</DependentUpon>
