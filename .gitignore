@@ -465,3 +465,5 @@ Temporary Items
 .apdisk
 *.suo
 *.vs
+
+App.config
