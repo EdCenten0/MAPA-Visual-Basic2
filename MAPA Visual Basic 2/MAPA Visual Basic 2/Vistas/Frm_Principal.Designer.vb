@@ -290,6 +290,7 @@ Partial Class Frm_Principal
         Me.ClientSize = New System.Drawing.Size(1382, 971)
         Me.Controls.Add(Me.panel_contenedor)
         Me.Controls.Add(Me.Panel_lateral)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(1400, 1018)
         Me.Name = "Frm_Principal"
         Me.Text = "Frm_Principal"
