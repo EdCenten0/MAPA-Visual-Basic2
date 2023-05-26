@@ -48,11 +48,23 @@ Partial Class Frm_Proveedores
         Me.Panel_Proveedor = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
+        Me.ProveedoresBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProveedoresTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.proveedoresTableAdapter()
+        Me.IdproveedorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CatalogoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RucDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.ProveedoresBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_Proveedor.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProveedoresBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ProveedoresBindingSource1
@@ -87,6 +99,7 @@ Partial Class Frm_Proveedores
         '
         Me.Textbox_catalogo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Textbox_catalogo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "catalogo", True))
         Me.Textbox_catalogo.Location = New System.Drawing.Point(101, 227)
         Me.Textbox_catalogo.Name = "Textbox_catalogo"
         Me.Textbox_catalogo.Size = New System.Drawing.Size(495, 51)
@@ -107,6 +120,7 @@ Partial Class Frm_Proveedores
         '
         Me.Textbox_direccion.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Textbox_direccion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "direccion", True))
         Me.Textbox_direccion.Location = New System.Drawing.Point(101, 170)
         Me.Textbox_direccion.Name = "Textbox_direccion"
         Me.Textbox_direccion.Size = New System.Drawing.Size(495, 51)
@@ -118,6 +132,7 @@ Partial Class Frm_Proveedores
         Me.Textbox_telefono.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Textbox_telefono.BackColor = System.Drawing.Color.White
+        Me.Textbox_telefono.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "telefono", True))
         Me.Textbox_telefono.Location = New System.Drawing.Point(103, 102)
         Me.Textbox_telefono.Name = "Textbox_telefono"
         Me.Textbox_telefono.Size = New System.Drawing.Size(495, 20)
@@ -137,6 +152,7 @@ Partial Class Frm_Proveedores
         '
         Me.Textbox_ruc.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Textbox_ruc.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "ruc", True))
         Me.Textbox_ruc.Location = New System.Drawing.Point(102, 134)
         Me.Textbox_ruc.Name = "Textbox_ruc"
         Me.Textbox_ruc.Size = New System.Drawing.Size(495, 20)
@@ -157,6 +173,7 @@ Partial Class Frm_Proveedores
         Me.Textbox_email.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Textbox_email.BackColor = System.Drawing.Color.White
+        Me.Textbox_email.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "email", True))
         Me.Textbox_email.Location = New System.Drawing.Point(103, 73)
         Me.Textbox_email.Name = "Textbox_email"
         Me.Textbox_email.Size = New System.Drawing.Size(495, 20)
@@ -217,6 +234,7 @@ Partial Class Frm_Proveedores
         Me.Textbox_id.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Textbox_id.BackColor = System.Drawing.Color.White
+        Me.Textbox_id.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "id_proveedor", True))
         Me.Textbox_id.Enabled = False
         Me.Textbox_id.Location = New System.Drawing.Point(102, 5)
         Me.Textbox_id.Name = "Textbox_id"
@@ -247,6 +265,7 @@ Partial Class Frm_Proveedores
         '
         Me.Textbox_nombre.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Textbox_nombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "nombre", True))
         Me.Textbox_nombre.Location = New System.Drawing.Point(103, 40)
         Me.Textbox_nombre.Name = "Textbox_nombre"
         Me.Textbox_nombre.Size = New System.Drawing.Size(495, 20)
@@ -280,7 +299,10 @@ Partial Class Frm_Proveedores
         Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdproveedorDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CatalogoDataGridViewTextBoxColumn, Me.RucDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.ProveedoresBindingSource2
         Me.DataGridView1.Location = New System.Drawing.Point(12, 358)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(760, 191)
@@ -315,6 +337,70 @@ Partial Class Frm_Proveedores
         Me.Panel2.Size = New System.Drawing.Size(760, 282)
         Me.Panel2.TabIndex = 28
         '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ProveedoresBindingSource2
+        '
+        Me.ProveedoresBindingSource2.DataMember = "proveedores"
+        Me.ProveedoresBindingSource2.DataSource = Me.MAPADataSet
+        '
+        'ProveedoresTableAdapter
+        '
+        Me.ProveedoresTableAdapter.ClearBeforeFill = True
+        '
+        'IdproveedorDataGridViewTextBoxColumn
+        '
+        Me.IdproveedorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IdproveedorDataGridViewTextBoxColumn.DataPropertyName = "id_proveedor"
+        Me.IdproveedorDataGridViewTextBoxColumn.HeaderText = "id_proveedor"
+        Me.IdproveedorDataGridViewTextBoxColumn.Name = "IdproveedorDataGridViewTextBoxColumn"
+        Me.IdproveedorDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        '
+        'EmailDataGridViewTextBoxColumn
+        '
+        Me.EmailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "email"
+        Me.EmailDataGridViewTextBoxColumn.HeaderText = "email"
+        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        '
+        'CatalogoDataGridViewTextBoxColumn
+        '
+        Me.CatalogoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.CatalogoDataGridViewTextBoxColumn.DataPropertyName = "catalogo"
+        Me.CatalogoDataGridViewTextBoxColumn.HeaderText = "catalogo"
+        Me.CatalogoDataGridViewTextBoxColumn.Name = "CatalogoDataGridViewTextBoxColumn"
+        '
+        'RucDataGridViewTextBoxColumn
+        '
+        Me.RucDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.RucDataGridViewTextBoxColumn.DataPropertyName = "ruc"
+        Me.RucDataGridViewTextBoxColumn.HeaderText = "ruc"
+        Me.RucDataGridViewTextBoxColumn.Name = "RucDataGridViewTextBoxColumn"
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        '
         'Frm_Proveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -330,6 +416,8 @@ Partial Class Frm_Proveedores
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProveedoresBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -359,4 +447,14 @@ Partial Class Frm_Proveedores
     Friend WithEvents Panel_Proveedor As Panel
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents MAPADataSet As MAPADataSet
+    Friend WithEvents ProveedoresBindingSource2 As BindingSource
+    Friend WithEvents ProveedoresTableAdapter As MAPADataSetTableAdapters.proveedoresTableAdapter
+    Friend WithEvents IdproveedorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CatalogoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RucDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
