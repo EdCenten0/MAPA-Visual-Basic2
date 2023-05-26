@@ -14,7 +14,7 @@
 
     End Sub
 
+    Private Sub lbl_nombre_Click(sender As Object, e As EventArgs) Handles lbl_nombre.Click
 
-
-
+    End Sub
 End Class
