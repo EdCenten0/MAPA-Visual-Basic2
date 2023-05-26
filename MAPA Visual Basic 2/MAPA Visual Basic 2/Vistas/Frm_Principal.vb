@@ -23,7 +23,7 @@
         abrirFromularioHijo(New Frm_Clientes)
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
         abrirFromularioHijo(New Frm_Ajustes)
     End Sub
 
@@ -31,11 +31,15 @@
         abrirFromularioHijo(New Frm_Proveedores)
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button7_Click(sender As Object, e As EventArgs)
         abrirFromularioHijo(New Frm_Taller)
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
         abrirFromularioHijo(New Frm_Ventas)
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        abrirFromularioHijo(New Frm_Materiales)
     End Sub
 End Class
