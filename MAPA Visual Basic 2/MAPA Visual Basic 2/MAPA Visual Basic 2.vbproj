@@ -104,6 +104,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Vistas\Frm_Ajustes.Designer.vb">
+      <DependentUpon>Frm_Ajustes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Ajustes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Pedido.Designer.vb">
+      <DependentUpon>Frm_Pedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Pedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Principal.Designer.vb">
+      <DependentUpon>Frm_Principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vistas\Frm_Vista_Previa_Pedidos.Designer.vb">
       <DependentUpon>Frm_Vista_Previa_Pedidos.vb</DependentUpon>
     </Compile>
@@ -117,6 +135,15 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Ajustes.resx">
+      <DependentUpon>Frm_Ajustes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Pedido.resx">
+      <DependentUpon>Frm_Pedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Principal.resx">
+      <DependentUpon>Frm_Principal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Vista_Previa_Pedidos.resx">
       <DependentUpon>Frm_Vista_Previa_Pedidos.vb</DependentUpon>
