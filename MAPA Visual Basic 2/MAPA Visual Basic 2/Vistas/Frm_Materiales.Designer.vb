@@ -22,6 +22,7 @@ Partial Class Frm_Materiales
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblId = New System.Windows.Forms.Label()
         Me.txt_descripcion = New System.Windows.Forms.RichTextBox()
@@ -40,8 +41,23 @@ Partial Class Frm_Materiales
         Me.lbl_material = New System.Windows.Forms.Label()
         Me.cb_unidad_medida = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
+        Me.MaterialesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MaterialesTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materialesTableAdapter()
+        Me.MaterialesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IdmaterialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombrematerialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CantidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UnidaddemedidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrecioporunidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PreciototalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdpedidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MaterialesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MaterialesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -82,6 +98,7 @@ Partial Class Frm_Materiales
         '
         'txt_descripcion
         '
+        Me.txt_descripcion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "descripcion", True))
         Me.txt_descripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_descripcion.Location = New System.Drawing.Point(181, 55)
         Me.txt_descripcion.Name = "txt_descripcion"
@@ -93,6 +110,7 @@ Partial Class Frm_Materiales
         '
         Me.txt_precio_total.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_precio_total.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "precio_total", True))
         Me.txt_precio_total.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_precio_total.Location = New System.Drawing.Point(450, 160)
         Me.txt_precio_total.Name = "txt_precio_total"
@@ -103,6 +121,7 @@ Partial Class Frm_Materiales
         '
         Me.txt_cantidad.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_cantidad.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "cantidad", True))
         Me.txt_cantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_cantidad.Location = New System.Drawing.Point(450, 10)
         Me.txt_cantidad.Name = "txt_cantidad"
@@ -113,6 +132,7 @@ Partial Class Frm_Materiales
         '
         Me.txt_precio_unidad.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_precio_unidad.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "precio_por_unidad", True))
         Me.txt_precio_unidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_precio_unidad.Location = New System.Drawing.Point(181, 157)
         Me.txt_precio_unidad.Name = "txt_precio_unidad"
@@ -123,6 +143,7 @@ Partial Class Frm_Materiales
         '
         Me.txt_material.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_material.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "nombre_material", True))
         Me.txt_material.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_material.Location = New System.Drawing.Point(181, 10)
         Me.txt_material.Name = "txt_material"
@@ -240,6 +261,7 @@ Partial Class Frm_Materiales
         '
         Me.cb_unidad_medida.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cb_unidad_medida.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "unidad_de_medida", True))
         Me.cb_unidad_medida.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_unidad_medida.FormattingEnabled = True
         Me.cb_unidad_medida.Items.AddRange(New Object() {"Lbs", "Lts", "Mts", "Inches", "Galón", "Unidad", "Simple"})
@@ -254,11 +276,82 @@ Partial Class Frm_Materiales
         Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdmaterialDataGridViewTextBoxColumn, Me.NombrematerialDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.CantidadDataGridViewTextBoxColumn, Me.UnidaddemedidaDataGridViewTextBoxColumn, Me.PrecioporunidadDataGridViewTextBoxColumn, Me.PreciototalDataGridViewTextBoxColumn, Me.IdpedidoDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.MaterialesBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(12, 213)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(832, 304)
         Me.DataGridView1.TabIndex = 4
+        '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MaterialesBindingSource
+        '
+        Me.MaterialesBindingSource.DataMember = "materiales"
+        Me.MaterialesBindingSource.DataSource = Me.MAPADataSet
+        '
+        'MaterialesTableAdapter
+        '
+        Me.MaterialesTableAdapter.ClearBeforeFill = True
+        '
+        'MaterialesBindingSource1
+        '
+        Me.MaterialesBindingSource1.DataMember = "materiales"
+        Me.MaterialesBindingSource1.DataSource = Me.MAPADataSet
+        '
+        'IdmaterialDataGridViewTextBoxColumn
+        '
+        Me.IdmaterialDataGridViewTextBoxColumn.DataPropertyName = "id_material"
+        Me.IdmaterialDataGridViewTextBoxColumn.HeaderText = "id_material"
+        Me.IdmaterialDataGridViewTextBoxColumn.Name = "IdmaterialDataGridViewTextBoxColumn"
+        Me.IdmaterialDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombrematerialDataGridViewTextBoxColumn
+        '
+        Me.NombrematerialDataGridViewTextBoxColumn.DataPropertyName = "nombre_material"
+        Me.NombrematerialDataGridViewTextBoxColumn.HeaderText = "nombre_material"
+        Me.NombrematerialDataGridViewTextBoxColumn.Name = "NombrematerialDataGridViewTextBoxColumn"
+        '
+        'DescripcionDataGridViewTextBoxColumn
+        '
+        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
+        '
+        'CantidadDataGridViewTextBoxColumn
+        '
+        Me.CantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad"
+        Me.CantidadDataGridViewTextBoxColumn.HeaderText = "cantidad"
+        Me.CantidadDataGridViewTextBoxColumn.Name = "CantidadDataGridViewTextBoxColumn"
+        '
+        'UnidaddemedidaDataGridViewTextBoxColumn
+        '
+        Me.UnidaddemedidaDataGridViewTextBoxColumn.DataPropertyName = "unidad_de_medida"
+        Me.UnidaddemedidaDataGridViewTextBoxColumn.HeaderText = "unidad_de_medida"
+        Me.UnidaddemedidaDataGridViewTextBoxColumn.Name = "UnidaddemedidaDataGridViewTextBoxColumn"
+        '
+        'PrecioporunidadDataGridViewTextBoxColumn
+        '
+        Me.PrecioporunidadDataGridViewTextBoxColumn.DataPropertyName = "precio_por_unidad"
+        Me.PrecioporunidadDataGridViewTextBoxColumn.HeaderText = "precio_por_unidad"
+        Me.PrecioporunidadDataGridViewTextBoxColumn.Name = "PrecioporunidadDataGridViewTextBoxColumn"
+        '
+        'PreciototalDataGridViewTextBoxColumn
+        '
+        Me.PreciototalDataGridViewTextBoxColumn.DataPropertyName = "precio_total"
+        Me.PreciototalDataGridViewTextBoxColumn.HeaderText = "precio_total"
+        Me.PreciototalDataGridViewTextBoxColumn.Name = "PreciototalDataGridViewTextBoxColumn"
+        '
+        'IdpedidoDataGridViewTextBoxColumn
+        '
+        Me.IdpedidoDataGridViewTextBoxColumn.DataPropertyName = "id_pedido"
+        Me.IdpedidoDataGridViewTextBoxColumn.HeaderText = "id_pedido"
+        Me.IdpedidoDataGridViewTextBoxColumn.Name = "IdpedidoDataGridViewTextBoxColumn"
         '
         'Frm_Materiales
         '
@@ -272,6 +365,9 @@ Partial Class Frm_Materiales
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MaterialesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MaterialesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -294,4 +390,16 @@ Partial Class Frm_Materiales
     Friend WithEvents lbl_material As Label
     Friend WithEvents cb_unidad_medida As ComboBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents MAPADataSet As MAPADataSet
+    Friend WithEvents MaterialesBindingSource As BindingSource
+    Friend WithEvents MaterialesTableAdapter As MAPADataSetTableAdapters.materialesTableAdapter
+    Friend WithEvents MaterialesBindingSource1 As BindingSource
+    Friend WithEvents IdmaterialDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombrematerialDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CantidadDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UnidaddemedidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PrecioporunidadDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PreciototalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdpedidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
