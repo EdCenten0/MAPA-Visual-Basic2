@@ -38,11 +38,18 @@ Partial Class Frm_Rol
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
+        Me.RolesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RolesTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.rolesTableAdapter()
+        Me.IdrolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombrerolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.RolesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RolesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RolesBindingSource1
@@ -98,6 +105,7 @@ Partial Class Frm_Rol
         Me.txt_id.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txt_id.BackColor = System.Drawing.Color.White
+        Me.txt_id.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RolesBindingSource2, "id_rol", True))
         Me.txt_id.Enabled = False
         Me.txt_id.Location = New System.Drawing.Point(48, 50)
         Me.txt_id.Name = "txt_id"
@@ -128,6 +136,7 @@ Partial Class Frm_Rol
         '
         Me.txt_rol.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_rol.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RolesBindingSource2, "nombre_rol", True))
         Me.txt_rol.Location = New System.Drawing.Point(48, 103)
         Me.txt_rol.Name = "txt_rol"
         Me.txt_rol.Size = New System.Drawing.Size(509, 20)
@@ -161,7 +170,10 @@ Partial Class Frm_Rol
         Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdrolDataGridViewTextBoxColumn, Me.NombrerolDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.RolesBindingSource2
         Me.DataGridView1.Location = New System.Drawing.Point(12, 285)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(757, 264)
@@ -196,6 +208,35 @@ Partial Class Frm_Rol
         Me.Label4.TabIndex = 25
         Me.Label4.Text = "Rol"
         '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RolesBindingSource2
+        '
+        Me.RolesBindingSource2.DataMember = "roles"
+        Me.RolesBindingSource2.DataSource = Me.MAPADataSet
+        '
+        'RolesTableAdapter
+        '
+        Me.RolesTableAdapter.ClearBeforeFill = True
+        '
+        'IdrolDataGridViewTextBoxColumn
+        '
+        Me.IdrolDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IdrolDataGridViewTextBoxColumn.DataPropertyName = "id_rol"
+        Me.IdrolDataGridViewTextBoxColumn.HeaderText = "id_rol"
+        Me.IdrolDataGridViewTextBoxColumn.Name = "IdrolDataGridViewTextBoxColumn"
+        Me.IdrolDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombrerolDataGridViewTextBoxColumn
+        '
+        Me.NombrerolDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NombrerolDataGridViewTextBoxColumn.DataPropertyName = "nombre_rol"
+        Me.NombrerolDataGridViewTextBoxColumn.HeaderText = "nombre_rol"
+        Me.NombrerolDataGridViewTextBoxColumn.Name = "NombrerolDataGridViewTextBoxColumn"
+        '
         'Frm_Rol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -211,6 +252,8 @@ Partial Class Frm_Rol
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RolesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -230,4 +273,9 @@ Partial Class Frm_Rol
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label4 As Label
+    Friend WithEvents MAPADataSet As MAPADataSet
+    Friend WithEvents RolesBindingSource2 As BindingSource
+    Friend WithEvents RolesTableAdapter As MAPADataSetTableAdapters.rolesTableAdapter
+    Friend WithEvents IdrolDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombrerolDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
