@@ -12,7 +12,11 @@
         Me.txt_id.Text = ""
         Me.txt_correo.Text = ""
         Me.txt_clave.Text = ""
-        Me.cb_rol.SelectedIndex = 0
+
+        If Not Me.cb_rol.SelectedIndex = -1 Then
+            Me.cb_rol.SelectedIndex = 0
+        End If
+
     End Function
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
@@ -35,7 +39,7 @@
 
     Private Sub bt_eliminar_Click(sender As Object, e As EventArgs) Handles bt_eliminar.Click
         MessageBox.Show("Se ha eliminado el usuario: " & txt_usuario.Text)
-        Me.UsuariosTableAdapter.Eliminar(txt_id.Text)
+        Me.UsuariosTableAdapter.Eliminar(Me.txt_id.Text)
         Me.UsuariosTableAdapter.Fill(Me.MAPADataSet.usuarios)
     End Sub
 
@@ -45,7 +49,5 @@
         Me.UsuariosTableAdapter.Fill(Me.MAPADataSet.usuarios)
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
-    End Sub
 End Class
