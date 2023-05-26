@@ -42,4 +42,16 @@
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         abrirFromularioHijo(New Frm_Materiales)
     End Sub
+
+    Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles Button5.Click
+        abrirFromularioHijo(New Frm_Ajustes)
+    End Sub
+
+    Private Sub Button7_Click_1(sender As Object, e As EventArgs) Handles Button7.Click
+        abrirFromularioHijo(New Frm_Taller)
+    End Sub
+
+    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
+        abrirFromularioHijo(New Frm_Ventas)
+    End Sub
 End Class
