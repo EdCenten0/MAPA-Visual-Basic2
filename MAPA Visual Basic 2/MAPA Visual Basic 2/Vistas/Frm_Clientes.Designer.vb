@@ -38,22 +38,22 @@ Partial Class Frm_Clientes
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ClientesTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.clientesTableAdapter()
-        Me.RichTextBox6 = New System.Windows.Forms.RichTextBox()
+        Me.IDTCliente = New System.Windows.Forms.RichTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.RichTextBox7 = New System.Windows.Forms.RichTextBox()
+        Me.IDCliente = New System.Windows.Forms.RichTextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.NombreCliente = New System.Windows.Forms.RichTextBox()
+        Me.CedulaCliente = New System.Windows.Forms.RichTextBox()
+        Me.TelefonoCliente = New System.Windows.Forms.RichTextBox()
+        Me.EmailCliente = New System.Windows.Forms.RichTextBox()
+        Me.ApellidoCliente = New System.Windows.Forms.RichTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.RichTextBox8 = New System.Windows.Forms.RichTextBox()
+        Me.Busqueda = New System.Windows.Forms.RichTextBox()
         Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -184,16 +184,16 @@ Partial Class Frm_Clientes
         '
         Me.ClientesTableAdapter.ClearBeforeFill = True
         '
-        'RichTextBox6
+        'IDTCliente
         '
-        Me.RichTextBox6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.IDTCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id_tienda", True))
-        Me.RichTextBox6.Location = New System.Drawing.Point(116, 260)
-        Me.RichTextBox6.Name = "RichTextBox6"
-        Me.RichTextBox6.Size = New System.Drawing.Size(326, 31)
-        Me.RichTextBox6.TabIndex = 101
-        Me.RichTextBox6.Text = ""
+        Me.IDTCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id_tienda", True))
+        Me.IDTCliente.Location = New System.Drawing.Point(116, 260)
+        Me.IDTCliente.Name = "IDTCliente"
+        Me.IDTCliente.Size = New System.Drawing.Size(326, 31)
+        Me.IDTCliente.TabIndex = 101
+        Me.IDTCliente.Text = ""
         '
         'Label6
         '
@@ -207,17 +207,17 @@ Partial Class Frm_Clientes
         Me.Label6.TabIndex = 100
         Me.Label6.Text = "Id tienda:"
         '
-        'RichTextBox7
+        'IDCliente
         '
-        Me.RichTextBox7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.IDCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id_cliente", True))
-        Me.RichTextBox7.Location = New System.Drawing.Point(102, 12)
-        Me.RichTextBox7.Name = "RichTextBox7"
-        Me.RichTextBox7.ShortcutsEnabled = False
-        Me.RichTextBox7.Size = New System.Drawing.Size(340, 31)
-        Me.RichTextBox7.TabIndex = 99
-        Me.RichTextBox7.Text = ""
+        Me.IDCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id_cliente", True))
+        Me.IDCliente.Location = New System.Drawing.Point(102, 12)
+        Me.IDCliente.Name = "IDCliente"
+        Me.IDCliente.ShortcutsEnabled = False
+        Me.IDCliente.Size = New System.Drawing.Size(340, 31)
+        Me.IDCliente.TabIndex = 99
+        Me.IDCliente.Text = ""
         '
         'Label7
         '
@@ -231,60 +231,60 @@ Partial Class Frm_Clientes
         Me.Label7.TabIndex = 98
         Me.Label7.Text = "ID:"
         '
-        'RichTextBox5
+        'NombreCliente
         '
-        Me.RichTextBox5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.NombreCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "nombre", True))
-        Me.RichTextBox5.Location = New System.Drawing.Point(101, 45)
-        Me.RichTextBox5.Name = "RichTextBox5"
-        Me.RichTextBox5.Size = New System.Drawing.Size(341, 31)
-        Me.RichTextBox5.TabIndex = 97
-        Me.RichTextBox5.Text = ""
+        Me.NombreCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "nombre", True))
+        Me.NombreCliente.Location = New System.Drawing.Point(101, 45)
+        Me.NombreCliente.Name = "NombreCliente"
+        Me.NombreCliente.Size = New System.Drawing.Size(341, 31)
+        Me.NombreCliente.TabIndex = 97
+        Me.NombreCliente.Text = ""
         '
-        'RichTextBox4
+        'CedulaCliente
         '
-        Me.RichTextBox4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.CedulaCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "cedula", True))
-        Me.RichTextBox4.Location = New System.Drawing.Point(102, 129)
-        Me.RichTextBox4.Name = "RichTextBox4"
-        Me.RichTextBox4.Size = New System.Drawing.Size(341, 31)
-        Me.RichTextBox4.TabIndex = 96
-        Me.RichTextBox4.Text = ""
+        Me.CedulaCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "cedula", True))
+        Me.CedulaCliente.Location = New System.Drawing.Point(102, 129)
+        Me.CedulaCliente.Name = "CedulaCliente"
+        Me.CedulaCliente.Size = New System.Drawing.Size(341, 31)
+        Me.CedulaCliente.TabIndex = 96
+        Me.CedulaCliente.Text = ""
         '
-        'RichTextBox3
+        'TelefonoCliente
         '
-        Me.RichTextBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.TelefonoCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "telefono", True))
-        Me.RichTextBox3.Location = New System.Drawing.Point(102, 217)
-        Me.RichTextBox3.Name = "RichTextBox3"
-        Me.RichTextBox3.Size = New System.Drawing.Size(341, 31)
-        Me.RichTextBox3.TabIndex = 95
-        Me.RichTextBox3.Text = ""
+        Me.TelefonoCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "telefono", True))
+        Me.TelefonoCliente.Location = New System.Drawing.Point(102, 217)
+        Me.TelefonoCliente.Name = "TelefonoCliente"
+        Me.TelefonoCliente.Size = New System.Drawing.Size(341, 31)
+        Me.TelefonoCliente.TabIndex = 95
+        Me.TelefonoCliente.Text = ""
         '
-        'RichTextBox2
+        'EmailCliente
         '
-        Me.RichTextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.EmailCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "email", True))
-        Me.RichTextBox2.Location = New System.Drawing.Point(102, 174)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(341, 31)
-        Me.RichTextBox2.TabIndex = 94
-        Me.RichTextBox2.Text = ""
+        Me.EmailCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "email", True))
+        Me.EmailCliente.Location = New System.Drawing.Point(102, 174)
+        Me.EmailCliente.Name = "EmailCliente"
+        Me.EmailCliente.Size = New System.Drawing.Size(341, 31)
+        Me.EmailCliente.TabIndex = 94
+        Me.EmailCliente.Text = ""
         '
-        'RichTextBox1
+        'ApellidoCliente
         '
-        Me.RichTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.ApellidoCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "apellido", True))
-        Me.RichTextBox1.Location = New System.Drawing.Point(101, 86)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(341, 31)
-        Me.RichTextBox1.TabIndex = 93
-        Me.RichTextBox1.Text = ""
+        Me.ApellidoCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "apellido", True))
+        Me.ApellidoCliente.Location = New System.Drawing.Point(101, 86)
+        Me.ApellidoCliente.Name = "ApellidoCliente"
+        Me.ApellidoCliente.Size = New System.Drawing.Size(341, 31)
+        Me.ApellidoCliente.TabIndex = 93
+        Me.ApellidoCliente.Text = ""
         '
         'Label4
         '
@@ -356,15 +356,15 @@ Partial Class Frm_Clientes
         Me.Button6.Text = "Refresh"
         Me.Button6.UseVisualStyleBackColor = True
         '
-        'RichTextBox8
+        'Busqueda
         '
-        Me.RichTextBox8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox8.Location = New System.Drawing.Point(574, 251)
-        Me.RichTextBox8.Name = "RichTextBox8"
-        Me.RichTextBox8.Size = New System.Drawing.Size(148, 38)
-        Me.RichTextBox8.TabIndex = 103
-        Me.RichTextBox8.Text = ""
+        Me.Busqueda.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Busqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Busqueda.Location = New System.Drawing.Point(574, 251)
+        Me.Busqueda.Name = "Busqueda"
+        Me.Busqueda.Size = New System.Drawing.Size(148, 38)
+        Me.Busqueda.TabIndex = 103
+        Me.Busqueda.Text = ""
         '
         'Button5
         '
@@ -382,17 +382,17 @@ Partial Class Frm_Clientes
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(784, 561)
         Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.RichTextBox8)
+        Me.Controls.Add(Me.Busqueda)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.RichTextBox6)
+        Me.Controls.Add(Me.IDTCliente)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.RichTextBox7)
+        Me.Controls.Add(Me.IDCliente)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.RichTextBox5)
-        Me.Controls.Add(Me.RichTextBox4)
-        Me.Controls.Add(Me.RichTextBox3)
-        Me.Controls.Add(Me.RichTextBox2)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.NombreCliente)
+        Me.Controls.Add(Me.CedulaCliente)
+        Me.Controls.Add(Me.TelefonoCliente)
+        Me.Controls.Add(Me.EmailCliente)
+        Me.Controls.Add(Me.ApellidoCliente)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
@@ -427,21 +427,21 @@ Partial Class Frm_Clientes
     Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdtiendaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents RichTextBox6 As RichTextBox
+    Friend WithEvents IDTCliente As RichTextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents RichTextBox7 As RichTextBox
+    Friend WithEvents IDCliente As RichTextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents RichTextBox5 As RichTextBox
-    Friend WithEvents RichTextBox4 As RichTextBox
-    Friend WithEvents RichTextBox3 As RichTextBox
-    Friend WithEvents RichTextBox2 As RichTextBox
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents NombreCliente As RichTextBox
+    Friend WithEvents CedulaCliente As RichTextBox
+    Friend WithEvents TelefonoCliente As RichTextBox
+    Friend WithEvents EmailCliente As RichTextBox
+    Friend WithEvents ApellidoCliente As RichTextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Button6 As Button
-    Friend WithEvents RichTextBox8 As RichTextBox
+    Friend WithEvents Busqueda As RichTextBox
     Friend WithEvents Button5 As Button
 End Class

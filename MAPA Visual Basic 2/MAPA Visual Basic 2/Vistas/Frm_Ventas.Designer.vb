@@ -26,14 +26,14 @@ Partial Class Frm_Ventas
         Me.Button6 = New System.Windows.Forms.Button()
         Me.RichTextBox8 = New System.Windows.Forms.RichTextBox()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.IDFVenta = New System.Windows.Forms.RichTextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.RichTextBox6 = New System.Windows.Forms.RichTextBox()
+        Me.IDTVenta = New System.Windows.Forms.RichTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.RichTextBox7 = New System.Windows.Forms.RichTextBox()
+        Me.IDVenta = New System.Windows.Forms.RichTextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.CantidadVenta = New System.Windows.Forms.RichTextBox()
+        Me.DescripcionVenta = New System.Windows.Forms.RichTextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -84,16 +84,16 @@ Partial Class Frm_Ventas
         Me.Button5.Text = "Buscar"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'RichTextBox2
+        'IDFVenta
         '
-        Me.RichTextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.IDFVenta.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "id_factura", True))
-        Me.RichTextBox2.Location = New System.Drawing.Point(184, 300)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(303, 31)
-        Me.RichTextBox2.TabIndex = 89
-        Me.RichTextBox2.Text = ""
+        Me.IDFVenta.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "id_factura", True))
+        Me.IDFVenta.Location = New System.Drawing.Point(184, 300)
+        Me.IDFVenta.Name = "IDFVenta"
+        Me.IDFVenta.Size = New System.Drawing.Size(303, 31)
+        Me.IDFVenta.TabIndex = 89
+        Me.IDFVenta.Text = ""
         '
         'Label1
         '
@@ -107,16 +107,16 @@ Partial Class Frm_Ventas
         Me.Label1.TabIndex = 88
         Me.Label1.Text = "Id Factura:"
         '
-        'RichTextBox6
+        'IDTVenta
         '
-        Me.RichTextBox6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.IDTVenta.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "id_tienda", True))
-        Me.RichTextBox6.Location = New System.Drawing.Point(170, 244)
-        Me.RichTextBox6.Name = "RichTextBox6"
-        Me.RichTextBox6.Size = New System.Drawing.Size(317, 31)
-        Me.RichTextBox6.TabIndex = 87
-        Me.RichTextBox6.Text = ""
+        Me.IDTVenta.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "id_tienda", True))
+        Me.IDTVenta.Location = New System.Drawing.Point(170, 244)
+        Me.IDTVenta.Name = "IDTVenta"
+        Me.IDTVenta.Size = New System.Drawing.Size(317, 31)
+        Me.IDTVenta.TabIndex = 87
+        Me.IDTVenta.Text = ""
         '
         'Label6
         '
@@ -130,17 +130,17 @@ Partial Class Frm_Ventas
         Me.Label6.TabIndex = 86
         Me.Label6.Text = "Id tienda:"
         '
-        'RichTextBox7
+        'IDVenta
         '
-        Me.RichTextBox7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.IDVenta.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "id_venta", True))
-        Me.RichTextBox7.Location = New System.Drawing.Point(157, 28)
-        Me.RichTextBox7.Name = "RichTextBox7"
-        Me.RichTextBox7.ShortcutsEnabled = False
-        Me.RichTextBox7.Size = New System.Drawing.Size(330, 31)
-        Me.RichTextBox7.TabIndex = 85
-        Me.RichTextBox7.Text = ""
+        Me.IDVenta.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "id_venta", True))
+        Me.IDVenta.Location = New System.Drawing.Point(157, 28)
+        Me.IDVenta.Name = "IDVenta"
+        Me.IDVenta.ShortcutsEnabled = False
+        Me.IDVenta.Size = New System.Drawing.Size(330, 31)
+        Me.IDVenta.TabIndex = 85
+        Me.IDVenta.Text = ""
         '
         'Label7
         '
@@ -154,27 +154,27 @@ Partial Class Frm_Ventas
         Me.Label7.TabIndex = 84
         Me.Label7.Text = "ID Venta:"
         '
-        'RichTextBox5
+        'CantidadVenta
         '
-        Me.RichTextBox5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.CantidadVenta.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "cantidad", True))
-        Me.RichTextBox5.Location = New System.Drawing.Point(157, 86)
-        Me.RichTextBox5.Name = "RichTextBox5"
-        Me.RichTextBox5.Size = New System.Drawing.Size(320, 24)
-        Me.RichTextBox5.TabIndex = 83
-        Me.RichTextBox5.Text = ""
+        Me.CantidadVenta.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "cantidad", True))
+        Me.CantidadVenta.Location = New System.Drawing.Point(157, 86)
+        Me.CantidadVenta.Name = "CantidadVenta"
+        Me.CantidadVenta.Size = New System.Drawing.Size(320, 24)
+        Me.CantidadVenta.TabIndex = 83
+        Me.CantidadVenta.Text = ""
         '
-        'RichTextBox1
+        'DescripcionVenta
         '
-        Me.RichTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.DescripcionVenta.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "descripcion", True))
-        Me.RichTextBox1.Location = New System.Drawing.Point(201, 130)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(286, 90)
-        Me.RichTextBox1.TabIndex = 82
-        Me.RichTextBox1.Text = ""
+        Me.DescripcionVenta.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "descripcion", True))
+        Me.DescripcionVenta.Location = New System.Drawing.Point(201, 130)
+        Me.DescripcionVenta.Name = "DescripcionVenta"
+        Me.DescripcionVenta.Size = New System.Drawing.Size(286, 90)
+        Me.DescripcionVenta.TabIndex = 82
+        Me.DescripcionVenta.Text = ""
         '
         'Button4
         '
@@ -317,14 +317,14 @@ Partial Class Frm_Ventas
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.RichTextBox8)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.RichTextBox2)
+        Me.Controls.Add(Me.IDFVenta)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.RichTextBox6)
+        Me.Controls.Add(Me.IDTVenta)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.RichTextBox7)
+        Me.Controls.Add(Me.IDVenta)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.RichTextBox5)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.CantidadVenta)
+        Me.Controls.Add(Me.DescripcionVenta)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -345,14 +345,14 @@ Partial Class Frm_Ventas
     Friend WithEvents Button6 As Button
     Friend WithEvents RichTextBox8 As RichTextBox
     Friend WithEvents Button5 As Button
-    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents IDFVenta As RichTextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents RichTextBox6 As RichTextBox
+    Friend WithEvents IDTVenta As RichTextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents RichTextBox7 As RichTextBox
+    Friend WithEvents IDVenta As RichTextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents RichTextBox5 As RichTextBox
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents CantidadVenta As RichTextBox
+    Friend WithEvents DescripcionVenta As RichTextBox
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button

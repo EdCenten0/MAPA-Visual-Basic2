@@ -4,4 +4,39 @@
         Me.ClientesTableAdapter.Fill(Me.MAPADataSet.clientes)
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.ClientesTableAdapter.Guardar(NombreCliente.Text, ApellidoCliente.Text, CedulaCliente.Text, EmailCliente.Text, TelefonoCliente.Text, IDTCliente.Text)
+        Me.ClientesTableAdapter.Fill(Me.MAPADataSet.clientes)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.ClientesTableAdapter.Editar(NombreCliente.Text, ApellidoCliente.Text, CedulaCliente.Text, EmailCliente.Text, TelefonoCliente.Text, IDTCliente.Text, IDCliente.Text, IDCliente.Text)
+        Me.ClientesTableAdapter.Fill(Me.MAPADataSet.clientes)
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.ClientesTableAdapter.Eliminar(IDCliente.Text)
+        Me.ClientesTableAdapter.Fill(Me.MAPADataSet.clientes)
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Me.ClientesTableAdapter.Buscar(MAPADataSet.clientes, NombreCliente.Text)
+        Me.ClientesTableAdapter.Fill(Me.MAPADataSet.clientes)
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        NombreCliente.Clear()
+        ApellidoCliente.Clear()
+        CedulaCliente.Clear()
+        EmailCliente.Clear()
+        TelefonoCliente.Clear()
+        IDTCliente.Clear()
+        IDCliente.Clear()
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Me.ClientesTableAdapter.Fill(Me.MAPADataSet.clientes)
+    End Sub
 End Class
