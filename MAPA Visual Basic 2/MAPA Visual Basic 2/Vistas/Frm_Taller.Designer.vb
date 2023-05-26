@@ -39,6 +39,7 @@ Partial Class Frm_Taller
         Me.lblTelefono = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.TallerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblTelefono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -51,33 +52,38 @@ Partial Class Frm_Taller
         '
         'lblEmail
         '
-        Me.lblEmail.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.lblEmail.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmail.Location = New System.Drawing.Point(341, 27)
+        Me.lblEmail.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.lblEmail.Location = New System.Drawing.Point(127, 157)
+        Me.lblEmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(177, 22)
+        Me.lblEmail.Size = New System.Drawing.Size(417, 24)
         Me.lblEmail.TabIndex = 11
         '
         'lbl_email
         '
-        Me.lbl_email.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.lbl_email.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_email.AutoSize = True
-        Me.lbl_email.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_email.Location = New System.Drawing.Point(283, 27)
+        Me.lbl_email.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.lbl_email.Location = New System.Drawing.Point(19, 161)
+        Me.lbl_email.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_email.Name = "lbl_email"
-        Me.lbl_email.Size = New System.Drawing.Size(52, 20)
+        Me.lbl_email.Size = New System.Drawing.Size(57, 20)
         Me.lbl_email.TabIndex = 10
         Me.lbl_email.Text = "Email:"
         '
         'btn_vaciar_campos
         '
         Me.btn_vaciar_campos.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_vaciar_campos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_vaciar_campos.Location = New System.Drawing.Point(548, 184)
+        Me.btn_vaciar_campos.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.btn_vaciar_campos.Location = New System.Drawing.Point(731, 253)
+        Me.btn_vaciar_campos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btn_vaciar_campos.Name = "btn_vaciar_campos"
-        Me.btn_vaciar_campos.Size = New System.Drawing.Size(131, 28)
+        Me.btn_vaciar_campos.Size = New System.Drawing.Size(207, 36)
         Me.btn_vaciar_campos.TabIndex = 9
         Me.btn_vaciar_campos.Text = "Vaciar Campos"
         Me.btn_vaciar_campos.UseVisualStyleBackColor = True
@@ -85,10 +91,11 @@ Partial Class Frm_Taller
         'btn_eliminar
         '
         Me.btn_eliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_eliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_eliminar.Location = New System.Drawing.Point(548, 134)
+        Me.btn_eliminar.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.btn_eliminar.Location = New System.Drawing.Point(731, 201)
+        Me.btn_eliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btn_eliminar.Name = "btn_eliminar"
-        Me.btn_eliminar.Size = New System.Drawing.Size(124, 28)
+        Me.btn_eliminar.Size = New System.Drawing.Size(207, 36)
         Me.btn_eliminar.TabIndex = 8
         Me.btn_eliminar.Text = "Eliminar"
         Me.btn_eliminar.UseVisualStyleBackColor = True
@@ -96,10 +103,11 @@ Partial Class Frm_Taller
         'btn_editar
         '
         Me.btn_editar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_editar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_editar.Location = New System.Drawing.Point(548, 85)
+        Me.btn_editar.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.btn_editar.Location = New System.Drawing.Point(731, 150)
+        Me.btn_editar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btn_editar.Name = "btn_editar"
-        Me.btn_editar.Size = New System.Drawing.Size(124, 27)
+        Me.btn_editar.Size = New System.Drawing.Size(207, 36)
         Me.btn_editar.TabIndex = 7
         Me.btn_editar.Text = "Editar"
         Me.btn_editar.UseVisualStyleBackColor = True
@@ -109,10 +117,11 @@ Partial Class Frm_Taller
         Me.TextBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(94, 184)
+        Me.TextBox3.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.TextBox3.Location = New System.Drawing.Point(127, 255)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(125, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(417, 24)
         Me.TextBox3.TabIndex = 6
         '
         'lblDireccion
@@ -120,10 +129,11 @@ Partial Class Frm_Taller
         Me.lblDireccion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDireccion.Location = New System.Drawing.Point(94, 108)
+        Me.lblDireccion.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.lblDireccion.Location = New System.Drawing.Point(127, 204)
+        Me.lblDireccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.lblDireccion.Name = "lblDireccion"
-        Me.lblDireccion.Size = New System.Drawing.Size(192, 22)
+        Me.lblDireccion.Size = New System.Drawing.Size(417, 24)
         Me.lblDireccion.TabIndex = 5
         '
         'lblNombre
@@ -131,19 +141,21 @@ Partial Class Frm_Taller
         Me.lblNombre.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(94, 29)
+        Me.lblNombre.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.lblNombre.Location = New System.Drawing.Point(127, 105)
+        Me.lblNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(125, 22)
+        Me.lblNombre.Size = New System.Drawing.Size(417, 24)
         Me.lblNombre.TabIndex = 4
         '
         'btn_guardar
         '
         Me.btn_guardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_guardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_guardar.Location = New System.Drawing.Point(548, 29)
+        Me.btn_guardar.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.btn_guardar.Location = New System.Drawing.Point(731, 98)
+        Me.btn_guardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btn_guardar.Name = "btn_guardar"
-        Me.btn_guardar.Size = New System.Drawing.Size(124, 28)
+        Me.btn_guardar.Size = New System.Drawing.Size(207, 36)
         Me.btn_guardar.TabIndex = 3
         Me.btn_guardar.Text = "Guardar"
         Me.btn_guardar.UseVisualStyleBackColor = True
@@ -153,10 +165,11 @@ Partial Class Frm_Taller
         Me.lbl_telefono.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lbl_telefono.AutoSize = True
-        Me.lbl_telefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_telefono.Location = New System.Drawing.Point(13, 182)
+        Me.lbl_telefono.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.lbl_telefono.Location = New System.Drawing.Point(19, 253)
+        Me.lbl_telefono.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_telefono.Name = "lbl_telefono"
-        Me.lbl_telefono.Size = New System.Drawing.Size(75, 20)
+        Me.lbl_telefono.Size = New System.Drawing.Size(84, 20)
         Me.lbl_telefono.TabIndex = 2
         Me.lbl_telefono.Text = "Teléfono:"
         '
@@ -165,10 +178,11 @@ Partial Class Frm_Taller
         Me.lbl_direccion.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lbl_direccion.AutoSize = True
-        Me.lbl_direccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_direccion.Location = New System.Drawing.Point(13, 108)
+        Me.lbl_direccion.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.lbl_direccion.Location = New System.Drawing.Point(19, 208)
+        Me.lbl_direccion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_direccion.Name = "lbl_direccion"
-        Me.lbl_direccion.Size = New System.Drawing.Size(79, 20)
+        Me.lbl_direccion.Size = New System.Drawing.Size(88, 20)
         Me.lbl_direccion.TabIndex = 1
         Me.lbl_direccion.Text = "Dirección:"
         '
@@ -178,10 +192,11 @@ Partial Class Frm_Taller
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lbl_nombre.AutoEllipsis = True
         Me.lbl_nombre.AutoSize = True
-        Me.lbl_nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_nombre.Location = New System.Drawing.Point(13, 27)
+        Me.lbl_nombre.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.lbl_nombre.Location = New System.Drawing.Point(19, 109)
+        Me.lbl_nombre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_nombre.Name = "lbl_nombre"
-        Me.lbl_nombre.Size = New System.Drawing.Size(69, 20)
+        Me.lbl_nombre.Size = New System.Drawing.Size(79, 20)
         Me.lbl_nombre.TabIndex = 0
         Me.lbl_nombre.Text = "Nombre:"
         '
@@ -191,9 +206,11 @@ Partial Class Frm_Taller
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTelefono.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.lblTelefono.Location = New System.Drawing.Point(12, 255)
+        Me.lblTelefono.Location = New System.Drawing.Point(16, 314)
+        Me.lblTelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.lblTelefono.Name = "lblTelefono"
-        Me.lblTelefono.Size = New System.Drawing.Size(760, 294)
+        Me.lblTelefono.RowHeadersWidth = 51
+        Me.lblTelefono.Size = New System.Drawing.Size(1013, 362)
         Me.lblTelefono.TabIndex = 2
         '
         'Panel2
@@ -201,6 +218,7 @@ Partial Class Frm_Taller
         Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.lblEmail)
         Me.Panel2.Controls.Add(Me.lbl_email)
         Me.Panel2.Controls.Add(Me.btn_vaciar_campos)
@@ -213,9 +231,10 @@ Partial Class Frm_Taller
         Me.Panel2.Controls.Add(Me.lbl_telefono)
         Me.Panel2.Controls.Add(Me.lbl_direccion)
         Me.Panel2.Controls.Add(Me.lbl_nombre)
-        Me.Panel2.Location = New System.Drawing.Point(12, 3)
+        Me.Panel2.Location = New System.Drawing.Point(16, 13)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(760, 357)
+        Me.Panel2.Size = New System.Drawing.Size(1013, 300)
         Me.Panel2.TabIndex = 1
         '
         'Panel1
@@ -224,16 +243,29 @@ Partial Class Frm_Taller
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(784, 561)
+        Me.Panel1.Size = New System.Drawing.Size(1045, 690)
         Me.Panel1.TabIndex = 1
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Inter Medium", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(16, 10)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(109, 40)
+        Me.Label4.TabIndex = 26
+        Me.Label4.Text = "Taller"
         '
         'Frm_Taller
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 561)
+        Me.ClientSize = New System.Drawing.Size(1045, 690)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Frm_Taller"
         Me.Text = "Form4"
         CType(Me.TallerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -261,4 +293,5 @@ Partial Class Frm_Taller
     Friend WithEvents lblTelefono As DataGridView
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label4 As Label
 End Class
