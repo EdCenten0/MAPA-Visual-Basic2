@@ -76,13 +76,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Frm_Materiales.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Materiales.Designer.vb">
-      <DependentUpon>Frm_Materiales.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="MAPADataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -110,6 +103,12 @@
     <Compile Include="Vistas\Frm_Ajustes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vistas\Frm_Materiales.Designer.vb">
+      <DependentUpon>Frm_Materiales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Materiales.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vistas\Frm_Pedido.Designer.vb">
       <DependentUpon>Frm_Pedido.vb</DependentUpon>
     </Compile>
@@ -128,11 +127,50 @@
     <Compile Include="Vistas\Frm_Vista_Previa_Pedidos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vistas\Frm_Proveedores.Designer.vb">
+      <DependentUpon>Frm_Proveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Proveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Taller.Designer.vb">
+      <DependentUpon>Frm_Taller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Taller.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Rol.Designer.vb">
+      <DependentUpon>Frm_Rol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Rol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Usuarios.Designer.vb">
+      <DependentUpon>Frm_Usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Pedidos.Designer.vb">
+      <DependentUpon>Frm_Pedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Pedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Clientes.Designer.vb">
+      <DependentUpon>Frm_Clientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Frm_Login.Designer.vb">
+      <DependentUpon>Frm_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Frm_Materiales.resx">
-      <DependentUpon>Frm_Materiales.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -142,6 +180,9 @@
     <EmbeddedResource Include="Vistas\Frm_Ajustes.resx">
       <DependentUpon>Frm_Ajustes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Materiales.resx">
+      <DependentUpon>Frm_Materiales.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Pedido.resx">
       <DependentUpon>Frm_Pedido.vb</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +191,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Vista_Previa_Pedidos.resx">
       <DependentUpon>Frm_Vista_Previa_Pedidos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Proveedores.resx">
+      <DependentUpon>Frm_Proveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Taller.resx">
+      <DependentUpon>Frm_Taller.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Rol.resx">
+      <DependentUpon>Frm_Rol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Usuarios.resx">
+      <DependentUpon>Frm_Usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Pedidos.resx">
+      <DependentUpon>Frm_Pedidos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Clientes.resx">
+      <DependentUpon>Frm_Clientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Login.resx">
+      <DependentUpon>Frm_Login.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -176,5 +238,6 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
