@@ -211,7 +211,8 @@ Partial Class Frm_Clientes
         Me.RichTextBox6.Location = New System.Drawing.Point(144, 375)
         Me.RichTextBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox6.Name = "RichTextBox6"
-        Me.RichTextBox6.Size = New System.Drawing.Size(454, 24)
+        Me.RichTextBox6.ReadOnly = True
+        Me.RichTextBox6.Size = New System.Drawing.Size(94, 24)
         Me.RichTextBox6.TabIndex = 101
         Me.RichTextBox6.Text = ""
         '
