@@ -65,16 +65,17 @@ Partial Class Frm_Pedido
         Me.Panel2.Location = New System.Drawing.Point(16, 53)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1068, 218)
+        Me.Panel2.Size = New System.Drawing.Size(1050, 218)
         Me.Panel2.TabIndex = 28
         '
         'tb_index
         '
         Me.tb_index.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_index.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.tb_index.Location = New System.Drawing.Point(673, 183)
+        Me.tb_index.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.tb_index.Location = New System.Drawing.Point(617, 183)
         Me.tb_index.Name = "tb_index"
-        Me.tb_index.Size = New System.Drawing.Size(96, 28)
+        Me.tb_index.ReadOnly = True
+        Me.tb_index.Size = New System.Drawing.Size(96, 24)
         Me.tb_index.TabIndex = 49
         '
         'tb_cliente
@@ -82,9 +83,9 @@ Partial Class Frm_Pedido
         Me.tb_cliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_cliente.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.tb_cliente.Location = New System.Drawing.Point(203, 187)
+        Me.tb_cliente.Location = New System.Drawing.Point(165, 187)
         Me.tb_cliente.Name = "tb_cliente"
-        Me.tb_cliente.Size = New System.Drawing.Size(435, 24)
+        Me.tb_cliente.Size = New System.Drawing.Size(417, 24)
         Me.tb_cliente.TabIndex = 48
         '
         'Label2
@@ -92,10 +93,10 @@ Partial Class Frm_Pedido
         Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Inter", 12.0!)
-        Me.Label2.Location = New System.Drawing.Point(14, 187)
+        Me.Label2.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label2.Location = New System.Drawing.Point(5, 187)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(84, 24)
+        Me.Label2.Size = New System.Drawing.Size(70, 20)
         Me.Label2.TabIndex = 47
         Me.Label2.Text = "Cliente:"
         '
@@ -103,22 +104,22 @@ Partial Class Frm_Pedido
         '
         Me.DateTimePicker1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Inter", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(203, 52)
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(165, 52)
         Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4)
         Me.DateTimePicker1.MinimumSize = New System.Drawing.Size(300, 30)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(455, 30)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(437, 30)
         Me.DateTimePicker1.TabIndex = 46
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(4, 52)
+        Me.Label5.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label5.Location = New System.Drawing.Point(5, 52)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(179, 24)
+        Me.Label5.Size = New System.Drawing.Size(152, 20)
         Me.Label5.TabIndex = 45
         Me.Label5.Text = "Fecha de ingreso:"
         '
@@ -126,33 +127,33 @@ Partial Class Frm_Pedido
         '
         Me.RichTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox1.Font = New System.Drawing.Font("Inter", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(203, 110)
+        Me.RichTextBox1.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.RichTextBox1.Location = New System.Drawing.Point(165, 110)
         Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(664, 62)
+        Me.RichTextBox1.Size = New System.Drawing.Size(646, 62)
         Me.RichTextBox1.TabIndex = 44
         Me.RichTextBox1.Text = ""
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(4, 107)
+        Me.Label3.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label3.Location = New System.Drawing.Point(5, 110)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(127, 24)
+        Me.Label3.Size = New System.Drawing.Size(107, 20)
         Me.Label3.TabIndex = 35
         Me.Label3.Text = "Descripcion:"
         '
         'Button4
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Font = New System.Drawing.Font("Inter", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(895, 167)
+        Me.Button4.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.Button4.Location = New System.Drawing.Point(839, 167)
         Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(173, 36)
+        Me.Button4.Size = New System.Drawing.Size(207, 36)
         Me.Button4.TabIndex = 34
         Me.Button4.Text = "Vaciar"
         Me.Button4.UseVisualStyleBackColor = True
@@ -160,11 +161,11 @@ Partial Class Frm_Pedido
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Font = New System.Drawing.Font("Inter", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(895, 4)
+        Me.Button1.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.Button1.Location = New System.Drawing.Point(839, 4)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(173, 36)
+        Me.Button1.Size = New System.Drawing.Size(207, 36)
         Me.Button1.TabIndex = 31
         Me.Button1.Text = "Guardar"
         Me.Button1.UseVisualStyleBackColor = True
@@ -172,11 +173,11 @@ Partial Class Frm_Pedido
         'Button3
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Font = New System.Drawing.Font("Inter", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(895, 116)
+        Me.Button3.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.Button3.Location = New System.Drawing.Point(839, 116)
         Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(173, 36)
+        Me.Button3.Size = New System.Drawing.Size(207, 36)
         Me.Button3.TabIndex = 33
         Me.Button3.Text = "Editar"
         Me.Button3.UseVisualStyleBackColor = True
@@ -187,21 +188,22 @@ Partial Class Frm_Pedido
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.BackColor = System.Drawing.Color.White
         Me.TextBox1.Enabled = False
-        Me.TextBox1.Font = New System.Drawing.Font("Inter", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(203, 12)
+        Me.TextBox1.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.TextBox1.Location = New System.Drawing.Point(165, 12)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(187, 23)
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(93, 24)
         Me.TextBox1.TabIndex = 27
         '
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Font = New System.Drawing.Font("Inter", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(895, 58)
+        Me.Button2.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.Button2.Location = New System.Drawing.Point(835, 61)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(173, 36)
+        Me.Button2.Size = New System.Drawing.Size(207, 36)
         Me.Button2.TabIndex = 32
         Me.Button2.Text = "Eliminar"
         Me.Button2.UseVisualStyleBackColor = True
@@ -209,11 +211,11 @@ Partial Class Frm_Pedido
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(4, 10)
+        Me.Label1.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label1.Location = New System.Drawing.Point(5, 12)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(35, 24)
+        Me.Label1.Size = New System.Drawing.Size(30, 20)
         Me.Label1.TabIndex = 28
         Me.Label1.Text = "ID:"
         '
@@ -238,7 +240,7 @@ Partial Class Frm_Pedido
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.Size = New System.Drawing.Size(1068, 373)
+        Me.DataGridView1.Size = New System.Drawing.Size(1050, 373)
         Me.DataGridView1.TabIndex = 33
         '
         'Panel1
@@ -249,14 +251,14 @@ Partial Class Frm_Pedido
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1100, 665)
+        Me.Panel1.Size = New System.Drawing.Size(1082, 665)
         Me.Panel1.TabIndex = 32
         '
         'Frm_Pedido
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1100, 665)
+        Me.ClientSize = New System.Drawing.Size(1082, 665)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "Frm_Pedido"

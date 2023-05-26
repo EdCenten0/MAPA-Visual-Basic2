@@ -179,6 +179,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.tb_fecha.Location = New System.Drawing.Point(219, 344)
         Me.tb_fecha.Margin = New System.Windows.Forms.Padding(4)
         Me.tb_fecha.Name = "tb_fecha"
+        Me.tb_fecha.ReadOnly = True
         Me.tb_fecha.Size = New System.Drawing.Size(381, 24)
         Me.tb_fecha.TabIndex = 37
         '
@@ -191,6 +192,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.tb_pedido.Margin = New System.Windows.Forms.Padding(4)
         Me.tb_pedido.Multiline = True
         Me.tb_pedido.Name = "tb_pedido"
+        Me.tb_pedido.ReadOnly = True
         Me.tb_pedido.Size = New System.Drawing.Size(381, 148)
         Me.tb_pedido.TabIndex = 36
         '
@@ -255,6 +257,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.tb_index.Location = New System.Drawing.Point(529, 53)
         Me.tb_index.Margin = New System.Windows.Forms.Padding(4)
         Me.tb_index.Name = "tb_index"
+        Me.tb_index.ReadOnly = True
         Me.tb_index.Size = New System.Drawing.Size(71, 24)
         Me.tb_index.TabIndex = 40
         '
@@ -265,6 +268,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.tb_cliente.Location = New System.Drawing.Point(219, 53)
         Me.tb_cliente.Margin = New System.Windows.Forms.Padding(4)
         Me.tb_cliente.Name = "tb_cliente"
+        Me.tb_cliente.ReadOnly = True
         Me.tb_cliente.Size = New System.Drawing.Size(301, 24)
         Me.tb_cliente.TabIndex = 35
         '

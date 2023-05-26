@@ -70,7 +70,7 @@ Partial Class Frm_Clientes
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdclienteDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidoDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.IdtiendaDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ClientesBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(16, 421)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(1017, 255)
@@ -154,7 +154,7 @@ Partial Class Frm_Clientes
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button4.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.Button4.Location = New System.Drawing.Point(736, 159)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(207, 36)
         Me.Button4.TabIndex = 64
@@ -166,7 +166,7 @@ Partial Class Frm_Clientes
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button3.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.Button3.Location = New System.Drawing.Point(736, 115)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(207, 36)
         Me.Button3.TabIndex = 63
@@ -178,7 +178,7 @@ Partial Class Frm_Clientes
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.Button2.Location = New System.Drawing.Point(736, 71)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(207, 36)
         Me.Button2.TabIndex = 62
@@ -190,7 +190,7 @@ Partial Class Frm_Clientes
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.Button1.Location = New System.Drawing.Point(736, 27)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(207, 36)
         Me.Button1.TabIndex = 61
@@ -208,7 +208,7 @@ Partial Class Frm_Clientes
         Me.RichTextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id_tienda", True))
         Me.RichTextBox6.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.RichTextBox6.Location = New System.Drawing.Point(135, 319)
-        Me.RichTextBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RichTextBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox6.Name = "RichTextBox6"
         Me.RichTextBox6.Size = New System.Drawing.Size(454, 24)
         Me.RichTextBox6.TabIndex = 101
@@ -234,8 +234,9 @@ Partial Class Frm_Clientes
         Me.RichTextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id_cliente", True))
         Me.RichTextBox7.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.RichTextBox7.Location = New System.Drawing.Point(135, 15)
-        Me.RichTextBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RichTextBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox7.Name = "RichTextBox7"
+        Me.RichTextBox7.ReadOnly = True
         Me.RichTextBox7.ShortcutsEnabled = False
         Me.RichTextBox7.Size = New System.Drawing.Size(105, 24)
         Me.RichTextBox7.TabIndex = 99
@@ -261,7 +262,7 @@ Partial Class Frm_Clientes
         Me.RichTextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "nombre", True))
         Me.RichTextBox5.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.RichTextBox5.Location = New System.Drawing.Point(135, 55)
-        Me.RichTextBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RichTextBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox5.Name = "RichTextBox5"
         Me.RichTextBox5.Size = New System.Drawing.Size(453, 24)
         Me.RichTextBox5.TabIndex = 97
@@ -274,7 +275,7 @@ Partial Class Frm_Clientes
         Me.RichTextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "cedula", True))
         Me.RichTextBox4.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.RichTextBox4.Location = New System.Drawing.Point(136, 159)
-        Me.RichTextBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RichTextBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox4.Name = "RichTextBox4"
         Me.RichTextBox4.Size = New System.Drawing.Size(453, 24)
         Me.RichTextBox4.TabIndex = 96
@@ -287,7 +288,7 @@ Partial Class Frm_Clientes
         Me.RichTextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "telefono", True))
         Me.RichTextBox3.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.RichTextBox3.Location = New System.Drawing.Point(136, 267)
-        Me.RichTextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RichTextBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox3.Name = "RichTextBox3"
         Me.RichTextBox3.Size = New System.Drawing.Size(453, 24)
         Me.RichTextBox3.TabIndex = 95
@@ -300,7 +301,7 @@ Partial Class Frm_Clientes
         Me.RichTextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "email", True))
         Me.RichTextBox2.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.RichTextBox2.Location = New System.Drawing.Point(136, 214)
-        Me.RichTextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RichTextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(453, 24)
         Me.RichTextBox2.TabIndex = 94
@@ -313,7 +314,7 @@ Partial Class Frm_Clientes
         Me.RichTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "apellido", True))
         Me.RichTextBox1.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.RichTextBox1.Location = New System.Drawing.Point(135, 106)
-        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(453, 24)
         Me.RichTextBox1.TabIndex = 93
@@ -388,12 +389,12 @@ Partial Class Frm_Clientes
         '
         Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button6.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.Button6.Location = New System.Drawing.Point(906, 326)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button6.Location = New System.Drawing.Point(736, 367)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(67, 36)
+        Me.Button6.Size = New System.Drawing.Size(207, 36)
         Me.Button6.TabIndex = 104
-        Me.Button6.Text = "Refresh"
+        Me.Button6.Text = "Refrescar tabla"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'RichTextBox8
@@ -401,10 +402,10 @@ Partial Class Frm_Clientes
         Me.RichTextBox8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox8.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.RichTextBox8.Location = New System.Drawing.Point(682, 294)
-        Me.RichTextBox8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RichTextBox8.Location = New System.Drawing.Point(736, 291)
+        Me.RichTextBox8.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox8.Name = "RichTextBox8"
-        Me.RichTextBox8.Size = New System.Drawing.Size(196, 24)
+        Me.RichTextBox8.Size = New System.Drawing.Size(207, 24)
         Me.RichTextBox8.TabIndex = 103
         Me.RichTextBox8.Text = ""
         '
@@ -412,8 +413,8 @@ Partial Class Frm_Clientes
         '
         Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button5.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.Button5.Location = New System.Drawing.Point(682, 326)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button5.Location = New System.Drawing.Point(736, 323)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(207, 36)
         Me.Button5.TabIndex = 102
@@ -447,7 +448,7 @@ Partial Class Frm_Clientes
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Frm_Clientes"
         Me.Text = "Cliente"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
