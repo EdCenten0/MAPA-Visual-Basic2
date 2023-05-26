@@ -466,4 +466,4 @@ Temporary Items
 *.suo
 *.vs
 
-*.config
+/App.config
