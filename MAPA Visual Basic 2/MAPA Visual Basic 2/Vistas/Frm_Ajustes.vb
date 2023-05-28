@@ -13,8 +13,8 @@
         currentForm.TopLevel = False
         currentForm.FormBorderStyle = FormBorderStyle.None
         currentForm.Dock = DockStyle.Fill
-        Frm_Principal.panel_contenedor.Controls.Add(currentForm)
-        Frm_Principal.panel_contenedor.Tag = currentForm
+        panel_contenedor_ajustes.Controls.Add(currentForm)
+        panel_contenedor_ajustes.Tag = currentForm
         currentForm.BringToFront()
         currentForm.Show()
     End Sub
