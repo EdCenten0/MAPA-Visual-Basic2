@@ -41,4 +41,5 @@
         Me.ProveedoresTableAdapter.Fill(Me.MAPADataSet.proveedores)
     End Sub
 
+
 End Class

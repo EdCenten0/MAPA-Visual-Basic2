@@ -28,6 +28,8 @@ Partial Class Frm_Proveedores
         Me.Label4 = New System.Windows.Forms.Label()
         Me.bt_refrescar = New System.Windows.Forms.Button()
         Me.Textbox_catalogo = New System.Windows.Forms.RichTextBox()
+        Me.ProveedoresBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Textbox_direccion = New System.Windows.Forms.RichTextBox()
         Me.Textbox_telefono = New System.Windows.Forms.TextBox()
@@ -47,10 +49,6 @@ Partial Class Frm_Proveedores
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel_Proveedor = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
-        Me.ProveedoresBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProveedoresTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.proveedoresTableAdapter()
         Me.IdproveedorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -58,13 +56,18 @@ Partial Class Frm_Proveedores
         Me.CatalogoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RucDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.ProveedoresTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.proveedoresTableAdapter()
+        Me.bt_buscar = New System.Windows.Forms.Button()
+        Me.txt_buscar = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         CType(Me.ProveedoresBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProveedoresBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_Proveedor.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProveedoresBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ProveedoresBindingSource1
@@ -105,6 +108,16 @@ Partial Class Frm_Proveedores
         Me.Textbox_catalogo.Size = New System.Drawing.Size(495, 51)
         Me.Textbox_catalogo.TabIndex = 45
         Me.Textbox_catalogo.Text = ""
+        '
+        'ProveedoresBindingSource2
+        '
+        Me.ProveedoresBindingSource2.DataMember = "proveedores"
+        Me.ProveedoresBindingSource2.DataSource = Me.MAPADataSet
+        '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label6
         '
@@ -303,53 +316,10 @@ Partial Class Frm_Proveedores
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdproveedorDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CatalogoDataGridViewTextBoxColumn, Me.RucDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ProveedoresBindingSource2
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 358)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 368)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(760, 191)
+        Me.DataGridView1.Size = New System.Drawing.Size(760, 181)
         Me.DataGridView1.TabIndex = 29
-        '
-        'Panel2
-        '
-        Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.Controls.Add(Me.bt_refrescar)
-        Me.Panel2.Controls.Add(Me.Textbox_catalogo)
-        Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.Textbox_direccion)
-        Me.Panel2.Controls.Add(Me.Textbox_telefono)
-        Me.Panel2.Controls.Add(Me.Label7)
-        Me.Panel2.Controls.Add(Me.Textbox_ruc)
-        Me.Panel2.Controls.Add(Me.Label8)
-        Me.Panel2.Controls.Add(Me.Textbox_email)
-        Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.bt_vaciar)
-        Me.Panel2.Controls.Add(Me.bt_guardar)
-        Me.Panel2.Controls.Add(Me.bt_editar)
-        Me.Panel2.Controls.Add(Me.Textbox_id)
-        Me.Panel2.Controls.Add(Me.bt_eliminar)
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.Textbox_nombre)
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(12, 37)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(760, 282)
-        Me.Panel2.TabIndex = 28
-        '
-        'MAPADataSet
-        '
-        Me.MAPADataSet.DataSetName = "MAPADataSet"
-        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ProveedoresBindingSource2
-        '
-        Me.ProveedoresBindingSource2.DataMember = "proveedores"
-        Me.ProveedoresBindingSource2.DataSource = Me.MAPADataSet
-        '
-        'ProveedoresTableAdapter
-        '
-        Me.ProveedoresTableAdapter.ClearBeforeFill = True
         '
         'IdproveedorDataGridViewTextBoxColumn
         '
@@ -401,6 +371,71 @@ Partial Class Frm_Proveedores
         Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
         Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
         '
+        'Panel2
+        '
+        Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.Controls.Add(Me.bt_buscar)
+        Me.Panel2.Controls.Add(Me.txt_buscar)
+        Me.Panel2.Controls.Add(Me.Label9)
+        Me.Panel2.Controls.Add(Me.bt_refrescar)
+        Me.Panel2.Controls.Add(Me.Textbox_catalogo)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.Textbox_direccion)
+        Me.Panel2.Controls.Add(Me.Textbox_telefono)
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.Textbox_ruc)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.Textbox_email)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Controls.Add(Me.bt_vaciar)
+        Me.Panel2.Controls.Add(Me.bt_guardar)
+        Me.Panel2.Controls.Add(Me.bt_editar)
+        Me.Panel2.Controls.Add(Me.Textbox_id)
+        Me.Panel2.Controls.Add(Me.bt_eliminar)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.Textbox_nombre)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Location = New System.Drawing.Point(12, 37)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(760, 325)
+        Me.Panel2.TabIndex = 28
+        '
+        'ProveedoresTableAdapter
+        '
+        Me.ProveedoresTableAdapter.ClearBeforeFill = True
+        '
+        'bt_buscar
+        '
+        Me.bt_buscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.bt_buscar.Location = New System.Drawing.Point(644, 292)
+        Me.bt_buscar.Name = "bt_buscar"
+        Me.bt_buscar.Size = New System.Drawing.Size(97, 23)
+        Me.bt_buscar.TabIndex = 51
+        Me.bt_buscar.Text = "Buscar"
+        Me.bt_buscar.UseVisualStyleBackColor = True
+        '
+        'txt_buscar
+        '
+        Me.txt_buscar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_buscar.Location = New System.Drawing.Point(101, 292)
+        Me.txt_buscar.Name = "txt_buscar"
+        Me.txt_buscar.Size = New System.Drawing.Size(474, 20)
+        Me.txt_buscar.TabIndex = 50
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.Label9.Location = New System.Drawing.Point(2, 292)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(68, 20)
+        Me.Label9.TabIndex = 49
+        Me.Label9.Text = "Buscar:"
+        '
         'Frm_Proveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -408,16 +443,16 @@ Partial Class Frm_Proveedores
         Me.ClientSize = New System.Drawing.Size(784, 561)
         Me.Controls.Add(Me.Panel_Proveedor)
         Me.Name = "Frm_Proveedores"
-        Me.Text = "Form3"
+        Me.Text = "Proveedores"
         CType(Me.ProveedoresBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProveedoresBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_Proveedor.ResumeLayout(False)
         Me.Panel_Proveedor.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProveedoresBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -457,4 +492,7 @@ Partial Class Frm_Proveedores
     Friend WithEvents CatalogoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents RucDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents bt_buscar As Button
+    Friend WithEvents txt_buscar As TextBox
+    Friend WithEvents Label9 As Label
 End Class

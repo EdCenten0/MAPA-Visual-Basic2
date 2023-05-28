@@ -30,15 +30,18 @@ Partial Class Frm_Usuarios
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.bt_buscar = New System.Windows.Forms.Button()
+        Me.txt_buscar = New System.Windows.Forms.TextBox()
+        Me.UsuariosBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MAPADataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.bt_refrescar = New System.Windows.Forms.Button()
         Me.bt_vaciar = New System.Windows.Forms.Button()
         Me.bt_guardar = New System.Windows.Forms.Button()
         Me.bt_editar = New System.Windows.Forms.Button()
         Me.bt_eliminar = New System.Windows.Forms.Button()
         Me.txt_correo = New System.Windows.Forms.TextBox()
-        Me.UsuariosBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MAPADataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txt_clave = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -116,6 +119,9 @@ Partial Class Frm_Usuarios
         Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.Controls.Add(Me.bt_buscar)
+        Me.Panel2.Controls.Add(Me.txt_buscar)
+        Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.bt_refrescar)
         Me.Panel2.Controls.Add(Me.bt_vaciar)
         Me.Panel2.Controls.Add(Me.bt_guardar)
@@ -133,8 +139,53 @@ Partial Class Frm_Usuarios
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(12, 43)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(760, 219)
+        Me.Panel2.Size = New System.Drawing.Size(760, 256)
         Me.Panel2.TabIndex = 28
+        '
+        'bt_buscar
+        '
+        Me.bt_buscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.bt_buscar.Location = New System.Drawing.Point(645, 225)
+        Me.bt_buscar.Name = "bt_buscar"
+        Me.bt_buscar.Size = New System.Drawing.Size(97, 23)
+        Me.bt_buscar.TabIndex = 48
+        Me.bt_buscar.Text = "Buscar"
+        Me.bt_buscar.UseVisualStyleBackColor = True
+        '
+        'txt_buscar
+        '
+        Me.txt_buscar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_buscar.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource4, "correo_electronico", True))
+        Me.txt_buscar.Location = New System.Drawing.Point(77, 225)
+        Me.txt_buscar.Name = "txt_buscar"
+        Me.txt_buscar.Size = New System.Drawing.Size(499, 20)
+        Me.txt_buscar.TabIndex = 47
+        '
+        'UsuariosBindingSource4
+        '
+        Me.UsuariosBindingSource4.DataMember = "usuarios"
+        Me.UsuariosBindingSource4.DataSource = Me.MAPADataSetBindingSource
+        '
+        'MAPADataSetBindingSource
+        '
+        Me.MAPADataSetBindingSource.DataSource = Me.MAPADataSet
+        Me.MAPADataSetBindingSource.Position = 0
+        '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.Label7.Location = New System.Drawing.Point(3, 225)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(68, 20)
+        Me.Label7.TabIndex = 46
+        Me.Label7.Text = "Buscar:"
         '
         'bt_refrescar
         '
@@ -195,21 +246,6 @@ Partial Class Frm_Usuarios
         Me.txt_correo.Name = "txt_correo"
         Me.txt_correo.Size = New System.Drawing.Size(491, 20)
         Me.txt_correo.TabIndex = 39
-        '
-        'UsuariosBindingSource4
-        '
-        Me.UsuariosBindingSource4.DataMember = "usuarios"
-        Me.UsuariosBindingSource4.DataSource = Me.MAPADataSetBindingSource
-        '
-        'MAPADataSetBindingSource
-        '
-        Me.MAPADataSetBindingSource.DataSource = Me.MAPADataSet
-        Me.MAPADataSetBindingSource.Position = 0
-        '
-        'MAPADataSet
-        '
-        Me.MAPADataSet.DataSetName = "MAPADataSet"
-        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label6
         '
@@ -332,9 +368,9 @@ Partial Class Frm_Usuarios
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdusuarioDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ClaveDataGridViewTextBoxColumn, Me.CorreoelectronicoDataGridViewTextBoxColumn, Me.IdrolDataGridViewTextBoxColumn})
         Me.DataGridView2.DataSource = Me.UsuariosBindingSource4
-        Me.DataGridView2.Location = New System.Drawing.Point(12, 280)
+        Me.DataGridView2.Location = New System.Drawing.Point(12, 305)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(760, 269)
+        Me.DataGridView2.Size = New System.Drawing.Size(760, 244)
         Me.DataGridView2.TabIndex = 30
         '
         'IdusuarioDataGridViewTextBoxColumn
@@ -394,7 +430,7 @@ Partial Class Frm_Usuarios
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Frm_Usuarios"
-        Me.Text = "Form6"
+        Me.Text = "Usuarios"
         CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuariosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuariosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -450,4 +486,7 @@ Partial Class Frm_Usuarios
     Friend WithEvents IdrolDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents RolesBindingSource1 As BindingSource
     Friend WithEvents RolesTableAdapter As MAPADataSetTableAdapters.rolesTableAdapter
+    Friend WithEvents Label7 As Label
+    Friend WithEvents bt_buscar As Button
+    Friend WithEvents txt_buscar As TextBox
 End Class

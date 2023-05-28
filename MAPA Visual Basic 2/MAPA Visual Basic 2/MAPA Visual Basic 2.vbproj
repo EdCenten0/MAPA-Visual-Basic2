@@ -115,6 +115,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Vistas\Frm_Agregar_Usuario.Designer.vb">
+      <DependentUpon>Frm_Agregar_Usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Agregar_Usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vistas\Frm_Ajustes.Designer.vb">
       <DependentUpon>Frm_Ajustes.vb</DependentUpon>
     </Compile>
@@ -195,6 +201,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Agregar_Usuario.resx">
+      <DependentUpon>Frm_Agregar_Usuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Ajustes.resx">
       <DependentUpon>Frm_Ajustes.vb</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +276,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo Registrar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo MAPA.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
