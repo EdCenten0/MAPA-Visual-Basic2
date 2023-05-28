@@ -2,7 +2,7 @@
 
     Private currentForm As Form = Nothing
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        abrirFromularioHijo(New Frm_Tienda)
     End Sub
 
     Private Sub abrirFromularioHijo(formHijo As Form)

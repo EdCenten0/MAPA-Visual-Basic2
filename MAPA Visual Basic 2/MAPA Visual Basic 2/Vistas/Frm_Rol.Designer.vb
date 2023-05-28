@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Frm_Rol
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Frm_Rol
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.RolesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
@@ -65,7 +65,7 @@ Partial Class Frm_Rol
         Me.bt_refrescar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_refrescar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_refrescar.Location = New System.Drawing.Point(798, 194)
-        Me.bt_refrescar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_refrescar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_refrescar.Name = "bt_refrescar"
         Me.bt_refrescar.Size = New System.Drawing.Size(207, 36)
         Me.bt_refrescar.TabIndex = 35
@@ -77,7 +77,7 @@ Partial Class Frm_Rol
         Me.bt_vaciar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_vaciar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_vaciar.Location = New System.Drawing.Point(798, 150)
-        Me.bt_vaciar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_vaciar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_vaciar.Name = "bt_vaciar"
         Me.bt_vaciar.Size = New System.Drawing.Size(207, 36)
         Me.bt_vaciar.TabIndex = 34
@@ -89,7 +89,7 @@ Partial Class Frm_Rol
         Me.bt_guardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_guardar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_guardar.Location = New System.Drawing.Point(798, 18)
-        Me.bt_guardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_guardar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_guardar.Name = "bt_guardar"
         Me.bt_guardar.Size = New System.Drawing.Size(207, 36)
         Me.bt_guardar.TabIndex = 31
@@ -101,7 +101,7 @@ Partial Class Frm_Rol
         Me.bt_editar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_editar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_editar.Location = New System.Drawing.Point(798, 106)
-        Me.bt_editar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_editar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_editar.Name = "bt_editar"
         Me.bt_editar.Size = New System.Drawing.Size(207, 36)
         Me.bt_editar.TabIndex = 33
@@ -117,7 +117,7 @@ Partial Class Frm_Rol
         Me.txt_id.Enabled = False
         Me.txt_id.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_id.Location = New System.Drawing.Point(66, 21)
-        Me.txt_id.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_id.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_id.Name = "txt_id"
         Me.txt_id.ReadOnly = True
         Me.txt_id.Size = New System.Drawing.Size(93, 24)
@@ -138,7 +138,7 @@ Partial Class Frm_Rol
         Me.bt_eliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_eliminar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_eliminar.Location = New System.Drawing.Point(798, 62)
-        Me.bt_eliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_eliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_eliminar.Name = "bt_eliminar"
         Me.bt_eliminar.Size = New System.Drawing.Size(207, 36)
         Me.bt_eliminar.TabIndex = 32
@@ -163,7 +163,7 @@ Partial Class Frm_Rol
         Me.txt_rol.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RolesBindingSource2, "nombre_rol", True))
         Me.txt_rol.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_rol.Location = New System.Drawing.Point(68, 62)
-        Me.txt_rol.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_rol.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_rol.Name = "txt_rol"
         Me.txt_rol.Size = New System.Drawing.Size(417, 24)
         Me.txt_rol.TabIndex = 29
@@ -188,7 +188,7 @@ Partial Class Frm_Rol
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Location = New System.Drawing.Point(11, 10)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1045, 690)
         Me.Panel1.TabIndex = 27
@@ -203,7 +203,7 @@ Partial Class Frm_Rol
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdrolDataGridViewTextBoxColumn, Me.NombrerolDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.RolesBindingSource2
         Me.DataGridView1.Location = New System.Drawing.Point(16, 299)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(1009, 377)
@@ -241,7 +241,7 @@ Partial Class Frm_Rol
         Me.Panel2.Controls.Add(Me.txt_rol)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(16, 55)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1013, 236)
         Me.Panel2.TabIndex = 28
@@ -267,7 +267,7 @@ Partial Class Frm_Rol
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1045, 690)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Frm_Rol"
         Me.Text = "Form5"
         CType(Me.RolesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
