@@ -156,7 +156,6 @@ Partial Class Frm_Usuarios
         '
         Me.txt_buscar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_buscar.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource4, "correo_electronico", True))
         Me.txt_buscar.Location = New System.Drawing.Point(77, 225)
         Me.txt_buscar.Name = "txt_buscar"
         Me.txt_buscar.Size = New System.Drawing.Size(499, 20)

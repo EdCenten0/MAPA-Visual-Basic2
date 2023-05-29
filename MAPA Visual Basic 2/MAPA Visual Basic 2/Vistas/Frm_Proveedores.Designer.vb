@@ -57,10 +57,10 @@ Partial Class Frm_Proveedores
         Me.RucDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.ProveedoresTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.proveedoresTableAdapter()
         Me.bt_buscar = New System.Windows.Forms.Button()
         Me.txt_buscar = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.ProveedoresTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.proveedoresTableAdapter()
         CType(Me.ProveedoresBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -403,10 +403,6 @@ Partial Class Frm_Proveedores
         Me.Panel2.Size = New System.Drawing.Size(760, 325)
         Me.Panel2.TabIndex = 28
         '
-        'ProveedoresTableAdapter
-        '
-        Me.ProveedoresTableAdapter.ClearBeforeFill = True
-        '
         'bt_buscar
         '
         Me.bt_buscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -423,7 +419,7 @@ Partial Class Frm_Proveedores
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txt_buscar.Location = New System.Drawing.Point(101, 292)
         Me.txt_buscar.Name = "txt_buscar"
-        Me.txt_buscar.Size = New System.Drawing.Size(474, 20)
+        Me.txt_buscar.Size = New System.Drawing.Size(495, 20)
         Me.txt_buscar.TabIndex = 50
         '
         'Label9
@@ -435,6 +431,10 @@ Partial Class Frm_Proveedores
         Me.Label9.Size = New System.Drawing.Size(68, 20)
         Me.Label9.TabIndex = 49
         Me.Label9.Text = "Buscar:"
+        '
+        'ProveedoresTableAdapter
+        '
+        Me.ProveedoresTableAdapter.ClearBeforeFill = True
         '
         'Frm_Proveedores
         '

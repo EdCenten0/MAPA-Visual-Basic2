@@ -41,11 +41,11 @@ Partial Class Frm_Rol
         Me.IdrolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombrerolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.RolesTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.rolesTableAdapter()
         Me.bt_buscar = New System.Windows.Forms.Button()
         Me.txt_buscar = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.RolesTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.rolesTableAdapter()
         CType(Me.RolesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -152,7 +152,7 @@ Partial Class Frm_Rol
         Me.txt_rol.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RolesBindingSource2, "nombre_rol", True))
         Me.txt_rol.Location = New System.Drawing.Point(79, 103)
         Me.txt_rol.Name = "txt_rol"
-        Me.txt_rol.Size = New System.Drawing.Size(478, 20)
+        Me.txt_rol.Size = New System.Drawing.Size(499, 20)
         Me.txt_rol.TabIndex = 29
         '
         'Label2
@@ -229,20 +229,6 @@ Partial Class Frm_Rol
         Me.Panel2.Size = New System.Drawing.Size(760, 246)
         Me.Panel2.TabIndex = 28
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.Label4.Location = New System.Drawing.Point(12, 9)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(55, 31)
-        Me.Label4.TabIndex = 25
-        Me.Label4.Text = "Rol"
-        '
-        'RolesTableAdapter
-        '
-        Me.RolesTableAdapter.ClearBeforeFill = True
-        '
         'bt_buscar
         '
         Me.bt_buscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -271,6 +257,20 @@ Partial Class Frm_Rol
         Me.Label9.Size = New System.Drawing.Size(68, 20)
         Me.Label9.TabIndex = 52
         Me.Label9.Text = "Buscar:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
+        Me.Label4.Location = New System.Drawing.Point(12, 9)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(55, 31)
+        Me.Label4.TabIndex = 25
+        Me.Label4.Text = "Rol"
+        '
+        'RolesTableAdapter
+        '
+        Me.RolesTableAdapter.ClearBeforeFill = True
         '
         'Frm_Rol
         '
