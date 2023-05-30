@@ -39,4 +39,8 @@
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Me.ClientesTableAdapter.Fill(Me.MAPADataSet.clientes)
     End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Reportes.ShowDialog()
+    End Sub
 End Class
