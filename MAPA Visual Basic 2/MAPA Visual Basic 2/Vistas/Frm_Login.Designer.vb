@@ -197,8 +197,10 @@ Partial Class Frm_Login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(784, 561)
         Me.Controls.Add(Me.background_Login)
+        Me.MaximizeBox = False
         Me.Name = "Frm_Login"
-        Me.Text = "Frm_Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Iniciar sesión"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.background_Login.ResumeLayout(False)

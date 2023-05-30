@@ -38,4 +38,8 @@
     Private Sub bt_vaciar_Click(sender As Object, e As EventArgs) Handles bt_vaciar.Click
         vaciar()
     End Sub
+
+    Private Sub bt_buscar_Click(sender As Object, e As EventArgs) Handles bt_buscar.Click
+        Me.RolesTableAdapter.Buscar(Me.MAPADataSet.roles, Me.txt_buscar.Text)
+    End Sub
 End Class

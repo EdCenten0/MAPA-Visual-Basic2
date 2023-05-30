@@ -49,5 +49,7 @@
         Me.UsuariosTableAdapter.Fill(Me.MAPADataSet.usuarios)
     End Sub
 
-
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles bt_buscar.Click
+        Me.UsuariosTableAdapter.Buscar(Me.MAPADataSet.usuarios, Me.txt_buscar.Text)
+    End Sub
 End Class
