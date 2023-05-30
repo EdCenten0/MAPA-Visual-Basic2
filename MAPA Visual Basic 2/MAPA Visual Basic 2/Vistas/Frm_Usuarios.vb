@@ -49,15 +49,15 @@
                                 vaciar()
 
                             Else
-                                MessageBox.Show("Error de correo electronico, debe tener menos de 50 caracteres")
+                                MessageBox.Show("Error de correo electronico debe tener menos de 50 caracteres")
                             End If
 
                         Else
-                            MessageBox.Show("Error de contraseña, debe tener menos de 50 caracteres")
+                            MessageBox.Show("Error de contraseña debe tener menos de 50 caracteres")
                         End If
 
                     Else
-                        MessageBox.Show("Error de nombre de usuario, debe tener menos de 50 caracteres")
+                        MessageBox.Show("Error de nombre de usuario debe tener menos de 50 caracteres")
                     End If
 
                 Else
@@ -108,15 +108,15 @@
                                 vaciar()
 
                             Else
-                                MessageBox.Show("Error de correo electronico, debe tener menos de 50 caracteres")
+                                MessageBox.Show("Error de correo electronico debe tener menos de 50 caracteres")
                             End If
 
                         Else
-                            MessageBox.Show("Error de contraseña, debe tener menos de 50 caracteres")
+                            MessageBox.Show("Error de contraseña debe tener menos de 50 caracteres")
                         End If
 
                     Else
-                        MessageBox.Show("Error de nombre de usuario, debe tener menos de 50 caracteres")
+                        MessageBox.Show("Error de nombre de usuario debe tener menos de 50 caracteres")
                     End If
 
                 Else
