@@ -84,6 +84,8 @@ Public Class Frm_Vista_Previa_Pedidos
         Me.PedidosTableAdapter.Fill(Me.MAPADataSet.pedidos)
         cb_seleccion_pedido.DropDownStyle = ComboBoxStyle.DropDownList
 
+        lb_materiales_agregados.Text = obtenerMaterialesAgregados() & " materiales agregados..."
+
 
 
     End Sub
@@ -148,5 +150,9 @@ Public Class Frm_Vista_Previa_Pedidos
         Dim frm_m_p_p As New Frm_Materiales_Por_Pedido
         frm_m_p_p.id_pedido = cb_seleccion_pedido.SelectedValue
         abrirFromularioHijo(frm_m_p_p)
+    End Sub
+
+    Private Sub lb_materiales_agregados_Click(sender As Object, e As EventArgs) Handles lb_materiales_agregados.Click
+
     End Sub
 End Class
