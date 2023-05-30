@@ -3,10 +3,6 @@
         'TODO: esta línea de código carga datos en la tabla 'MAPADataSet.materiales' Puede moverla o quitarla según sea necesario.
         Me.MaterialesTableAdapter.Fill(Me.MAPADataSet.materiales)
 
-
-
-
-
         cb_unidad_medida.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 

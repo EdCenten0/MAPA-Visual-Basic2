@@ -115,10 +115,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Vistas\Frm_Materiales_Por_Pedidovb.Designer.vb">
-      <DependentUpon>Frm_Materiales_Por_Pedidovb.vb</DependentUpon>
+    <Compile Include="Vistas\Frm_Materiales_Por_Pedido.Designer.vb">
+      <DependentUpon>Frm_Materiales_Por_Pedido.vb</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Frm_Materiales_Por_Pedidovb.vb">
+    <Compile Include="Vistas\Frm_Materiales_Por_Pedido.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Frm_Tienda.Designer.vb">
@@ -213,8 +213,8 @@
     <EmbeddedResource Include="Vistas\Frm_Materiales.resx">
       <DependentUpon>Frm_Materiales.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Frm_Materiales_Por_Pedidovb.resx">
-      <DependentUpon>Frm_Materiales_Por_Pedidovb.vb</DependentUpon>
+    <EmbeddedResource Include="Vistas\Frm_Materiales_Por_Pedido.resx">
+      <DependentUpon>Frm_Materiales_Por_Pedido.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Pedido.resx">
       <DependentUpon>Frm_Pedido.vb</DependentUpon>

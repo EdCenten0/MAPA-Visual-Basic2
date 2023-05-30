@@ -145,6 +145,8 @@ Public Class Frm_Vista_Previa_Pedidos
     End Sub
 
     Private Sub bt_agregar_materiales_Click_1(sender As Object, e As EventArgs) Handles bt_agregar_materiales.Click
-        abrirFromularioHijo(New Frm_Materiales_Por_Pedido)
+        Dim frm_m_p_p As New Frm_Materiales_Por_Pedido
+        frm_m_p_p.id_pedido = cb_seleccion_pedido.SelectedValue
+        abrirFromularioHijo(frm_m_p_p)
     End Sub
 End Class
