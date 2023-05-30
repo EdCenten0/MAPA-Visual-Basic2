@@ -7,6 +7,7 @@ Public Class Frm_Login
 
     Private Sub Frm_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion = New SqlConnection("Data Source=FRANCISCO-MELEN;Initial Catalog=MAPA;Persist Security Info=True;User ID=sa;Password=1234")
+        txt_Clave.PasswordChar = "*"
     End Sub
 
     Private Sub bt_Ingresar_Click(sender As Object, e As EventArgs) Handles bt_Ingresar.Click

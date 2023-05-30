@@ -4,6 +4,7 @@
         Me.RolesTableAdapter.Fill(Me.MAPADataSet.roles)
         'TODO: esta línea de código carga datos en la tabla 'MAPADataSet.usuarios' Puede moverla o quitarla según sea necesario.
         Me.UsuariosTableAdapter.Fill(Me.MAPADataSet.usuarios)
+        txt_clave.PasswordChar = "*"
 
 
     End Sub
