@@ -35,7 +35,7 @@ Public Class Frm_Materiales
         Me.MaterialesTableAdapter.Fill(Me.MAPADataSet.materiales)
 
     End Sub
-8b9acb7cf11b252055032977ed35f195566bd9d1
+
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
 
         MessageBox.Show("Se ha eliminado el registro: " & txt_material.Text)
