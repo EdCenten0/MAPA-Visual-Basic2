@@ -49,15 +49,15 @@
                                 vaciar()
 
                             Else
-                                MessageBox.Show("Error de correo electronico debe tener menos de 50 caracteres")
+                                MessageBox.Show("El correo electronico debe tener menos de 50 caracteres")
                             End If
 
                         Else
-                            MessageBox.Show("Error de contraseña debe tener menos de 50 caracteres")
+                            MessageBox.Show("La contraseña debe tener menos de 50 caracteres")
                         End If
 
                     Else
-                        MessageBox.Show("Error de nombre de usuario debe tener menos de 50 caracteres")
+                        MessageBox.Show("El nombre de usuario debe tener menos de 50 caracteres")
                     End If
 
                 Else
@@ -69,7 +69,7 @@
             End If
 
         Else
-            MessageBox.Show("Llene los campos vacios")
+            MessageBox.Show("Llene todos campos vacios")
         End If
 
 
@@ -127,10 +127,9 @@
                 MessageBox.Show("Seleccione el registro a editar")
             End If
 
-
-
         Else
-            MessageBox.Show("Llene los campos vacios")
+            MessageBox.Show("Llene todos campos vacios")
+
         End If
 
     End Sub

@@ -21,7 +21,7 @@
                     vaciar()
 
                 Else
-                    MessageBox.Show("Error de rol debe tener menos de 50 caracteres")
+                    MessageBox.Show("El rol debe tener menos de 50 caracteres")
 
                 End If
 
@@ -77,7 +77,7 @@
                     vaciar()
 
                 Else
-                    MessageBox.Show("Error de rol debe tener menos de 50 caracteres")
+                    MessageBox.Show("El rol debe tener menos de 50 caracteres")
 
                 End If
 
