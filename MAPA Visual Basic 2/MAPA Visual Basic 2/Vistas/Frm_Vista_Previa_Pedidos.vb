@@ -143,4 +143,8 @@ Public Class Frm_Vista_Previa_Pedidos
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
+
+    Private Sub bt_agregar_materiales_Click_1(sender As Object, e As EventArgs) Handles bt_agregar_materiales.Click
+        abrirFromularioHijo(New Frm_Materiales_Por_Pedido)
+    End Sub
 End Class
