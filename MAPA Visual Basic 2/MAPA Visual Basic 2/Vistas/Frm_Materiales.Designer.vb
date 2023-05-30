@@ -24,10 +24,16 @@ Partial Class Frm_Materiales
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.lblId = New System.Windows.Forms.Label()
-        Me.txt_descripcion = New System.Windows.Forms.RichTextBox()
+        Me.cbIdPedido = New System.Windows.Forms.ComboBox()
         Me.MaterialesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
+        Me.lblIdPedido = New System.Windows.Forms.Label()
+        Me.btnRefrescar = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.lblBuscar = New System.Windows.Forms.Label()
+        Me.lblId = New System.Windows.Forms.Label()
+        Me.txt_descripcion = New System.Windows.Forms.RichTextBox()
         Me.txt_precio_total = New System.Windows.Forms.TextBox()
         Me.txt_cantidad = New System.Windows.Forms.TextBox()
         Me.txt_precio_unidad = New System.Windows.Forms.TextBox()
@@ -54,12 +60,7 @@ Partial Class Frm_Materiales
         Me.MaterialesTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materialesTableAdapter()
         Me.MaterialesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnRefrescar = New System.Windows.Forms.Button()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.txtBuscar = New System.Windows.Forms.TextBox()
-        Me.lblBuscar = New System.Windows.Forms.Label()
-        Me.lblIdPedido = New System.Windows.Forms.Label()
-        Me.cbIdPedido = New System.Windows.Forms.ComboBox()
+        Me.lbl_id = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         CType(Me.MaterialesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,6 +72,7 @@ Partial Class Frm_Materiales
         '
         Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.Controls.Add(Me.lbl_id)
         Me.Panel2.Controls.Add(Me.cbIdPedido)
         Me.Panel2.Controls.Add(Me.lblIdPedido)
         Me.Panel2.Controls.Add(Me.btnRefrescar)
@@ -99,6 +101,75 @@ Partial Class Frm_Materiales
         Me.Panel2.Size = New System.Drawing.Size(832, 176)
         Me.Panel2.TabIndex = 5
         '
+        'cbIdPedido
+        '
+        Me.cbIdPedido.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "id_pedido", True))
+        Me.cbIdPedido.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbIdPedido.FormattingEnabled = True
+        Me.cbIdPedido.Items.AddRange(New Object() {"pedidos"})
+        Me.cbIdPedido.Location = New System.Drawing.Point(512, 80)
+        Me.cbIdPedido.Name = "cbIdPedido"
+        Me.cbIdPedido.Size = New System.Drawing.Size(121, 21)
+        Me.cbIdPedido.TabIndex = 36
+        '
+        'MaterialesBindingSource
+        '
+        Me.MaterialesBindingSource.DataMember = "materiales"
+        Me.MaterialesBindingSource.DataSource = Me.MAPADataSet
+        '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'lblIdPedido
+        '
+        Me.lblIdPedido.AutoSize = True
+        Me.lblIdPedido.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIdPedido.Location = New System.Drawing.Point(444, 83)
+        Me.lblIdPedido.Name = "lblIdPedido"
+        Me.lblIdPedido.Size = New System.Drawing.Size(72, 16)
+        Me.lblIdPedido.TabIndex = 35
+        Me.lblIdPedido.Text = "Id_pedido:"
+        '
+        'btnRefrescar
+        '
+        Me.btnRefrescar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRefrescar.Location = New System.Drawing.Point(544, 149)
+        Me.btnRefrescar.Name = "btnRefrescar"
+        Me.btnRefrescar.Size = New System.Drawing.Size(75, 24)
+        Me.btnRefrescar.TabIndex = 34
+        Me.btnRefrescar.Text = "Refrescar"
+        Me.btnRefrescar.UseVisualStyleBackColor = True
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.Location = New System.Drawing.Point(619, 114)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar.TabIndex = 33
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'txtBuscar
+        '
+        Me.txtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuscar.Location = New System.Drawing.Point(512, 114)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(100, 21)
+        Me.txtBuscar.TabIndex = 32
+        '
+        'lblBuscar
+        '
+        Me.lblBuscar.AutoSize = True
+        Me.lblBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBuscar.Location = New System.Drawing.Point(444, 119)
+        Me.lblBuscar.Name = "lblBuscar"
+        Me.lblBuscar.Size = New System.Drawing.Size(53, 16)
+        Me.lblBuscar.TabIndex = 31
+        Me.lblBuscar.Text = "Buscar:"
+        '
         'lblId
         '
         Me.lblId.AutoSize = True
@@ -119,19 +190,10 @@ Partial Class Frm_Materiales
         Me.txt_descripcion.TabIndex = 15
         Me.txt_descripcion.Text = ""
         '
-        'MaterialesBindingSource
-        '
-        Me.MaterialesBindingSource.DataMember = "materiales"
-        Me.MaterialesBindingSource.DataSource = Me.MAPADataSet
-        '
-        'MAPADataSet
-        '
-        Me.MAPADataSet.DataSetName = "MAPADataSet"
-        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'txt_precio_total
         '
         Me.txt_precio_total.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "precio_total", True))
+        Me.txt_precio_total.Enabled = False
         Me.txt_precio_total.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
         Me.txt_precio_total.Location = New System.Drawing.Point(538, 46)
         Me.txt_precio_total.Name = "txt_precio_total"
@@ -370,63 +432,16 @@ Partial Class Frm_Materiales
         Me.Label1.TabIndex = 26
         Me.Label1.Text = "Materiales"
         '
-        'btnRefrescar
+        'lbl_id
         '
-        Me.btnRefrescar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRefrescar.Location = New System.Drawing.Point(544, 149)
-        Me.btnRefrescar.Name = "btnRefrescar"
-        Me.btnRefrescar.Size = New System.Drawing.Size(75, 24)
-        Me.btnRefrescar.TabIndex = 34
-        Me.btnRefrescar.Text = "Refrescar"
-        Me.btnRefrescar.UseVisualStyleBackColor = True
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.Location = New System.Drawing.Point(619, 114)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBuscar.TabIndex = 33
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'txtBuscar
-        '
-        Me.txtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBuscar.Location = New System.Drawing.Point(512, 114)
-        Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(100, 21)
-        Me.txtBuscar.TabIndex = 32
-        '
-        'lblBuscar
-        '
-        Me.lblBuscar.AutoSize = True
-        Me.lblBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBuscar.Location = New System.Drawing.Point(444, 119)
-        Me.lblBuscar.Name = "lblBuscar"
-        Me.lblBuscar.Size = New System.Drawing.Size(53, 16)
-        Me.lblBuscar.TabIndex = 31
-        Me.lblBuscar.Text = "Buscar:"
-        '
-        'lblIdPedido
-        '
-        Me.lblIdPedido.AutoSize = True
-        Me.lblIdPedido.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIdPedido.Location = New System.Drawing.Point(444, 83)
-        Me.lblIdPedido.Name = "lblIdPedido"
-        Me.lblIdPedido.Size = New System.Drawing.Size(72, 16)
-        Me.lblIdPedido.TabIndex = 35
-        Me.lblIdPedido.Text = "Id_pedido:"
-        '
-        'cbIdPedido
-        '
-        Me.cbIdPedido.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "id_pedido", True))
-        Me.cbIdPedido.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbIdPedido.FormattingEnabled = True
-        Me.cbIdPedido.Location = New System.Drawing.Point(512, 80)
-        Me.cbIdPedido.Name = "cbIdPedido"
-        Me.cbIdPedido.Size = New System.Drawing.Size(121, 21)
-        Me.cbIdPedido.TabIndex = 36
+        Me.lbl_id.AutoSize = True
+        Me.lbl_id.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "id_material", True))
+        Me.lbl_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_id.ForeColor = System.Drawing.SystemColors.Control
+        Me.lbl_id.Location = New System.Drawing.Point(62, 34)
+        Me.lbl_id.Name = "lbl_id"
+        Me.lbl_id.Size = New System.Drawing.Size(0, 16)
+        Me.lbl_id.TabIndex = 37
         '
         'Frm_Materiales
         '
@@ -486,4 +501,5 @@ Partial Class Frm_Materiales
     Friend WithEvents lblBuscar As Label
     Friend WithEvents cbIdPedido As ComboBox
     Friend WithEvents lblIdPedido As Label
+    Friend WithEvents lbl_id As Label
 End Class
