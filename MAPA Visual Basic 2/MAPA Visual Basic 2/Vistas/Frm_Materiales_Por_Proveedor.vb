@@ -22,7 +22,11 @@ Public Class Frm_Materiales_Por_Proveedor
     End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
-        Label5.Text = ComboBox2.SelectedItem.get_id_material()
+        If ComboBox2.SelectedIndex = -1 Then
+            Label5.Text = ""
+        Else
+            Label5.Text = ComboBox2.SelectedItem.get_id_material()
+        End If
     End Sub
 
     Private Class Material
@@ -149,13 +153,19 @@ Public Class Frm_Materiales_Por_Proveedor
 
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        Label6.Text = ComboBox1.SelectedItem.get_id_proveedor()
+        If ComboBox1.SelectedIndex = -1 Then
+            Label6.Text = ""
+        Else
+            Label6.Text = ComboBox1.SelectedItem.get_id_proveedor()
+        End If
+
     End Sub
 
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
         MessageBox.Show("Se eliminó la relación entre: " & ComboBox2.SelectedItem.get_nombre_material & " y " & ComboBox1.SelectedItem.get_nombre)
-
-
+        Me.Materiales_por_proveedorTableAdapter.DeleteQuery(DataGridView1.CurrentRow.Cells(0).Value.ToString())
+        Me.Materiales_por_proveedorTableAdapter.Fill(Me.MAPADataSet.materiales_por_proveedor)
+        vaciarComboBoxes()
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
@@ -163,8 +173,8 @@ Public Class Frm_Materiales_Por_Proveedor
         Dim id_proveedor_tabla As Integer
 
 
-        If Integer.TryParse(DataGridView1.CurrentRow.Cells(0).Value.ToString(), id_proveedor_tabla) AndAlso
-        Integer.TryParse(DataGridView1.CurrentRow.Cells(1).Value.ToString(), id_material_tabla) Then
+        If Integer.TryParse(DataGridView1.CurrentRow.Cells(1).Value.ToString(), id_proveedor_tabla) AndAlso
+        Integer.TryParse(DataGridView1.CurrentRow.Cells(2).Value.ToString(), id_material_tabla) Then
 
             For Each material As Material In ComboBox2.Items
                 If material.get_id_material() = id_material_tabla Then
@@ -182,7 +192,10 @@ Public Class Frm_Materiales_Por_Proveedor
         End If
     End Sub
 
-
+    Private Sub vaciarComboBoxes()
+        Me.ComboBox1.SelectedIndex = -1
+        Me.ComboBox2.SelectedIndex = -1
+    End Sub
 
 End Class
 

@@ -41,6 +41,11 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lbl_material = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Materiales_por_proveedorTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_proveedorTableAdapter()
+        Me.ProveedoresTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.proveedoresTableAdapter()
+        Me.Materiales_por_pedidoTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter()
+        Me.MaterialesporproveedorBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdproveedorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdmaterialesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombrematerialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,10 +59,6 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.CatalogoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RucDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Materiales_por_proveedorTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_proveedorTableAdapter()
-        Me.ProveedoresTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.proveedoresTableAdapter()
-        Me.Materiales_por_pedidoTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter()
-        Me.MaterialesporproveedorBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.MaterialesporproveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -251,7 +252,7 @@ Partial Class Frm_Materiales_Por_Proveedor
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdproveedorDataGridViewTextBoxColumn, Me.IdmaterialesDataGridViewTextBoxColumn, Me.NombrematerialDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.CantidadDataGridViewTextBoxColumn, Me.unidad_de_medida, Me.precio_por_unidad, Me.NombreDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CatalogoDataGridViewTextBoxColumn, Me.RucDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.IdproveedorDataGridViewTextBoxColumn, Me.IdmaterialesDataGridViewTextBoxColumn, Me.NombrematerialDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.CantidadDataGridViewTextBoxColumn, Me.unidad_de_medida, Me.precio_por_unidad, Me.NombreDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CatalogoDataGridViewTextBoxColumn, Me.RucDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.MaterialesporproveedorBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(12, 297)
         Me.DataGridView1.Name = "DataGridView1"
@@ -259,6 +260,32 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(1120, 313)
         Me.DataGridView1.TabIndex = 32
+        '
+        'Materiales_por_proveedorTableAdapter
+        '
+        Me.Materiales_por_proveedorTableAdapter.ClearBeforeFill = True
+        '
+        'ProveedoresTableAdapter
+        '
+        Me.ProveedoresTableAdapter.ClearBeforeFill = True
+        '
+        'Materiales_por_pedidoTableAdapter
+        '
+        Me.Materiales_por_pedidoTableAdapter.ClearBeforeFill = True
+        '
+        'MaterialesporproveedorBindingSource1
+        '
+        Me.MaterialesporproveedorBindingSource1.DataMember = "materiales_por_proveedor"
+        Me.MaterialesporproveedorBindingSource1.DataSource = Me.MAPADataSet
+        '
+        'Column1
+        '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column1.DataPropertyName = "id_materiales_por_proveedor"
+        Me.Column1.HeaderText = "Relacion ID"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
         '
         'IdproveedorDataGridViewTextBoxColumn
         '
@@ -364,23 +391,6 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.DireccionDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
         '
-        'Materiales_por_proveedorTableAdapter
-        '
-        Me.Materiales_por_proveedorTableAdapter.ClearBeforeFill = True
-        '
-        'ProveedoresTableAdapter
-        '
-        Me.ProveedoresTableAdapter.ClearBeforeFill = True
-        '
-        'Materiales_por_pedidoTableAdapter
-        '
-        Me.Materiales_por_pedidoTableAdapter.ClearBeforeFill = True
-        '
-        'MaterialesporproveedorBindingSource1
-        '
-        Me.MaterialesporproveedorBindingSource1.DataMember = "materiales_por_proveedor"
-        Me.MaterialesporproveedorBindingSource1.DataSource = Me.MAPADataSet
-        '
         'Frm_Materiales_Por_Proveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -422,6 +432,10 @@ Partial Class Frm_Materiales_Por_Proveedor
     Friend WithEvents MAPADataSet As MAPADataSet
     Friend WithEvents MaterialesporproveedorBindingSource As BindingSource
     Friend WithEvents Materiales_por_proveedorTableAdapter As MAPADataSetTableAdapters.materiales_por_proveedorTableAdapter
+    Friend WithEvents ProveedoresTableAdapter As MAPADataSetTableAdapters.proveedoresTableAdapter
+    Friend WithEvents Materiales_por_pedidoTableAdapter As MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter
+    Friend WithEvents MaterialesporproveedorBindingSource1 As BindingSource
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents IdproveedorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdmaterialesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombrematerialDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -435,7 +449,4 @@ Partial Class Frm_Materiales_Por_Proveedor
     Friend WithEvents CatalogoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents RucDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ProveedoresTableAdapter As MAPADataSetTableAdapters.proveedoresTableAdapter
-    Friend WithEvents Materiales_por_pedidoTableAdapter As MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter
-    Friend WithEvents MaterialesporproveedorBindingSource1 As BindingSource
 End Class
