@@ -9,9 +9,13 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_guardar.Click
 
+        Dim mult As Double
+
+        mult = (txt_precio_unidad.Text * txt_cantidad.Text).ToString
+
         MessageBox.Show("Se ha guardado el registro: " & txt_material.Text)
 
-        Me.MaterialesTableAdapter.Guardar(txt_material.Text, txt_descripcion.Text, txt_cantidad.Text, cb_unidad_medida.SelectedItem, txt_precio_unidad.Text, txt_precio_total.Text, 2)
+        Me.MaterialesTableAdapter.Guardar(txt_material.Text, txt_descripcion.Text, txt_cantidad.Text, cb_unidad_medida.SelectedItem, txt_precio_unidad.Text, mult, 2)
         Me.MaterialesTableAdapter.Fill(Me.MAPADataSet.materiales)
     End Sub
 
