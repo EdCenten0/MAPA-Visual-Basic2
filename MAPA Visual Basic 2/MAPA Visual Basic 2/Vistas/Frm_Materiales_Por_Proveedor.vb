@@ -202,8 +202,17 @@ Public Class Frm_Materiales_Por_Proveedor
     End Sub
 
     Private Sub btn_editar_Click(sender As Object, e As EventArgs) Handles btn_editar.Click
+        MsgBox("Registro editado")
         Me.Materiales_por_proveedorTableAdapter.UpdateQuery(Label6.Text, Label5.Text, DataGridView1.CurrentRow.Cells(0).Value.ToString())
         Me.Materiales_por_proveedorTableAdapter.Fill(Me.MAPADataSet.materiales_por_proveedor)
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub btn_vaciar_campos_Click(sender As Object, e As EventArgs) Handles btn_vaciar_campos.Click
+        vaciarComboBoxes()
     End Sub
 End Class
 

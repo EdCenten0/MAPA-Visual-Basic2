@@ -151,7 +151,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label6.Location = New System.Drawing.Point(534, 73)
+        Me.Label6.Location = New System.Drawing.Point(541, 15)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(0, 20)
@@ -161,7 +161,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label5.Location = New System.Drawing.Point(534, 15)
+        Me.Label5.Location = New System.Drawing.Point(541, 69)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(0, 20)
@@ -171,7 +171,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         '
         Me.ComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MaterialesporproveedorBindingSource, "id_materiales_por_proveedor", True))
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(118, 15)
+        Me.ComboBox2.Location = New System.Drawing.Point(118, 69)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(256, 24)
         Me.ComboBox2.TabIndex = 7
@@ -195,7 +195,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         '
         Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MaterialesporproveedorBindingSource, "id_materiales_por_proveedor", True))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(118, 73)
+        Me.ComboBox1.Location = New System.Drawing.Point(118, 15)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(256, 24)
         Me.ComboBox1.TabIndex = 6
@@ -204,7 +204,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label4.Location = New System.Drawing.Point(406, 73)
+        Me.Label4.Location = New System.Drawing.Point(407, 15)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(118, 20)
@@ -215,7 +215,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label3.Location = New System.Drawing.Point(406, 15)
+        Me.Label3.Location = New System.Drawing.Point(407, 69)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(100, 20)
@@ -226,7 +226,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label2.Location = New System.Drawing.Point(4, 73)
+        Me.Label2.Location = New System.Drawing.Point(4, 15)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(97, 20)
@@ -237,7 +237,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         '
         Me.lbl_material.AutoSize = True
         Me.lbl_material.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.lbl_material.Location = New System.Drawing.Point(4, 15)
+        Me.lbl_material.Location = New System.Drawing.Point(4, 69)
         Me.lbl_material.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_material.Name = "lbl_material"
         Me.lbl_material.Size = New System.Drawing.Size(79, 20)
