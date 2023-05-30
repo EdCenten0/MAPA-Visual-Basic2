@@ -30,6 +30,9 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.btn_editar = New System.Windows.Forms.Button()
         Me.btn_guardar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.MaterialesporproveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MAPADataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -38,10 +41,6 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lbl_material = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.MaterialesporproveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MAPADataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
-        Me.Materiales_por_proveedorTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_proveedorTableAdapter()
         Me.IdproveedorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdmaterialesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombrematerialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -55,16 +54,16 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.CatalogoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RucDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MaterialesporproveedorBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProveedoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Materiales_por_proveedorTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_proveedorTableAdapter()
         Me.ProveedoresTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.proveedoresTableAdapter()
+        Me.Materiales_por_pedidoTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter()
+        Me.MaterialesporproveedorBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MaterialesporproveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MaterialesporproveedorBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -154,9 +153,23 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.Label6.Location = New System.Drawing.Point(534, 73)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(24, 20)
+        Me.Label6.Size = New System.Drawing.Size(0, 20)
         Me.Label6.TabIndex = 9
-        Me.Label6.Text = "id"
+        '
+        'MaterialesporproveedorBindingSource
+        '
+        Me.MaterialesporproveedorBindingSource.DataMember = "materiales_por_proveedor"
+        Me.MaterialesporproveedorBindingSource.DataSource = Me.MAPADataSetBindingSource
+        '
+        'MAPADataSetBindingSource
+        '
+        Me.MAPADataSetBindingSource.DataSource = Me.MAPADataSet
+        Me.MAPADataSetBindingSource.Position = 0
+        '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label5
         '
@@ -165,15 +178,12 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.Label5.Location = New System.Drawing.Point(534, 15)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(24, 20)
+        Me.Label5.Size = New System.Drawing.Size(0, 20)
         Me.Label5.TabIndex = 8
-        Me.Label5.Text = "id"
         '
         'ComboBox2
         '
-        Me.ComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MaterialesporproveedorBindingSource, "id_materiales", True))
-        Me.ComboBox2.DataSource = Me.MaterialesporproveedorBindingSource
-        Me.ComboBox2.DisplayMember = "nombre_material"
+        Me.ComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MaterialesporproveedorBindingSource, "id_materiales_por_proveedor", True))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(118, 15)
         Me.ComboBox2.Name = "ComboBox2"
@@ -182,9 +192,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         '
         'ComboBox1
         '
-        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MaterialesporproveedorBindingSource, "id_proveedor", True))
-        Me.ComboBox1.DataSource = Me.MaterialesporproveedorBindingSource
-        Me.ComboBox1.DisplayMember = "nombre"
+        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MaterialesporproveedorBindingSource, "id_materiales_por_proveedor", True))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(118, 73)
         Me.ComboBox1.Name = "ComboBox1"
@@ -251,25 +259,6 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(1120, 313)
         Me.DataGridView1.TabIndex = 32
-        '
-        'MaterialesporproveedorBindingSource
-        '
-        Me.MaterialesporproveedorBindingSource.DataMember = "materiales_por_proveedor"
-        Me.MaterialesporproveedorBindingSource.DataSource = Me.MAPADataSetBindingSource
-        '
-        'MAPADataSetBindingSource
-        '
-        Me.MAPADataSetBindingSource.DataSource = Me.MAPADataSet
-        Me.MAPADataSetBindingSource.Position = 0
-        '
-        'MAPADataSet
-        '
-        Me.MAPADataSet.DataSetName = "MAPADataSet"
-        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Materiales_por_proveedorTableAdapter
-        '
-        Me.Materiales_por_proveedorTableAdapter.ClearBeforeFill = True
         '
         'IdproveedorDataGridViewTextBoxColumn
         '
@@ -375,19 +364,22 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.DireccionDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
         '
-        'MaterialesporproveedorBindingSource1
+        'Materiales_por_proveedorTableAdapter
         '
-        Me.MaterialesporproveedorBindingSource1.DataMember = "materiales_por_proveedor"
-        Me.MaterialesporproveedorBindingSource1.DataSource = Me.MAPADataSetBindingSource
-        '
-        'ProveedoresBindingSource
-        '
-        Me.ProveedoresBindingSource.DataMember = "proveedores"
-        Me.ProveedoresBindingSource.DataSource = Me.MAPADataSetBindingSource
+        Me.Materiales_por_proveedorTableAdapter.ClearBeforeFill = True
         '
         'ProveedoresTableAdapter
         '
         Me.ProveedoresTableAdapter.ClearBeforeFill = True
+        '
+        'Materiales_por_pedidoTableAdapter
+        '
+        Me.Materiales_por_pedidoTableAdapter.ClearBeforeFill = True
+        '
+        'MaterialesporproveedorBindingSource1
+        '
+        Me.MaterialesporproveedorBindingSource1.DataMember = "materiales_por_proveedor"
+        Me.MaterialesporproveedorBindingSource1.DataSource = Me.MAPADataSet
         '
         'Frm_Materiales_Por_Proveedor
         '
@@ -401,12 +393,11 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.Text = "Frm_Materiales_Por_Proveedor"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MaterialesporproveedorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MAPADataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MaterialesporproveedorBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -444,7 +435,7 @@ Partial Class Frm_Materiales_Por_Proveedor
     Friend WithEvents CatalogoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents RucDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents MaterialesporproveedorBindingSource1 As BindingSource
-    Friend WithEvents ProveedoresBindingSource As BindingSource
     Friend WithEvents ProveedoresTableAdapter As MAPADataSetTableAdapters.proveedoresTableAdapter
+    Friend WithEvents Materiales_por_pedidoTableAdapter As MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter
+    Friend WithEvents MaterialesporproveedorBindingSource1 As BindingSource
 End Class
