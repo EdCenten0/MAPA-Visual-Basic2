@@ -4,6 +4,8 @@ Public Class Frm_Materiales
         'TODO: esta línea de código carga datos en la tabla 'MAPADataSet.materiales' Puede moverla o quitarla según sea necesario.
         Me.MaterialesTableAdapter.Fill(Me.MAPADataSet.materiales)
         Me.comboBox()
+        Me.cb_unidad_medida.SelectedText = "Seleccionar"
+        vaciarCampos()
 
     End Sub
 
@@ -45,11 +47,15 @@ Public Class Frm_Materiales
     End Sub
 
     Private Sub btn_vaciar_campos_Click(sender As Object, e As EventArgs) Handles btn_vaciar_campos.Click
-        txt_material.Clear()
-        txt_descripcion.Clear()
-        txt_precio_unidad.Clear()
-        txt_cantidad.Clear()
-        txt_precio_total.Clear()
+
+        txt_material.Text = ""
+        txt_descripcion.Text = ""
+        txt_cantidad.Text = ""
+        txt_precio_unidad.Text = ""
+        txt_cantidad.Text = ""
+        cb_unidad_medida.Text = "medidas"
+        txt_precio_total.Text = ""
+        cbIdPedido.Text = "pedidos"
 
 
     End Sub
@@ -74,7 +80,22 @@ Public Class Frm_Materiales
 
         cbIdPedido.DisplayMember = "id_pedido"
         cbIdPedido.ValueMember = "id_pedido"
+
+
     End Sub
 
+
+    Public Sub vaciarCampos()
+
+        txt_material.Text = ""
+        txt_descripcion.Text = ""
+        txt_cantidad.Text = ""
+        txt_precio_unidad.Text = ""
+        txt_cantidad.Text = ""
+        cb_unidad_medida.Text = "medidas"
+        txt_precio_total.Text = ""
+        cbIdPedido.Text = "pedidos"
+
+    End Sub
 
 End Class
