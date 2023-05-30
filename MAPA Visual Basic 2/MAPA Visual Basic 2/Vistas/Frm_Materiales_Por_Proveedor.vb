@@ -2,6 +2,9 @@
 Imports System.Data.SqlClient
 
 Public Class Frm_Materiales_Por_Proveedor
+
+
+
     Private Sub Frm_Materiales_Por_Proveedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'MAPADataSet.proveedores' Puede moverla o quitarla según sea necesario.
         Me.ProveedoresTableAdapter.Fill(Me.MAPADataSet.proveedores)
@@ -190,6 +193,7 @@ Public Class Frm_Materiales_Por_Proveedor
                 End If
             Next
         End If
+
     End Sub
 
     Private Sub vaciarComboBoxes()
@@ -197,6 +201,10 @@ Public Class Frm_Materiales_Por_Proveedor
         Me.ComboBox2.SelectedIndex = -1
     End Sub
 
+    Private Sub btn_editar_Click(sender As Object, e As EventArgs) Handles btn_editar.Click
+        Me.Materiales_por_proveedorTableAdapter.UpdateQuery(Label6.Text, Label5.Text, DataGridView1.CurrentRow.Cells(0).Value.ToString())
+        Me.Materiales_por_proveedorTableAdapter.Fill(Me.MAPADataSet.materiales_por_proveedor)
+    End Sub
 End Class
 
 

@@ -41,10 +41,6 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lbl_material = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Materiales_por_proveedorTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_proveedorTableAdapter()
-        Me.ProveedoresTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.proveedoresTableAdapter()
-        Me.Materiales_por_pedidoTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter()
-        Me.MaterialesporproveedorBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdproveedorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdmaterialesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -59,6 +55,10 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.CatalogoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RucDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Materiales_por_proveedorTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_proveedorTableAdapter()
+        Me.ProveedoresTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.proveedoresTableAdapter()
+        Me.Materiales_por_pedidoTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter()
+        Me.MaterialesporproveedorBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.MaterialesporproveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -261,23 +261,6 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.DataGridView1.Size = New System.Drawing.Size(1120, 313)
         Me.DataGridView1.TabIndex = 32
         '
-        'Materiales_por_proveedorTableAdapter
-        '
-        Me.Materiales_por_proveedorTableAdapter.ClearBeforeFill = True
-        '
-        'ProveedoresTableAdapter
-        '
-        Me.ProveedoresTableAdapter.ClearBeforeFill = True
-        '
-        'Materiales_por_pedidoTableAdapter
-        '
-        Me.Materiales_por_pedidoTableAdapter.ClearBeforeFill = True
-        '
-        'MaterialesporproveedorBindingSource1
-        '
-        Me.MaterialesporproveedorBindingSource1.DataMember = "materiales_por_proveedor"
-        Me.MaterialesporproveedorBindingSource1.DataSource = Me.MAPADataSet
-        '
         'Column1
         '
         Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -390,6 +373,23 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Dirección"
         Me.DireccionDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        '
+        'Materiales_por_proveedorTableAdapter
+        '
+        Me.Materiales_por_proveedorTableAdapter.ClearBeforeFill = True
+        '
+        'ProveedoresTableAdapter
+        '
+        Me.ProveedoresTableAdapter.ClearBeforeFill = True
+        '
+        'Materiales_por_pedidoTableAdapter
+        '
+        Me.Materiales_por_pedidoTableAdapter.ClearBeforeFill = True
+        '
+        'MaterialesporproveedorBindingSource1
+        '
+        Me.MaterialesporproveedorBindingSource1.DataMember = "materiales_por_proveedor"
+        Me.MaterialesporproveedorBindingSource1.DataSource = Me.MAPADataSet
         '
         'Frm_Materiales_Por_Proveedor
         '
