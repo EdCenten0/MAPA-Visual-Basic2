@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CD247494-1C20-48DC-B3CA-1799782E154A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>MAPA_Visual_Basic_2.Frm_Login</StartupObject>
+    <StartupObject>MAPA_Visual_Basic_2.Frm_Principal</StartupObject>
     <RootNamespace>MAPA_Visual_Basic_2</RootNamespace>
     <AssemblyName>MAPA Visual Basic 2</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -121,6 +121,12 @@
     <Compile Include="Vistas\Frm_Materiales_Por_Pedido.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vistas\Frm_Materiales_Por_Proveedor.Designer.vb">
+      <DependentUpon>Frm_Materiales_Por_Proveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Frm_Materiales_Por_Proveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vistas\Frm_Tienda.Designer.vb">
       <DependentUpon>Frm_Tienda.vb</DependentUpon>
     </Compile>
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Materiales_Por_Pedido.resx">
       <DependentUpon>Frm_Materiales_Por_Pedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Frm_Materiales_Por_Proveedor.resx">
+      <DependentUpon>Frm_Materiales_Por_Proveedor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Pedido.resx">
       <DependentUpon>Frm_Pedido.vb</DependentUpon>

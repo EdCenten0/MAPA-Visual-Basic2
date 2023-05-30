@@ -75,6 +75,8 @@ Partial Public Class MAPADataSet
     
     Private relationFK_ventas_tienda As Global.System.Data.DataRelation
     
+    Private relationFK_materiales_por_proveedor_materiales1 As Global.System.Data.DataRelation
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -518,6 +520,7 @@ Partial Public Class MAPADataSet
         Me.relationFK_usuarios_roles = Me.Relations("FK_usuarios_roles")
         Me.relationFK_ventas_facturas = Me.Relations("FK_ventas_facturas")
         Me.relationFK_ventas_tienda = Me.Relations("FK_ventas_tienda")
+        Me.relationFK_materiales_por_proveedor_materiales1 = Me.Relations("FK_materiales_por_proveedor_materiales1")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -578,6 +581,8 @@ Partial Public Class MAPADataSet
         Me.Relations.Add(Me.relationFK_ventas_facturas)
         Me.relationFK_ventas_tienda = New Global.System.Data.DataRelation("FK_ventas_tienda", New Global.System.Data.DataColumn() {Me.tabletienda.id_tiendaColumn}, New Global.System.Data.DataColumn() {Me.tableventas.id_tiendaColumn}, false)
         Me.Relations.Add(Me.relationFK_ventas_tienda)
+        Me.relationFK_materiales_por_proveedor_materiales1 = New Global.System.Data.DataRelation("FK_materiales_por_proveedor_materiales1", New Global.System.Data.DataColumn() {Me.tablemateriales_por_pedido.id_materialColumn}, New Global.System.Data.DataColumn() {Me.tablemateriales_por_proveedor.id_materialesColumn}, false)
+        Me.Relations.Add(Me.relationFK_materiales_por_proveedor_materiales1)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2111,6 +2116,32 @@ Partial Public Class MAPADataSet
         
         Private columnid_materiales As Global.System.Data.DataColumn
         
+        Private columnnombre_material As Global.System.Data.DataColumn
+        
+        Private columndescripcion As Global.System.Data.DataColumn
+        
+        Private columncantidad As Global.System.Data.DataColumn
+        
+        Private columnunidad_de_medida As Global.System.Data.DataColumn
+        
+        Private columnprecio_por_unidad As Global.System.Data.DataColumn
+        
+        Private columnprecio_total As Global.System.Data.DataColumn
+        
+        Private columnid_pedido As Global.System.Data.DataColumn
+        
+        Private columnnombre As Global.System.Data.DataColumn
+        
+        Private columnemail As Global.System.Data.DataColumn
+        
+        Private columntelefono As Global.System.Data.DataColumn
+        
+        Private columncatalogo As Global.System.Data.DataColumn
+        
+        Private columnruc As Global.System.Data.DataColumn
+        
+        Private columndireccion As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -2171,6 +2202,110 @@ Partial Public Class MAPADataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property nombre_materialColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnombre_material
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property descripcionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndescripcion
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property cantidadColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncantidad
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property unidad_de_medidaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnunidad_de_medida
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property precio_por_unidadColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnprecio_por_unidad
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property precio_totalColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnprecio_total
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property id_pedidoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_pedido
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property nombreColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnombre
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property emailColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnemail
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property telefonoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntelefono
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property catalogoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncatalogo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property rucColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnruc
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property direccionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndireccion
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2207,9 +2342,9 @@ Partial Public Class MAPADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addmateriales_por_proveedorRow(ByVal parentproveedoresRowByFK_materiales_por_proveedor_proveedores As proveedoresRow, ByVal parentmaterialesRowByFK_materiales_por_proveedor_materiales As materialesRow) As materiales_por_proveedorRow
+        Public Overloads Function Addmateriales_por_proveedorRow(ByVal parentproveedoresRowByFK_materiales_por_proveedor_proveedores As proveedoresRow, ByVal parentmaterialesRowByFK_materiales_por_proveedor_materiales As materialesRow, ByVal nombre_material As String, ByVal descripcion As String, ByVal cantidad As Integer, ByVal unidad_de_medida As String, ByVal precio_por_unidad As Double, ByVal precio_total As Double, ByVal id_pedido As Integer, ByVal nombre As String, ByVal email As String, ByVal telefono As String, ByVal catalogo As String, ByVal ruc As String, ByVal direccion As String) As materiales_por_proveedorRow
             Dim rowmateriales_por_proveedorRow As materiales_por_proveedorRow = CType(Me.NewRow,materiales_por_proveedorRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing, nombre_material, descripcion, cantidad, unidad_de_medida, precio_por_unidad, precio_total, id_pedido, nombre, email, telefono, catalogo, ruc, direccion}
             If (Not (parentproveedoresRowByFK_materiales_por_proveedor_proveedores) Is Nothing) Then
                 columnValuesArray(1) = parentproveedoresRowByFK_materiales_por_proveedor_proveedores(0)
             End If
@@ -2247,6 +2382,19 @@ Partial Public Class MAPADataSet
             Me.columnid_materiales_por_proveedor = MyBase.Columns("id_materiales_por_proveedor")
             Me.columnid_proveedor = MyBase.Columns("id_proveedor")
             Me.columnid_materiales = MyBase.Columns("id_materiales")
+            Me.columnnombre_material = MyBase.Columns("nombre_material")
+            Me.columndescripcion = MyBase.Columns("descripcion")
+            Me.columncantidad = MyBase.Columns("cantidad")
+            Me.columnunidad_de_medida = MyBase.Columns("unidad_de_medida")
+            Me.columnprecio_por_unidad = MyBase.Columns("precio_por_unidad")
+            Me.columnprecio_total = MyBase.Columns("precio_total")
+            Me.columnid_pedido = MyBase.Columns("id_pedido")
+            Me.columnnombre = MyBase.Columns("nombre")
+            Me.columnemail = MyBase.Columns("email")
+            Me.columntelefono = MyBase.Columns("telefono")
+            Me.columncatalogo = MyBase.Columns("catalogo")
+            Me.columnruc = MyBase.Columns("ruc")
+            Me.columndireccion = MyBase.Columns("direccion")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2258,6 +2406,32 @@ Partial Public Class MAPADataSet
             MyBase.Columns.Add(Me.columnid_proveedor)
             Me.columnid_materiales = New Global.System.Data.DataColumn("id_materiales", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_materiales)
+            Me.columnnombre_material = New Global.System.Data.DataColumn("nombre_material", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnombre_material)
+            Me.columndescripcion = New Global.System.Data.DataColumn("descripcion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndescripcion)
+            Me.columncantidad = New Global.System.Data.DataColumn("cantidad", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncantidad)
+            Me.columnunidad_de_medida = New Global.System.Data.DataColumn("unidad_de_medida", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnunidad_de_medida)
+            Me.columnprecio_por_unidad = New Global.System.Data.DataColumn("precio_por_unidad", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnprecio_por_unidad)
+            Me.columnprecio_total = New Global.System.Data.DataColumn("precio_total", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnprecio_total)
+            Me.columnid_pedido = New Global.System.Data.DataColumn("id_pedido", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_pedido)
+            Me.columnnombre = New Global.System.Data.DataColumn("nombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnombre)
+            Me.columnemail = New Global.System.Data.DataColumn("email", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnemail)
+            Me.columntelefono = New Global.System.Data.DataColumn("telefono", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntelefono)
+            Me.columncatalogo = New Global.System.Data.DataColumn("catalogo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncatalogo)
+            Me.columnruc = New Global.System.Data.DataColumn("ruc", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnruc)
+            Me.columndireccion = New Global.System.Data.DataColumn("direccion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndireccion)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_materiales_por_proveedor}, true))
             Me.columnid_materiales_por_proveedor.AutoIncrement = true
             Me.columnid_materiales_por_proveedor.AutoIncrementSeed = -1
@@ -2265,6 +2439,25 @@ Partial Public Class MAPADataSet
             Me.columnid_materiales_por_proveedor.AllowDBNull = false
             Me.columnid_materiales_por_proveedor.ReadOnly = true
             Me.columnid_materiales_por_proveedor.Unique = true
+            Me.columnnombre_material.AllowDBNull = false
+            Me.columnnombre_material.MaxLength = 50
+            Me.columndescripcion.AllowDBNull = false
+            Me.columndescripcion.MaxLength = 300
+            Me.columncantidad.AllowDBNull = false
+            Me.columnunidad_de_medida.AllowDBNull = false
+            Me.columnunidad_de_medida.MaxLength = 5
+            Me.columnprecio_por_unidad.AllowDBNull = false
+            Me.columnprecio_total.AllowDBNull = false
+            Me.columnnombre.AllowDBNull = false
+            Me.columnnombre.MaxLength = 50
+            Me.columnemail.MaxLength = 50
+            Me.columntelefono.AllowDBNull = false
+            Me.columntelefono.MaxLength = 12
+            Me.columncatalogo.AllowDBNull = false
+            Me.columncatalogo.MaxLength = 100
+            Me.columnruc.MaxLength = 15
+            Me.columndireccion.AllowDBNull = false
+            Me.columndireccion.MaxLength = 300
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5536,6 +5729,162 @@ Partial Public Class MAPADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property nombre_material() As String
+            Get
+                Return CType(Me(Me.tablemateriales_por_proveedor.nombre_materialColumn),String)
+            End Get
+            Set
+                Me(Me.tablemateriales_por_proveedor.nombre_materialColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property descripcion() As String
+            Get
+                Return CType(Me(Me.tablemateriales_por_proveedor.descripcionColumn),String)
+            End Get
+            Set
+                Me(Me.tablemateriales_por_proveedor.descripcionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property cantidad() As Integer
+            Get
+                Return CType(Me(Me.tablemateriales_por_proveedor.cantidadColumn),Integer)
+            End Get
+            Set
+                Me(Me.tablemateriales_por_proveedor.cantidadColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property unidad_de_medida() As String
+            Get
+                Return CType(Me(Me.tablemateriales_por_proveedor.unidad_de_medidaColumn),String)
+            End Get
+            Set
+                Me(Me.tablemateriales_por_proveedor.unidad_de_medidaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property precio_por_unidad() As Double
+            Get
+                Return CType(Me(Me.tablemateriales_por_proveedor.precio_por_unidadColumn),Double)
+            End Get
+            Set
+                Me(Me.tablemateriales_por_proveedor.precio_por_unidadColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property precio_total() As Double
+            Get
+                Return CType(Me(Me.tablemateriales_por_proveedor.precio_totalColumn),Double)
+            End Get
+            Set
+                Me(Me.tablemateriales_por_proveedor.precio_totalColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property id_pedido() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tablemateriales_por_proveedor.id_pedidoColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'id_pedido' de la tabla 'materiales_por_proveedor' es DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablemateriales_por_proveedor.id_pedidoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property nombre() As String
+            Get
+                Return CType(Me(Me.tablemateriales_por_proveedor.nombreColumn),String)
+            End Get
+            Set
+                Me(Me.tablemateriales_por_proveedor.nombreColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property email() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablemateriales_por_proveedor.emailColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'email' de la tabla 'materiales_por_proveedor' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablemateriales_por_proveedor.emailColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property telefono() As String
+            Get
+                Return CType(Me(Me.tablemateriales_por_proveedor.telefonoColumn),String)
+            End Get
+            Set
+                Me(Me.tablemateriales_por_proveedor.telefonoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property catalogo() As String
+            Get
+                Return CType(Me(Me.tablemateriales_por_proveedor.catalogoColumn),String)
+            End Get
+            Set
+                Me(Me.tablemateriales_por_proveedor.catalogoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ruc() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablemateriales_por_proveedor.rucColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'ruc' de la tabla 'materiales_por_proveedor' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablemateriales_por_proveedor.rucColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property direccion() As String
+            Get
+                Return CType(Me(Me.tablemateriales_por_proveedor.direccionColumn),String)
+            End Get
+            Set
+                Me(Me.tablemateriales_por_proveedor.direccionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property materialesRow() As materialesRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_materiales_por_proveedor_materiales")),materialesRow)
@@ -5553,6 +5902,17 @@ Partial Public Class MAPADataSet
             End Get
             Set
                 Me.SetParentRow(value, Me.Table.ParentRelations("FK_materiales_por_proveedor_proveedores"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property materiales_por_pedidoRow() As materiales_por_pedidoRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_materiales_por_proveedor_materiales1")),materiales_por_pedidoRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("FK_materiales_por_proveedor_materiales1"))
             End Set
         End Property
         
@@ -5578,6 +5938,42 @@ Partial Public Class MAPADataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub Setid_materialesNull()
             Me(Me.tablemateriales_por_proveedor.id_materialesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function Isid_pedidoNull() As Boolean
+            Return Me.IsNull(Me.tablemateriales_por_proveedor.id_pedidoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub Setid_pedidoNull()
+            Me(Me.tablemateriales_por_proveedor.id_pedidoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsemailNull() As Boolean
+            Return Me.IsNull(Me.tablemateriales_por_proveedor.emailColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetemailNull()
+            Me(Me.tablemateriales_por_proveedor.emailColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsrucNull() As Boolean
+            Return Me.IsNull(Me.tablemateriales_por_proveedor.rucColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetrucNull()
+            Me(Me.tablemateriales_por_proveedor.rucColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -6477,6 +6873,16 @@ Partial Public Class MAPADataSet
         Public Sub Setid_pedidoNull()
             Me(Me.tablemateriales_por_pedido.id_pedidoColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function Getmateriales_por_proveedorRows() As materiales_por_proveedorRow()
+            If (Me.Table.ChildRelations("FK_materiales_por_proveedor_materiales1") Is Nothing) Then
+                Return New materiales_por_proveedorRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_materiales_por_proveedor_materiales1")),materiales_por_proveedorRow())
+            End If
+        End Function
     End Class
     
     '''<summary>
@@ -9192,48 +9598,20 @@ Namespace MAPADataSetTableAdapters
             tableMapping.ColumnMappings.Add("id_materiales_por_proveedor", "id_materiales_por_proveedor")
             tableMapping.ColumnMappings.Add("id_proveedor", "id_proveedor")
             tableMapping.ColumnMappings.Add("id_materiales", "id_materiales")
+            tableMapping.ColumnMappings.Add("nombre_material", "nombre_material")
+            tableMapping.ColumnMappings.Add("descripcion", "descripcion")
+            tableMapping.ColumnMappings.Add("cantidad", "cantidad")
+            tableMapping.ColumnMappings.Add("unidad_de_medida", "unidad_de_medida")
+            tableMapping.ColumnMappings.Add("precio_por_unidad", "precio_por_unidad")
+            tableMapping.ColumnMappings.Add("precio_total", "precio_total")
+            tableMapping.ColumnMappings.Add("id_pedido", "id_pedido")
+            tableMapping.ColumnMappings.Add("nombre", "nombre")
+            tableMapping.ColumnMappings.Add("email", "email")
+            tableMapping.ColumnMappings.Add("telefono", "telefono")
+            tableMapping.ColumnMappings.Add("catalogo", "catalogo")
+            tableMapping.ColumnMappings.Add("ruc", "ruc")
+            tableMapping.ColumnMappings.Add("direccion", "direccion")
             Me._adapter.TableMappings.Add(tableMapping)
-            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[materiales_por_proveedor] WHERE (([id_materiales_por_proveedor"& _ 
-                "] = @Original_id_materiales_por_proveedor) AND ((@IsNull_id_proveedor = 1 AND [i"& _ 
-                "d_proveedor] IS NULL) OR ([id_proveedor] = @Original_id_proveedor)) AND ((@IsNul"& _ 
-                "l_id_materiales = 1 AND [id_materiales] IS NULL) OR ([id_materiales] = @Original"& _ 
-                "_id_materiales)))"
-            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_materiales_por_proveedor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_materiales_por_proveedor", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_id_proveedor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_proveedor", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_proveedor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_proveedor", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_id_materiales", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_materiales", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_materiales", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_materiales", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[materiales_por_proveedor] ([id_proveedor], [id_materiales]) VA"& _ 
-                "LUES (@id_proveedor, @id_materiales);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_materiales_por_proveedor, id_pr"& _ 
-                "oveedor, id_materiales FROM materiales_por_proveedor WHERE (id_materiales_por_pr"& _ 
-                "oveedor = SCOPE_IDENTITY())"
-            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_proveedor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_proveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_materiales", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_materiales", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[materiales_por_proveedor] SET [id_proveedor] = @id_proveedor, [id_m"& _ 
-                "ateriales] = @id_materiales WHERE (([id_materiales_por_proveedor] = @Original_id"& _ 
-                "_materiales_por_proveedor) AND ((@IsNull_id_proveedor = 1 AND [id_proveedor] IS "& _ 
-                "NULL) OR ([id_proveedor] = @Original_id_proveedor)) AND ((@IsNull_id_materiales "& _ 
-                "= 1 AND [id_materiales] IS NULL) OR ([id_materiales] = @Original_id_materiales))"& _ 
-                ");"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_materiales_por_proveedor, id_proveedor, id_materiales FROM materia"& _ 
-                "les_por_proveedor WHERE (id_materiales_por_proveedor = @id_materiales_por_provee"& _ 
-                "dor)"
-            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_proveedor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_proveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_materiales", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_materiales", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_materiales_por_proveedor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_materiales_por_proveedor", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_id_proveedor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_proveedor", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_proveedor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_proveedor", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_id_materiales", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_materiales", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_materiales", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_materiales", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_materiales_por_proveedor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_materiales_por_proveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9246,12 +9624,26 @@ Namespace MAPADataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT id_materiales_por_proveedor, id_proveedor, id_materiales FROM dbo.material"& _ 
-                "es_por_proveedor"
+            Me._commandCollection(0).CommandText = "SELECT materiales_por_proveedor.id_materiales_por_proveedor, materiales_por_prove"& _ 
+                "edor.id_proveedor, materiales_por_proveedor.id_materiales, materiales.nombre_mat"& _ 
+                "erial, materiales.descripcion, materiales.cantidad, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  material"& _ 
+                "es.unidad_de_medida, materiales.precio_por_unidad, materiales.precio_total, mate"& _ 
+                "riales.id_pedido, proveedores.nombre, proveedores.email, proveedores.telefono, p"& _ 
+                "roveedores.catalogo, proveedores.ruc, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  proveedores.direccion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     materiales_por_proveedor INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  materiales ON m"& _ 
+                "ateriales_por_proveedor.id_materiales = materiales.id_material INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"     "& _ 
+                "             proveedores ON materiales_por_proveedor.id_proveedor = proveedores."& _ 
+                "id_proveedor"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "INSERT INTO materiales_por_proveedor"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  (id_proveedor, id_materia"& _ 
+                "les)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES (@param1,@param2)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_proveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param2", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_materiales", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9280,149 +9672,34 @@ Namespace MAPADataSetTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As MAPADataSet.materiales_por_proveedorDataTable) As Integer
-            Return Me.Adapter.Update(dataTable)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As MAPADataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "materiales_por_proveedor")
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(dataRows)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_id_materiales_por_proveedor As Integer, ByVal Original_id_proveedor As Global.System.Nullable(Of Integer), ByVal Original_id_materiales As Global.System.Nullable(Of Integer)) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_id_materiales_por_proveedor,Integer)
-            If (Original_id_proveedor.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_id_proveedor.Value,Integer)
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function Insert1(ByVal param1 As Global.System.Nullable(Of Integer), ByVal param2 As Global.System.Nullable(Of Integer)) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            If (param1.HasValue = true) Then
+                command.Parameters(0).Value = CType(param1.Value,Integer)
             Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+                command.Parameters(0).Value = Global.System.DBNull.Value
             End If
-            If (Original_id_materiales.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_id_materiales.Value,Integer)
+            If (param2.HasValue = true) Then
+                command.Parameters(1).Value = CType(param2.Value,Integer)
             Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+                command.Parameters(1).Value = Global.System.DBNull.Value
             End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
-            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.DeleteCommand.Connection.Open
+                command.Connection.Open
             End If
+            Dim returnValue As Integer
             Try 
-                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
-                Return returnValue
+                returnValue = command.ExecuteNonQuery
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.DeleteCommand.Connection.Close
+                    command.Connection.Close
                 End If
             End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal id_proveedor As Global.System.Nullable(Of Integer), ByVal id_materiales As Global.System.Nullable(Of Integer)) As Integer
-            If (id_proveedor.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(id_proveedor.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
-            End If
-            If (id_materiales.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(id_materiales.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
-            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.InsertCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.InsertCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal id_proveedor As Global.System.Nullable(Of Integer), ByVal id_materiales As Global.System.Nullable(Of Integer), ByVal Original_id_materiales_por_proveedor As Integer, ByVal Original_id_proveedor As Global.System.Nullable(Of Integer), ByVal Original_id_materiales As Global.System.Nullable(Of Integer), ByVal id_materiales_por_proveedor As Integer) As Integer
-            If (id_proveedor.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(id_proveedor.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
-            End If
-            If (id_materiales.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(id_materiales.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
-            End If
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Original_id_materiales_por_proveedor,Integer)
-            If (Original_id_proveedor.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_id_proveedor.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Original_id_materiales.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_id_materiales.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(id_materiales_por_proveedor,Integer)
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
-            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.UpdateCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.UpdateCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal id_proveedor As Global.System.Nullable(Of Integer), ByVal id_materiales As Global.System.Nullable(Of Integer), ByVal Original_id_materiales_por_proveedor As Integer, ByVal Original_id_proveedor As Global.System.Nullable(Of Integer), ByVal Original_id_materiales As Global.System.Nullable(Of Integer)) As Integer
-            Return Me.Update(id_proveedor, id_materiales, Original_id_materiales_por_proveedor, Original_id_proveedor, Original_id_materiales, Original_id_materiales_por_proveedor)
+            Return returnValue
         End Function
     End Class
     
@@ -12503,7 +12780,7 @@ Namespace MAPADataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(5) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(4) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT id_usuario, nombre, clave, correo_electronico, id_rol FROM dbo.usuarios"
@@ -12534,21 +12811,15 @@ Namespace MAPADataSetTableAdapters
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_usuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_usuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "SELECT * FROM dbo.usuarios WHERE (nombre = @nombre) AND (clave = @clave)"
-            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@clave", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "clave", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(5).Connection = Me.Connection
-            Me._commandCollection(5).CommandText = "INSERT INTO usuarios"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (nombre, clave, correo_electronico"& _ 
+            Me._commandCollection(4).CommandText = "INSERT INTO usuarios"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (nombre, clave, correo_electronico"& _ 
                 ", id_rol)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES        (@nombre,@clave,@correo_electronico,@id_rol); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT "& _ 
                 "id_usuario, nombre, clave, correo_electronico, id_rol FROM usuarios WHERE (id_us"& _ 
                 "uario = SCOPE_IDENTITY())"
-            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@clave", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "clave", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correo_electronico", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "correo_electronico", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_rol", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_rol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@clave", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "clave", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correo_electronico", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "correo_electronico", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_rol", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_rol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -12607,29 +12878,6 @@ Namespace MAPADataSetTableAdapters
             Dim dataTable As MAPADataSet.usuariosDataTable = New MAPADataSet.usuariosDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function ExisteUsuario(ByVal dataTable As MAPADataSet.usuariosDataTable, ByVal nombre As String, ByVal clave As String) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(4)
-            If (nombre Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("nombre")
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(nombre,String)
-            End If
-            If (clave Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("clave")
-            Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(clave,String)
-            End If
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
-            End If
-            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
-            Return returnValue
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -12863,7 +13111,7 @@ Namespace MAPADataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
         Public Overloads Overridable Function Guardar(ByVal nombre As String, ByVal clave As String, ByVal correo_electronico As String, ByVal id_rol As Integer) As Integer
-            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(5)
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
             If (nombre Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("nombre")
             Else
@@ -14093,8 +14341,6 @@ Namespace MAPADataSetTableAdapters
         
         Private _materialesTableAdapter As materialesTableAdapter
         
-        Private _materiales_por_proveedorTableAdapter As materiales_por_proveedorTableAdapter
-        
         Private _pedidosTableAdapter As pedidosTableAdapter
         
         Private _proveedoresTableAdapter As proveedoresTableAdapter
@@ -14179,20 +14425,6 @@ Namespace MAPADataSetTableAdapters
             End Get
             Set
                 Me._materialesTableAdapter = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
-            "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property materiales_por_proveedorTableAdapter() As materiales_por_proveedorTableAdapter
-            Get
-                Return Me._materiales_por_proveedorTableAdapter
-            End Get
-            Set
-                Me._materiales_por_proveedorTableAdapter = value
             End Set
         End Property
         
@@ -14343,10 +14575,6 @@ Namespace MAPADataSetTableAdapters
                             AndAlso (Not (Me._materialesTableAdapter.Connection) Is Nothing)) Then
                     Return Me._materialesTableAdapter.Connection
                 End If
-                If ((Not (Me._materiales_por_proveedorTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._materiales_por_proveedorTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._materiales_por_proveedorTableAdapter.Connection
-                End If
                 If ((Not (Me._pedidosTableAdapter) Is Nothing)  _
                             AndAlso (Not (Me._pedidosTableAdapter.Connection) Is Nothing)) Then
                     Return Me._pedidosTableAdapter.Connection
@@ -14402,9 +14630,6 @@ Namespace MAPADataSetTableAdapters
                     count = (count + 1)
                 End If
                 If (Not (Me._materialesTableAdapter) Is Nothing) Then
-                    count = (count + 1)
-                End If
-                If (Not (Me._materiales_por_proveedorTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 If (Not (Me._pedidosTableAdapter) Is Nothing) Then
@@ -14514,12 +14739,12 @@ Namespace MAPADataSetTableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._materiales_por_proveedorTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.materiales_por_proveedor.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._materiales_por_pedidoTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.materiales_por_pedido.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._materiales_por_proveedorTableAdapter.Update(updatedRows))
+                    result = (result + Me._materiales_por_pedidoTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -14547,15 +14772,6 @@ Namespace MAPADataSetTableAdapters
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
                     result = (result + Me._ventasTableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
-            If (Not (Me._materiales_por_pedidoTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.materiales_por_pedido.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._materiales_por_pedidoTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -14633,11 +14849,11 @@ Namespace MAPADataSetTableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._materiales_por_proveedorTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.materiales_por_proveedor.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._materiales_por_pedidoTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.materiales_por_pedido.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._materiales_por_proveedorTableAdapter.Update(addedRows))
+                    result = (result + Me._materiales_por_pedidoTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -14665,14 +14881,6 @@ Namespace MAPADataSetTableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._materiales_por_pedidoTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.materiales_por_pedido.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._materiales_por_pedidoTableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
             Return result
         End Function
         
@@ -14683,14 +14891,6 @@ Namespace MAPADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Function UpdateDeletedRows(ByVal dataSet As MAPADataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._materiales_por_pedidoTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.materiales_por_pedido.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
-                If ((Not (deletedRows) Is Nothing)  _
-                            AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._materiales_por_pedidoTableAdapter.Update(deletedRows))
-                    allChangedRows.AddRange(deletedRows)
-                End If
-            End If
             If (Not (Me._ventasTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.ventas.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
@@ -14715,11 +14915,11 @@ Namespace MAPADataSetTableAdapters
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
-            If (Not (Me._materiales_por_proveedorTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.materiales_por_proveedor.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._materiales_por_pedidoTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.materiales_por_pedido.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._materiales_por_proveedorTableAdapter.Update(deletedRows))
+                    result = (result + Me._materiales_por_pedidoTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -14848,11 +15048,6 @@ Namespace MAPADataSetTableAdapters
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
-            If ((Not (Me._materiales_por_proveedorTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._materiales_por_proveedorTableAdapter.Connection) = false)) Then
-                Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
-                        "sma cadena de conexión.")
-            End If
             If ((Not (Me._pedidosTableAdapter) Is Nothing)  _
                         AndAlso (Me.MatchTableAdapterConnection(Me._pedidosTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
@@ -14959,15 +15154,6 @@ Namespace MAPADataSetTableAdapters
                     If Me._materialesTableAdapter.Adapter.AcceptChangesDuringUpdate Then
                         Me._materialesTableAdapter.Adapter.AcceptChangesDuringUpdate = false
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._materialesTableAdapter.Adapter)
-                    End If
-                End If
-                If (Not (Me._materiales_por_proveedorTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._materiales_por_proveedorTableAdapter, Me._materiales_por_proveedorTableAdapter.Connection)
-                    Me._materiales_por_proveedorTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
-                    Me._materiales_por_proveedorTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
-                    If Me._materiales_por_proveedorTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._materiales_por_proveedorTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._materiales_por_proveedorTableAdapter.Adapter)
                     End If
                 End If
                 If (Not (Me._pedidosTableAdapter) Is Nothing) Then
@@ -15117,10 +15303,6 @@ Namespace MAPADataSetTableAdapters
                 If (Not (Me._materialesTableAdapter) Is Nothing) Then
                     Me._materialesTableAdapter.Connection = CType(revertConnections(Me._materialesTableAdapter),Global.System.Data.SqlClient.SqlConnection)
                     Me._materialesTableAdapter.Transaction = Nothing
-                End If
-                If (Not (Me._materiales_por_proveedorTableAdapter) Is Nothing) Then
-                    Me._materiales_por_proveedorTableAdapter.Connection = CType(revertConnections(Me._materiales_por_proveedorTableAdapter),Global.System.Data.SqlClient.SqlConnection)
-                    Me._materiales_por_proveedorTableAdapter.Transaction = Nothing
                 End If
                 If (Not (Me._pedidosTableAdapter) Is Nothing) Then
                     Me._pedidosTableAdapter.Connection = CType(revertConnections(Me._pedidosTableAdapter),Global.System.Data.SqlClient.SqlConnection)
