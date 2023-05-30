@@ -30,11 +30,11 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.btn_editar = New System.Windows.Forms.Button()
         Me.btn_guardar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.MaterialesporproveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MAPADataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -156,21 +156,6 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.Label6.Size = New System.Drawing.Size(0, 20)
         Me.Label6.TabIndex = 9
         '
-        'MaterialesporproveedorBindingSource
-        '
-        Me.MaterialesporproveedorBindingSource.DataMember = "materiales_por_proveedor"
-        Me.MaterialesporproveedorBindingSource.DataSource = Me.MAPADataSetBindingSource
-        '
-        'MAPADataSetBindingSource
-        '
-        Me.MAPADataSetBindingSource.DataSource = Me.MAPADataSet
-        Me.MAPADataSetBindingSource.Position = 0
-        '
-        'MAPADataSet
-        '
-        Me.MAPADataSet.DataSetName = "MAPADataSet"
-        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -189,6 +174,21 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(256, 24)
         Me.ComboBox2.TabIndex = 7
+        '
+        'MaterialesporproveedorBindingSource
+        '
+        Me.MaterialesporproveedorBindingSource.DataMember = "materiales_por_proveedor"
+        Me.MaterialesporproveedorBindingSource.DataSource = Me.MAPADataSetBindingSource
+        '
+        'MAPADataSetBindingSource
+        '
+        Me.MAPADataSetBindingSource.DataSource = Me.MAPADataSet
+        Me.MAPADataSetBindingSource.Position = 0
+        '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ComboBox1
         '

@@ -17,7 +17,7 @@ Public Class Frm_Materiales_Por_Proveedor
 
     Private Sub btn_guardar_Click(sender As Object, e As EventArgs) Handles btn_guardar.Click
         MessageBox.Show("Guardado")
-        Me.Materiales_por_proveedorTableAdapter.Insert1(ComboBox1.SelectedValue, ComboBox2.SelectedValue)
+        Me.Materiales_por_proveedorTableAdapter.Insert1(ComboBox1.SelectedItem.get_id_proveedor, ComboBox2.SelectedItem.get_id_material)
         Me.Materiales_por_proveedorTableAdapter.Fill(Me.MAPADataSet.materiales_por_proveedor)
     End Sub
 
@@ -51,7 +51,11 @@ Public Class Frm_Materiales_Por_Proveedor
         End Function
 
         Public Overrides Function Equals(obj As Object) As Boolean
-            Return MyBase.Equals(obj)
+            If TypeOf obj Is Material Then
+                Dim other As Material = DirectCast(obj, Material)
+                Return Me.get_id_material() = other.get_id_material()
+            End If
+            Return False
         End Function
 
         Public Overrides Function GetHashCode() As Integer
@@ -63,27 +67,17 @@ Public Class Frm_Materiales_Por_Proveedor
         Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
         Dim query As String = "SELECT id_material, nombre_material FROM materiales"
 
-        'Creo las variables que quiero que almacenen los datos de la consulta
-        Dim id_material As Integer
-        Dim nombre_material As String
-
         Using connection As New SqlConnection(connectionString)
             Using command As New SqlCommand(query, connection)
-
-                'Abro la conexion y preparo el reader
                 connection.Open()
                 Dim reader As SqlDataReader = command.ExecuteReader()
 
-                'Leo los registros de mi reader para introducirlos en las variables creadas
-
                 Do While reader.Read
-                    id_material = reader.GetInt32(0)
-                    nombre_material = reader.GetString(1)
-                    Me.ComboBox2.Items.Add(New Material(id_material, nombre_material))
-
+                    Dim id_material As Integer = reader.GetInt32(0)
+                    Dim nombre_material As String = reader.GetString(1)
+                    ComboBox2.Items.Add(New Material(id_material, nombre_material))
                 Loop
 
-                'Cierro los recursos de conexion abiertos
                 reader.Close()
                 connection.Close()
             End Using
@@ -116,8 +110,13 @@ Public Class Frm_Materiales_Por_Proveedor
         End Function
 
         Public Overrides Function Equals(obj As Object) As Boolean
-            Return MyBase.Equals(obj)
+            If TypeOf obj Is Proveedor Then
+                Dim other As Proveedor = DirectCast(obj, Proveedor)
+                Return Me.get_id_proveedor() = other.get_id_proveedor()
+            End If
+            Return False
         End Function
+
 
         Public Overrides Function GetHashCode() As Integer
             Return MyBase.GetHashCode()
@@ -131,36 +130,60 @@ Public Class Frm_Materiales_Por_Proveedor
         Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
         Dim query As String = "SELECT id_proveedor, nombre FROM proveedores"
 
-        'Creo las variables que quiero que almacenen los datos de la consulta
-        Dim id_proveedor As Integer
-        Dim nombre As String
-
         Using connection As New SqlConnection(connectionString)
             Using command As New SqlCommand(query, connection)
-
-                'Abro la conexion y preparo el reader
                 connection.Open()
                 Dim reader As SqlDataReader = command.ExecuteReader()
 
-                'Leo los registros de mi reader para introducirlos en las variables creadas
-
                 Do While reader.Read
-                    id_proveedor = reader.GetInt32(0)
-                    nombre = reader.GetString(1)
+                    Dim id_proveedor As Integer = reader.GetInt32(0)
+                    Dim nombre As String = reader.GetString(1)
                     ComboBox1.Items.Add(New Proveedor(id_proveedor, nombre))
-
                 Loop
 
-                'Cierro los recursos de conexion abiertos
                 reader.Close()
                 connection.Close()
             End Using
         End Using
     End Function
 
+
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         Label6.Text = ComboBox1.SelectedItem.get_id_proveedor()
     End Sub
+
+    Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
+        MessageBox.Show("Se eliminó la relación entre: " & ComboBox2.SelectedItem.get_nombre_material & " y " & ComboBox1.SelectedItem.get_nombre)
+
+
+    End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        Dim id_material_tabla As Integer
+        Dim id_proveedor_tabla As Integer
+
+
+        If Integer.TryParse(DataGridView1.CurrentRow.Cells(0).Value.ToString(), id_proveedor_tabla) AndAlso
+        Integer.TryParse(DataGridView1.CurrentRow.Cells(1).Value.ToString(), id_material_tabla) Then
+
+            For Each material As Material In ComboBox2.Items
+                If material.get_id_material() = id_material_tabla Then
+                    ComboBox2.SelectedItem = material
+                    Exit For
+                End If
+            Next
+
+            For Each proveedor As Proveedor In ComboBox1.Items
+                If proveedor.get_id_proveedor() = id_proveedor_tabla Then
+                    ComboBox1.SelectedItem = proveedor
+                    Exit For
+                End If
+            Next
+        End If
+    End Sub
+
+
+
 End Class
 
 
