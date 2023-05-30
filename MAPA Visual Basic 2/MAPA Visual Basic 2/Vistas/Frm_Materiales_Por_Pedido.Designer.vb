@@ -25,8 +25,11 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.lbl_id_pedido = New System.Windows.Forms.Label()
         Me.lblId = New System.Windows.Forms.Label()
         Me.txt_descripcion = New System.Windows.Forms.RichTextBox()
+        Me.MaterialesporpedidoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
         Me.txt_precio_total = New System.Windows.Forms.TextBox()
         Me.txt_cantidad = New System.Windows.Forms.TextBox()
         Me.txt_precio_unidad = New System.Windows.Forms.TextBox()
@@ -50,13 +53,11 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.PrecioporunidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PreciototalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdpedidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MaterialesporpedidoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
         Me.Materiales_por_pedidoTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter()
         Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MaterialesporpedidoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -74,6 +75,7 @@ Partial Class Frm_Materiales_Por_Pedido
         '
         Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.Controls.Add(Me.lbl_id_pedido)
         Me.Panel2.Controls.Add(Me.lblId)
         Me.Panel2.Controls.Add(Me.txt_descripcion)
         Me.Panel2.Controls.Add(Me.txt_precio_total)
@@ -97,6 +99,16 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.Panel2.Size = New System.Drawing.Size(1109, 201)
         Me.Panel2.TabIndex = 28
         '
+        'lbl_id_pedido
+        '
+        Me.lbl_id_pedido.AutoSize = True
+        Me.lbl_id_pedido.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.lbl_id_pedido.Location = New System.Drawing.Point(629, 137)
+        Me.lbl_id_pedido.Name = "lbl_id_pedido"
+        Me.lbl_id_pedido.Size = New System.Drawing.Size(71, 25)
+        Me.lbl_id_pedido.TabIndex = 17
+        Me.lbl_id_pedido.Text = "Label2"
+        '
         'lblId
         '
         Me.lblId.AutoSize = True
@@ -118,6 +130,16 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.txt_descripcion.Size = New System.Drawing.Size(417, 62)
         Me.txt_descripcion.TabIndex = 15
         Me.txt_descripcion.Text = ""
+        '
+        'MaterialesporpedidoBindingSource
+        '
+        Me.MaterialesporpedidoBindingSource.DataMember = "materiales_por_pedido"
+        Me.MaterialesporpedidoBindingSource.DataSource = Me.MAPADataSet
+        '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'txt_precio_total
         '
@@ -353,16 +375,6 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.IdpedidoDataGridViewTextBoxColumn.Name = "IdpedidoDataGridViewTextBoxColumn"
         Me.IdpedidoDataGridViewTextBoxColumn.Width = 125
         '
-        'MaterialesporpedidoBindingSource
-        '
-        Me.MaterialesporpedidoBindingSource.DataMember = "materiales_por_pedido"
-        Me.MaterialesporpedidoBindingSource.DataSource = Me.MAPADataSet
-        '
-        'MAPADataSet
-        '
-        Me.MAPADataSet.DataSetName = "MAPADataSet"
-        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Materiales_por_pedidoTableAdapter
         '
         Me.Materiales_por_pedidoTableAdapter.ClearBeforeFill = True
@@ -379,9 +391,9 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.Text = "Frm_Materiales_Por_Pedidovb"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MaterialesporpedidoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -417,4 +429,5 @@ Partial Class Frm_Materiales_Por_Pedido
     Friend WithEvents MaterialesporpedidoBindingSource As BindingSource
     Friend WithEvents MAPADataSet As MAPADataSet
     Friend WithEvents Materiales_por_pedidoTableAdapter As MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter
+    Friend WithEvents lbl_id_pedido As Label
 End Class
