@@ -63,6 +63,6 @@
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-
+        Me.MaterialesTableAdapter.Buscar(Me.MAPADataSet.materiales, txtBuscar.Text)
     End Sub
 End Class
