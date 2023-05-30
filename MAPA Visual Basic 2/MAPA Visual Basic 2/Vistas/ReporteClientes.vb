@@ -1,7 +1,15 @@
 ﻿Public Class ReporteClientes
-    Private Sub CrystalReportViewer1_Load(sender As Object, e As EventArgs) Handles CrystalReportViewer1.Load
-        Dim reporte As New CrystalReport1
-        reporte.DataSourceConnections.Item(0).SetLogon("sa", "1234")
-        Me.CrystalReportViewer1.ReportSource = reporte
+    Private Sub CrystalReportViewer1_Load(sender As Object, e As EventArgs)
+
     End Sub
+    Public Sub CargarReporte()
+        Dim objReporte As New CrystalReport2
+        objReporte.DataSourceConnections.Item(0).SetLogon("sa", "1234")
+        objReporte.SetParameterValue("@descripcion", TextBox1.Text)
+        Me.cryreport.ReportSource = objReporte
+    End Sub
+    Private Sub Buscar_Click(sender As Object, e As EventArgs) Handles Buscar.Click
+        CargarReporte()
+    End Sub
+
 End Class

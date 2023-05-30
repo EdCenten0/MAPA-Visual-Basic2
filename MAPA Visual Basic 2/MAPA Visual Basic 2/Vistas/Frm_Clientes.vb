@@ -21,8 +21,8 @@
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Me.ClientesTableAdapter.Buscar(MAPADataSet.clientes, NombreCliente.Text)
-        Me.ClientesTableAdapter.Fill(Me.MAPADataSet.clientes)
+        Me.ClientesTableAdapter.Buscar(MAPADataSet.clientes, Busqueda.Text)
+
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -41,6 +41,6 @@
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        Reportes.ShowDialog()
+        ReporteClientes.ShowDialog()
     End Sub
 End Class
