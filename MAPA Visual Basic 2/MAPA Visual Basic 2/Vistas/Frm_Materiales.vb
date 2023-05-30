@@ -64,7 +64,7 @@ Public Class Frm_Materiales
     End Sub
 
     Private Sub comboBox()
-        Dim connection As New SqlConnection("Data Source=DENISSE;Initial Catalog=MAPA;Persist Security Info=True;User ID=sa;Password=1234")
+        Dim connection As New SqlConnection("Data Source=CARLOSCent;Initial Catalog=MAPA;Persist Security Info=True;User ID=sa;Password=1234")
         Dim command As New SqlCommand("SELECT * FROM pedidos", connection)
         Dim adapter As New SqlDataAdapter(command)
         Dim table As New DataTable
