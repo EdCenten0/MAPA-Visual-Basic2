@@ -25,11 +25,12 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.lbl_id_material = New System.Windows.Forms.Label()
+        Me.MaterialesporpedidoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
         Me.lbl_id_pedido = New System.Windows.Forms.Label()
         Me.lblId = New System.Windows.Forms.Label()
         Me.txt_descripcion = New System.Windows.Forms.RichTextBox()
-        Me.MaterialesporpedidoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
         Me.txt_precio_total = New System.Windows.Forms.TextBox()
         Me.txt_cantidad = New System.Windows.Forms.TextBox()
         Me.txt_precio_unidad = New System.Windows.Forms.TextBox()
@@ -45,6 +46,7 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.lbl_material = New System.Windows.Forms.Label()
         Me.cb_unidad_medida = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Materiales_por_pedidoTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter()
         Me.IdmaterialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombrematerialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,7 +55,6 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.PrecioporunidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PreciototalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdpedidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Materiales_por_pedidoTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter()
         Me.Panel2.SuspendLayout()
         CType(Me.MaterialesporpedidoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,6 +76,7 @@ Partial Class Frm_Materiales_Por_Pedido
         '
         Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.Controls.Add(Me.lbl_id_material)
         Me.Panel2.Controls.Add(Me.lbl_id_pedido)
         Me.Panel2.Controls.Add(Me.lblId)
         Me.Panel2.Controls.Add(Me.txt_descripcion)
@@ -98,6 +100,27 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1109, 201)
         Me.Panel2.TabIndex = 28
+        '
+        'lbl_id_material
+        '
+        Me.lbl_id_material.AutoSize = True
+        Me.lbl_id_material.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesporpedidoBindingSource, "id_material", True))
+        Me.lbl_id_material.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.lbl_id_material.Location = New System.Drawing.Point(722, 137)
+        Me.lbl_id_material.Name = "lbl_id_material"
+        Me.lbl_id_material.Size = New System.Drawing.Size(71, 25)
+        Me.lbl_id_material.TabIndex = 18
+        Me.lbl_id_material.Text = "Label2"
+        '
+        'MaterialesporpedidoBindingSource
+        '
+        Me.MaterialesporpedidoBindingSource.DataMember = "materiales_por_pedido"
+        Me.MaterialesporpedidoBindingSource.DataSource = Me.MAPADataSet
+        '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'lbl_id_pedido
         '
@@ -130,16 +153,6 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.txt_descripcion.Size = New System.Drawing.Size(417, 62)
         Me.txt_descripcion.TabIndex = 15
         Me.txt_descripcion.Text = ""
-        '
-        'MaterialesporpedidoBindingSource
-        '
-        Me.MaterialesporpedidoBindingSource.DataMember = "materiales_por_pedido"
-        Me.MaterialesporpedidoBindingSource.DataSource = Me.MAPADataSet
-        '
-        'MAPADataSet
-        '
-        Me.MAPADataSet.DataSetName = "MAPADataSet"
-        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'txt_precio_total
         '
@@ -310,74 +323,74 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.DataGridView1.Size = New System.Drawing.Size(1109, 366)
         Me.DataGridView1.TabIndex = 27
         '
+        'Materiales_por_pedidoTableAdapter
+        '
+        Me.Materiales_por_pedidoTableAdapter.ClearBeforeFill = True
+        '
         'IdmaterialDataGridViewTextBoxColumn
         '
+        Me.IdmaterialDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.IdmaterialDataGridViewTextBoxColumn.DataPropertyName = "id_material"
         Me.IdmaterialDataGridViewTextBoxColumn.HeaderText = "id_material"
         Me.IdmaterialDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdmaterialDataGridViewTextBoxColumn.Name = "IdmaterialDataGridViewTextBoxColumn"
         Me.IdmaterialDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdmaterialDataGridViewTextBoxColumn.Width = 125
         '
         'NombrematerialDataGridViewTextBoxColumn
         '
+        Me.NombrematerialDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.NombrematerialDataGridViewTextBoxColumn.DataPropertyName = "nombre_material"
         Me.NombrematerialDataGridViewTextBoxColumn.HeaderText = "nombre_material"
         Me.NombrematerialDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.NombrematerialDataGridViewTextBoxColumn.Name = "NombrematerialDataGridViewTextBoxColumn"
-        Me.NombrematerialDataGridViewTextBoxColumn.Width = 125
         '
         'DescripcionDataGridViewTextBoxColumn
         '
+        Me.DescripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
         Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
         Me.DescripcionDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
-        Me.DescripcionDataGridViewTextBoxColumn.Width = 125
         '
         'CantidadDataGridViewTextBoxColumn
         '
+        Me.CantidadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.CantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad"
         Me.CantidadDataGridViewTextBoxColumn.HeaderText = "cantidad"
         Me.CantidadDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.CantidadDataGridViewTextBoxColumn.Name = "CantidadDataGridViewTextBoxColumn"
-        Me.CantidadDataGridViewTextBoxColumn.Width = 125
         '
         'UnidaddemedidaDataGridViewTextBoxColumn
         '
+        Me.UnidaddemedidaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.UnidaddemedidaDataGridViewTextBoxColumn.DataPropertyName = "unidad_de_medida"
         Me.UnidaddemedidaDataGridViewTextBoxColumn.HeaderText = "unidad_de_medida"
         Me.UnidaddemedidaDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.UnidaddemedidaDataGridViewTextBoxColumn.Name = "UnidaddemedidaDataGridViewTextBoxColumn"
-        Me.UnidaddemedidaDataGridViewTextBoxColumn.Width = 125
         '
         'PrecioporunidadDataGridViewTextBoxColumn
         '
+        Me.PrecioporunidadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.PrecioporunidadDataGridViewTextBoxColumn.DataPropertyName = "precio_por_unidad"
         Me.PrecioporunidadDataGridViewTextBoxColumn.HeaderText = "precio_por_unidad"
         Me.PrecioporunidadDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.PrecioporunidadDataGridViewTextBoxColumn.Name = "PrecioporunidadDataGridViewTextBoxColumn"
-        Me.PrecioporunidadDataGridViewTextBoxColumn.Width = 125
         '
         'PreciototalDataGridViewTextBoxColumn
         '
+        Me.PreciototalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.PreciototalDataGridViewTextBoxColumn.DataPropertyName = "precio_total"
         Me.PreciototalDataGridViewTextBoxColumn.HeaderText = "precio_total"
         Me.PreciototalDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.PreciototalDataGridViewTextBoxColumn.Name = "PreciototalDataGridViewTextBoxColumn"
-        Me.PreciototalDataGridViewTextBoxColumn.Width = 125
         '
         'IdpedidoDataGridViewTextBoxColumn
         '
+        Me.IdpedidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.IdpedidoDataGridViewTextBoxColumn.DataPropertyName = "id_pedido"
         Me.IdpedidoDataGridViewTextBoxColumn.HeaderText = "id_pedido"
         Me.IdpedidoDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdpedidoDataGridViewTextBoxColumn.Name = "IdpedidoDataGridViewTextBoxColumn"
-        Me.IdpedidoDataGridViewTextBoxColumn.Width = 125
-        '
-        'Materiales_por_pedidoTableAdapter
-        '
-        Me.Materiales_por_pedidoTableAdapter.ClearBeforeFill = True
         '
         'Frm_Materiales_Por_Pedido
         '
@@ -418,6 +431,11 @@ Partial Class Frm_Materiales_Por_Pedido
     Friend WithEvents lbl_material As Label
     Friend WithEvents cb_unidad_medida As ComboBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents MaterialesporpedidoBindingSource As BindingSource
+    Friend WithEvents MAPADataSet As MAPADataSet
+    Friend WithEvents Materiales_por_pedidoTableAdapter As MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter
+    Friend WithEvents lbl_id_pedido As Label
+    Friend WithEvents lbl_id_material As Label
     Friend WithEvents IdmaterialDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombrematerialDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -426,8 +444,4 @@ Partial Class Frm_Materiales_Por_Pedido
     Friend WithEvents PrecioporunidadDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PreciototalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdpedidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents MaterialesporpedidoBindingSource As BindingSource
-    Friend WithEvents MAPADataSet As MAPADataSet
-    Friend WithEvents Materiales_por_pedidoTableAdapter As MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter
-    Friend WithEvents lbl_id_pedido As Label
 End Class

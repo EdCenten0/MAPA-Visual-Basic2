@@ -14,4 +14,13 @@ Public Class Frm_Materiales_Por_Pedido
         Me.Materiales_por_pedidoTableAdapter.InsertQuery(txt_material.Text, txt_descripcion.Text, txt_cantidad.Text, cb_unidad_medida.Text, txt_precio_unidad.Text, txt_precio_total.Text, id_pedido)
         Me.Materiales_por_pedidoTableAdapter.Fill(Me.MAPADataSet.materiales_por_pedido, id_pedido)
     End Sub
+
+    Private Sub btn_editar_Click(sender As Object, e As EventArgs) Handles btn_editar.Click
+        MessageBox.Show("Se ha editado el registro: " & txt_material.Text)
+
+        Me.Materiales_por_pedidoTableAdapter.Update1(txt_material.Text, txt_descripcion.Text, txt_cantidad.Text, cb_unidad_medida.Text, txt_precio_unidad.Text, txt_precio_total.Text, id_pedido, lbl_id_material.Text)
+        Me.Materiales_por_pedidoTableAdapter.Fill(Me.MAPADataSet.materiales_por_pedido, id_pedido)
+    End Sub
+
+
 End Class
