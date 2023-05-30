@@ -2,7 +2,8 @@
     Private Sub Frm_Clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'MAPADataSet.clientes' Puede moverla o quitarla según sea necesario.
         Me.ClientesTableAdapter.Fill(Me.MAPADataSet.clientes)
-
+        IDTCliente.Enabled = False
+        IDCliente.Enabled = False
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -41,6 +42,6 @@
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        ReporteClientes.ShowDialog()
+        Reporte_Materiales_Pedidos.ShowDialog()
     End Sub
 End Class

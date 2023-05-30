@@ -12,4 +12,7 @@
         CargarReporte()
     End Sub
 
+    Private Sub cryreport_Load(sender As Object, e As EventArgs) Handles cryreport.Load
+
+    End Sub
 End Class
