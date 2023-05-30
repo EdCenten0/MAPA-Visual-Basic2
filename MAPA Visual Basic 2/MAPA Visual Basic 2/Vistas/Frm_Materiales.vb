@@ -72,10 +72,6 @@ Public Class Frm_Materiales
 
         cbIdPedido.DataSource = table
 
-        Dim var As Integer
-
-
-
         cbIdPedido.DisplayMember = "id_pedido"
         cbIdPedido.ValueMember = "id_pedido"
     End Sub

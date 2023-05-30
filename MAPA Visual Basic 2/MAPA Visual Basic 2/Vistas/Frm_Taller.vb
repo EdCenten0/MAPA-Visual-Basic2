@@ -38,6 +38,10 @@
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Me.TallerTableAdapter.Buscar(Me.MAPADataSet.taller, Me.txtBuscar.Text)
+    End Sub
 
+    Private Sub btnRefrescar_Click(sender As Object, e As EventArgs) Handles btnRefrescar.Click
+        Me.TallerTableAdapter.Fill(Me.MAPADataSet.taller)
     End Sub
 End Class
