@@ -41,7 +41,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_facturas_pedidos" ZOrder="22" LineWidth="11">
+    <Connector ID="DesignRelation:FK_facturas_pedidos" ZOrder="5" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>925</X>
@@ -53,7 +53,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_materiales_pedidos" ZOrder="21" LineWidth="11">
+    <Connector ID="DesignRelation:FK_materiales_pedidos" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>808</X>
@@ -69,7 +69,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_materiales_por_proveedor_materiales" ZOrder="20" LineWidth="11">
+    <Connector ID="DesignRelation:FK_materiales_por_proveedor_materiales" ZOrder="4" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>1138</X>
@@ -85,7 +85,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_materiales_por_proveedor_proveedores" ZOrder="19" LineWidth="11">
+    <Connector ID="DesignRelation:FK_materiales_por_proveedor_proveedores" ZOrder="20" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>663</X>
@@ -97,7 +97,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_pedidos_clientes" ZOrder="18" LineWidth="11">
+    <Connector ID="DesignRelation:FK_pedidos_clientes" ZOrder="19" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>678</X>
@@ -113,7 +113,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_pedidos_estados" ZOrder="17" LineWidth="11">
+    <Connector ID="DesignRelation:FK_pedidos_estados" ZOrder="18" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>1126</X>
@@ -129,7 +129,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_proveedores_tienda" ZOrder="16" LineWidth="11">
+    <Connector ID="DesignRelation:FK_proveedores_tienda" ZOrder="17" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>234</X>
@@ -145,7 +145,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_taller_tienda" ZOrder="15" LineWidth="11">
+    <Connector ID="DesignRelation:FK_taller_tienda" ZOrder="16" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>218</X>
@@ -161,7 +161,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_usuarios_roles" ZOrder="14" LineWidth="11">
+    <Connector ID="DesignRelation:FK_usuarios_roles" ZOrder="15" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>1403</X>
@@ -173,7 +173,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_ventas_facturas" ZOrder="13" LineWidth="11">
+    <Connector ID="DesignRelation:FK_ventas_facturas" ZOrder="14" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>772</X>
@@ -185,7 +185,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_ventas_tienda" ZOrder="12" LineWidth="11">
+    <Connector ID="DesignRelation:FK_ventas_tienda" ZOrder="13" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>226</X>
