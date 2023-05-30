@@ -46,7 +46,6 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.lbl_material = New System.Windows.Forms.Label()
         Me.cb_unidad_medida = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Materiales_por_pedidoTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter()
         Me.IdmaterialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombrematerialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -55,6 +54,7 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.PrecioporunidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PreciototalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdpedidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Materiales_por_pedidoTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter()
         Me.Panel2.SuspendLayout()
         CType(Me.MaterialesporpedidoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -323,10 +323,6 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.DataGridView1.Size = New System.Drawing.Size(1109, 366)
         Me.DataGridView1.TabIndex = 27
         '
-        'Materiales_por_pedidoTableAdapter
-        '
-        Me.Materiales_por_pedidoTableAdapter.ClearBeforeFill = True
-        '
         'IdmaterialDataGridViewTextBoxColumn
         '
         Me.IdmaterialDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -391,6 +387,10 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.IdpedidoDataGridViewTextBoxColumn.HeaderText = "id_pedido"
         Me.IdpedidoDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdpedidoDataGridViewTextBoxColumn.Name = "IdpedidoDataGridViewTextBoxColumn"
+        '
+        'Materiales_por_pedidoTableAdapter
+        '
+        Me.Materiales_por_pedidoTableAdapter.ClearBeforeFill = True
         '
         'Frm_Materiales_Por_Pedido
         '

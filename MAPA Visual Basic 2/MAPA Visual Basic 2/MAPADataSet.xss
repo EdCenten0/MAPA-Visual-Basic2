@@ -18,7 +18,7 @@
     <Shape ID="DesignTable:tienda" ZOrder="25" X="70" Y="70" Height="248" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:usuarios" ZOrder="24" X="1260" Y="304" Height="248" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:ventas" ZOrder="23" X="370" Y="789" Height="248" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:materiales_por_pedido" ZOrder="1" X="660" Y="1140" Height="319" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="214" />
+    <Shape ID="DesignTable:materiales_por_pedido" ZOrder="1" X="581" Y="1112" Height="365" Width="992" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="28" SplitterPosition="214" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_clientes_tienda" ZOrder="22" LineWidth="11">
