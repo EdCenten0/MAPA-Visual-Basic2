@@ -2,6 +2,7 @@
     Private Sub Frm_Taller_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'MAPADataSet.taller' Puede moverla o quitarla según sea necesario.
         Me.TallerTableAdapter.Fill(Me.MAPADataSet.taller)
+        limpiarCampos()
 
     End Sub
 
@@ -44,4 +45,12 @@
     Private Sub btnRefrescar_Click(sender As Object, e As EventArgs) Handles btnRefrescar.Click
         Me.TallerTableAdapter.Fill(Me.MAPADataSet.taller)
     End Sub
+
+    Public Sub limpiarCampos()
+        txtNombre.Text = ""
+        txtDireccion.Text = ""
+        txtTelefono.Text = ""
+        txtEmail.Text = ""
+    End Sub
+
 End Class
