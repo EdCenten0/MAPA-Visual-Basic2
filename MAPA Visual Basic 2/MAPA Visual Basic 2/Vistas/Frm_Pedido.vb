@@ -19,7 +19,9 @@ Public Class Frm_Pedido
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        MessageBox.Show("Guardado")
+        Me.PedidosTableAdapter.Guardar(RichTextBox1.Text, DateTimePicker1.Text, ComboBox2.SelectedItem.get_id_cliente, ComboBox1.SelectedItem.get_id_estado)
+        Me.PedidosTableAdapter.Fill(Me.MAPADataSet.pedidos)
     End Sub
 
     Private Class Cliente
@@ -197,5 +199,31 @@ Public Class Frm_Pedido
         Else
             TextBox2.Text = ComboBox1.SelectedItem.get_id_estado()
         End If
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        MsgBox("Registro editado")
+        Me.PedidosTableAdapter.Editar(RichTextBox1.Text, DateTimePicker1.Text, ComboBox2.SelectedItem.get_id_cliente, ComboBox1.SelectedItem.get_id_estado, TextBox1.Text, TextBox1.Text)
+        Me.PedidosTableAdapter.Fill(Me.MAPADataSet.pedidos)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        MsgBox("Registro eliminado")
+        Me.PedidosTableAdapter.Eliminar(TextBox1.Text)
+        Me.PedidosTableAdapter.Fill(Me.MAPADataSet.pedidos)
+    End Sub
+
+    Private Sub vaciarCampos()
+        TextBox1.Text = ""
+        ComboBox1.SelectedIndex = -1
+        DateTimePicker1.ResetText()
+        RichTextBox1.Text = ""
+        ComboBox2.SelectedIndex = -1
+        TextBox2.Text = ""
+        tb_index.Text = ""
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        vaciarCampos()
     End Sub
 End Class

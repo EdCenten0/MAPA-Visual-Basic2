@@ -24,6 +24,7 @@ Partial Class Frm_Pedido
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.PedidosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -44,16 +45,15 @@ Partial Class Frm_Pedido
         Me.EstadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PedidosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.pedidosTableAdapter()
-        Me.EstadosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.estadosTableAdapter()
         Me.IdpedidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechapedidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdclienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.id_estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PedidosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.pedidosTableAdapter()
+        Me.EstadosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.estadosTableAdapter()
         Me.Panel2.SuspendLayout()
         CType(Me.PedidosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,6 +88,15 @@ Partial Class Frm_Pedido
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1050, 218)
         Me.Panel2.TabIndex = 28
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.TextBox2.Location = New System.Drawing.Point(617, 11)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(96, 24)
+        Me.TextBox2.TabIndex = 53
         '
         'ComboBox2
         '
@@ -214,7 +223,7 @@ Partial Class Frm_Pedido
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.Button1.Location = New System.Drawing.Point(839, 4)
+        Me.Button1.Location = New System.Drawing.Point(839, 35)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(207, 36)
@@ -226,7 +235,7 @@ Partial Class Frm_Pedido
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button3.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.Button3.Location = New System.Drawing.Point(839, 116)
+        Me.Button3.Location = New System.Drawing.Point(839, 79)
         Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(207, 36)
@@ -253,7 +262,7 @@ Partial Class Frm_Pedido
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.Button2.Location = New System.Drawing.Point(835, 61)
+        Me.Button2.Location = New System.Drawing.Point(839, 123)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(207, 36)
@@ -304,25 +313,6 @@ Partial Class Frm_Pedido
         Me.DataGridView1.Size = New System.Drawing.Size(1050, 373)
         Me.DataGridView1.TabIndex = 33
         '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1082, 665)
-        Me.Panel1.TabIndex = 32
-        '
-        'PedidosTableAdapter
-        '
-        Me.PedidosTableAdapter.ClearBeforeFill = True
-        '
-        'EstadosTableAdapter
-        '
-        Me.EstadosTableAdapter.ClearBeforeFill = True
-        '
         'IdpedidoDataGridViewTextBoxColumn
         '
         Me.IdpedidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -372,14 +362,24 @@ Partial Class Frm_Pedido
         Me.nombre.Name = "nombre"
         Me.nombre.Width = 125
         '
-        'TextBox2
+        'Panel1
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(617, 11)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(96, 24)
-        Me.TextBox2.TabIndex = 53
+        Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1082, 665)
+        Me.Panel1.TabIndex = 32
+        '
+        'PedidosTableAdapter
+        '
+        Me.PedidosTableAdapter.ClearBeforeFill = True
+        '
+        'EstadosTableAdapter
+        '
+        Me.EstadosTableAdapter.ClearBeforeFill = True
         '
         'Frm_Pedido
         '
