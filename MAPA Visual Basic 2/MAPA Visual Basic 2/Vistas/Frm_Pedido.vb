@@ -12,6 +12,8 @@ Public Class Frm_Pedido
         Me.PedidosTableAdapter.Fill(Me.MAPADataSet.pedidos)
         ComboBox1.SelectedIndex = -1
         llenarComboBoxClientes()
+        llenarComboBoxEstados()
+
 
 
     End Sub
@@ -68,8 +70,8 @@ Public Class Frm_Pedido
 
 
     Private Function llenarComboBoxClientes()
-            Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
-            Dim query As String = "SELECT id_cliente, nombre, apellido FROM clientes"
+        Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
+        Dim query As String = "SELECT id_cliente, nombre, apellido FROM clientes"
 
         Using connection As New SqlConnection(connectionString)
             Using command As New SqlCommand(query, connection)
@@ -89,6 +91,66 @@ Public Class Frm_Pedido
         End Using
     End Function
 
+    Private Class Estado
+        Private id_estado As Integer
+        Private nombre As String
+
+        Public Sub New(id_estado As Integer, nombre As String)
+            Me.id_estado = id_estado
+            Me.nombre = nombre
+        End Sub
+
+        Public Function get_id_estado()
+            Return Me.id_estado
+        End Function
+
+        Public Function get_nombre()
+            Return Me.nombre
+        End Function
+
+        Protected Overrides Sub Finalize()
+            MyBase.Finalize()
+        End Sub
+
+        Public Overrides Function ToString() As String
+            Return Me.nombre
+        End Function
+
+        Public Overrides Function Equals(obj As Object) As Boolean
+            If TypeOf obj Is Estado Then
+                Dim other As Estado = DirectCast(obj, Estado)
+                Return Me.get_id_estado() = other.get_id_estado()
+            End If
+            Return False
+        End Function
+
+        Public Overrides Function GetHashCode() As Integer
+            Return MyBase.GetHashCode()
+        End Function
+    End Class
+
+    Private Function llenarComboBoxEstados()
+        Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
+        Dim query As String = "SELECT id_estado, nombre FROM estados"
+
+        Using connection As New SqlConnection(connectionString)
+            Using command As New SqlCommand(query, connection)
+                connection.Open()
+                Dim reader As SqlDataReader = command.ExecuteReader()
+
+                Do While reader.Read
+                    Dim id_estado As Integer = reader.GetInt32(0)
+                    Dim nombre As String = reader.GetString(1)
+
+                    ComboBox1.Items.Add(New Estado(id_estado, nombre))
+                Loop
+
+                reader.Close()
+                connection.Close()
+            End Using
+        End Using
+    End Function
+
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
         If ComboBox2.SelectedIndex = -1 Then
             tb_index.Text = ""
@@ -97,20 +159,43 @@ Public Class Frm_Pedido
         End If
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Dim id_cliente_tabla As Integer
+        Dim id_estado_tabla As Integer
 
 
 
         If Integer.TryParse(DataGridView1.CurrentRow.Cells(3).Value.ToString(), id_cliente_tabla) Then
-
             For Each cliente As Cliente In ComboBox2.Items
                 If cliente.get_id_cliente() = id_cliente_tabla Then
                     ComboBox2.SelectedItem = cliente
                     Exit For
                 End If
             Next
+
+
         End If
 
+        If Integer.TryParse(DataGridView1.CurrentRow.Cells(4).Value.ToString(), id_estado_tabla) Then
+            For Each estado As Estado In ComboBox1.Items
+                If estado.get_id_estado() = id_estado_tabla Then
+                    ComboBox1.SelectedItem = estado
+                    Exit For
+                End If
+            Next
+        End If
+
+    End Sub
+
+    Private Sub tb_index_TextChanged(sender As Object, e As EventArgs) Handles tb_index.TextChanged
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        If ComboBox1.SelectedIndex = -1 Then
+            TextBox2.Text = ""
+        Else
+            TextBox2.Text = ComboBox1.SelectedItem.get_id_estado()
+        End If
     End Sub
 End Class
