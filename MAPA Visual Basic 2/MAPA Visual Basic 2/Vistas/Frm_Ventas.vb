@@ -42,4 +42,8 @@
     Private Sub btn_guardar_Click(sender As Object, e As EventArgs) Handles btn_guardar.Click
         ReporteClientes.Show()
     End Sub
+
+    Private Sub IDFVenta_TextChanged(sender As Object, e As EventArgs) Handles IDFVenta.TextChanged
+
+    End Sub
 End Class
