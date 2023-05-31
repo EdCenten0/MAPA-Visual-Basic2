@@ -58,7 +58,7 @@
   -->
 
   <!-- Habilitar los temas para los controles y cuadros de diálogo comunes de Windows (Windows XP y versiones posteriores) -->
-  <!--
+  
   <dependency>
     <dependentAssembly>
       <assemblyIdentity

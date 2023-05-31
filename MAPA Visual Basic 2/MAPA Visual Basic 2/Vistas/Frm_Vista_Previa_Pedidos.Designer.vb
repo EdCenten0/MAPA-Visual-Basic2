@@ -32,7 +32,6 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.PedidosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.pedidosTableAdapter()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.bt_imprimir_informe = New System.Windows.Forms.Button()
-        Me.bt_finalizar_pedido = New System.Windows.Forms.Button()
         Me.tb_fecha = New System.Windows.Forms.TextBox()
         Me.tb_pedido = New System.Windows.Forms.TextBox()
         Me.bt_agregar_materiales = New System.Windows.Forms.Button()
@@ -125,7 +124,6 @@ Partial Class Frm_Vista_Previa_Pedidos
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.bt_imprimir_informe)
-        Me.Panel2.Controls.Add(Me.bt_finalizar_pedido)
         Me.Panel2.Controls.Add(Me.tb_fecha)
         Me.Panel2.Controls.Add(Me.tb_pedido)
         Me.Panel2.Controls.Add(Me.bt_agregar_materiales)
@@ -147,29 +145,13 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.bt_imprimir_informe.Cursor = System.Windows.Forms.Cursors.Hand
         Me.bt_imprimir_informe.Font = New System.Drawing.Font("Inter", 9.0!)
         Me.bt_imprimir_informe.ForeColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.bt_imprimir_informe.Location = New System.Drawing.Point(437, 421)
+        Me.bt_imprimir_informe.Location = New System.Drawing.Point(297, 420)
         Me.bt_imprimir_informe.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_imprimir_informe.Name = "bt_imprimir_informe"
         Me.bt_imprimir_informe.Size = New System.Drawing.Size(137, 36)
         Me.bt_imprimir_informe.TabIndex = 39
         Me.bt_imprimir_informe.Text = "Imprimir informe"
         Me.bt_imprimir_informe.UseVisualStyleBackColor = True
-        '
-        'bt_finalizar_pedido
-        '
-        Me.bt_finalizar_pedido.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.bt_finalizar_pedido.AutoSize = True
-        Me.bt_finalizar_pedido.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.bt_finalizar_pedido.FlatAppearance.BorderSize = 0
-        Me.bt_finalizar_pedido.Font = New System.Drawing.Font("Inter", 9.0!)
-        Me.bt_finalizar_pedido.ForeColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.bt_finalizar_pedido.Location = New System.Drawing.Point(297, 420)
-        Me.bt_finalizar_pedido.Margin = New System.Windows.Forms.Padding(4)
-        Me.bt_finalizar_pedido.Name = "bt_finalizar_pedido"
-        Me.bt_finalizar_pedido.Size = New System.Drawing.Size(132, 37)
-        Me.bt_finalizar_pedido.TabIndex = 38
-        Me.bt_finalizar_pedido.Text = "Finalizar pedido"
-        Me.bt_finalizar_pedido.UseVisualStyleBackColor = True
         '
         'tb_fecha
         '
@@ -313,7 +295,6 @@ Partial Class Frm_Vista_Previa_Pedidos
     Friend WithEvents PedidosTableAdapter As MAPADataSetTableAdapters.pedidosTableAdapter
     Friend WithEvents Panel2 As Panel
     Friend WithEvents bt_imprimir_informe As Button
-    Friend WithEvents bt_finalizar_pedido As Button
     Friend WithEvents tb_fecha As TextBox
     Friend WithEvents tb_pedido As TextBox
     Friend WithEvents bt_agregar_materiales As Button

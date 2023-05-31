@@ -45,15 +45,15 @@ Partial Class Frm_Pedido
         Me.EstadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PedidosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.pedidosTableAdapter()
+        Me.EstadosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.estadosTableAdapter()
         Me.IdpedidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechapedidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdclienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.id_estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PedidosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.pedidosTableAdapter()
-        Me.EstadosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.estadosTableAdapter()
         Me.Panel2.SuspendLayout()
         CType(Me.PedidosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,11 +91,12 @@ Partial Class Frm_Pedido
         '
         'TextBox2
         '
+        Me.TextBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox2.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(617, 11)
+        Me.TextBox2.Location = New System.Drawing.Point(526, 12)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(96, 24)
+        Me.TextBox2.Size = New System.Drawing.Size(76, 24)
         Me.TextBox2.TabIndex = 53
         '
         'ComboBox2
@@ -111,7 +112,7 @@ Partial Class Frm_Pedido
         Me.ComboBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.PedidosBindingSource, "id_estado", True))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(438, 12)
+        Me.ComboBox1.Location = New System.Drawing.Point(356, 12)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(164, 24)
         Me.ComboBox1.TabIndex = 51
@@ -131,7 +132,7 @@ Partial Class Frm_Pedido
         Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label6.Location = New System.Drawing.Point(361, 12)
+        Me.Label6.Location = New System.Drawing.Point(279, 15)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(70, 20)
@@ -141,10 +142,10 @@ Partial Class Frm_Pedido
         'tb_index
         '
         Me.tb_index.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.tb_index.Location = New System.Drawing.Point(617, 183)
+        Me.tb_index.Location = New System.Drawing.Point(735, 179)
         Me.tb_index.Name = "tb_index"
         Me.tb_index.ReadOnly = True
-        Me.tb_index.Size = New System.Drawing.Size(96, 24)
+        Me.tb_index.Size = New System.Drawing.Size(76, 24)
         Me.tb_index.TabIndex = 49
         '
         'Label2
@@ -179,9 +180,9 @@ Partial Class Frm_Pedido
         Me.Label5.Location = New System.Drawing.Point(5, 52)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(152, 20)
+        Me.Label5.Size = New System.Drawing.Size(134, 20)
         Me.Label5.TabIndex = 45
-        Me.Label5.Text = "Fecha de ingreso:"
+        Me.Label5.Text = "Fecha de inicio:"
         '
         'RichTextBox1
         '
@@ -216,7 +217,7 @@ Partial Class Frm_Pedido
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(207, 36)
         Me.Button4.TabIndex = 34
-        Me.Button4.Text = "Vaciar"
+        Me.Button4.Text = "Vaciar Campos"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button1
@@ -299,9 +300,6 @@ Partial Class Frm_Pedido
         '
         'DataGridView1
         '
-        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdpedidoDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.FechapedidoDataGridViewTextBoxColumn, Me.IdclienteDataGridViewTextBoxColumn, Me.id_estado, Me.nombre})
@@ -312,55 +310,6 @@ Partial Class Frm_Pedido
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(1050, 373)
         Me.DataGridView1.TabIndex = 33
-        '
-        'IdpedidoDataGridViewTextBoxColumn
-        '
-        Me.IdpedidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.IdpedidoDataGridViewTextBoxColumn.DataPropertyName = "id_pedido"
-        Me.IdpedidoDataGridViewTextBoxColumn.HeaderText = "id_pedido"
-        Me.IdpedidoDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdpedidoDataGridViewTextBoxColumn.Name = "IdpedidoDataGridViewTextBoxColumn"
-        Me.IdpedidoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DescripcionDataGridViewTextBoxColumn
-        '
-        Me.DescripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
-        '
-        'FechapedidoDataGridViewTextBoxColumn
-        '
-        Me.FechapedidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.FechapedidoDataGridViewTextBoxColumn.DataPropertyName = "fecha_pedido"
-        Me.FechapedidoDataGridViewTextBoxColumn.HeaderText = "fecha_pedido"
-        Me.FechapedidoDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.FechapedidoDataGridViewTextBoxColumn.Name = "FechapedidoDataGridViewTextBoxColumn"
-        '
-        'IdclienteDataGridViewTextBoxColumn
-        '
-        Me.IdclienteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.IdclienteDataGridViewTextBoxColumn.DataPropertyName = "id_cliente"
-        Me.IdclienteDataGridViewTextBoxColumn.HeaderText = "id_cliente"
-        Me.IdclienteDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdclienteDataGridViewTextBoxColumn.Name = "IdclienteDataGridViewTextBoxColumn"
-        '
-        'id_estado
-        '
-        Me.id_estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.id_estado.DataPropertyName = "id_estado"
-        Me.id_estado.HeaderText = "id_estado"
-        Me.id_estado.MinimumWidth = 6
-        Me.id_estado.Name = "id_estado"
-        '
-        'nombre
-        '
-        Me.nombre.DataPropertyName = "nombre"
-        Me.nombre.HeaderText = "nombre"
-        Me.nombre.MinimumWidth = 6
-        Me.nombre.Name = "nombre"
-        Me.nombre.Width = 125
         '
         'Panel1
         '
@@ -380,6 +329,55 @@ Partial Class Frm_Pedido
         'EstadosTableAdapter
         '
         Me.EstadosTableAdapter.ClearBeforeFill = True
+        '
+        'IdpedidoDataGridViewTextBoxColumn
+        '
+        Me.IdpedidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IdpedidoDataGridViewTextBoxColumn.DataPropertyName = "id_pedido"
+        Me.IdpedidoDataGridViewTextBoxColumn.HeaderText = "Pedido ID"
+        Me.IdpedidoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdpedidoDataGridViewTextBoxColumn.Name = "IdpedidoDataGridViewTextBoxColumn"
+        Me.IdpedidoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DescripcionDataGridViewTextBoxColumn
+        '
+        Me.DescripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "Descripción"
+        Me.DescripcionDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
+        '
+        'FechapedidoDataGridViewTextBoxColumn
+        '
+        Me.FechapedidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.FechapedidoDataGridViewTextBoxColumn.DataPropertyName = "fecha_pedido"
+        Me.FechapedidoDataGridViewTextBoxColumn.HeaderText = "Fecha de inicio"
+        Me.FechapedidoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.FechapedidoDataGridViewTextBoxColumn.Name = "FechapedidoDataGridViewTextBoxColumn"
+        '
+        'IdclienteDataGridViewTextBoxColumn
+        '
+        Me.IdclienteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IdclienteDataGridViewTextBoxColumn.DataPropertyName = "id_cliente"
+        Me.IdclienteDataGridViewTextBoxColumn.HeaderText = "Cliente ID"
+        Me.IdclienteDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdclienteDataGridViewTextBoxColumn.Name = "IdclienteDataGridViewTextBoxColumn"
+        '
+        'id_estado
+        '
+        Me.id_estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.id_estado.DataPropertyName = "id_estado"
+        Me.id_estado.HeaderText = "Estado ID"
+        Me.id_estado.MinimumWidth = 6
+        Me.id_estado.Name = "id_estado"
+        '
+        'nombre
+        '
+        Me.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "Estado"
+        Me.nombre.MinimumWidth = 6
+        Me.nombre.Name = "nombre"
         '
         'Frm_Pedido
         '
@@ -426,11 +424,11 @@ Partial Class Frm_Pedido
     Friend WithEvents EstadosBindingSource As BindingSource
     Friend WithEvents EstadosTableAdapter As MAPADataSetTableAdapters.estadosTableAdapter
     Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents IdpedidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FechapedidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdclienteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents id_estado As DataGridViewTextBoxColumn
     Friend WithEvents nombre As DataGridViewTextBoxColumn
-    Friend WithEvents TextBox2 As TextBox
 End Class

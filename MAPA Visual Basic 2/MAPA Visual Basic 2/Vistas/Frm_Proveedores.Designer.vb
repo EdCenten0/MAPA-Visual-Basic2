@@ -49,6 +49,11 @@ Partial Class Frm_Proveedores
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel_Proveedor = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.bt_buscar = New System.Windows.Forms.Button()
+        Me.txt_buscar = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.ProveedoresTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.proveedoresTableAdapter()
         Me.IdproveedorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -56,11 +61,6 @@ Partial Class Frm_Proveedores
         Me.CatalogoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RucDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.bt_buscar = New System.Windows.Forms.Button()
-        Me.txt_buscar = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.ProveedoresTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.proveedoresTableAdapter()
         CType(Me.ProveedoresBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,31 +81,32 @@ Partial Class Frm_Proveedores
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
-        Me.Label4.Location = New System.Drawing.Point(13, 9)
+        Me.Label4.Font = New System.Drawing.Font("Inter Medium", 19.8!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Location = New System.Drawing.Point(17, 11)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(134, 25)
+        Me.Label4.Size = New System.Drawing.Size(226, 40)
         Me.Label4.TabIndex = 25
         Me.Label4.Text = "Proveedores"
         '
         'bt_refrescar
         '
         Me.bt_refrescar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bt_refrescar.Location = New System.Drawing.Point(630, 237)
+        Me.bt_refrescar.Location = New System.Drawing.Point(921, 355)
+        Me.bt_refrescar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.bt_refrescar.Name = "bt_refrescar"
-        Me.bt_refrescar.Size = New System.Drawing.Size(130, 41)
+        Me.bt_refrescar.Size = New System.Drawing.Size(88, 36)
         Me.bt_refrescar.TabIndex = 48
         Me.bt_refrescar.Text = "Refrescar tabla"
         Me.bt_refrescar.UseVisualStyleBackColor = True
         '
         'Textbox_catalogo
         '
-        Me.Textbox_catalogo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Textbox_catalogo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "catalogo", True))
-        Me.Textbox_catalogo.Location = New System.Drawing.Point(101, 227)
+        Me.Textbox_catalogo.Location = New System.Drawing.Point(135, 279)
+        Me.Textbox_catalogo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Textbox_catalogo.Name = "Textbox_catalogo"
-        Me.Textbox_catalogo.Size = New System.Drawing.Size(495, 51)
+        Me.Textbox_catalogo.Size = New System.Drawing.Size(659, 62)
         Me.Textbox_catalogo.TabIndex = 45
         Me.Textbox_catalogo.Text = ""
         '
@@ -122,60 +123,60 @@ Partial Class Frm_Proveedores
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.Label6.Location = New System.Drawing.Point(2, 227)
+        Me.Label6.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label6.Location = New System.Drawing.Point(3, 279)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(80, 20)
+        Me.Label6.Size = New System.Drawing.Size(86, 20)
         Me.Label6.TabIndex = 44
-        Me.Label6.Text = "Catalogo:"
+        Me.Label6.Text = "Catálogo:"
         '
         'Textbox_direccion
         '
-        Me.Textbox_direccion.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Textbox_direccion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "direccion", True))
-        Me.Textbox_direccion.Location = New System.Drawing.Point(101, 170)
+        Me.Textbox_direccion.Location = New System.Drawing.Point(135, 209)
+        Me.Textbox_direccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Textbox_direccion.Name = "Textbox_direccion"
-        Me.Textbox_direccion.Size = New System.Drawing.Size(495, 51)
+        Me.Textbox_direccion.Size = New System.Drawing.Size(659, 62)
         Me.Textbox_direccion.TabIndex = 43
         Me.Textbox_direccion.Text = ""
         '
         'Textbox_telefono
         '
-        Me.Textbox_telefono.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Textbox_telefono.BackColor = System.Drawing.Color.White
         Me.Textbox_telefono.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "telefono", True))
-        Me.Textbox_telefono.Location = New System.Drawing.Point(103, 102)
+        Me.Textbox_telefono.Location = New System.Drawing.Point(135, 126)
+        Me.Textbox_telefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Textbox_telefono.Name = "Textbox_telefono"
-        Me.Textbox_telefono.Size = New System.Drawing.Size(495, 20)
+        Me.Textbox_telefono.Size = New System.Drawing.Size(264, 22)
         Me.Textbox_telefono.TabIndex = 39
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.Label7.Location = New System.Drawing.Point(4, 102)
+        Me.Label7.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label7.Location = New System.Drawing.Point(4, 126)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(78, 20)
+        Me.Label7.Size = New System.Drawing.Size(84, 20)
         Me.Label7.TabIndex = 40
-        Me.Label7.Text = "Telefono:"
+        Me.Label7.Text = "Teléfono:"
         '
         'Textbox_ruc
         '
-        Me.Textbox_ruc.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Textbox_ruc.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "ruc", True))
-        Me.Textbox_ruc.Location = New System.Drawing.Point(102, 134)
+        Me.Textbox_ruc.Location = New System.Drawing.Point(135, 168)
+        Me.Textbox_ruc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Textbox_ruc.Name = "Textbox_ruc"
-        Me.Textbox_ruc.Size = New System.Drawing.Size(495, 20)
+        Me.Textbox_ruc.Size = New System.Drawing.Size(659, 22)
         Me.Textbox_ruc.TabIndex = 41
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.Label8.Location = New System.Drawing.Point(3, 134)
+        Me.Label8.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label8.Location = New System.Drawing.Point(4, 165)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(50, 20)
         Me.Label8.TabIndex = 42
@@ -183,51 +184,56 @@ Partial Class Frm_Proveedores
         '
         'Textbox_email
         '
-        Me.Textbox_email.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Textbox_email.BackColor = System.Drawing.Color.White
         Me.Textbox_email.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "email", True))
-        Me.Textbox_email.Location = New System.Drawing.Point(103, 73)
+        Me.Textbox_email.Location = New System.Drawing.Point(492, 126)
+        Me.Textbox_email.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Textbox_email.Name = "Textbox_email"
-        Me.Textbox_email.Size = New System.Drawing.Size(495, 20)
+        Me.Textbox_email.Size = New System.Drawing.Size(262, 22)
         Me.Textbox_email.TabIndex = 35
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.Label3.Location = New System.Drawing.Point(4, 69)
+        Me.Label3.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label3.Location = New System.Drawing.Point(427, 126)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(56, 20)
+        Me.Label3.Size = New System.Drawing.Size(57, 20)
         Me.Label3.TabIndex = 36
         Me.Label3.Text = "Email:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.Label5.Location = New System.Drawing.Point(2, 170)
+        Me.Label5.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label5.Location = New System.Drawing.Point(3, 209)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(86, 20)
+        Me.Label5.Size = New System.Drawing.Size(88, 20)
         Me.Label5.TabIndex = 38
         Me.Label5.Text = "Dirección:"
         '
         'bt_vaciar
         '
         Me.bt_vaciar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bt_vaciar.Location = New System.Drawing.Point(630, 181)
+        Me.bt_vaciar.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.bt_vaciar.Location = New System.Drawing.Point(816, 311)
+        Me.bt_vaciar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.bt_vaciar.Name = "bt_vaciar"
-        Me.bt_vaciar.Size = New System.Drawing.Size(130, 40)
+        Me.bt_vaciar.Size = New System.Drawing.Size(193, 36)
         Me.bt_vaciar.TabIndex = 34
-        Me.bt_vaciar.Text = "Vaciar"
+        Me.bt_vaciar.Text = "Vaciar Campos"
         Me.bt_vaciar.UseVisualStyleBackColor = True
         '
         'bt_guardar
         '
         Me.bt_guardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bt_guardar.Location = New System.Drawing.Point(630, 5)
+        Me.bt_guardar.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.bt_guardar.Location = New System.Drawing.Point(816, 179)
+        Me.bt_guardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.bt_guardar.Name = "bt_guardar"
-        Me.bt_guardar.Size = New System.Drawing.Size(130, 44)
+        Me.bt_guardar.Size = New System.Drawing.Size(193, 36)
         Me.bt_guardar.TabIndex = 31
         Me.bt_guardar.Text = "Guardar"
         Me.bt_guardar.UseVisualStyleBackColor = True
@@ -235,31 +241,34 @@ Partial Class Frm_Proveedores
         'bt_editar
         '
         Me.bt_editar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bt_editar.Location = New System.Drawing.Point(630, 125)
+        Me.bt_editar.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.bt_editar.Location = New System.Drawing.Point(816, 223)
+        Me.bt_editar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.bt_editar.Name = "bt_editar"
-        Me.bt_editar.Size = New System.Drawing.Size(130, 41)
+        Me.bt_editar.Size = New System.Drawing.Size(193, 36)
         Me.bt_editar.TabIndex = 33
-        Me.bt_editar.Text = "Ediitar"
+        Me.bt_editar.Text = "Editar"
         Me.bt_editar.UseVisualStyleBackColor = True
         '
         'Textbox_id
         '
-        Me.Textbox_id.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Textbox_id.BackColor = System.Drawing.Color.White
         Me.Textbox_id.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "id_proveedor", True))
         Me.Textbox_id.Enabled = False
-        Me.Textbox_id.Location = New System.Drawing.Point(102, 5)
+        Me.Textbox_id.Location = New System.Drawing.Point(134, 53)
+        Me.Textbox_id.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Textbox_id.Name = "Textbox_id"
-        Me.Textbox_id.Size = New System.Drawing.Size(71, 20)
+        Me.Textbox_id.Size = New System.Drawing.Size(93, 22)
         Me.Textbox_id.TabIndex = 27
         '
         'bt_eliminar
         '
         Me.bt_eliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bt_eliminar.Location = New System.Drawing.Point(630, 62)
+        Me.bt_eliminar.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.bt_eliminar.Location = New System.Drawing.Point(816, 267)
+        Me.bt_eliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.bt_eliminar.Name = "bt_eliminar"
-        Me.bt_eliminar.Size = New System.Drawing.Size(130, 41)
+        Me.bt_eliminar.Size = New System.Drawing.Size(193, 36)
         Me.bt_eliminar.TabIndex = 32
         Me.bt_eliminar.Text = "Eliminar"
         Me.bt_eliminar.UseVisualStyleBackColor = True
@@ -267,30 +276,31 @@ Partial Class Frm_Proveedores
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.Label1.Location = New System.Drawing.Point(3, 3)
+        Me.Label1.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label1.Location = New System.Drawing.Point(5, 53)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(31, 20)
+        Me.Label1.Size = New System.Drawing.Size(30, 20)
         Me.Label1.TabIndex = 28
         Me.Label1.Text = "ID:"
         '
         'Textbox_nombre
         '
-        Me.Textbox_nombre.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Textbox_nombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource2, "nombre", True))
-        Me.Textbox_nombre.Location = New System.Drawing.Point(103, 40)
+        Me.Textbox_nombre.Location = New System.Drawing.Point(135, 88)
+        Me.Textbox_nombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Textbox_nombre.Name = "Textbox_nombre"
-        Me.Textbox_nombre.Size = New System.Drawing.Size(495, 20)
+        Me.Textbox_nombre.Size = New System.Drawing.Size(659, 22)
         Me.Textbox_nombre.TabIndex = 29
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.Label2.Location = New System.Drawing.Point(4, 38)
+        Me.Label2.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label2.Location = New System.Drawing.Point(5, 90)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 20)
+        Me.Label2.Size = New System.Drawing.Size(79, 20)
         Me.Label2.TabIndex = 30
         Me.Label2.Text = "Nombre:"
         '
@@ -303,8 +313,9 @@ Partial Class Frm_Proveedores
         Me.Panel_Proveedor.Controls.Add(Me.Panel2)
         Me.Panel_Proveedor.Controls.Add(Me.Label4)
         Me.Panel_Proveedor.Location = New System.Drawing.Point(0, -1)
+        Me.Panel_Proveedor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel_Proveedor.Name = "Panel_Proveedor"
-        Me.Panel_Proveedor.Size = New System.Drawing.Size(784, 563)
+        Me.Panel_Proveedor.Size = New System.Drawing.Size(1045, 693)
         Me.Panel_Proveedor.TabIndex = 29
         '
         'DataGridView1
@@ -316,60 +327,12 @@ Partial Class Frm_Proveedores
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdproveedorDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CatalogoDataGridViewTextBoxColumn, Me.RucDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ProveedoresBindingSource2
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 368)
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 453)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(760, 181)
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.Size = New System.Drawing.Size(1013, 223)
         Me.DataGridView1.TabIndex = 29
-        '
-        'IdproveedorDataGridViewTextBoxColumn
-        '
-        Me.IdproveedorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.IdproveedorDataGridViewTextBoxColumn.DataPropertyName = "id_proveedor"
-        Me.IdproveedorDataGridViewTextBoxColumn.HeaderText = "id_proveedor"
-        Me.IdproveedorDataGridViewTextBoxColumn.Name = "IdproveedorDataGridViewTextBoxColumn"
-        Me.IdproveedorDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        '
-        'EmailDataGridViewTextBoxColumn
-        '
-        Me.EmailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "email"
-        Me.EmailDataGridViewTextBoxColumn.HeaderText = "email"
-        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        '
-        'CatalogoDataGridViewTextBoxColumn
-        '
-        Me.CatalogoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.CatalogoDataGridViewTextBoxColumn.DataPropertyName = "catalogo"
-        Me.CatalogoDataGridViewTextBoxColumn.HeaderText = "catalogo"
-        Me.CatalogoDataGridViewTextBoxColumn.Name = "CatalogoDataGridViewTextBoxColumn"
-        '
-        'RucDataGridViewTextBoxColumn
-        '
-        Me.RucDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.RucDataGridViewTextBoxColumn.DataPropertyName = "ruc"
-        Me.RucDataGridViewTextBoxColumn.HeaderText = "ruc"
-        Me.RucDataGridViewTextBoxColumn.Name = "RucDataGridViewTextBoxColumn"
-        '
-        'DireccionDataGridViewTextBoxColumn
-        '
-        Me.DireccionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
-        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
-        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
         '
         'Panel2
         '
@@ -398,37 +361,39 @@ Partial Class Frm_Proveedores
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Textbox_nombre)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(12, 37)
+        Me.Panel2.Location = New System.Drawing.Point(16, 46)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(760, 325)
+        Me.Panel2.Size = New System.Drawing.Size(1013, 400)
         Me.Panel2.TabIndex = 28
         '
         'bt_buscar
         '
         Me.bt_buscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bt_buscar.Location = New System.Drawing.Point(644, 292)
+        Me.bt_buscar.Location = New System.Drawing.Point(816, 355)
+        Me.bt_buscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.bt_buscar.Name = "bt_buscar"
-        Me.bt_buscar.Size = New System.Drawing.Size(97, 23)
+        Me.bt_buscar.Size = New System.Drawing.Size(89, 36)
         Me.bt_buscar.TabIndex = 51
         Me.bt_buscar.Text = "Buscar"
         Me.bt_buscar.UseVisualStyleBackColor = True
         '
         'txt_buscar
         '
-        Me.txt_buscar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_buscar.Location = New System.Drawing.Point(101, 292)
+        Me.txt_buscar.Location = New System.Drawing.Point(134, 362)
+        Me.txt_buscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txt_buscar.Name = "txt_buscar"
-        Me.txt_buscar.Size = New System.Drawing.Size(495, 20)
+        Me.txt_buscar.Size = New System.Drawing.Size(659, 22)
         Me.txt_buscar.TabIndex = 50
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.Label9.Location = New System.Drawing.Point(2, 292)
+        Me.Label9.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label9.Location = New System.Drawing.Point(3, 359)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(68, 20)
+        Me.Label9.Size = New System.Drawing.Size(69, 20)
         Me.Label9.TabIndex = 49
         Me.Label9.Text = "Buscar:"
         '
@@ -436,12 +401,70 @@ Partial Class Frm_Proveedores
         '
         Me.ProveedoresTableAdapter.ClearBeforeFill = True
         '
+        'IdproveedorDataGridViewTextBoxColumn
+        '
+        Me.IdproveedorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IdproveedorDataGridViewTextBoxColumn.DataPropertyName = "id_proveedor"
+        Me.IdproveedorDataGridViewTextBoxColumn.HeaderText = "Proveedor ID"
+        Me.IdproveedorDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdproveedorDataGridViewTextBoxColumn.Name = "IdproveedorDataGridViewTextBoxColumn"
+        Me.IdproveedorDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        '
+        'EmailDataGridViewTextBoxColumn
+        '
+        Me.EmailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "email"
+        Me.EmailDataGridViewTextBoxColumn.HeaderText = "Email"
+        Me.EmailDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Teléfono"
+        Me.TelefonoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        '
+        'CatalogoDataGridViewTextBoxColumn
+        '
+        Me.CatalogoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.CatalogoDataGridViewTextBoxColumn.DataPropertyName = "catalogo"
+        Me.CatalogoDataGridViewTextBoxColumn.HeaderText = "Catálogo"
+        Me.CatalogoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CatalogoDataGridViewTextBoxColumn.Name = "CatalogoDataGridViewTextBoxColumn"
+        '
+        'RucDataGridViewTextBoxColumn
+        '
+        Me.RucDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.RucDataGridViewTextBoxColumn.DataPropertyName = "ruc"
+        Me.RucDataGridViewTextBoxColumn.HeaderText = "RUC"
+        Me.RucDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.RucDataGridViewTextBoxColumn.Name = "RucDataGridViewTextBoxColumn"
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Dirección"
+        Me.DireccionDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        '
         'Frm_Proveedores
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 561)
+        Me.ClientSize = New System.Drawing.Size(1045, 690)
         Me.Controls.Add(Me.Panel_Proveedor)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Frm_Proveedores"
         Me.Text = "Proveedores"
         CType(Me.ProveedoresBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -485,6 +508,9 @@ Partial Class Frm_Proveedores
     Friend WithEvents MAPADataSet As MAPADataSet
     Friend WithEvents ProveedoresBindingSource2 As BindingSource
     Friend WithEvents ProveedoresTableAdapter As MAPADataSetTableAdapters.proveedoresTableAdapter
+    Friend WithEvents bt_buscar As Button
+    Friend WithEvents txt_buscar As TextBox
+    Friend WithEvents Label9 As Label
     Friend WithEvents IdproveedorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -492,7 +518,4 @@ Partial Class Frm_Proveedores
     Friend WithEvents CatalogoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents RucDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents bt_buscar As Button
-    Friend WithEvents txt_buscar As TextBox
-    Friend WithEvents Label9 As Label
 End Class

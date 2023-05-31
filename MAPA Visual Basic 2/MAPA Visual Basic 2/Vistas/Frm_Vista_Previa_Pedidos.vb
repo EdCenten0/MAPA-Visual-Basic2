@@ -152,7 +152,5 @@ Public Class Frm_Vista_Previa_Pedidos
         abrirFromularioHijo(frm_m_p_p)
     End Sub
 
-    Private Sub lb_materiales_agregados_Click(sender As Object, e As EventArgs) Handles lb_materiales_agregados.Click
 
-    End Sub
 End Class
