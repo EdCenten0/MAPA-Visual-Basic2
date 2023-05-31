@@ -31,7 +31,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PedidosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.pedidosTableAdapter()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.bt_imprimir_informe = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.tb_fecha = New System.Windows.Forms.TextBox()
         Me.tb_pedido = New System.Windows.Forms.TextBox()
         Me.bt_agregar_materiales = New System.Windows.Forms.Button()
@@ -41,6 +41,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.tb_index = New System.Windows.Forms.TextBox()
         Me.tb_cliente = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.PedidosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -123,7 +124,8 @@ Partial Class Frm_Vista_Previa_Pedidos
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.bt_imprimir_informe)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.tb_fecha)
         Me.Panel2.Controls.Add(Me.tb_pedido)
         Me.Panel2.Controls.Add(Me.bt_agregar_materiales)
@@ -138,20 +140,20 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.Panel2.Size = New System.Drawing.Size(679, 535)
         Me.Panel2.TabIndex = 30
         '
-        'bt_imprimir_informe
+        'Button1
         '
-        Me.bt_imprimir_informe.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.bt_imprimir_informe.AutoSize = True
-        Me.bt_imprimir_informe.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.bt_imprimir_informe.Font = New System.Drawing.Font("Inter", 9.0!)
-        Me.bt_imprimir_informe.ForeColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.bt_imprimir_informe.Location = New System.Drawing.Point(297, 420)
-        Me.bt_imprimir_informe.Margin = New System.Windows.Forms.Padding(4)
-        Me.bt_imprimir_informe.Name = "bt_imprimir_informe"
-        Me.bt_imprimir_informe.Size = New System.Drawing.Size(137, 36)
-        Me.bt_imprimir_informe.TabIndex = 39
-        Me.bt_imprimir_informe.Text = "Imprimir informe"
-        Me.bt_imprimir_informe.UseVisualStyleBackColor = True
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button1.AutoSize = True
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(312, 419)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(137, 36)
+        Me.Button1.TabIndex = 41
+        Me.Button1.Text = "Crear Factura"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'tb_fecha
         '
@@ -190,7 +192,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.bt_agregar_materiales.Name = "bt_agregar_materiales"
         Me.bt_agregar_materiales.Size = New System.Drawing.Size(207, 36)
         Me.bt_agregar_materiales.TabIndex = 34
-        Me.bt_agregar_materiales.Text = "Agregar materiales al pedido"
+        Me.bt_agregar_materiales.Text = "Agregar Materiales al Pedido"
         Me.bt_agregar_materiales.UseVisualStyleBackColor = True
         '
         'lb_materiales_agregados
@@ -266,6 +268,19 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.Label2.TabIndex = 30
         Me.Label2.Text = "Cliente:"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PedidosBindingSource, "id_pedido", True))
+        Me.Label4.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(141, 215)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(71, 20)
+        Me.Label4.TabIndex = 42
+        Me.Label4.Text = "Pedido:"
+        '
         'Frm_Vista_Previa_Pedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
@@ -294,7 +309,6 @@ Partial Class Frm_Vista_Previa_Pedidos
     Friend WithEvents PedidosBindingSource As BindingSource
     Friend WithEvents PedidosTableAdapter As MAPADataSetTableAdapters.pedidosTableAdapter
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents bt_imprimir_informe As Button
     Friend WithEvents tb_fecha As TextBox
     Friend WithEvents tb_pedido As TextBox
     Friend WithEvents bt_agregar_materiales As Button
@@ -304,4 +318,6 @@ Partial Class Frm_Vista_Previa_Pedidos
     Friend WithEvents tb_index As TextBox
     Friend WithEvents tb_cliente As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label4 As Label
 End Class

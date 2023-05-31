@@ -187,6 +187,8 @@ Public Class Frm_Pedido
             Next
         End If
 
+        Me.PedidosTableAdapter.Fill(Me.MAPADataSet.pedidos)
+
     End Sub
 
     Private Sub tb_index_TextChanged(sender As Object, e As EventArgs) Handles tb_index.TextChanged
@@ -226,4 +228,6 @@ Public Class Frm_Pedido
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         vaciarCampos()
     End Sub
+
+
 End Class

@@ -25,6 +25,7 @@ Partial Class Frm_Principal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_Principal))
         Me.panel_contenedor = New System.Windows.Forms.Panel()
         Me.Panel_lateral = New System.Windows.Forms.Panel()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -33,11 +34,11 @@ Partial Class Frm_Principal
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel_lateral.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -60,6 +61,7 @@ Partial Class Frm_Principal
         Me.Panel_lateral.Controls.Add(Me.Button8)
         Me.Panel_lateral.Controls.Add(Me.Button7)
         Me.Panel_lateral.Controls.Add(Me.Button4)
+        Me.Panel_lateral.Controls.Add(Me.Button9)
         Me.Panel_lateral.Controls.Add(Me.Button5)
         Me.Panel_lateral.Controls.Add(Me.Button6)
         Me.Panel_lateral.Controls.Add(Me.Panel3)
@@ -74,6 +76,28 @@ Partial Class Frm_Principal
         Me.Panel_lateral.Size = New System.Drawing.Size(227, 971)
         Me.Panel_lateral.TabIndex = 2
         Me.Panel_lateral.TabStop = True
+        '
+        'Button5
+        '
+        Me.Button5.AutoSize = True
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(234, Byte), Integer))
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(199, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(199, Byte), Integer))
+        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Inter", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.Button5.Location = New System.Drawing.Point(0, 386)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(10)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(227, 45)
+        Me.Button5.TabIndex = 24
+        Me.Button5.Text = "Materiales Por Proveed."
+        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'Button6
         '
@@ -208,38 +232,27 @@ Partial Class Frm_Principal
         Me.Panel2.Size = New System.Drawing.Size(227, 204)
         Me.Panel2.TabIndex = 2
         '
-        'PictureBox1
+        'Button9
         '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(227, 204)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'Button5
-        '
-        Me.Button5.AutoSize = True
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(234, Byte), Integer))
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(199, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Inter", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.Button5.Location = New System.Drawing.Point(0, 386)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(10)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(227, 45)
-        Me.Button5.TabIndex = 24
-        Me.Button5.Text = "Materiales Por Proveed."
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.Button9.AutoSize = True
+        Me.Button9.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(234, Byte), Integer))
+        Me.Button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button9.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button9.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button9.FlatAppearance.BorderSize = 0
+        Me.Button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(199, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(199, Byte), Integer))
+        Me.Button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button9.Font = New System.Drawing.Font("Inter", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.Button9.Location = New System.Drawing.Point(0, 431)
+        Me.Button9.Margin = New System.Windows.Forms.Padding(10)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(227, 45)
+        Me.Button9.TabIndex = 30
+        Me.Button9.Text = "Facturas"
+        Me.Button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button9.UseVisualStyleBackColor = False
         '
         'Button4
         '
@@ -254,11 +267,11 @@ Partial Class Frm_Principal
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Inter", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.Button4.Location = New System.Drawing.Point(0, 431)
+        Me.Button4.Location = New System.Drawing.Point(0, 476)
         Me.Button4.Margin = New System.Windows.Forms.Padding(10)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(227, 45)
-        Me.Button4.TabIndex = 26
+        Me.Button4.TabIndex = 34
         Me.Button4.Text = "Ventas"
         Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button4.UseVisualStyleBackColor = False
@@ -276,11 +289,11 @@ Partial Class Frm_Principal
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("Inter", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.Button7.Location = New System.Drawing.Point(0, 476)
+        Me.Button7.Location = New System.Drawing.Point(0, 521)
         Me.Button7.Margin = New System.Windows.Forms.Padding(10)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(227, 45)
-        Me.Button7.TabIndex = 28
+        Me.Button7.TabIndex = 35
         Me.Button7.Text = "Taller"
         Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button7.UseVisualStyleBackColor = False
@@ -298,14 +311,25 @@ Partial Class Frm_Principal
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button8.Font = New System.Drawing.Font("Inter", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.Button8.Location = New System.Drawing.Point(0, 521)
+        Me.Button8.Location = New System.Drawing.Point(0, 566)
         Me.Button8.Margin = New System.Windows.Forms.Padding(10)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(227, 45)
-        Me.Button8.TabIndex = 29
+        Me.Button8.TabIndex = 36
         Me.Button8.Text = "Ajustes"
         Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button8.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(227, 204)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'Frm_Principal
         '
@@ -343,4 +367,5 @@ Partial Class Frm_Principal
     Friend WithEvents Button8 As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents Button9 As Button
 End Class

@@ -8587,7 +8587,7 @@ Namespace MAPADataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(3) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(4) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT id_factura, precio_total, precio_materiales, mano_de_obra, fecha, id_pedid"& _ 
@@ -8626,6 +8626,17 @@ Namespace MAPADataSetTableAdapters
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mano_de_obra", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "mano_de_obra", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fecha", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_pedido", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_pedido", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(4).Connection = Me.Connection
+            Me._commandCollection(4).CommandText = "INSERT INTO [dbo].[facturas] ([precio_total], [precio_materiales], [mano_de_obra]"& _ 
+                ", [fecha], [id_pedido]) VALUES (@precio_total, @precio_materiales, @mano_de_obra"& _ 
+                ", @fecha, @id_pedido);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@precio_total", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "precio_total", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@precio_materiales", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "precio_materiales", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mano_de_obra", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "mano_de_obra", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fecha", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_pedido", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_pedido", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8833,6 +8844,37 @@ Namespace MAPADataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
         Public Overloads Overridable Function Guardar(ByVal precio_total As Double, ByVal precio_materiales As Double, ByVal mano_de_obra As Double, ByVal fecha As String, ByVal id_pedido As Integer) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
+            command.Parameters(0).Value = CType(precio_total,Double)
+            command.Parameters(1).Value = CType(precio_materiales,Double)
+            command.Parameters(2).Value = CType(mano_de_obra,Double)
+            If (fecha Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("fecha")
+            Else
+                command.Parameters(3).Value = CType(fecha,String)
+            End If
+            command.Parameters(4).Value = CType(id_pedido,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function InsertQuery(ByVal precio_total As Double, ByVal precio_materiales As Double, ByVal mano_de_obra As Double, ByVal fecha As String, ByVal id_pedido As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
             command.Parameters(0).Value = CType(precio_total,Double)
             command.Parameters(1).Value = CType(precio_materiales,Double)
             command.Parameters(2).Value = CType(mano_de_obra,Double)
@@ -10038,7 +10080,7 @@ Namespace MAPADataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(4) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(5) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT pedidos.id_pedido, pedidos.descripcion, pedidos.fecha_pedido, pedidos.id_c"& _ 
@@ -10072,15 +10114,21 @@ Namespace MAPADataSetTableAdapters
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_pedido", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_pedido", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "INSERT INTO pedidos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (descripcion, fecha_pedido, id_clie"& _ 
+            Me._commandCollection(4).CommandText = "SELECT id_pedido, descripcion, fecha_pedido, id_cliente, id_estado"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     pedi"& _ 
+                "dos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (id_pedido = @param1)"
+            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_pedido", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(5).Connection = Me.Connection
+            Me._commandCollection(5).CommandText = "INSERT INTO pedidos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (descripcion, fecha_pedido, id_clie"& _ 
                 "nte, id_estado)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES        (@descripcion,@fecha_pedido,@id_cliente,@id_estad"& _ 
                 "o);  "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_pedido, descripcion, fecha_pedido, id_cliente, id_estado FROM p"& _ 
                 "edidos WHERE (id_pedido = SCOPE_IDENTITY())"
-            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 300, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fecha_pedido", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha_pedido", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_cliente", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_cliente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 300, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fecha_pedido", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha_pedido", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_cliente", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_cliente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -10128,6 +10176,32 @@ Namespace MAPADataSetTableAdapters
         Public Overloads Overridable Function GetDataBy3(ByVal Param1 As Integer) As MAPADataSet.pedidosDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
+            Dim dataTable As MAPADataSet.pedidosDataTable = New MAPADataSet.pedidosDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillOnlyOne(ByVal dataTable As MAPADataSet.pedidosDataTable, ByVal param1 As Integer) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(4)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,Integer)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy4(ByVal param1 As Integer) As MAPADataSet.pedidosDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(4)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,Integer)
             Dim dataTable As MAPADataSet.pedidosDataTable = New MAPADataSet.pedidosDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -10201,7 +10275,7 @@ Namespace MAPADataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
         Public Overloads Overridable Function Guardar(ByVal descripcion As String, ByVal fecha_pedido As String, ByVal id_cliente As Integer, ByVal id_estado As Global.System.Nullable(Of Integer)) As Integer
-            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(5)
             If (descripcion Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("descripcion")
             Else

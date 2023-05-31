@@ -27,8 +27,6 @@ Partial Class Frm_Pedido
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.PedidosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.tb_index = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -42,24 +40,26 @@ Partial Class Frm_Pedido
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.EstadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PedidosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.pedidosTableAdapter()
-        Me.EstadosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.estadosTableAdapter()
+        Me.id_estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdpedidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechapedidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdclienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.id_estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PedidosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
+        Me.EstadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PedidosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.pedidosTableAdapter()
+        Me.EstadosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.estadosTableAdapter()
         Me.Panel2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         CType(Me.PedidosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EstadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -116,16 +116,6 @@ Partial Class Frm_Pedido
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(164, 24)
         Me.ComboBox1.TabIndex = 51
-        '
-        'PedidosBindingSource
-        '
-        Me.PedidosBindingSource.DataMember = "pedidos"
-        Me.PedidosBindingSource.DataSource = Me.MAPADataSet
-        '
-        'MAPADataSet
-        '
-        Me.MAPADataSet.DataSetName = "MAPADataSet"
-        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label6
         '
@@ -282,11 +272,6 @@ Partial Class Frm_Pedido
         Me.Label1.TabIndex = 28
         Me.Label1.Text = "ID:"
         '
-        'EstadosBindingSource
-        '
-        Me.EstadosBindingSource.DataMember = "estados"
-        Me.EstadosBindingSource.DataSource = Me.MAPADataSet
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -322,13 +307,13 @@ Partial Class Frm_Pedido
         Me.Panel1.Size = New System.Drawing.Size(1082, 665)
         Me.Panel1.TabIndex = 32
         '
-        'PedidosTableAdapter
+        'id_estado
         '
-        Me.PedidosTableAdapter.ClearBeforeFill = True
-        '
-        'EstadosTableAdapter
-        '
-        Me.EstadosTableAdapter.ClearBeforeFill = True
+        Me.id_estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.id_estado.DataPropertyName = "id_estado"
+        Me.id_estado.HeaderText = "Estado ID"
+        Me.id_estado.MinimumWidth = 6
+        Me.id_estado.Name = "id_estado"
         '
         'IdpedidoDataGridViewTextBoxColumn
         '
@@ -363,14 +348,6 @@ Partial Class Frm_Pedido
         Me.IdclienteDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdclienteDataGridViewTextBoxColumn.Name = "IdclienteDataGridViewTextBoxColumn"
         '
-        'id_estado
-        '
-        Me.id_estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.id_estado.DataPropertyName = "id_estado"
-        Me.id_estado.HeaderText = "Estado ID"
-        Me.id_estado.MinimumWidth = 6
-        Me.id_estado.Name = "id_estado"
-        '
         'nombre
         '
         Me.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -378,6 +355,29 @@ Partial Class Frm_Pedido
         Me.nombre.HeaderText = "Estado"
         Me.nombre.MinimumWidth = 6
         Me.nombre.Name = "nombre"
+        '
+        'PedidosBindingSource
+        '
+        Me.PedidosBindingSource.DataMember = "pedidos"
+        Me.PedidosBindingSource.DataSource = Me.MAPADataSet
+        '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'EstadosBindingSource
+        '
+        Me.EstadosBindingSource.DataMember = "estados"
+        Me.EstadosBindingSource.DataSource = Me.MAPADataSet
+        '
+        'PedidosTableAdapter
+        '
+        Me.PedidosTableAdapter.ClearBeforeFill = True
+        '
+        'EstadosTableAdapter
+        '
+        Me.EstadosTableAdapter.ClearBeforeFill = True
         '
         'Frm_Pedido
         '
@@ -390,12 +390,12 @@ Partial Class Frm_Pedido
         Me.Text = "Frm_Pedido"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PedidosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EstadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PedidosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EstadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
