@@ -2605,6 +2605,10 @@ Partial Public Class MAPADataSet
         
         Private columnid_estado As Global.System.Data.DataColumn
         
+        Private columnExpr1 As Global.System.Data.DataColumn
+        
+        Private columnnombre As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -2681,6 +2685,22 @@ Partial Public Class MAPADataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Expr1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnExpr1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property nombreColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnombre
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2717,9 +2737,9 @@ Partial Public Class MAPADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddpedidosRow(ByVal descripcion As String, ByVal fecha_pedido As Date, ByVal parentclientesRowByFK_pedidos_clientes As clientesRow, ByVal parentestadosRowByFK_pedidos_estados As estadosRow) As pedidosRow
+        Public Overloads Function AddpedidosRow(ByVal descripcion As String, ByVal fecha_pedido As Date, ByVal parentclientesRowByFK_pedidos_clientes As clientesRow, ByVal parentestadosRowByFK_pedidos_estados As estadosRow, ByVal nombre As String) As pedidosRow
             Dim rowpedidosRow As pedidosRow = CType(Me.NewRow,pedidosRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, descripcion, fecha_pedido, Nothing, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, descripcion, fecha_pedido, Nothing, Nothing, Nothing, nombre}
             If (Not (parentclientesRowByFK_pedidos_clientes) Is Nothing) Then
                 columnValuesArray(3) = parentclientesRowByFK_pedidos_clientes(0)
             End If
@@ -2759,6 +2779,8 @@ Partial Public Class MAPADataSet
             Me.columnfecha_pedido = MyBase.Columns("fecha_pedido")
             Me.columnid_cliente = MyBase.Columns("id_cliente")
             Me.columnid_estado = MyBase.Columns("id_estado")
+            Me.columnExpr1 = MyBase.Columns("Expr1")
+            Me.columnnombre = MyBase.Columns("nombre")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2774,6 +2796,10 @@ Partial Public Class MAPADataSet
             MyBase.Columns.Add(Me.columnid_cliente)
             Me.columnid_estado = New Global.System.Data.DataColumn("id_estado", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_estado)
+            Me.columnExpr1 = New Global.System.Data.DataColumn("Expr1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnExpr1)
+            Me.columnnombre = New Global.System.Data.DataColumn("nombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnombre)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_pedido}, true))
             Me.columnid_pedido.AutoIncrement = true
             Me.columnid_pedido.AutoIncrementSeed = -1
@@ -2785,6 +2811,11 @@ Partial Public Class MAPADataSet
             Me.columndescripcion.MaxLength = 300
             Me.columnfecha_pedido.AllowDBNull = false
             Me.columnid_cliente.AllowDBNull = false
+            Me.columnExpr1.AutoIncrement = true
+            Me.columnExpr1.AutoIncrementSeed = -1
+            Me.columnExpr1.AutoIncrementStep = -1
+            Me.columnExpr1.ReadOnly = true
+            Me.columnnombre.MaxLength = 20
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6053,6 +6084,36 @@ Partial Public Class MAPADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Expr1() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tablepedidos.Expr1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Expr1' de la tabla 'pedidos' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablepedidos.Expr1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property nombre() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablepedidos.nombreColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'nombre' de la tabla 'pedidos' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablepedidos.nombreColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property clientesRow() As clientesRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_pedidos_clientes")),clientesRow)
@@ -6083,6 +6144,30 @@ Partial Public Class MAPADataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub Setid_estadoNull()
             Me(Me.tablepedidos.id_estadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsExpr1Null() As Boolean
+            Return Me.IsNull(Me.tablepedidos.Expr1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetExpr1Null()
+            Me(Me.tablepedidos.Expr1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsnombreNull() As Boolean
+            Return Me.IsNull(Me.tablepedidos.nombreColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetnombreNull()
+            Me(Me.tablepedidos.nombreColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9938,52 +10023,9 @@ Namespace MAPADataSetTableAdapters
             tableMapping.ColumnMappings.Add("fecha_pedido", "fecha_pedido")
             tableMapping.ColumnMappings.Add("id_cliente", "id_cliente")
             tableMapping.ColumnMappings.Add("id_estado", "id_estado")
+            tableMapping.ColumnMappings.Add("Expr1", "Expr1")
+            tableMapping.ColumnMappings.Add("nombre", "nombre")
             Me._adapter.TableMappings.Add(tableMapping)
-            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[pedidos] WHERE (([id_pedido] = @Original_id_pedido) AND ([desc"& _ 
-                "ripcion] = @Original_descripcion) AND ([fecha_pedido] = @Original_fecha_pedido) "& _ 
-                "AND ([id_cliente] = @Original_id_cliente) AND ((@IsNull_id_estado = 1 AND [id_es"& _ 
-                "tado] IS NULL) OR ([id_estado] = @Original_id_estado)))"
-            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_pedido", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_pedido", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_descripcion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fecha_pedido", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha_pedido", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_cliente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_cliente", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_id_estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_estado", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[pedidos] ([descripcion], [fecha_pedido], [id_cliente], [id_est"& _ 
-                "ado]) VALUES (@descripcion, @fecha_pedido, @id_cliente, @id_estado);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_"& _ 
-                "pedido, descripcion, fecha_pedido, id_cliente, id_estado FROM pedidos WHERE (id_"& _ 
-                "pedido = SCOPE_IDENTITY())"
-            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fecha_pedido", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha_pedido", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_cliente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_cliente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[pedidos] SET [descripcion] = @descripcion, [fecha_pedido] = @fecha_"& _ 
-                "pedido, [id_cliente] = @id_cliente, [id_estado] = @id_estado WHERE (([id_pedido]"& _ 
-                " = @Original_id_pedido) AND ([descripcion] = @Original_descripcion) AND ([fecha_"& _ 
-                "pedido] = @Original_fecha_pedido) AND ([id_cliente] = @Original_id_cliente) AND "& _ 
-                "((@IsNull_id_estado = 1 AND [id_estado] IS NULL) OR ([id_estado] = @Original_id_"& _ 
-                "estado)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_pedido, descripcion, fecha_pedido, id_cliente, id_estado F"& _ 
-                "ROM pedidos WHERE (id_pedido = @id_pedido)"
-            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fecha_pedido", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha_pedido", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_cliente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_cliente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_pedido", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_pedido", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_descripcion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fecha_pedido", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha_pedido", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_cliente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_cliente", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_id_estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_estado", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_pedido", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_pedido", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9999,8 +10041,10 @@ Namespace MAPADataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(4) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT id_pedido, descripcion, fecha_pedido, id_cliente, id_estado FROM dbo.pedid"& _ 
-                "os"
+            Me._commandCollection(0).CommandText = "SELECT pedidos.id_pedido, pedidos.descripcion, pedidos.fecha_pedido, pedidos.id_c"& _ 
+                "liente, pedidos.id_estado, estados.id_estado AS Expr1, estados.nombre"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     "& _ 
+                "pedidos LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  estados ON pedidos.id_estado = estado"& _ 
+                "s.id_estado"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
@@ -10087,157 +10131,6 @@ Namespace MAPADataSetTableAdapters
             Dim dataTable As MAPADataSet.pedidosDataTable = New MAPADataSet.pedidosDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As MAPADataSet.pedidosDataTable) As Integer
-            Return Me.Adapter.Update(dataTable)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As MAPADataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "pedidos")
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(dataRows)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_id_pedido As Integer, ByVal Original_descripcion As String, ByVal Original_fecha_pedido As Date, ByVal Original_id_cliente As Integer, ByVal Original_id_estado As Global.System.Nullable(Of Integer)) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_id_pedido,Integer)
-            If (Original_descripcion Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_descripcion")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_descripcion,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_fecha_pedido,Date)
-            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_id_cliente,Integer)
-            If (Original_id_estado.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_id_estado.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(5).Value = Global.System.DBNull.Value
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
-            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.DeleteCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.DeleteCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal descripcion As String, ByVal fecha_pedido As Date, ByVal id_cliente As Integer, ByVal id_estado As Global.System.Nullable(Of Integer)) As Integer
-            If (descripcion Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("descripcion")
-            Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(descripcion,String)
-            End If
-            Me.Adapter.InsertCommand.Parameters(1).Value = CType(fecha_pedido,Date)
-            Me.Adapter.InsertCommand.Parameters(2).Value = CType(id_cliente,Integer)
-            If (id_estado.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(id_estado.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
-            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.InsertCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.InsertCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal descripcion As String, ByVal fecha_pedido As Date, ByVal id_cliente As Integer, ByVal id_estado As Global.System.Nullable(Of Integer), ByVal Original_id_pedido As Integer, ByVal Original_descripcion As String, ByVal Original_fecha_pedido As Date, ByVal Original_id_cliente As Integer, ByVal Original_id_estado As Global.System.Nullable(Of Integer), ByVal id_pedido As Integer) As Integer
-            If (descripcion Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("descripcion")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(descripcion,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(fecha_pedido,Date)
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(id_cliente,Integer)
-            If (id_estado.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(id_estado.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_id_pedido,Integer)
-            If (Original_descripcion Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_descripcion")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_descripcion,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_fecha_pedido,Date)
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_id_cliente,Integer)
-            If (Original_id_estado.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_id_estado.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
-            End If
-            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(id_pedido,Integer)
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
-            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.UpdateCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.UpdateCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal descripcion As String, ByVal fecha_pedido As Date, ByVal id_cliente As Integer, ByVal id_estado As Global.System.Nullable(Of Integer), ByVal Original_id_pedido As Integer, ByVal Original_descripcion As String, ByVal Original_fecha_pedido As Date, ByVal Original_id_cliente As Integer, ByVal Original_id_estado As Global.System.Nullable(Of Integer)) As Integer
-            Return Me.Update(descripcion, fecha_pedido, id_cliente, id_estado, Original_id_pedido, Original_descripcion, Original_fecha_pedido, Original_id_cliente, Original_id_estado, Original_id_pedido)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -14444,8 +14337,6 @@ Namespace MAPADataSetTableAdapters
         
         Private _materialesTableAdapter As materialesTableAdapter
         
-        Private _pedidosTableAdapter As pedidosTableAdapter
-        
         Private _proveedoresTableAdapter As proveedoresTableAdapter
         
         Private _rolesTableAdapter As rolesTableAdapter
@@ -14528,20 +14419,6 @@ Namespace MAPADataSetTableAdapters
             End Get
             Set
                 Me._materialesTableAdapter = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
-            "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property pedidosTableAdapter() As pedidosTableAdapter
-            Get
-                Return Me._pedidosTableAdapter
-            End Get
-            Set
-                Me._pedidosTableAdapter = value
             End Set
         End Property
         
@@ -14678,10 +14555,6 @@ Namespace MAPADataSetTableAdapters
                             AndAlso (Not (Me._materialesTableAdapter.Connection) Is Nothing)) Then
                     Return Me._materialesTableAdapter.Connection
                 End If
-                If ((Not (Me._pedidosTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._pedidosTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._pedidosTableAdapter.Connection
-                End If
                 If ((Not (Me._proveedoresTableAdapter) Is Nothing)  _
                             AndAlso (Not (Me._proveedoresTableAdapter.Connection) Is Nothing)) Then
                     Return Me._proveedoresTableAdapter.Connection
@@ -14733,9 +14606,6 @@ Namespace MAPADataSetTableAdapters
                     count = (count + 1)
                 End If
                 If (Not (Me._materialesTableAdapter) Is Nothing) Then
-                    count = (count + 1)
-                End If
-                If (Not (Me._pedidosTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 If (Not (Me._proveedoresTableAdapter) Is Nothing) Then
@@ -14794,15 +14664,6 @@ Namespace MAPADataSetTableAdapters
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
                     result = (result + Me._estadosTableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
-            If (Not (Me._pedidosTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.pedidos.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._pedidosTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -14909,14 +14770,6 @@ Namespace MAPADataSetTableAdapters
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
                     result = (result + Me._estadosTableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
-            If (Not (Me._pedidosTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.pedidos.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._pedidosTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -15058,14 +14911,6 @@ Namespace MAPADataSetTableAdapters
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
-            If (Not (Me._pedidosTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.pedidos.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
-                If ((Not (deletedRows) Is Nothing)  _
-                            AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._pedidosTableAdapter.Update(deletedRows))
-                    allChangedRows.AddRange(deletedRows)
-                End If
-            End If
             If (Not (Me._estadosTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.estados.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
@@ -15148,11 +14993,6 @@ Namespace MAPADataSetTableAdapters
             End If
             If ((Not (Me._materialesTableAdapter) Is Nothing)  _
                         AndAlso (Me.MatchTableAdapterConnection(Me._materialesTableAdapter.Connection) = false)) Then
-                Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
-                        "sma cadena de conexión.")
-            End If
-            If ((Not (Me._pedidosTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._pedidosTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
@@ -15257,15 +15097,6 @@ Namespace MAPADataSetTableAdapters
                     If Me._materialesTableAdapter.Adapter.AcceptChangesDuringUpdate Then
                         Me._materialesTableAdapter.Adapter.AcceptChangesDuringUpdate = false
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._materialesTableAdapter.Adapter)
-                    End If
-                End If
-                If (Not (Me._pedidosTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._pedidosTableAdapter, Me._pedidosTableAdapter.Connection)
-                    Me._pedidosTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
-                    Me._pedidosTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
-                    If Me._pedidosTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._pedidosTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._pedidosTableAdapter.Adapter)
                     End If
                 End If
                 If (Not (Me._proveedoresTableAdapter) Is Nothing) Then
@@ -15406,10 +15237,6 @@ Namespace MAPADataSetTableAdapters
                 If (Not (Me._materialesTableAdapter) Is Nothing) Then
                     Me._materialesTableAdapter.Connection = CType(revertConnections(Me._materialesTableAdapter),Global.System.Data.SqlClient.SqlConnection)
                     Me._materialesTableAdapter.Transaction = Nothing
-                End If
-                If (Not (Me._pedidosTableAdapter) Is Nothing) Then
-                    Me._pedidosTableAdapter.Connection = CType(revertConnections(Me._pedidosTableAdapter),Global.System.Data.SqlClient.SqlConnection)
-                    Me._pedidosTableAdapter.Transaction = Nothing
                 End If
                 If (Not (Me._proveedoresTableAdapter) Is Nothing) Then
                     Me._proveedoresTableAdapter.Connection = CType(revertConnections(Me._proveedoresTableAdapter),Global.System.Data.SqlClient.SqlConnection)

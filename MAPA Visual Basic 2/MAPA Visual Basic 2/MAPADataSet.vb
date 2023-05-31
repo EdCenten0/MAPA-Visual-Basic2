@@ -10,6 +10,8 @@ Partial Public Class MAPADataSet
 End Class
 
 Namespace MAPADataSetTableAdapters
+    Partial Public Class estadosTableAdapter
+    End Class
 
     Partial Public Class materiales_por_pedidoTableAdapter
     End Class
