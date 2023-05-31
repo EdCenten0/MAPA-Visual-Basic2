@@ -268,7 +268,7 @@ Partial Class Frm_Pedido
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(207, 36)
         Me.Button2.TabIndex = 32
-        Me.Button2.Text = "Eliminar"
+        Me.Button2.Text = " Eliminar"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Label1

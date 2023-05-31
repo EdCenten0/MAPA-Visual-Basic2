@@ -139,8 +139,6 @@ Partial Class Frm_Clientes
         '
         'IDCliente
         '
-        Me.IDCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.IDCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id_cliente", True))
         Me.IDCliente.Enabled = False
         Me.IDCliente.Font = New System.Drawing.Font("Inter", 8.0!)
@@ -154,8 +152,6 @@ Partial Class Frm_Clientes
         '
         'Label7
         '
-        Me.Label7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Inter", 10.2!)
         Me.Label7.Location = New System.Drawing.Point(17, 117)
@@ -167,8 +163,6 @@ Partial Class Frm_Clientes
         '
         'NombreCliente
         '
-        Me.NombreCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.NombreCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "nombre", True))
         Me.NombreCliente.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.NombreCliente.Location = New System.Drawing.Point(113, 162)
@@ -180,8 +174,6 @@ Partial Class Frm_Clientes
         '
         'CedulaCliente
         '
-        Me.CedulaCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CedulaCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "cedula", True))
         Me.CedulaCliente.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.CedulaCliente.Location = New System.Drawing.Point(114, 202)
@@ -193,8 +185,6 @@ Partial Class Frm_Clientes
         '
         'TelefonoCliente
         '
-        Me.TelefonoCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TelefonoCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "telefono", True))
         Me.TelefonoCliente.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.TelefonoCliente.Location = New System.Drawing.Point(113, 248)
@@ -217,8 +207,6 @@ Partial Class Frm_Clientes
         '
         'ApellidoCliente
         '
-        Me.ApellidoCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ApellidoCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "apellido", True))
         Me.ApellidoCliente.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.ApellidoCliente.Location = New System.Drawing.Point(465, 162)
@@ -230,8 +218,6 @@ Partial Class Frm_Clientes
         '
         'Label4
         '
-        Me.Label4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Inter", 10.2!)
         Me.Label4.Location = New System.Drawing.Point(378, 207)
@@ -243,8 +229,6 @@ Partial Class Frm_Clientes
         '
         'Label5
         '
-        Me.Label5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Inter", 10.2!)
         Me.Label5.Location = New System.Drawing.Point(17, 248)
@@ -256,8 +240,6 @@ Partial Class Frm_Clientes
         '
         'Label3
         '
-        Me.Label3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Inter", 10.2!)
         Me.Label3.Location = New System.Drawing.Point(378, 162)
@@ -269,8 +251,6 @@ Partial Class Frm_Clientes
         '
         'Label2
         '
-        Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Inter", 10.2!)
         Me.Label2.Location = New System.Drawing.Point(16, 162)
@@ -282,8 +262,6 @@ Partial Class Frm_Clientes
         '
         'Label1
         '
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Inter", 10.2!)
         Me.Label1.Location = New System.Drawing.Point(17, 207)
@@ -306,8 +284,6 @@ Partial Class Frm_Clientes
         '
         'Busqueda
         '
-        Me.Busqueda.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Busqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Busqueda.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.Busqueda.Location = New System.Drawing.Point(114, 383)
@@ -330,8 +306,6 @@ Partial Class Frm_Clientes
         '
         'Label8
         '
-        Me.Label8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Inter", 10.2!)
         Me.Label8.Location = New System.Drawing.Point(15, 382)
@@ -359,8 +333,6 @@ Partial Class Frm_Clientes
         '
         'Label6
         '
-        Me.Label6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Inter", 10.2!)
         Me.Label6.Location = New System.Drawing.Point(17, 297)
@@ -372,8 +344,6 @@ Partial Class Frm_Clientes
         '
         'IDTCliente
         '
-        Me.IDTCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.IDTCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id_tienda", True))
         Me.IDTCliente.Enabled = False
         Me.IDTCliente.Font = New System.Drawing.Font("Inter", 8.0!)

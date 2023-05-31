@@ -25,7 +25,7 @@ Public Class Frm_Materiales_Por_Pedido
     End Sub
 
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
-        MessageBox.Show("Se ha editado el registro:")
+        MessageBox.Show("Se ha eliminado el registro")
         Me.Materiales_por_pedidoTableAdapter.Delete1(lbl_id_material.Text)
         Me.Materiales_por_pedidoTableAdapter.Fill(Me.MAPADataSet.materiales_por_pedido, id_pedido)
         vaciar_campos()

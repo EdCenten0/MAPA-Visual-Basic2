@@ -13,7 +13,7 @@ Public Class Frm_Pedido
         ComboBox1.SelectedIndex = -1
         llenarComboBoxClientes()
         llenarComboBoxEstados()
-
+        vaciarCampos()
 
 
     End Sub
