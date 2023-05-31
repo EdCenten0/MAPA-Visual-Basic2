@@ -38,4 +38,8 @@
         CantidadVenta.Clear()
         DescripcionVenta.Clear()
     End Sub
+
+    Private Sub btn_guardar_Click(sender As Object, e As EventArgs) Handles btn_guardar.Click
+        ReporteClientes.Show()
+    End Sub
 End Class

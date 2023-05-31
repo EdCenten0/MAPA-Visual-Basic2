@@ -1,7 +1,5 @@
 ﻿Public Class ReporteClientes
-    Private Sub CrystalReportViewer1_Load(sender As Object, e As EventArgs)
 
-    End Sub
     Public Sub CargarReporte()
         Dim objReporte As New CrystalReport2
         objReporte.DataSourceConnections.Item(0).SetLogon("sa", "1234")
@@ -12,7 +10,7 @@
         CargarReporte()
     End Sub
 
-    Private Sub cryreport_Load(sender As Object, e As EventArgs) Handles cryreport.Load
-
+    Private Sub ReporteClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CargarReporte()
     End Sub
 End Class
