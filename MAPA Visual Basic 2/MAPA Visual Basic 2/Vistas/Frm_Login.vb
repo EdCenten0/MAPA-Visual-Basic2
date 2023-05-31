@@ -6,7 +6,7 @@ Public Class Frm_Login
     Dim comando As New SqlCommand
 
     Private Sub Frm_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        conexion = New SqlConnection("Data Source=FRANCISCO-MELEN;Initial Catalog=MAPA;Persist Security Info=True;User ID=sa;Password=1234")
+        conexion = New SqlConnection("Data Source=CARLOSCent;Initial Catalog=MAPA;Persist Security Info=True;User ID=sa;Password=1234")
         txt_Clave.PasswordChar = "*"
     End Sub
 

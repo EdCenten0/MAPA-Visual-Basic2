@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CD247494-1C20-48DC-B3CA-1799782E154A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>MAPA_Visual_Basic_2.Frm_Principal</StartupObject>
+    <StartupObject>MAPA_Visual_Basic_2.Frm_Login</StartupObject>
     <RootNamespace>MAPA_Visual_Basic_2</RootNamespace>
     <AssemblyName>MAPA Visual Basic 2</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -66,10 +66,17 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -132,6 +139,18 @@
     </Compile>
     <Compile Include="Vistas\Frm_Tienda.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\CrystalReport11.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Vistas\CrystalReport2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Vistas\Frm_Ventas.Designer.vb">
       <DependentUpon>Frm_Ventas.vb</DependentUpon>
@@ -211,6 +230,18 @@
     <Compile Include="Vistas\Frm_Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vistas\ReporteClientes.Designer.vb">
+      <DependentUpon>ReporteClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ReporteClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Reporte_Materiales_Pedidos.Designer.vb">
+      <DependentUpon>Reporte_Materiales_Pedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Reporte_Materiales_Pedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -221,6 +252,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Agregar_Usuario.resx">
       <DependentUpon>Frm_Agregar_Usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport11.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Frm_Ajustes.resx">
       <DependentUpon>Frm_Ajustes.vb</DependentUpon>
@@ -267,6 +306,12 @@
     <EmbeddedResource Include="Vistas\Frm_Login.resx">
       <DependentUpon>Frm_Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ReporteClientes.resx">
+      <DependentUpon>ReporteClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Reporte_Materiales_Pedidos.resx">
+      <DependentUpon>Reporte_Materiales_Pedidos.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="MAPADataSet.xsc">
@@ -293,22 +338,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Fondo Registrar.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logo MAPA.png" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

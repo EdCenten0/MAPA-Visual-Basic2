@@ -26,16 +26,16 @@ Partial Class Frm_Ventas
         Me.Button6 = New System.Windows.Forms.Button()
         Me.RichTextBox8 = New System.Windows.Forms.RichTextBox()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.IDFVenta = New System.Windows.Forms.RichTextBox()
         Me.VentasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.RichTextBox6 = New System.Windows.Forms.RichTextBox()
+        Me.IDTVenta = New System.Windows.Forms.RichTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.RichTextBox7 = New System.Windows.Forms.RichTextBox()
+        Me.IDVenta = New System.Windows.Forms.RichTextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.CantidadVenta = New System.Windows.Forms.RichTextBox()
+        Me.DescripcionVenta = New System.Windows.Forms.RichTextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -49,7 +49,7 @@ Partial Class Frm_Ventas
         Me.IdtiendaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdfacturaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VentasTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.ventasTableAdapter()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.btn_guardar = New System.Windows.Forms.Button()
         CType(Me.VentasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,50 +58,47 @@ Partial Class Frm_Ventas
         'Button6
         '
         Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button6.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.Button6.Location = New System.Drawing.Point(716, 378)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button6.Location = New System.Drawing.Point(748, 414)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(207, 36)
+        Me.Button6.Size = New System.Drawing.Size(127, 33)
         Me.Button6.TabIndex = 92
-        Me.Button6.Text = "Refrescar tabla"
+        Me.Button6.Text = "Refresh"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'RichTextBox8
         '
         Me.RichTextBox8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox8.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.RichTextBox8.Location = New System.Drawing.Point(716, 290)
-        Me.RichTextBox8.Margin = New System.Windows.Forms.Padding(4)
+        Me.RichTextBox8.Location = New System.Drawing.Point(716, 302)
+        Me.RichTextBox8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RichTextBox8.Name = "RichTextBox8"
-        Me.RichTextBox8.Size = New System.Drawing.Size(207, 36)
+        Me.RichTextBox8.Size = New System.Drawing.Size(196, 37)
         Me.RichTextBox8.TabIndex = 91
         Me.RichTextBox8.Text = ""
         '
         'Button5
         '
         Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button5.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.Button5.Location = New System.Drawing.Point(716, 334)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button5.Location = New System.Drawing.Point(716, 356)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(207, 36)
+        Me.Button5.Size = New System.Drawing.Size(197, 50)
         Me.Button5.TabIndex = 90
         Me.Button5.Text = "Buscar"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'RichTextBox2
+        'IDFVenta
         '
-        Me.RichTextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.IDFVenta.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "id_factura", True))
-        Me.RichTextBox2.Location = New System.Drawing.Point(126, 320)
-        Me.RichTextBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(93, 24)
-        Me.RichTextBox2.TabIndex = 89
-        Me.RichTextBox2.Text = ""
+        Me.IDFVenta.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "id_factura", True))
+        Me.IDFVenta.Location = New System.Drawing.Point(245, 369)
+        Me.IDFVenta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.IDFVenta.Name = "IDFVenta"
+        Me.IDFVenta.Size = New System.Drawing.Size(403, 37)
+        Me.IDFVenta.TabIndex = 89
+        Me.IDFVenta.Text = ""
         '
         'VentasBindingSource
         '
@@ -118,97 +115,96 @@ Partial Class Frm_Ventas
         Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label1.Location = New System.Drawing.Point(30, 320)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(81, 375)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(95, 20)
+        Me.Label1.Size = New System.Drawing.Size(145, 31)
         Me.Label1.TabIndex = 88
         Me.Label1.Text = "Id Factura:"
         '
-        'RichTextBox6
+        'IDTVenta
         '
-        Me.RichTextBox6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.IDTVenta.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "id_tienda", True))
-        Me.RichTextBox6.Location = New System.Drawing.Point(126, 266)
-        Me.RichTextBox6.Margin = New System.Windows.Forms.Padding(4)
-        Me.RichTextBox6.Name = "RichTextBox6"
-        Me.RichTextBox6.Size = New System.Drawing.Size(93, 24)
-        Me.RichTextBox6.TabIndex = 87
-        Me.RichTextBox6.Text = ""
+        Me.IDTVenta.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "id_tienda", True))
+        Me.IDTVenta.Location = New System.Drawing.Point(227, 300)
+        Me.IDTVenta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.IDTVenta.Name = "IDTVenta"
+        Me.IDTVenta.Size = New System.Drawing.Size(421, 37)
+        Me.IDTVenta.TabIndex = 87
+        Me.IDTVenta.Text = ""
         '
         'Label6
         '
         Me.Label6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label6.Location = New System.Drawing.Point(30, 266)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(81, 308)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(90, 20)
+        Me.Label6.Size = New System.Drawing.Size(126, 31)
         Me.Label6.TabIndex = 86
-        Me.Label6.Text = "Id Tienda:"
+        Me.Label6.Text = "Id tienda:"
         '
-        'RichTextBox7
+        'IDVenta
         '
-        Me.RichTextBox7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.IDVenta.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "id_venta", True))
-        Me.RichTextBox7.Location = New System.Drawing.Point(132, 77)
-        Me.RichTextBox7.Margin = New System.Windows.Forms.Padding(4)
-        Me.RichTextBox7.Name = "RichTextBox7"
-        Me.RichTextBox7.ShortcutsEnabled = False
-        Me.RichTextBox7.Size = New System.Drawing.Size(93, 24)
-        Me.RichTextBox7.TabIndex = 85
-        Me.RichTextBox7.Text = ""
+        Me.IDVenta.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "id_venta", True))
+        Me.IDVenta.Location = New System.Drawing.Point(209, 34)
+        Me.IDVenta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.IDVenta.Name = "IDVenta"
+        Me.IDVenta.ShortcutsEnabled = False
+        Me.IDVenta.Size = New System.Drawing.Size(439, 37)
+        Me.IDVenta.TabIndex = 85
+        Me.IDVenta.Text = ""
         '
         'Label7
         '
         Me.Label7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label7.Location = New System.Drawing.Point(23, 77)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(87, 34)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(82, 20)
+        Me.Label7.Size = New System.Drawing.Size(109, 29)
         Me.Label7.TabIndex = 84
         Me.Label7.Text = "ID Venta:"
         '
-        'RichTextBox5
+        'CantidadVenta
         '
-        Me.RichTextBox5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.CantidadVenta.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "cantidad", True))
-        Me.RichTextBox5.Location = New System.Drawing.Point(132, 124)
-        Me.RichTextBox5.Margin = New System.Windows.Forms.Padding(4)
-        Me.RichTextBox5.Name = "RichTextBox5"
-        Me.RichTextBox5.Size = New System.Drawing.Size(417, 24)
-        Me.RichTextBox5.TabIndex = 83
-        Me.RichTextBox5.Text = ""
+        Me.CantidadVenta.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "cantidad", True))
+        Me.CantidadVenta.Location = New System.Drawing.Point(209, 106)
+        Me.CantidadVenta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CantidadVenta.Name = "CantidadVenta"
+        Me.CantidadVenta.Size = New System.Drawing.Size(425, 29)
+        Me.CantidadVenta.TabIndex = 83
+        Me.CantidadVenta.Text = ""
         '
-        'RichTextBox1
+        'DescripcionVenta
         '
-        Me.RichTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.DescripcionVenta.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "descripcion", True))
-        Me.RichTextBox1.Location = New System.Drawing.Point(126, 175)
-        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(417, 62)
-        Me.RichTextBox1.TabIndex = 82
-        Me.RichTextBox1.Text = ""
+        Me.DescripcionVenta.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentasBindingSource, "descripcion", True))
+        Me.DescripcionVenta.Location = New System.Drawing.Point(268, 160)
+        Me.DescripcionVenta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DescripcionVenta.Name = "DescripcionVenta"
+        Me.DescripcionVenta.Size = New System.Drawing.Size(380, 110)
+        Me.DescripcionVenta.TabIndex = 82
+        Me.DescripcionVenta.Text = ""
         '
         'Button4
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.Button4.Location = New System.Drawing.Point(716, 187)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button4.Location = New System.Drawing.Point(716, 236)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(207, 36)
+        Me.Button4.Size = New System.Drawing.Size(197, 58)
         Me.Button4.TabIndex = 81
         Me.Button4.Text = "Vaciar Campos"
         Me.Button4.UseVisualStyleBackColor = True
@@ -216,11 +212,10 @@ Partial Class Frm_Ventas
         'Button3
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.Button3.Location = New System.Drawing.Point(716, 132)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button3.Location = New System.Drawing.Point(716, 160)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(207, 36)
+        Me.Button3.Size = New System.Drawing.Size(197, 69)
         Me.Button3.TabIndex = 80
         Me.Button3.Text = "Eliminar"
         Me.Button3.UseVisualStyleBackColor = True
@@ -228,11 +223,10 @@ Partial Class Frm_Ventas
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.Button2.Location = New System.Drawing.Point(716, 85)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Location = New System.Drawing.Point(716, 95)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(207, 36)
+        Me.Button2.Size = New System.Drawing.Size(197, 58)
         Me.Button2.TabIndex = 79
         Me.Button2.Text = "Editar"
         Me.Button2.UseVisualStyleBackColor = True
@@ -240,11 +234,10 @@ Partial Class Frm_Ventas
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.Button1.Location = New System.Drawing.Point(716, 41)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Location = New System.Drawing.Point(716, 16)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(207, 36)
+        Me.Button1.Size = New System.Drawing.Size(197, 71)
         Me.Button1.TabIndex = 78
         Me.Button1.Text = "Guardar"
         Me.Button1.UseVisualStyleBackColor = True
@@ -254,11 +247,11 @@ Partial Class Frm_Ventas
         Me.Label3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label3.Location = New System.Drawing.Point(17, 175)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(81, 160)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(107, 20)
+        Me.Label3.Size = New System.Drawing.Size(165, 31)
         Me.Label3.TabIndex = 77
         Me.Label3.Text = "Descripcion:"
         '
@@ -267,11 +260,11 @@ Partial Class Frm_Ventas
         Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label2.Location = New System.Drawing.Point(23, 124)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(83, 106)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 20)
+        Me.Label2.Size = New System.Drawing.Size(115, 29)
         Me.Label2.TabIndex = 76
         Me.Label2.Text = "Cantidad:"
         '
@@ -286,7 +279,7 @@ Partial Class Frm_Ventas
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdventaDataGridViewTextBoxColumn, Me.CantidadDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.IdtiendaDataGridViewTextBoxColumn, Me.IdfacturaDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.VentasBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(9, 460)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(1028, 213)
@@ -341,34 +334,35 @@ Partial Class Frm_Ventas
         '
         Me.VentasTableAdapter.ClearBeforeFill = True
         '
-        'Label4
+        'btn_guardar
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Inter Medium", 19.8!, System.Drawing.FontStyle.Bold)
-        Me.Label4.Location = New System.Drawing.Point(13, 9)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(132, 40)
-        Me.Label4.TabIndex = 30
-        Me.Label4.Text = "Ventas"
+        Me.btn_guardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_guardar.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.btn_guardar.Location = New System.Drawing.Point(533, 412)
+        Me.btn_guardar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_guardar.Name = "btn_guardar"
+        Me.btn_guardar.Size = New System.Drawing.Size(160, 36)
+        Me.btn_guardar.TabIndex = 93
+        Me.btn_guardar.Text = "Reporte"
+        Me.btn_guardar.UseVisualStyleBackColor = True
         '
         'Frm_Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1045, 690)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.btn_guardar)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.RichTextBox8)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.RichTextBox2)
+        Me.Controls.Add(Me.IDFVenta)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.RichTextBox6)
+        Me.Controls.Add(Me.IDTVenta)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.RichTextBox7)
+        Me.Controls.Add(Me.IDVenta)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.RichTextBox5)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.CantidadVenta)
+        Me.Controls.Add(Me.DescripcionVenta)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -376,7 +370,7 @@ Partial Class Frm_Ventas
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Frm_Ventas"
         Me.Text = "Ventas"
         CType(Me.VentasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -390,14 +384,14 @@ Partial Class Frm_Ventas
     Friend WithEvents Button6 As Button
     Friend WithEvents RichTextBox8 As RichTextBox
     Friend WithEvents Button5 As Button
-    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents IDFVenta As RichTextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents RichTextBox6 As RichTextBox
+    Friend WithEvents IDTVenta As RichTextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents RichTextBox7 As RichTextBox
+    Friend WithEvents IDVenta As RichTextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents RichTextBox5 As RichTextBox
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents CantidadVenta As RichTextBox
+    Friend WithEvents DescripcionVenta As RichTextBox
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
@@ -413,5 +407,5 @@ Partial Class Frm_Ventas
     Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdtiendaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdfacturaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Label4 As Label
+    Friend WithEvents btn_guardar As Button
 End Class
