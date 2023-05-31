@@ -27,69 +27,18 @@
 
     Private Sub bt_guardar_Click(sender As Object, e As EventArgs) Handles bt_guardar.Click
 
-        If Not Me.Textbox_nombre.Text = "" And Not Me.Textbox_email.Text = "" And Not Me.Textbox_direccion.Text = "" And Not Me.Textbox_catalogo.Text = "" And Not Me.Textbox_ruc.Text = "" And Not Me.Textbox_telefono.Text = "" Then
-
-            If Me.Textbox_id.Text = "" Then
-
-                If Me.Textbox_nombre.TextLength <= 50 Then
-
-                    If Me.Textbox_email.TextLength <= 50 Then
-
-                        If Me.Textbox_ruc.TextLength <= 15 Then
-
-                            If Me.Textbox_telefono.TextLength <= 12 Then
-
-                                If Me.Textbox_catalogo.TextLength <= 100 Then
-
-                                    If Me.Textbox_direccion.TextLength <= 300 Then
-
-                                        MessageBox.Show("Se ha guardado el proveedor: " & Textbox_nombre.Text)
-                                        Me.ProveedoresTableAdapter.Guardar(Me.Textbox_nombre.Text, Me.Textbox_email.Text, Me.Textbox_telefono.Text, Me.Textbox_catalogo.Text, Me.Textbox_ruc.Text, Me.Textbox_direccion.Text, 1)
-                                        Me.ProveedoresTableAdapter.Fill(Me.MAPADataSet.proveedores)
-                                        vaciar()
-
-                                    Else
-                                        MessageBox.Show("La direccion debe tener menos de 300 caracteres")
-
-                                    End If
-
-                                Else
-                                    MessageBox.Show("El catalogo debe tener menos de 100 caracteres")
-
-                                End If
-
-                            Else
-                                MessageBox.Show("El telefono debe tener menos de 12 caracteres")
-
-                            End If
-
-                        Else
-                            MessageBox.Show("El ruc debe tener menos de 15 caracteres")
-
-                        End If
-
-                    Else
-                        MessageBox.Show("El correo electronico debe tener menos de 50 caracteres")
-
-                    End If
-
-                Else
-                    MessageBox.Show("El nombre del proveedor debe tener menos de 50 caracteres")
-
-                End If
-
-
-            Else
-                MessageBox.Show("No se puede guardar el proveedor con ese id existente")
-
+        If Me.Textbox_id.Text = "" Then
+            If comprobar() Then
+                MessageBox.Show("Se ha guardado el proveedor: " & Textbox_nombre.Text)
+                Me.ProveedoresTableAdapter.Guardar(Me.Textbox_nombre.Text, Me.Textbox_email.Text, Me.Textbox_telefono.Text, Me.Textbox_catalogo.Text, Me.Textbox_ruc.Text, Me.Textbox_direccion.Text, 1)
+                Me.ProveedoresTableAdapter.Fill(Me.MAPADataSet.proveedores)
+                vaciar()
             End If
 
         Else
-            MessageBox.Show("Llene los campos vacios")
+            MessageBox.Show("No se puede guardar el proveedor con ese id existente")
 
         End If
-
-
 
     End Sub
 
@@ -106,64 +55,71 @@
 
         End If
 
-
-        vaciar()
     End Sub
     Private Sub bt_editar_Click(sender As Object, e As EventArgs) Handles bt_editar.Click
 
+        If Not Me.Textbox_id.Text = "" Then
+
+            If comprobar() Then
+                MessageBox.Show("Se ha editado el proveedor: " & Textbox_nombre.Text)
+                Me.ProveedoresTableAdapter.Editar(Me.Textbox_nombre.Text, Me.Textbox_email.Text, Me.Textbox_telefono.Text, Me.Textbox_catalogo.Text, Me.Textbox_ruc.Text, Me.Textbox_direccion.Text, 1, Me.Textbox_id.Text, Me.Textbox_id.Text)
+                Me.ProveedoresTableAdapter.Fill(Me.MAPADataSet.proveedores)
+                vaciar()
+            End If
+
+        Else
+            MessageBox.Show("Seleccione al proveedor a editar")
+
+        End If
+
+    End Sub
+
+
+    Private Function comprobar() As Boolean
+        Dim valido As Boolean = False
+
         If Not Me.Textbox_nombre.Text = "" And Not Me.Textbox_email.Text = "" And Not Me.Textbox_direccion.Text = "" And Not Me.Textbox_catalogo.Text = "" And Not Me.Textbox_ruc.Text = "" And Not Me.Textbox_telefono.Text = "" Then
 
-            If Not Me.Textbox_id.Text = "" Then
+            If Me.Textbox_nombre.TextLength <= 50 Then
 
-                If Me.Textbox_nombre.TextLength <= 50 Then
+                If Me.Textbox_email.TextLength <= 50 Then
 
-                    If Me.Textbox_email.TextLength <= 50 Then
+                    If Me.Textbox_ruc.TextLength <= 15 Then
 
-                        If Me.Textbox_ruc.TextLength <= 15 Then
+                        If Me.Textbox_telefono.TextLength <= 12 Then
 
-                            If Me.Textbox_telefono.TextLength <= 12 Then
+                            If Me.Textbox_catalogo.TextLength <= 100 Then
 
-                                If Me.Textbox_catalogo.TextLength <= 100 Then
-
-                                    If Me.Textbox_direccion.TextLength <= 300 Then
-                                        MessageBox.Show("Se ha editado el proveedor: " & Textbox_nombre.Text)
-                                        Me.ProveedoresTableAdapter.Editar(Me.Textbox_nombre.Text, Me.Textbox_email.Text, Me.Textbox_telefono.Text, Me.Textbox_catalogo.Text, Me.Textbox_ruc.Text, Me.Textbox_direccion.Text, 1, Me.Textbox_id.Text, Me.Textbox_id.Text)
-                                        Me.ProveedoresTableAdapter.Fill(Me.MAPADataSet.proveedores)
-                                        vaciar()
-
-                                    Else
-                                        MessageBox.Show("La direccion debe tener menos de 300 caracteres")
-
-                                    End If
+                                If Me.Textbox_direccion.TextLength <= 300 Then
+                                    valido = True
 
                                 Else
-                                    MessageBox.Show("El catalogo debe tener menos de 100 caracteres")
+                                    MessageBox.Show("La direccion debe tener menos de 300 caracteres")
 
                                 End If
 
                             Else
-                                MessageBox.Show("El telefono debe tener menos de 12 caracteres")
+                                MessageBox.Show("El catalogo debe tener menos de 100 caracteres")
 
                             End If
 
                         Else
-                            MessageBox.Show("El ruc debe tener menos de 15 caracteres")
+                            MessageBox.Show("El telefono debe tener menos de 12 caracteres")
 
                         End If
 
                     Else
-                        MessageBox.Show("El correo electronico debe tener menos de 50 caracteres")
+                        MessageBox.Show("El ruc debe tener menos de 15 caracteres")
 
                     End If
 
                 Else
-                    MessageBox.Show("El nombre del proveedor debe tener menos de 50 caracteres")
+                    MessageBox.Show("El correo electronico debe tener menos de 50 caracteres")
 
                 End If
 
-
             Else
-                MessageBox.Show("Seleccione al proveedor a editar")
+                MessageBox.Show("El nombre del proveedor debe tener menos de 50 caracteres")
 
             End If
 
@@ -172,8 +128,10 @@
 
         End If
 
+        Return valido
 
-    End Sub
+    End Function
+
 
     Private Sub bt_buscar_Click(sender As Object, e As EventArgs) Handles bt_buscar.Click
         Me.ProveedoresTableAdapter.Buscar(Me.MAPADataSet.proveedores, Me.txt_buscar.Text)

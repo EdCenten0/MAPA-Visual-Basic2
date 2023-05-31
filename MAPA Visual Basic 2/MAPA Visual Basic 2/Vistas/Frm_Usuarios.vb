@@ -7,6 +7,7 @@
         vaciar()
     End Sub
 
+
     Private Function vaciar() As String
         Me.txt_usuario.Text = ""
         Me.txt_id.Text = ""
@@ -19,61 +20,34 @@
 
     End Function
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub bt_refrescar_Click_1(sender As Object, e As EventArgs) Handles bt_refrescar.Click
         Me.UsuariosTableAdapter.Fill(Me.MAPADataSet.usuarios)
     End Sub
 
+
     Private Sub bt_vaciar_Click(sender As Object, e As EventArgs) Handles bt_vaciar.Click
         vaciar()
     End Sub
 
+
     Private Sub bt_guardar_Click(sender As Object, e As EventArgs) Handles bt_guardar.Click
 
-        If Not Me.txt_usuario.Text = "" And Not Me.txt_correo.Text = "" And Not Me.txt_clave.Text = "" Then
+        If Me.txt_id.Text = "" Then
 
-            If Me.txt_id.Text = "" Then
-                If Me.txt_clave.TextLength >= 8 Then
-
-                    If Me.txt_usuario.TextLength <= 50 Then
-
-                        If Me.txt_clave.TextLength <= 50 Then
-
-                            If Me.txt_correo.TextLength <= 50 Then
-                                MessageBox.Show("Se ha guardado el usuario: " & txt_usuario.Text)
-                                Me.UsuariosTableAdapter.Guardar(txt_usuario.Text, txt_clave.Text, txt_correo.Text, cb_rol.SelectedValue)
-                                Me.UsuariosTableAdapter.Fill(Me.MAPADataSet.usuarios)
-                                vaciar()
-
-                            Else
-                                MessageBox.Show("El correo electronico debe tener menos de 50 caracteres")
-                            End If
-
-                        Else
-                            MessageBox.Show("La contraseña debe tener menos de 50 caracteres")
-                        End If
-
-                    Else
-                        MessageBox.Show("El nombre de usuario debe tener menos de 50 caracteres")
-                    End If
-
-                Else
-                    MessageBox.Show("La contraseña debe tener más de 8 caracteres")
-                End If
-
-            Else
-                MessageBox.Show("No se puede guardar un registro con ese id existente")
+            If Me.comprobar Then
+                MessageBox.Show("Se ha guardado el usuario: " & txt_usuario.Text)
+                Me.UsuariosTableAdapter.Guardar(txt_usuario.Text, txt_clave.Text, txt_correo.Text, cb_rol.SelectedValue)
+                Me.UsuariosTableAdapter.Fill(Me.MAPADataSet.usuarios)
+                vaciar()
             End If
 
         Else
-            MessageBox.Show("Llene todos campos vacios")
+            MessageBox.Show("No se puede guardar un registro con ese id existente")
         End If
 
-
     End Sub
+
 
     Private Sub bt_eliminar_Click(sender As Object, e As EventArgs) Handles bt_eliminar.Click
 
@@ -89,50 +63,63 @@
 
     End Sub
 
+
     Private Sub bt_editar_Click(sender As Object, e As EventArgs) Handles bt_editar.Click
+
+        If Not Me.txt_id.Text = "" Then
+
+            If Me.comprobar Then
+                MessageBox.Show("Se ha editado el usuario: " & txt_usuario.Text)
+                Me.UsuariosTableAdapter.Editar(txt_usuario.Text, txt_clave.Text, txt_correo.Text, cb_rol.SelectedValue, txt_id.Text, txt_id.Text)
+                Me.UsuariosTableAdapter.Fill(Me.MAPADataSet.usuarios)
+                vaciar()
+            End If
+
+        Else
+            MessageBox.Show("Seleccione el registro a editar")
+        End If
+
+    End Sub
+
+
+    Private Function comprobar() As Boolean
+        Dim valido As Boolean = False
 
         If Not Me.txt_usuario.Text = "" And Not Me.txt_correo.Text = "" And Not Me.txt_clave.Text = "" Then
 
-            If Not Me.txt_id.Text = "" Then
+            If Me.txt_clave.TextLength >= 8 Then
 
-                If Me.txt_clave.TextLength >= 8 Then
+                If Me.txt_usuario.TextLength <= 50 Then
 
-                    If Me.txt_usuario.TextLength <= 50 Then
+                    If Me.txt_clave.TextLength <= 50 Then
 
-                        If Me.txt_clave.TextLength <= 50 Then
-
-                            If Me.txt_correo.TextLength <= 50 Then
-                                MessageBox.Show("Se ha editado el usuario: " & txt_usuario.Text)
-                                Me.UsuariosTableAdapter.Editar(txt_usuario.Text, txt_clave.Text, txt_correo.Text, cb_rol.SelectedValue, txt_id.Text, txt_id.Text)
-                                Me.UsuariosTableAdapter.Fill(Me.MAPADataSet.usuarios)
-                                vaciar()
-
-                            Else
-                                MessageBox.Show("Error de correo electronico debe tener menos de 50 caracteres")
-                            End If
+                        If Me.txt_correo.TextLength <= 50 Then
+                            valido = True
 
                         Else
-                            MessageBox.Show("Error de contraseña debe tener menos de 50 caracteres")
+                            MessageBox.Show("Error de correo electronico debe tener menos de 50 caracteres")
                         End If
 
                     Else
-                        MessageBox.Show("Error de nombre de usuario debe tener menos de 50 caracteres")
+                        MessageBox.Show("Error de contraseña debe tener menos de 50 caracteres")
                     End If
 
                 Else
-                    MessageBox.Show("La contraseña debe tener más de 8 caracteres")
+                    MessageBox.Show("Error de nombre de usuario debe tener menos de 50 caracteres")
                 End If
 
             Else
-                MessageBox.Show("Seleccione el registro a editar")
+                MessageBox.Show("La contraseña debe tener más de 8 caracteres")
             End If
 
         Else
             MessageBox.Show("Llene todos campos vacios")
-
         End If
 
-    End Sub
+        Return valido
+
+    End Function
+
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles bt_buscar.Click
         Me.UsuariosTableAdapter.Buscar(Me.MAPADataSet.usuarios, Me.txt_buscar.Text)
