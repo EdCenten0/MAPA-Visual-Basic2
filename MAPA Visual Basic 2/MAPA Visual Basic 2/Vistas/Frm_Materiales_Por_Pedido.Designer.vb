@@ -46,6 +46,7 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.lbl_material = New System.Windows.Forms.Label()
         Me.cb_unidad_medida = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Materiales_por_pedidoTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter()
         Me.IdmaterialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombrematerialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,7 +55,6 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.PrecioporunidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PreciototalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdpedidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Materiales_por_pedidoTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materiales_por_pedidoTableAdapter()
         Me.Panel2.SuspendLayout()
         CType(Me.MaterialesporpedidoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -323,11 +323,15 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.DataGridView1.Size = New System.Drawing.Size(1109, 366)
         Me.DataGridView1.TabIndex = 27
         '
+        'Materiales_por_pedidoTableAdapter
+        '
+        Me.Materiales_por_pedidoTableAdapter.ClearBeforeFill = True
+        '
         'IdmaterialDataGridViewTextBoxColumn
         '
         Me.IdmaterialDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.IdmaterialDataGridViewTextBoxColumn.DataPropertyName = "id_material"
-        Me.IdmaterialDataGridViewTextBoxColumn.HeaderText = "id_material"
+        Me.IdmaterialDataGridViewTextBoxColumn.HeaderText = "Material ID"
         Me.IdmaterialDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdmaterialDataGridViewTextBoxColumn.Name = "IdmaterialDataGridViewTextBoxColumn"
         Me.IdmaterialDataGridViewTextBoxColumn.ReadOnly = True
@@ -336,7 +340,7 @@ Partial Class Frm_Materiales_Por_Pedido
         '
         Me.NombrematerialDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.NombrematerialDataGridViewTextBoxColumn.DataPropertyName = "nombre_material"
-        Me.NombrematerialDataGridViewTextBoxColumn.HeaderText = "nombre_material"
+        Me.NombrematerialDataGridViewTextBoxColumn.HeaderText = "Nombre del Material"
         Me.NombrematerialDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.NombrematerialDataGridViewTextBoxColumn.Name = "NombrematerialDataGridViewTextBoxColumn"
         '
@@ -344,7 +348,7 @@ Partial Class Frm_Materiales_Por_Pedido
         '
         Me.DescripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "Descripción"
         Me.DescripcionDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
         '
@@ -352,7 +356,7 @@ Partial Class Frm_Materiales_Por_Pedido
         '
         Me.CantidadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.CantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad"
-        Me.CantidadDataGridViewTextBoxColumn.HeaderText = "cantidad"
+        Me.CantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad"
         Me.CantidadDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.CantidadDataGridViewTextBoxColumn.Name = "CantidadDataGridViewTextBoxColumn"
         '
@@ -360,7 +364,7 @@ Partial Class Frm_Materiales_Por_Pedido
         '
         Me.UnidaddemedidaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.UnidaddemedidaDataGridViewTextBoxColumn.DataPropertyName = "unidad_de_medida"
-        Me.UnidaddemedidaDataGridViewTextBoxColumn.HeaderText = "unidad_de_medida"
+        Me.UnidaddemedidaDataGridViewTextBoxColumn.HeaderText = "Unidad de Medida"
         Me.UnidaddemedidaDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.UnidaddemedidaDataGridViewTextBoxColumn.Name = "UnidaddemedidaDataGridViewTextBoxColumn"
         '
@@ -368,7 +372,7 @@ Partial Class Frm_Materiales_Por_Pedido
         '
         Me.PrecioporunidadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.PrecioporunidadDataGridViewTextBoxColumn.DataPropertyName = "precio_por_unidad"
-        Me.PrecioporunidadDataGridViewTextBoxColumn.HeaderText = "precio_por_unidad"
+        Me.PrecioporunidadDataGridViewTextBoxColumn.HeaderText = "Precio por Unidad"
         Me.PrecioporunidadDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.PrecioporunidadDataGridViewTextBoxColumn.Name = "PrecioporunidadDataGridViewTextBoxColumn"
         '
@@ -376,7 +380,7 @@ Partial Class Frm_Materiales_Por_Pedido
         '
         Me.PreciototalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.PreciototalDataGridViewTextBoxColumn.DataPropertyName = "precio_total"
-        Me.PreciototalDataGridViewTextBoxColumn.HeaderText = "precio_total"
+        Me.PreciototalDataGridViewTextBoxColumn.HeaderText = "Precio Total"
         Me.PreciototalDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.PreciototalDataGridViewTextBoxColumn.Name = "PreciototalDataGridViewTextBoxColumn"
         '
@@ -384,13 +388,9 @@ Partial Class Frm_Materiales_Por_Pedido
         '
         Me.IdpedidoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.IdpedidoDataGridViewTextBoxColumn.DataPropertyName = "id_pedido"
-        Me.IdpedidoDataGridViewTextBoxColumn.HeaderText = "id_pedido"
+        Me.IdpedidoDataGridViewTextBoxColumn.HeaderText = "Pedido ID"
         Me.IdpedidoDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdpedidoDataGridViewTextBoxColumn.Name = "IdpedidoDataGridViewTextBoxColumn"
-        '
-        'Materiales_por_pedidoTableAdapter
-        '
-        Me.Materiales_por_pedidoTableAdapter.ClearBeforeFill = True
         '
         'Frm_Materiales_Por_Pedido
         '

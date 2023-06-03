@@ -8,7 +8,7 @@ Public Class Frm_Login
 
     Private Sub Frm_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        conexion = New SqlConnection("Data Source=CARLOSCent;Initial Catalog=MAPA;Persist Security Info=True;User ID=sa;Password=1234")
+        conexion = New SqlConnection(Frm_Principal.conexionString)
         txt_Clave.PasswordChar = "*"
         Application.EnableVisualStyles()
     End Sub

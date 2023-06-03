@@ -41,7 +41,7 @@ Public Class Frm_Vista_Previa_Pedidos
 
     Private Function ObtenerNombreApellidoCliente(idCliente As Integer) As String
         ' Configurar la conexión a la base de datos
-        Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
+        Dim connectionString As String = Frm_Principal.conexionString
         Dim query As String = "SELECT nombre, apellido FROM clientes WHERE id_cliente = @idCliente"
 
         Using connection As New SqlConnection(connectionString)
@@ -91,7 +91,7 @@ Public Class Frm_Vista_Previa_Pedidos
     End Sub
 
     Private Function obtenerMaterialesAgregados()
-        Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
+        Dim connectionString As String = Frm_Principal.conexionString
         Dim query As String = "SELECT COUNT(id_pedido) FROM materiales WHERE id_pedido = @id_pedido"
 
         Using connection As New SqlConnection(connectionString)

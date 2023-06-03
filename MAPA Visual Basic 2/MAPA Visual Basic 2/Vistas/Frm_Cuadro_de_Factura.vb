@@ -7,6 +7,7 @@ Public Class Frm_Cuadro_de_Factura
     Public fecha As String
     Public id_pedido As Integer
 
+
     Private Sub rellenarCampos()
         buscarPedido()
         sumarMateriales()
@@ -16,7 +17,7 @@ Public Class Frm_Cuadro_de_Factura
     End Sub
 
     Private Function buscarPedido()
-        Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
+        Dim connectionString As String = Frm_Principal.conexionString
         Dim query As String = "SELECT descripcion FROM pedidos WHERE id_pedido = @param1"
 
         Using connection As New SqlConnection(connectionString)

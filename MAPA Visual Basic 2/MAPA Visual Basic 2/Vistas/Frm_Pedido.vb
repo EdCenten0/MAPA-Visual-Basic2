@@ -72,7 +72,7 @@ Public Class Frm_Pedido
 
 
     Private Function llenarComboBoxClientes()
-        Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
+        Dim connectionString As String = Frm_Principal.conexionString
         Dim query As String = "SELECT id_cliente, nombre, apellido FROM clientes"
 
         Using connection As New SqlConnection(connectionString)
@@ -132,7 +132,7 @@ Public Class Frm_Pedido
     End Class
 
     Private Function llenarComboBoxEstados()
-        Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
+        Dim connectionString As String = Frm_Principal.conexionString
         Dim query As String = "SELECT id_estado, nombre FROM estados"
 
         Using connection As New SqlConnection(connectionString)

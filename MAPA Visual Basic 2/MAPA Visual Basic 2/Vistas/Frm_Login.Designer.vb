@@ -55,17 +55,19 @@ Partial Class Frm_Login
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(3, 214)
+        Me.Panel1.Location = New System.Drawing.Point(4, 263)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(781, 341)
+        Me.Panel1.Size = New System.Drawing.Size(1041, 420)
         Me.Panel1.TabIndex = 2
         '
         'check_Mostrar
         '
         Me.check_Mostrar.AutoSize = True
-        Me.check_Mostrar.Location = New System.Drawing.Point(253, 186)
+        Me.check_Mostrar.Location = New System.Drawing.Point(337, 229)
+        Me.check_Mostrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.check_Mostrar.Name = "check_Mostrar"
-        Me.check_Mostrar.Size = New System.Drawing.Size(117, 17)
+        Me.check_Mostrar.Size = New System.Drawing.Size(153, 21)
         Me.check_Mostrar.TabIndex = 21
         Me.check_Mostrar.Text = "Mostrar contraseña"
         Me.check_Mostrar.UseVisualStyleBackColor = True
@@ -74,10 +76,11 @@ Partial Class Frm_Login
         '
         Me.txt_Clave.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_Clave.Location = New System.Drawing.Point(185, 139)
-        Me.txt_Clave.MaximumSize = New System.Drawing.Size(400, 35)
+        Me.txt_Clave.Location = New System.Drawing.Point(247, 171)
+        Me.txt_Clave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clave.MaximumSize = New System.Drawing.Size(532, 35)
         Me.txt_Clave.Name = "txt_Clave"
-        Me.txt_Clave.Size = New System.Drawing.Size(248, 20)
+        Me.txt_Clave.Size = New System.Drawing.Size(329, 22)
         Me.txt_Clave.TabIndex = 20
         '
         'bt_Ingresar
@@ -86,10 +89,11 @@ Partial Class Frm_Login
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_Ingresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.bt_Ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bt_Ingresar.Location = New System.Drawing.Point(185, 269)
-        Me.bt_Ingresar.MaximumSize = New System.Drawing.Size(400, 35)
+        Me.bt_Ingresar.Location = New System.Drawing.Point(247, 331)
+        Me.bt_Ingresar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_Ingresar.MaximumSize = New System.Drawing.Size(533, 43)
         Me.bt_Ingresar.Name = "bt_Ingresar"
-        Me.bt_Ingresar.Size = New System.Drawing.Size(250, 35)
+        Me.bt_Ingresar.Size = New System.Drawing.Size(333, 43)
         Me.bt_Ingresar.TabIndex = 19
         Me.bt_Ingresar.Text = "Iniciar sesión"
         Me.bt_Ingresar.UseVisualStyleBackColor = False
@@ -100,9 +104,10 @@ Partial Class Frm_Login
         Me.Label6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!)
         Me.Label6.ForeColor = System.Drawing.Color.Blue
-        Me.Label6.Location = New System.Drawing.Point(310, 224)
+        Me.Label6.Location = New System.Drawing.Point(413, 276)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(145, 16)
+        Me.Label6.Size = New System.Drawing.Size(173, 20)
         Me.Label6.TabIndex = 18
         Me.Label6.Text = "Crear un nuevo usuario"
         '
@@ -110,9 +115,10 @@ Partial Class Frm_Login
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!)
-        Me.Label5.Location = New System.Drawing.Point(168, 224)
+        Me.Label5.Location = New System.Drawing.Point(224, 276)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(136, 16)
+        Me.Label5.Size = New System.Drawing.Size(163, 20)
         Me.Label5.TabIndex = 17
         Me.Label5.Text = "No tienes un usuario?"
         '
@@ -120,9 +126,10 @@ Partial Class Frm_Login
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
-        Me.Label4.Location = New System.Drawing.Point(12, 143)
+        Me.Label4.Location = New System.Drawing.Point(16, 176)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(169, 16)
+        Me.Label4.Size = New System.Drawing.Size(198, 20)
         Me.Label4.TabIndex = 16
         Me.Label4.Text = "Ingresa de Contraseña:"
         '
@@ -130,19 +137,21 @@ Partial Class Frm_Login
         '
         Me.txt_Usuario.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_Usuario.Location = New System.Drawing.Point(187, 97)
-        Me.txt_Usuario.MaximumSize = New System.Drawing.Size(400, 35)
+        Me.txt_Usuario.Location = New System.Drawing.Point(249, 119)
+        Me.txt_Usuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Usuario.MaximumSize = New System.Drawing.Size(532, 35)
         Me.txt_Usuario.Name = "txt_Usuario"
-        Me.txt_Usuario.Size = New System.Drawing.Size(248, 20)
+        Me.txt_Usuario.Size = New System.Drawing.Size(329, 22)
         Me.txt_Usuario.TabIndex = 15
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
-        Me.Label3.Location = New System.Drawing.Point(12, 97)
+        Me.Label3.Location = New System.Drawing.Point(16, 119)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(147, 16)
+        Me.Label3.Size = New System.Drawing.Size(168, 20)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Nombre de Usuario:"
         '
@@ -150,9 +159,10 @@ Partial Class Frm_Login
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        Me.Label2.Location = New System.Drawing.Point(12, 56)
+        Me.Label2.Location = New System.Drawing.Point(16, 69)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(320, 17)
+        Me.Label2.Size = New System.Drawing.Size(405, 22)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Inicio de sesión con tu usuario de MAPA Interface"
         '
@@ -160,9 +170,10 @@ Partial Class Frm_Login
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 9)
+        Me.Label1.Location = New System.Drawing.Point(8, 11)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(217, 31)
+        Me.Label1.Size = New System.Drawing.Size(269, 39)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Inicio de sesión"
         '
@@ -174,8 +185,9 @@ Partial Class Frm_Login
         Me.background_Login.Controls.Add(Me.Panel1)
         Me.background_Login.Controls.Add(Me.PictureBox1)
         Me.background_Login.Location = New System.Drawing.Point(0, -2)
+        Me.background_Login.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.background_Login.Name = "background_Login"
-        Me.background_Login.Size = New System.Drawing.Size(784, 565)
+        Me.background_Login.Size = New System.Drawing.Size(1045, 695)
         Me.background_Login.TabIndex = 1
         '
         'PictureBox1
@@ -185,22 +197,24 @@ Partial Class Frm_Login
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(784, 208)
+        Me.PictureBox1.Size = New System.Drawing.Size(1045, 256)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
         'Frm_Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 561)
+        Me.ClientSize = New System.Drawing.Size(1045, 690)
         Me.Controls.Add(Me.background_Login)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.Name = "Frm_Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Iniciar sesión"
+        Me.Text = " "
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.background_Login.ResumeLayout(False)

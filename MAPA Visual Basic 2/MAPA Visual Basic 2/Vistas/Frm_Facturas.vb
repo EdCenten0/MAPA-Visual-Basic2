@@ -9,7 +9,7 @@ Public Class Frm_Facturas
     End Sub
 
     Private Sub Label7_TextChanged(sender As Object, e As EventArgs) Handles Label7.TextChanged
-        Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
+        Dim connectionString As String = Frm_Principal.conexionString
         Dim query As String = "SELECT descripcion FROM pedidos WHERE id_pedido = @param1"
 
         Using connection As New SqlConnection(connectionString)
@@ -22,13 +22,8 @@ Public Class Frm_Facturas
                 If reader.Read() Then
                     descripcion = reader.GetString(0)
                     Console.WriteLine(descripcion)
-
-
-
                 End If
-
                 pedido_descripcion.Text = descripcion
-
                 reader.Close()
                 connection.Close()
             End Using
@@ -50,7 +45,7 @@ Public Class Frm_Facturas
     End Sub
 
     Private Sub bt_eliminar_Click(sender As Object, e As EventArgs) Handles bt_eliminar.Click
-        Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
+        Dim connectionString As String = Frm_Principal.conexionString
         Dim query As String = "DELETE FROM facturas WHERE id_factura = @param1"
 
         Using connection As New SqlConnection(connectionString)
@@ -58,8 +53,6 @@ Public Class Frm_Facturas
                 command.Parameters.Add("@param1", txt_id.Text)
                 connection.Open()
                 command.ExecuteNonQuery()
-
-
                 connection.Close()
             End Using
         End Using
@@ -68,7 +61,7 @@ Public Class Frm_Facturas
     End Sub
 
     Private Sub bt_guardar_Click(sender As Object, e As EventArgs) Handles bt_guardar.Click
-        Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
+        Dim connectionString As String = Frm_Principal.conexionString
         Dim query As String = "INSERT INTO ventas(cantidad, descripcion, id_tienda, id_factura) VALUES(@cantidad, @descripcion, 1, @id_factura);"
 
         Using connection As New SqlConnection(connectionString)
@@ -78,8 +71,6 @@ Public Class Frm_Facturas
                 command.Parameters.Add("@id_factura", txt_id.Text)
                 connection.Open()
                 command.ExecuteNonQuery()
-
-
                 connection.Close()
             End Using
         End Using

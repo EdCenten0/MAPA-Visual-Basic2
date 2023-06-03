@@ -71,7 +71,7 @@ Public Class Frm_Materiales_Por_Proveedor
     End Class
 
     Private Function llenarComboboxMateriales()
-        Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
+        Dim connectionString As String = Frm_Principal.conexionString
         Dim query As String = "SELECT id_material, nombre_material FROM materiales"
 
         Using connection As New SqlConnection(connectionString)
@@ -134,7 +134,7 @@ Public Class Frm_Materiales_Por_Proveedor
 
 
     Private Function llenarComboBoxProveedores()
-        Dim connectionString As String = "Data Source=CARLOSCent;Initial Catalog=MAPA;User Id=sa; Password=1234"
+        Dim connectionString As String = Frm_Principal.conexionString
         Dim query As String = "SELECT id_proveedor, nombre FROM proveedores"
 
         Using connection As New SqlConnection(connectionString)
