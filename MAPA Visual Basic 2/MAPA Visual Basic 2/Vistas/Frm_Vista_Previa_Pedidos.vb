@@ -3,6 +3,7 @@
 Public Class Frm_Vista_Previa_Pedidos
 
     Private currentForm As Form = Nothing
+    Public fcf As Frm_Cuadro_de_Factura = New Frm_Cuadro_de_Factura
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         abrirFromularioHijo(New Frm_Pedido())
     End Sub
@@ -153,7 +154,7 @@ Public Class Frm_Vista_Previa_Pedidos
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim fcf As Frm_Cuadro_de_Factura = New Frm_Cuadro_de_Factura
+
         fcf.id_pedido = Label4.Text
         fcf.Show()
     End Sub

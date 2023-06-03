@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CD247494-1C20-48DC-B3CA-1799782E154A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>MAPA_Visual_Basic_2.Frm_Principal</StartupObject>
+    <StartupObject>MAPA_Visual_Basic_2.Frm_Login</StartupObject>
     <RootNamespace>MAPA_Visual_Basic_2</RootNamespace>
     <AssemblyName>MAPA Visual Basic 2</AssemblyName>
     <FileAlignment>512</FileAlignment>

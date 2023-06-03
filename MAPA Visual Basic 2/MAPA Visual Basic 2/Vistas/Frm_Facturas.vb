@@ -61,20 +61,27 @@ Public Class Frm_Facturas
     End Sub
 
     Private Sub bt_guardar_Click(sender As Object, e As EventArgs) Handles bt_guardar.Click
-        Dim connectionString As String = Frm_Principal.conexionString
-        Dim query As String = "INSERT INTO ventas(cantidad, descripcion, id_tienda, id_factura) VALUES(@cantidad, @descripcion, 1, @id_factura);"
 
-        Using connection As New SqlConnection(connectionString)
-            Using command As New SqlCommand(query, connection)
-                command.Parameters.Add("@cantidad", TextBox2.Text)
-                command.Parameters.Add("@descripcion", pedido_descripcion.Text)
-                command.Parameters.Add("@id_factura", txt_id.Text)
-                connection.Open()
-                command.ExecuteNonQuery()
-                connection.Close()
+        If TextBox2.Text = "" Then
+            MsgBox("Debes de asignar un precio de venta para poder guardar un registro de venta")
+        Else
+            Dim connectionString As String = Frm_Principal.conexionString
+            Dim query As String = "INSERT INTO ventas(cantidad, descripcion, id_tienda, id_factura) VALUES(@cantidad, @descripcion, 1, @id_factura);"
+
+            Using connection As New SqlConnection(connectionString)
+                Using command As New SqlCommand(query, connection)
+                    command.Parameters.Add("@cantidad", TextBox2.Text)
+                    command.Parameters.Add("@descripcion", pedido_descripcion.Text)
+                    command.Parameters.Add("@id_factura", txt_id.Text)
+                    connection.Open()
+                    command.ExecuteNonQuery()
+                    connection.Close()
+                End Using
             End Using
-        End Using
 
-        MsgBox("Registro de la factura " & txt_id.Text & " guardado como venta")
+            MsgBox("Registro de la factura " & txt_id.Text & " guardado como venta")
+
+        End If
+
     End Sub
 End Class

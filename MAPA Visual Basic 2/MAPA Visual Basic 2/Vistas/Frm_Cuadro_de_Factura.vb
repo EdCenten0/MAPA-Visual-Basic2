@@ -47,11 +47,16 @@ Public Class Frm_Cuadro_de_Factura
                 connection.Open()
                 Dim reader As SqlDataReader = command.ExecuteReader()
 
-                If reader.Read() Then
-                    Dim precio_materiales As Double = reader.GetDouble(0)
-                    Label7.Text = precio_materiales
-                    Me.precio_materiales = precio_materiales
-                End If
+                Try
+                    If reader.Read() Then
+                        Dim precio_materiales As Double = reader.GetDouble(0)
+                        Label7.Text = precio_materiales
+                        Me.precio_materiales = precio_materiales
+                    End If
+                Catch ex As Exception
+                    MsgBox("El pedido no tiene materiales, agregue al menos uno")
+                End Try
+
 
                 reader.Close()
                 connection.Close()
