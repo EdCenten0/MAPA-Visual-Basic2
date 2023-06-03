@@ -1,7 +1,6 @@
 # MAPA Visual Basic2
 
 ![MAPA_Materiales](https://github.com/EdCenten0/Imgs/blob/master/MAPA%20Visual%20Studio/MAPA%20MATERIALES.png)
-![MAPA_Vista_Previa_Pedidos](https://github.com/EdCenten0/Imgs/blob/master/MAPA%20Visual%20Studio/MAPA%20VISTA%20PREVIA%20PEDIDOS.png)
 
  Jodimos el primero jejejej
 ---
@@ -24,8 +23,14 @@ El proyecto está hecho en base al caso de estudio de la empresa Nicaragüense M
 - IDE: Microsoft Visual Studio 2019
 - Reportes: Crystal Reports
 
-
-
-
+----
+## Más imagénes
+![MAPA_Vista_Previa_Pedidos](https://github.com/EdCenten0/Imgs/blob/master/MAPA%20Visual%20Studio/MAPA%20VISTA%20PREVIA%20PEDIDOS.png)
+![MAPA_Clientes](https://github.com/EdCenten0/Imgs/blob/master/MAPA%20Visual%20Studio/MAPA%20CLIENTES.png)
+![MAPA_Materiales_Por_Proveedor](https://github.com/EdCenten0/Imgs/blob/master/MAPA%20Visual%20Studio/MAPA%20MATERIALES%20POR%20PROVEEDOR.png)
+![MAPA_Proveedores](https://github.com/EdCenten0/Imgs/blob/master/MAPA%20Visual%20Studio/MAPA%20PROVEEDORES.png)
+![MAPA_Ventas](https://github.com/EdCenten0/Imgs/blob/master/MAPA%20Visual%20Studio/MAPA%20VENTAS.png)
+![MAPA_Roles](https://github.com/EdCenten0/Imgs/blob/master/MAPA%20Visual%20Studio/MAPA%20ROLES.png)
+![MAPA_Usuarios](https://github.com/EdCenten0/Imgs/blob/master/MAPA%20Visual%20Studio/MAPA%20USUARIOS.png)
 
 
