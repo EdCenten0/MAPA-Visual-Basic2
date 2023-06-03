@@ -9,7 +9,7 @@
 - [Francisco de Jesús Meléndez Simplina](https://github.com/FranciscoMelen10 "Francisco de Jesús Meléndez Simplina")
 - [René Nicolás Sandoval Lagos](https://github.com/Rene-Sandoval "René Nicolás Sandoval Lagos")
 
-### Todos y cada uno desarrolladores de lo que hace funcionar este proyecto ^_~
+### Todos y cada uno, desarrolladores de lo que hace funcionar este proyecto ^_~
 ----
 ## Sobre el proyecto
 
