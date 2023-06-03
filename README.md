@@ -24,7 +24,7 @@ El proyecto está hecho en base al caso de estudio de la empresa Nicaragüense M
 - Reportes: Crystal Reports
 
 ----
-## Más imagénes
+## Más imágenes
 ![MAPA_Vista_Previa_Pedidos](https://github.com/EdCenten0/Imgs/blob/master/MAPA%20Visual%20Studio/MAPA%20VISTA%20PREVIA%20PEDIDOS.png)
 ![MAPA_Clientes](https://github.com/EdCenten0/Imgs/blob/master/MAPA%20Visual%20Studio/MAPA%20CLIENTES.png)
 ![MAPA_Materiales_Por_Proveedor](https://github.com/EdCenten0/Imgs/blob/master/MAPA%20Visual%20Studio/MAPA%20MATERIALES%20POR%20PROVEEDOR.png)
