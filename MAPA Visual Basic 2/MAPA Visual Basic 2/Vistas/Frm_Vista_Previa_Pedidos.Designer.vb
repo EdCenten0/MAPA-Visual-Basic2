@@ -31,6 +31,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PedidosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.pedidosTableAdapter()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.tb_fecha = New System.Windows.Forms.TextBox()
         Me.tb_pedido = New System.Windows.Forms.TextBox()
@@ -41,7 +42,6 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.tb_index = New System.Windows.Forms.TextBox()
         Me.tb_cliente = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.PedidosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -89,7 +89,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.cb_seleccion_pedido.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cb_seleccion_pedido.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.PedidosBindingSource, "id_cliente", True))
+        Me.cb_seleccion_pedido.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.PedidosBindingSource, "id_pedido", True))
         Me.cb_seleccion_pedido.DataSource = Me.PedidosBindingSource
         Me.cb_seleccion_pedido.DisplayMember = "descripcion"
         Me.cb_seleccion_pedido.Font = New System.Drawing.Font("Inter", 8.0!)
@@ -139,6 +139,19 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(679, 535)
         Me.Panel2.TabIndex = 30
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PedidosBindingSource, "id_pedido", True))
+        Me.Label4.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(141, 215)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(71, 20)
+        Me.Label4.TabIndex = 42
+        Me.Label4.Text = "Pedido:"
         '
         'Button1
         '
@@ -267,19 +280,6 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.Label2.Size = New System.Drawing.Size(70, 20)
         Me.Label2.TabIndex = 30
         Me.Label2.Text = "Cliente:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PedidosBindingSource, "id_pedido", True))
-        Me.Label4.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(141, 215)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 20)
-        Me.Label4.TabIndex = 42
-        Me.Label4.Text = "Pedido:"
         '
         'Frm_Vista_Previa_Pedidos
         '
