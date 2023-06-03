@@ -1,6 +1,6 @@
 # MAPA Visual Basic2
 
-![MAPA_Materiales]([https://drive.google.com/file/d/1gwz-TxMy2X3FGVxL98XnZ5ySYPcf9tjR/view?usp=drive_link](https://github.com/EdCenten0/Imgs/blob/master/MAPA%20Visual%20Studio/MAPA%20MATERIALES.png))
+![MAPA_Materiales](https://github.com/EdCenten0/Imgs/blob/master/MAPA%20Visual%20Studio/MAPA%20MATERIALES.png)
  Jodimos el primero jejejej
 ---
 ## Creadores del proyecto MAPA Visual Basic:
