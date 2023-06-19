@@ -6,6 +6,7 @@ Public Class Frm_Login
     Dim comando As New SqlCommand
 
 
+
     Private Sub Frm_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         conexion = New SqlConnection(Frm_Principal.conexionString)

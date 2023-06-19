@@ -61,6 +61,10 @@
         Application.EnableVisualStyles()
     End Sub
 
+    Private Sub Frm_Principal_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Application.Exit()
+    End Sub
+
     Private Sub Button5_Click_2(sender As Object, e As EventArgs) Handles Button5.Click
         abrirFromularioHijo(New Frm_Materiales_Por_Proveedor)
     End Sub
