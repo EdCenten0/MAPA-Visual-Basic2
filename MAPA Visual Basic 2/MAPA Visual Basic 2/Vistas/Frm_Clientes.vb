@@ -7,7 +7,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.ClientesTableAdapter.Guardar(NombreCliente.Text, ApellidoCliente.Text, CedulaCliente.Text, EmailCliente.Text, TelefonoCliente.Text, IDTCliente.Text)
+        Me.ClientesTableAdapter.Guardar(NombreCliente.Text, ApellidoCliente.Text, CedulaCliente.Text, EmailCliente.Text, TelefonoCliente.Text, 1)
         Me.ClientesTableAdapter.Fill(Me.MAPADataSet.clientes)
         MessageBox.Show("Se ha guardado el registro: " & NombreCliente.Text)
     End Sub

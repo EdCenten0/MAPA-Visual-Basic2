@@ -310,7 +310,9 @@ Partial Class Frm_Principal
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(1400, 1018)
         Me.Name = "Frm_Principal"
-        Me.Text = "Frm_Principal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Sistema MAPA VB"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel_lateral.ResumeLayout(False)
         Me.Panel_lateral.PerformLayout()
         Me.Panel2.ResumeLayout(False)

@@ -22,6 +22,7 @@ Partial Class Frm_Cuadro_de_Factura
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_Cuadro_de_Factura))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -168,11 +169,12 @@ Partial Class Frm_Cuadro_de_Factura
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximumSize = New System.Drawing.Size(635, 409)
         Me.MinimumSize = New System.Drawing.Size(635, 409)
         Me.Name = "Frm_Cuadro_de_Factura"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Frm_Cuadro_de_Factura"
+        Me.Text = "Sistema MAPA VB - Creación de Factura"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

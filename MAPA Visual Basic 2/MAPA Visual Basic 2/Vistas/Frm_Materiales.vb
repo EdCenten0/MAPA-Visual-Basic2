@@ -122,4 +122,35 @@ Public Class Frm_Materiales
 
     End Sub
 
+    Private Sub txt_precio_unidad_TextChanged(sender As Object, e As EventArgs) Handles txt_precio_unidad.TextChanged
+        Try
+            Dim precioTotal As Double
+            Dim precio_unidad As Double
+            Dim cantidad As Double
+
+            Double.TryParse(txt_precio_unidad.Text, precio_unidad)
+            Double.TryParse(txt_cantidad.Text, cantidad)
+
+            precioTotal = precio_unidad * cantidad
+            txt_precio_total.Text = precioTotal.ToString("N")
+        Catch ex As Exception
+            MsgBox("Por favor, digite solamente números")
+        End Try
+    End Sub
+
+    Private Sub txt_cantidad_TextChanged(sender As Object, e As EventArgs) Handles txt_cantidad.TextChanged
+        Try
+            Dim precioTotal As Double
+            Dim precio_unidad As Double
+            Dim cantidad As Double
+
+            Double.TryParse(txt_precio_unidad.Text, precio_unidad)
+            Double.TryParse(txt_cantidad.Text, cantidad)
+
+            precioTotal = precio_unidad * cantidad
+            txt_precio_total.Text = precioTotal.ToString("N")
+        Catch ex As Exception
+            MsgBox("Por favor, digite solamente números")
+        End Try
+    End Sub
 End Class

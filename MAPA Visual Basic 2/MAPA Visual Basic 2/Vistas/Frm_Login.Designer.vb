@@ -56,7 +56,7 @@ Partial Class Frm_Login
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(4, 263)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1041, 420)
         Me.Panel1.TabIndex = 2
@@ -65,7 +65,7 @@ Partial Class Frm_Login
         '
         Me.check_Mostrar.AutoSize = True
         Me.check_Mostrar.Location = New System.Drawing.Point(337, 229)
-        Me.check_Mostrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.check_Mostrar.Margin = New System.Windows.Forms.Padding(4)
         Me.check_Mostrar.Name = "check_Mostrar"
         Me.check_Mostrar.Size = New System.Drawing.Size(153, 21)
         Me.check_Mostrar.TabIndex = 21
@@ -77,7 +77,7 @@ Partial Class Frm_Login
         Me.txt_Clave.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txt_Clave.Location = New System.Drawing.Point(247, 171)
-        Me.txt_Clave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clave.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clave.MaximumSize = New System.Drawing.Size(532, 35)
         Me.txt_Clave.Name = "txt_Clave"
         Me.txt_Clave.Size = New System.Drawing.Size(329, 22)
@@ -90,7 +90,7 @@ Partial Class Frm_Login
         Me.bt_Ingresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.bt_Ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.bt_Ingresar.Location = New System.Drawing.Point(247, 331)
-        Me.bt_Ingresar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_Ingresar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_Ingresar.MaximumSize = New System.Drawing.Size(533, 43)
         Me.bt_Ingresar.Name = "bt_Ingresar"
         Me.bt_Ingresar.Size = New System.Drawing.Size(333, 43)
@@ -138,7 +138,7 @@ Partial Class Frm_Login
         Me.txt_Usuario.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txt_Usuario.Location = New System.Drawing.Point(249, 119)
-        Me.txt_Usuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Usuario.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Usuario.MaximumSize = New System.Drawing.Size(532, 35)
         Me.txt_Usuario.Name = "txt_Usuario"
         Me.txt_Usuario.Size = New System.Drawing.Size(329, 22)
@@ -185,7 +185,7 @@ Partial Class Frm_Login
         Me.background_Login.Controls.Add(Me.Panel1)
         Me.background_Login.Controls.Add(Me.PictureBox1)
         Me.background_Login.Location = New System.Drawing.Point(0, -2)
-        Me.background_Login.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.background_Login.Margin = New System.Windows.Forms.Padding(4)
         Me.background_Login.Name = "background_Login"
         Me.background_Login.Size = New System.Drawing.Size(1045, 695)
         Me.background_Login.TabIndex = 1
@@ -197,7 +197,7 @@ Partial Class Frm_Login
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(1045, 256)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -210,11 +210,12 @@ Partial Class Frm_Login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1045, 690)
         Me.Controls.Add(Me.background_Login)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "Frm_Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = " "
+        Me.Text = " Sistema MAPA VB - Inicio de Sesión"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.background_Login.ResumeLayout(False)

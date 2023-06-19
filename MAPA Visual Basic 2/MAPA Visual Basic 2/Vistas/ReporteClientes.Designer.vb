@@ -90,7 +90,7 @@ Partial Class ReporteClientes
         Me.Controls.Add(Me.TextBox1)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ReporteClientes"
-        Me.Text = "ReporteClientes"
+        Me.Text = "Sistema MAPA VB - Reporte"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

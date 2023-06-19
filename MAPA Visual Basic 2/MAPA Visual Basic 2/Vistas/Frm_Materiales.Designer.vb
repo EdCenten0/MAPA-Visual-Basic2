@@ -50,9 +50,6 @@ Partial Class Frm_Materiales
         Me.lbl_material = New System.Windows.Forms.Label()
         Me.cb_unidad_medida = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.MaterialesTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materialesTableAdapter()
-        Me.MaterialesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.IdmaterialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombrematerialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -61,6 +58,9 @@ Partial Class Frm_Materiales
         Me.PrecioporunidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PreciototalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdpedidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MaterialesTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.materialesTableAdapter()
+        Me.MaterialesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         CType(Me.MaterialesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,7 +97,7 @@ Partial Class Frm_Materiales
         Me.Panel2.Controls.Add(Me.cb_unidad_medida)
         Me.Panel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel2.Location = New System.Drawing.Point(16, 48)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1109, 207)
         Me.Panel2.TabIndex = 5
@@ -131,7 +131,7 @@ Partial Class Frm_Materiales
         Me.cbIdPedido.FormattingEnabled = True
         Me.cbIdPedido.Items.AddRange(New Object() {"pedidos"})
         Me.cbIdPedido.Location = New System.Drawing.Point(653, 71)
-        Me.cbIdPedido.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbIdPedido.Margin = New System.Windows.Forms.Padding(4)
         Me.cbIdPedido.Name = "cbIdPedido"
         Me.cbIdPedido.Size = New System.Drawing.Size(160, 24)
         Me.cbIdPedido.TabIndex = 36
@@ -151,7 +151,7 @@ Partial Class Frm_Materiales
         '
         Me.btnRefrescar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRefrescar.Location = New System.Drawing.Point(629, 162)
-        Me.btnRefrescar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnRefrescar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRefrescar.Name = "btnRefrescar"
         Me.btnRefrescar.Size = New System.Drawing.Size(100, 30)
         Me.btnRefrescar.TabIndex = 34
@@ -162,7 +162,7 @@ Partial Class Frm_Materiales
         '
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Location = New System.Drawing.Point(737, 162)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(100, 28)
         Me.btnBuscar.TabIndex = 33
@@ -173,7 +173,7 @@ Partial Class Frm_Materiales
         '
         Me.txtBuscar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txtBuscar.Location = New System.Drawing.Point(653, 118)
-        Me.txtBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBuscar.Name = "txtBuscar"
         Me.txtBuscar.Size = New System.Drawing.Size(160, 24)
         Me.txtBuscar.TabIndex = 32
@@ -205,7 +205,7 @@ Partial Class Frm_Materiales
         Me.txt_descripcion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "descripcion", True))
         Me.txt_descripcion.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_descripcion.Location = New System.Drawing.Point(161, 71)
-        Me.txt_descripcion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_descripcion.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_descripcion.Name = "txt_descripcion"
         Me.txt_descripcion.Size = New System.Drawing.Size(351, 62)
         Me.txt_descripcion.TabIndex = 15
@@ -217,7 +217,7 @@ Partial Class Frm_Materiales
         Me.txt_precio_total.Enabled = False
         Me.txt_precio_total.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_precio_total.Location = New System.Drawing.Point(653, 16)
-        Me.txt_precio_total.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_precio_total.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_precio_total.Name = "txt_precio_total"
         Me.txt_precio_total.Size = New System.Drawing.Size(160, 24)
         Me.txt_precio_total.TabIndex = 14
@@ -227,7 +227,7 @@ Partial Class Frm_Materiales
         Me.txt_cantidad.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "cantidad", True))
         Me.txt_cantidad.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_cantidad.Location = New System.Drawing.Point(431, 166)
-        Me.txt_cantidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_cantidad.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_cantidad.Name = "txt_cantidad"
         Me.txt_cantidad.Size = New System.Drawing.Size(80, 24)
         Me.txt_cantidad.TabIndex = 13
@@ -237,7 +237,7 @@ Partial Class Frm_Materiales
         Me.txt_precio_unidad.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "precio_por_unidad", True))
         Me.txt_precio_unidad.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_precio_unidad.Location = New System.Drawing.Point(161, 162)
-        Me.txt_precio_unidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_precio_unidad.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_precio_unidad.Name = "txt_precio_unidad"
         Me.txt_precio_unidad.Size = New System.Drawing.Size(166, 24)
         Me.txt_precio_unidad.TabIndex = 12
@@ -247,7 +247,7 @@ Partial Class Frm_Materiales
         Me.txt_material.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "nombre_material", True))
         Me.txt_material.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_material.Location = New System.Drawing.Point(161, 19)
-        Me.txt_material.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_material.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_material.Name = "txt_material"
         Me.txt_material.Size = New System.Drawing.Size(351, 24)
         Me.txt_material.TabIndex = 10
@@ -257,7 +257,7 @@ Partial Class Frm_Materiales
         Me.btn_vaciar_campos.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_vaciar_campos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
         Me.btn_vaciar_campos.Location = New System.Drawing.Point(931, 162)
-        Me.btn_vaciar_campos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_vaciar_campos.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_vaciar_campos.Name = "btn_vaciar_campos"
         Me.btn_vaciar_campos.Size = New System.Drawing.Size(169, 36)
         Me.btn_vaciar_campos.TabIndex = 9
@@ -269,7 +269,7 @@ Partial Class Frm_Materiales
         Me.btn_eliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_eliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
         Me.btn_eliminar.Location = New System.Drawing.Point(927, 118)
-        Me.btn_eliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_eliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_eliminar.Name = "btn_eliminar"
         Me.btn_eliminar.Size = New System.Drawing.Size(169, 36)
         Me.btn_eliminar.TabIndex = 8
@@ -281,7 +281,7 @@ Partial Class Frm_Materiales
         Me.btn_editar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_editar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
         Me.btn_editar.Location = New System.Drawing.Point(927, 73)
-        Me.btn_editar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_editar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_editar.Name = "btn_editar"
         Me.btn_editar.Size = New System.Drawing.Size(169, 36)
         Me.btn_editar.TabIndex = 7
@@ -293,7 +293,7 @@ Partial Class Frm_Materiales
         Me.btn_guardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_guardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
         Me.btn_guardar.Location = New System.Drawing.Point(927, 28)
-        Me.btn_guardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_guardar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_guardar.Name = "btn_guardar"
         Me.btn_guardar.Size = New System.Drawing.Size(169, 36)
         Me.btn_guardar.TabIndex = 6
@@ -360,9 +360,9 @@ Partial Class Frm_Materiales
         Me.cb_unidad_medida.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesBindingSource, "unidad_de_medida", True))
         Me.cb_unidad_medida.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.cb_unidad_medida.FormattingEnabled = True
-        Me.cb_unidad_medida.Items.AddRange(New Object() {"Lbs", "Lts", "Mts", "Inches", "Galón", "Unidad", "Simple"})
+        Me.cb_unidad_medida.Items.AddRange(New Object() {"Lbs", "Lts", "Mts", "Inches", "Galón", "Unidad Simple"})
         Me.cb_unidad_medida.Location = New System.Drawing.Point(519, 166)
-        Me.cb_unidad_medida.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cb_unidad_medida.Margin = New System.Windows.Forms.Padding(4)
         Me.cb_unidad_medida.Name = "cb_unidad_medida"
         Me.cb_unidad_medida.Size = New System.Drawing.Size(92, 24)
         Me.cb_unidad_medida.TabIndex = 0
@@ -378,31 +378,11 @@ Partial Class Frm_Materiales
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdmaterialDataGridViewTextBoxColumn, Me.NombrematerialDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.CantidadDataGridViewTextBoxColumn, Me.UnidaddemedidaDataGridViewTextBoxColumn, Me.PrecioporunidadDataGridViewTextBoxColumn, Me.PreciototalDataGridViewTextBoxColumn, Me.IdpedidoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.MaterialesBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(16, 262)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(1109, 366)
         Me.DataGridView1.TabIndex = 4
-        '
-        'MaterialesTableAdapter
-        '
-        Me.MaterialesTableAdapter.ClearBeforeFill = True
-        '
-        'MaterialesBindingSource1
-        '
-        Me.MaterialesBindingSource1.DataMember = "materiales"
-        Me.MaterialesBindingSource1.DataSource = Me.MAPADataSet
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Inter Medium", 19.8!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(17, 4)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(192, 40)
-        Me.Label1.TabIndex = 26
-        Me.Label1.Text = "Materiales"
         '
         'IdmaterialDataGridViewTextBoxColumn
         '
@@ -469,6 +449,26 @@ Partial Class Frm_Materiales
         Me.IdpedidoDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdpedidoDataGridViewTextBoxColumn.Name = "IdpedidoDataGridViewTextBoxColumn"
         '
+        'MaterialesTableAdapter
+        '
+        Me.MaterialesTableAdapter.ClearBeforeFill = True
+        '
+        'MaterialesBindingSource1
+        '
+        Me.MaterialesBindingSource1.DataMember = "materiales"
+        Me.MaterialesBindingSource1.DataSource = Me.MAPADataSet
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Inter Medium", 19.8!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(17, 4)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(192, 40)
+        Me.Label1.TabIndex = 26
+        Me.Label1.Text = "Materiales"
+        '
         'Frm_Materiales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -477,7 +477,7 @@ Partial Class Frm_Materiales
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Frm_Materiales"
         Me.Text = "Materiales"
         Me.Panel2.ResumeLayout(False)

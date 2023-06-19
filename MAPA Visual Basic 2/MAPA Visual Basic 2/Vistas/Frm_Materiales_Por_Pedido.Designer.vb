@@ -157,11 +157,12 @@ Partial Class Frm_Materiales_Por_Pedido
         'txt_precio_total
         '
         Me.txt_precio_total.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesporpedidoBindingSource, "precio_total", True))
+        Me.txt_precio_total.Enabled = False
         Me.txt_precio_total.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_precio_total.Location = New System.Drawing.Point(703, 76)
         Me.txt_precio_total.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_precio_total.Name = "txt_precio_total"
-        Me.txt_precio_total.Size = New System.Drawing.Size(177, 24)
+        Me.txt_precio_total.Size = New System.Drawing.Size(208, 24)
         Me.txt_precio_total.TabIndex = 14
         '
         'txt_cantidad
@@ -302,16 +303,19 @@ Partial Class Frm_Materiales_Por_Pedido
         Me.cb_unidad_medida.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialesporpedidoBindingSource, "unidad_de_medida", True))
         Me.cb_unidad_medida.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.cb_unidad_medida.FormattingEnabled = True
-        Me.cb_unidad_medida.Items.AddRange(New Object() {"Lbs", "Lts", "Mts", "Inches", "Galón", "Unidad", "Simple"})
+        Me.cb_unidad_medida.Items.AddRange(New Object() {"Lbs", "Lts", "Mts", "Inches", "Galón", "Unidad Simple"})
         Me.cb_unidad_medida.Location = New System.Drawing.Point(787, 9)
         Me.cb_unidad_medida.Margin = New System.Windows.Forms.Padding(4)
         Me.cb_unidad_medida.Name = "cb_unidad_medida"
-        Me.cb_unidad_medida.Size = New System.Drawing.Size(92, 24)
+        Me.cb_unidad_medida.Size = New System.Drawing.Size(124, 24)
         Me.cb_unidad_medida.TabIndex = 0
         Me.cb_unidad_medida.Text = "Unidades"
         '
         'DataGridView1
         '
+        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdmaterialDataGridViewTextBoxColumn, Me.NombrematerialDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.CantidadDataGridViewTextBoxColumn, Me.UnidaddemedidaDataGridViewTextBoxColumn, Me.PrecioporunidadDataGridViewTextBoxColumn, Me.PreciototalDataGridViewTextBoxColumn, Me.IdpedidoDataGridViewTextBoxColumn})

@@ -23,33 +23,34 @@ Partial Class Frm_Agregar_Usuario
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_Agregar_Usuario))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.txt_correo = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txt_clave = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.cb_rol = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.UsuariosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
+        Me.RolesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.txt_correo = New System.Windows.Forms.TextBox()
+        Me.txt_clave = New System.Windows.Forms.TextBox()
         Me.txt_usuario = New System.Windows.Forms.TextBox()
+        Me.check_mostrar_clave = New System.Windows.Forms.CheckBox()
+        Me.bt_registrar = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.bt_registrar = New System.Windows.Forms.Button()
-        Me.MAPADataSet = New MAPA_Visual_Basic_2.MAPADataSet()
-        Me.UsuariosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsuariosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.usuariosTableAdapter()
-        Me.RolesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RolesTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.rolesTableAdapter()
-        Me.check_mostrar_clave = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuariosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -59,9 +60,10 @@ Partial Class Frm_Agregar_Usuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Location = New System.Drawing.Point(-2, -3)
+        Me.Panel1.Location = New System.Drawing.Point(-3, -4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(887, 572)
+        Me.Panel1.Size = New System.Drawing.Size(1183, 704)
         Me.Panel1.TabIndex = 0
         '
         'Panel3
@@ -82,64 +84,25 @@ Partial Class Frm_Agregar_Usuario
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Location = New System.Drawing.Point(451, 3)
+        Me.Panel3.Location = New System.Drawing.Point(601, 4)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(887, 566)
+        Me.Panel3.Size = New System.Drawing.Size(1183, 697)
         Me.Panel3.TabIndex = 1
         '
-        'PictureBox1
+        'Button1
         '
-        Me.PictureBox1.Image = Global.MAPA_Visual_Basic_2.My.Resources.Resources.Logo_MAPA
-        Me.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PictureBox1.Location = New System.Drawing.Point(164, 28)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(140, 141)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 55
-        Me.PictureBox1.TabStop = False
-        '
-        'txt_correo
-        '
-        Me.txt_correo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_correo.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.UsuariosBindingSource, "correo_electronico", True))
-        Me.txt_correo.Location = New System.Drawing.Point(86, 373)
-        Me.txt_correo.Name = "txt_correo"
-        Me.txt_correo.Size = New System.Drawing.Size(337, 20)
-        Me.txt_correo.TabIndex = 53
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.Label6.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label6.Location = New System.Drawing.Point(9, 371)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(65, 20)
-        Me.Label6.TabIndex = 54
-        Me.Label6.Text = "Correo:"
-        '
-        'txt_clave
-        '
-        Me.txt_clave.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_clave.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.UsuariosBindingSource, "clave", True))
-        Me.txt_clave.HideSelection = False
-        Me.txt_clave.Location = New System.Drawing.Point(86, 298)
-        Me.txt_clave.Name = "txt_clave"
-        Me.txt_clave.Size = New System.Drawing.Size(337, 20)
-        Me.txt_clave.TabIndex = 51
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label5.Location = New System.Drawing.Point(10, 298)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(56, 20)
-        Me.Label5.TabIndex = 52
-        Me.Label5.Text = "Clave:"
+        Me.Button1.AutoSize = True
+        Me.Button1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button1.Location = New System.Drawing.Point(248, 647)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(139, 33)
+        Me.Button1.TabIndex = 60
+        Me.Button1.Text = "Volver"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'cb_rol
         '
@@ -149,41 +112,157 @@ Partial Class Frm_Agregar_Usuario
         Me.cb_rol.DataSource = Me.RolesBindingSource
         Me.cb_rol.DisplayMember = "nombre_rol"
         Me.cb_rol.FormattingEnabled = True
-        Me.cb_rol.Location = New System.Drawing.Point(88, 430)
+        Me.cb_rol.Location = New System.Drawing.Point(117, 529)
+        Me.cb_rol.Margin = New System.Windows.Forms.Padding(4)
         Me.cb_rol.Name = "cb_rol"
-        Me.cb_rol.Size = New System.Drawing.Size(335, 21)
+        Me.cb_rol.Size = New System.Drawing.Size(445, 24)
         Me.cb_rol.TabIndex = 50
         Me.cb_rol.ValueMember = "id_rol"
         '
-        'Label3
+        'UsuariosBindingSource
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label3.Location = New System.Drawing.Point(9, 428)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 20)
-        Me.Label3.TabIndex = 49
-        Me.Label3.Text = "Rol:"
+        Me.UsuariosBindingSource.DataMember = "usuarios"
+        Me.UsuariosBindingSource.DataSource = Me.MAPADataSet
+        '
+        'MAPADataSet
+        '
+        Me.MAPADataSet.DataSetName = "MAPADataSet"
+        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RolesBindingSource
+        '
+        Me.RolesBindingSource.DataMember = "roles"
+        Me.RolesBindingSource.DataSource = Me.MAPADataSet
+        '
+        'txt_correo
+        '
+        Me.txt_correo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_correo.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.UsuariosBindingSource, "correo_electronico", True))
+        Me.txt_correo.Location = New System.Drawing.Point(115, 459)
+        Me.txt_correo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_correo.Name = "txt_correo"
+        Me.txt_correo.Size = New System.Drawing.Size(448, 22)
+        Me.txt_correo.TabIndex = 53
+        '
+        'txt_clave
+        '
+        Me.txt_clave.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_clave.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.UsuariosBindingSource, "clave", True))
+        Me.txt_clave.HideSelection = False
+        Me.txt_clave.Location = New System.Drawing.Point(115, 367)
+        Me.txt_clave.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_clave.Name = "txt_clave"
+        Me.txt_clave.Size = New System.Drawing.Size(448, 22)
+        Me.txt_clave.TabIndex = 51
         '
         'txt_usuario
         '
         Me.txt_usuario.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txt_usuario.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.UsuariosBindingSource, "nombre", True))
-        Me.txt_usuario.Location = New System.Drawing.Point(88, 246)
+        Me.txt_usuario.Location = New System.Drawing.Point(117, 303)
+        Me.txt_usuario.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_usuario.Name = "txt_usuario"
-        Me.txt_usuario.Size = New System.Drawing.Size(335, 20)
+        Me.txt_usuario.Size = New System.Drawing.Size(445, 22)
         Me.txt_usuario.TabIndex = 47
+        '
+        'check_mostrar_clave
+        '
+        Me.check_mostrar_clave.AutoSize = True
+        Me.check_mostrar_clave.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.check_mostrar_clave.Location = New System.Drawing.Point(115, 399)
+        Me.check_mostrar_clave.Margin = New System.Windows.Forms.Padding(4)
+        Me.check_mostrar_clave.Name = "check_mostrar_clave"
+        Me.check_mostrar_clave.Size = New System.Drawing.Size(153, 21)
+        Me.check_mostrar_clave.TabIndex = 59
+        Me.check_mostrar_clave.Text = "Mostrar contraseña"
+        Me.check_mostrar_clave.UseVisualStyleBackColor = True
+        '
+        'bt_registrar
+        '
+        Me.bt_registrar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.bt_registrar.AutoSize = True
+        Me.bt_registrar.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.bt_registrar.Location = New System.Drawing.Point(176, 588)
+        Me.bt_registrar.Margin = New System.Windows.Forms.Padding(4)
+        Me.bt_registrar.Name = "bt_registrar"
+        Me.bt_registrar.Size = New System.Drawing.Size(287, 36)
+        Me.bt_registrar.TabIndex = 57
+        Me.bt_registrar.Text = "Registrar"
+        Me.bt_registrar.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
+        Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label4.Location = New System.Drawing.Point(173, 228)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(276, 39)
+        Me.Label4.TabIndex = 56
+        Me.Label4.Text = "Registrar usuario"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.MAPA_Visual_Basic_2.My.Resources.Resources.Logo_MAPA
+        Me.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox1.Location = New System.Drawing.Point(219, 34)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(187, 174)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 55
+        Me.PictureBox1.TabStop = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.Label6.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label6.Location = New System.Drawing.Point(12, 457)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(83, 25)
+        Me.Label6.TabIndex = 54
+        Me.Label6.Text = "Correo:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label5.Location = New System.Drawing.Point(13, 367)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(73, 25)
+        Me.Label5.TabIndex = 52
+        Me.Label5.Text = "Clave:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label3.Location = New System.Drawing.Point(12, 527)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(50, 25)
+        Me.Label3.TabIndex = 49
+        Me.Label3.Text = "Rol:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(9, 246)
+        Me.Label2.Location = New System.Drawing.Point(12, 303)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 20)
+        Me.Label2.Size = New System.Drawing.Size(92, 25)
         Me.Label2.TabIndex = 48
         Me.Label2.Text = "Usuario:"
         '
@@ -194,101 +273,40 @@ Partial Class Frm_Agregar_Usuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackgroundImage = Global.MAPA_Visual_Basic_2.My.Resources.Resources.Fondo_Registrar
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel2.Location = New System.Drawing.Point(3, 3)
+        Me.Panel2.Location = New System.Drawing.Point(4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(449, 566)
+        Me.Panel2.Size = New System.Drawing.Size(599, 697)
         Me.Panel2.TabIndex = 0
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!)
-        Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label4.Location = New System.Drawing.Point(130, 185)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(221, 31)
-        Me.Label4.TabIndex = 56
-        Me.Label4.Text = "Registrar usuario"
-        '
-        'bt_registrar
-        '
-        Me.bt_registrar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bt_registrar.AutoSize = True
-        Me.bt_registrar.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bt_registrar.Location = New System.Drawing.Point(132, 478)
-        Me.bt_registrar.Name = "bt_registrar"
-        Me.bt_registrar.Size = New System.Drawing.Size(215, 29)
-        Me.bt_registrar.TabIndex = 57
-        Me.bt_registrar.Text = "Registrar"
-        Me.bt_registrar.UseVisualStyleBackColor = True
-        '
-        'MAPADataSet
-        '
-        Me.MAPADataSet.DataSetName = "MAPADataSet"
-        Me.MAPADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'UsuariosBindingSource
-        '
-        Me.UsuariosBindingSource.DataMember = "usuarios"
-        Me.UsuariosBindingSource.DataSource = Me.MAPADataSet
         '
         'UsuariosTableAdapter
         '
         Me.UsuariosTableAdapter.ClearBeforeFill = True
         '
-        'RolesBindingSource
-        '
-        Me.RolesBindingSource.DataMember = "roles"
-        Me.RolesBindingSource.DataSource = Me.MAPADataSet
-        '
         'RolesTableAdapter
         '
         Me.RolesTableAdapter.ClearBeforeFill = True
         '
-        'check_mostrar_clave
-        '
-        Me.check_mostrar_clave.AutoSize = True
-        Me.check_mostrar_clave.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.check_mostrar_clave.Location = New System.Drawing.Point(86, 324)
-        Me.check_mostrar_clave.Name = "check_mostrar_clave"
-        Me.check_mostrar_clave.Size = New System.Drawing.Size(117, 17)
-        Me.check_mostrar_clave.TabIndex = 59
-        Me.check_mostrar_clave.Text = "Mostrar contraseña"
-        Me.check_mostrar_clave.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.AutoSize = True
-        Me.Button1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Button1.Location = New System.Drawing.Point(186, 526)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(104, 23)
-        Me.Button1.TabIndex = 60
-        Me.Button1.Text = "Volver"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Frm_Agregar_Usuario
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(884, 561)
+        Me.ClientSize = New System.Drawing.Size(1179, 690)
         Me.Controls.Add(Me.Panel1)
-        Me.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "Frm_Agregar_Usuario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Ingresar usuario"
+        Me.Text = "Sistema MAPA VB - Ingresar usuario"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuariosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
