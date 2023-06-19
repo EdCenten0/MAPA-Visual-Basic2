@@ -104,7 +104,7 @@ Partial Class Frm_Tienda
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(430, 24)
-        Me.TextBox3.TabIndex = 47
+        Me.TextBox3.TabIndex = 5
         '
         'Label11
         '
@@ -126,7 +126,7 @@ Partial Class Frm_Tienda
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(430, 24)
-        Me.TextBox2.TabIndex = 38
+        Me.TextBox2.TabIndex = 4
         '
         'TextBox1
         '
@@ -137,7 +137,7 @@ Partial Class Frm_Tienda
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(430, 24)
-        Me.TextBox1.TabIndex = 37
+        Me.TextBox1.TabIndex = 3
         '
         'Label10
         '
@@ -169,7 +169,7 @@ Partial Class Frm_Tienda
         Me.bt_vaciar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_vaciar.Name = "bt_vaciar"
         Me.bt_vaciar.Size = New System.Drawing.Size(207, 36)
-        Me.bt_vaciar.TabIndex = 34
+        Me.bt_vaciar.TabIndex = 7
         Me.bt_vaciar.Text = "Vaciar"
         Me.bt_vaciar.UseVisualStyleBackColor = True
         '
@@ -181,7 +181,7 @@ Partial Class Frm_Tienda
         Me.bt_guardar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_guardar.Name = "bt_guardar"
         Me.bt_guardar.Size = New System.Drawing.Size(207, 36)
-        Me.bt_guardar.TabIndex = 31
+        Me.bt_guardar.TabIndex = 6
         Me.bt_guardar.Text = "Guardar"
         Me.bt_guardar.UseVisualStyleBackColor = True
         '
@@ -199,7 +199,7 @@ Partial Class Frm_Tienda
         Me.txt_id.Name = "txt_id"
         Me.txt_id.ReadOnly = True
         Me.txt_id.Size = New System.Drawing.Size(106, 24)
-        Me.txt_id.TabIndex = 27
+        Me.txt_id.TabIndex = 1
         '
         'Label2
         '
@@ -221,7 +221,7 @@ Partial Class Frm_Tienda
         Me.txt_rol.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_rol.Name = "txt_rol"
         Me.txt_rol.Size = New System.Drawing.Size(430, 24)
-        Me.txt_rol.TabIndex = 29
+        Me.txt_rol.TabIndex = 2
         '
         'Label3
         '

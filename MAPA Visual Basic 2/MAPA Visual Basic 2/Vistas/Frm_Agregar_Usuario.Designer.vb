@@ -100,7 +100,7 @@ Partial Class Frm_Agregar_Usuario
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(139, 33)
-        Me.Button1.TabIndex = 60
+        Me.Button1.TabIndex = 7
         Me.Button1.Text = "Volver"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -116,7 +116,7 @@ Partial Class Frm_Agregar_Usuario
         Me.cb_rol.Margin = New System.Windows.Forms.Padding(4)
         Me.cb_rol.Name = "cb_rol"
         Me.cb_rol.Size = New System.Drawing.Size(445, 24)
-        Me.cb_rol.TabIndex = 50
+        Me.cb_rol.TabIndex = 5
         Me.cb_rol.ValueMember = "id_rol"
         '
         'UsuariosBindingSource
@@ -143,7 +143,7 @@ Partial Class Frm_Agregar_Usuario
         Me.txt_correo.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_correo.Name = "txt_correo"
         Me.txt_correo.Size = New System.Drawing.Size(448, 22)
-        Me.txt_correo.TabIndex = 53
+        Me.txt_correo.TabIndex = 4
         '
         'txt_clave
         '
@@ -155,7 +155,7 @@ Partial Class Frm_Agregar_Usuario
         Me.txt_clave.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_clave.Name = "txt_clave"
         Me.txt_clave.Size = New System.Drawing.Size(448, 22)
-        Me.txt_clave.TabIndex = 51
+        Me.txt_clave.TabIndex = 2
         '
         'txt_usuario
         '
@@ -166,7 +166,7 @@ Partial Class Frm_Agregar_Usuario
         Me.txt_usuario.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_usuario.Name = "txt_usuario"
         Me.txt_usuario.Size = New System.Drawing.Size(445, 22)
-        Me.txt_usuario.TabIndex = 47
+        Me.txt_usuario.TabIndex = 1
         '
         'check_mostrar_clave
         '
@@ -176,7 +176,7 @@ Partial Class Frm_Agregar_Usuario
         Me.check_mostrar_clave.Margin = New System.Windows.Forms.Padding(4)
         Me.check_mostrar_clave.Name = "check_mostrar_clave"
         Me.check_mostrar_clave.Size = New System.Drawing.Size(153, 21)
-        Me.check_mostrar_clave.TabIndex = 59
+        Me.check_mostrar_clave.TabIndex = 3
         Me.check_mostrar_clave.Text = "Mostrar contraseña"
         Me.check_mostrar_clave.UseVisualStyleBackColor = True
         '
@@ -190,7 +190,7 @@ Partial Class Frm_Agregar_Usuario
         Me.bt_registrar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_registrar.Name = "bt_registrar"
         Me.bt_registrar.Size = New System.Drawing.Size(287, 36)
-        Me.bt_registrar.TabIndex = 57
+        Me.bt_registrar.TabIndex = 6
         Me.bt_registrar.Text = "Registrar"
         Me.bt_registrar.UseVisualStyleBackColor = True
         '

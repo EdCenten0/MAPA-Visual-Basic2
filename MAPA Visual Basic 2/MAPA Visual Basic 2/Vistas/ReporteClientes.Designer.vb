@@ -48,7 +48,7 @@ Partial Class ReporteClientes
         Me.Buscar.Margin = New System.Windows.Forms.Padding(4)
         Me.Buscar.Name = "Buscar"
         Me.Buscar.Size = New System.Drawing.Size(163, 28)
-        Me.Buscar.TabIndex = 13
+        Me.Buscar.TabIndex = 2
         Me.Buscar.Text = "Buscar"
         Me.Buscar.UseVisualStyleBackColor = True
         '
@@ -61,7 +61,7 @@ Partial Class ReporteClientes
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(733, 22)
-        Me.TextBox1.TabIndex = 12
+        Me.TextBox1.TabIndex = 1
         '
         'cryreport
         '

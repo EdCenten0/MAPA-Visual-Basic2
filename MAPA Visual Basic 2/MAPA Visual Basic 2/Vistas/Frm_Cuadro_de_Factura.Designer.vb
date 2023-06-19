@@ -142,7 +142,7 @@ Partial Class Frm_Cuadro_de_Factura
         Me.bt_guardar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_guardar.Name = "bt_guardar"
         Me.bt_guardar.Size = New System.Drawing.Size(173, 36)
-        Me.bt_guardar.TabIndex = 39
+        Me.bt_guardar.TabIndex = 41
         Me.bt_guardar.Text = "Guardar"
         Me.bt_guardar.UseVisualStyleBackColor = True
         '

@@ -39,6 +39,12 @@ Partial Class Frm_Taller
         Me.lbl_direccion = New System.Windows.Forms.Label()
         Me.lbl_nombre = New System.Windows.Forms.Label()
         Me.lblTelefono = New System.Windows.Forms.DataGridView()
+        Me.IdtallerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdtiendaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblId = New System.Windows.Forms.Label()
         Me.btnRefrescar = New System.Windows.Forms.Button()
@@ -49,12 +55,6 @@ Partial Class Frm_Taller
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TallerTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.tallerTableAdapter()
         Me.TallerBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IdtallerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdtiendaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.TallerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TallerBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,7 +76,7 @@ Partial Class Frm_Taller
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(417, 24)
-        Me.txtEmail.TabIndex = 11
+        Me.txtEmail.TabIndex = 2
         '
         'TallerBindingSource1
         '
@@ -104,10 +104,10 @@ Partial Class Frm_Taller
         Me.btn_vaciar_campos.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_vaciar_campos.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.btn_vaciar_campos.Location = New System.Drawing.Point(856, 191)
-        Me.btn_vaciar_campos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_vaciar_campos.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_vaciar_campos.Name = "btn_vaciar_campos"
         Me.btn_vaciar_campos.Size = New System.Drawing.Size(139, 36)
-        Me.btn_vaciar_campos.TabIndex = 9
+        Me.btn_vaciar_campos.TabIndex = 8
         Me.btn_vaciar_campos.Text = "Vaciar Campos"
         Me.btn_vaciar_campos.UseVisualStyleBackColor = True
         '
@@ -116,10 +116,10 @@ Partial Class Frm_Taller
         Me.btn_eliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_eliminar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.btn_eliminar.Location = New System.Drawing.Point(856, 134)
-        Me.btn_eliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_eliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_eliminar.Name = "btn_eliminar"
         Me.btn_eliminar.Size = New System.Drawing.Size(139, 36)
-        Me.btn_eliminar.TabIndex = 8
+        Me.btn_eliminar.TabIndex = 7
         Me.btn_eliminar.Text = "Eliminar"
         Me.btn_eliminar.UseVisualStyleBackColor = True
         '
@@ -128,10 +128,10 @@ Partial Class Frm_Taller
         Me.btn_editar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_editar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.btn_editar.Location = New System.Drawing.Point(856, 74)
-        Me.btn_editar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_editar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_editar.Name = "btn_editar"
         Me.btn_editar.Size = New System.Drawing.Size(139, 36)
-        Me.btn_editar.TabIndex = 7
+        Me.btn_editar.TabIndex = 6
         Me.btn_editar.Text = "Editar"
         Me.btn_editar.UseVisualStyleBackColor = True
         '
@@ -143,7 +143,7 @@ Partial Class Frm_Taller
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(417, 24)
-        Me.txtTelefono.TabIndex = 6
+        Me.txtTelefono.TabIndex = 4
         '
         'txtDireccion
         '
@@ -153,7 +153,7 @@ Partial Class Frm_Taller
         Me.txtDireccion.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(417, 24)
-        Me.txtDireccion.TabIndex = 5
+        Me.txtDireccion.TabIndex = 3
         '
         'txtNombre
         '
@@ -163,17 +163,17 @@ Partial Class Frm_Taller
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(417, 24)
-        Me.txtNombre.TabIndex = 4
+        Me.txtNombre.TabIndex = 1
         '
         'btn_guardar
         '
         Me.btn_guardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_guardar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.btn_guardar.Location = New System.Drawing.Point(856, 20)
-        Me.btn_guardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_guardar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_guardar.Name = "btn_guardar"
         Me.btn_guardar.Size = New System.Drawing.Size(139, 36)
-        Me.btn_guardar.TabIndex = 3
+        Me.btn_guardar.TabIndex = 5
         Me.btn_guardar.Text = "Guardar"
         Me.btn_guardar.UseVisualStyleBackColor = True
         '
@@ -227,120 +227,6 @@ Partial Class Frm_Taller
         Me.lblTelefono.Size = New System.Drawing.Size(1013, 362)
         Me.lblTelefono.TabIndex = 2
         '
-        'Panel2
-        '
-        Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.Controls.Add(Me.lblId)
-        Me.Panel2.Controls.Add(Me.btnRefrescar)
-        Me.Panel2.Controls.Add(Me.btnBuscar)
-        Me.Panel2.Controls.Add(Me.txtBuscar)
-        Me.Panel2.Controls.Add(Me.lblBuscar)
-        Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.txtEmail)
-        Me.Panel2.Controls.Add(Me.lbl_email)
-        Me.Panel2.Controls.Add(Me.btn_vaciar_campos)
-        Me.Panel2.Controls.Add(Me.btn_eliminar)
-        Me.Panel2.Controls.Add(Me.btn_editar)
-        Me.Panel2.Controls.Add(Me.txtTelefono)
-        Me.Panel2.Controls.Add(Me.txtDireccion)
-        Me.Panel2.Controls.Add(Me.txtNombre)
-        Me.Panel2.Controls.Add(Me.btn_guardar)
-        Me.Panel2.Controls.Add(Me.lbl_telefono)
-        Me.Panel2.Controls.Add(Me.lbl_direccion)
-        Me.Panel2.Controls.Add(Me.lbl_nombre)
-        Me.Panel2.Location = New System.Drawing.Point(16, 14)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1013, 300)
-        Me.Panel2.TabIndex = 1
-        '
-        'lblId
-        '
-        Me.lblId.AutoSize = True
-        Me.lblId.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TallerBindingSource1, "id_taller", True))
-        Me.lblId.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblId.Location = New System.Drawing.Point(568, 92)
-        Me.lblId.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(0, 17)
-        Me.lblId.TabIndex = 31
-        '
-        'btnRefrescar
-        '
-        Me.btnRefrescar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnRefrescar.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.btnRefrescar.Location = New System.Drawing.Point(872, 256)
-        Me.btnRefrescar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnRefrescar.Name = "btnRefrescar"
-        Me.btnRefrescar.Size = New System.Drawing.Size(100, 30)
-        Me.btnRefrescar.TabIndex = 30
-        Me.btnRefrescar.Text = "Refrescar"
-        Me.btnRefrescar.UseVisualStyleBackColor = True
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.btnBuscar.Location = New System.Drawing.Point(675, 256)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(100, 28)
-        Me.btnBuscar.TabIndex = 29
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'txtBuscar
-        '
-        Me.txtBuscar.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.txtBuscar.Location = New System.Drawing.Point(660, 224)
-        Me.txtBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(132, 24)
-        Me.txtBuscar.TabIndex = 28
-        '
-        'lblBuscar
-        '
-        Me.lblBuscar.AutoSize = True
-        Me.lblBuscar.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.lblBuscar.Location = New System.Drawing.Point(581, 224)
-        Me.lblBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblBuscar.Name = "lblBuscar"
-        Me.lblBuscar.Size = New System.Drawing.Size(69, 20)
-        Me.lblBuscar.TabIndex = 27
-        Me.lblBuscar.Text = "Buscar:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(15, 12)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(104, 38)
-        Me.Label4.TabIndex = 26
-        Me.Label4.Text = "Taller"
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.lblTelefono)
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1045, 690)
-        Me.Panel1.TabIndex = 1
-        '
-        'TallerTableAdapter
-        '
-        Me.TallerTableAdapter.ClearBeforeFill = True
-        '
-        'TallerBindingSource2
-        '
-        Me.TallerBindingSource2.DataMember = "taller"
-        Me.TallerBindingSource2.DataSource = Me.MAPADataSet
-        '
         'IdtallerDataGridViewTextBoxColumn
         '
         Me.IdtallerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -390,13 +276,127 @@ Partial Class Frm_Taller
         Me.IdtiendaDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdtiendaDataGridViewTextBoxColumn.Name = "IdtiendaDataGridViewTextBoxColumn"
         '
+        'Panel2
+        '
+        Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.Controls.Add(Me.lblId)
+        Me.Panel2.Controls.Add(Me.btnRefrescar)
+        Me.Panel2.Controls.Add(Me.btnBuscar)
+        Me.Panel2.Controls.Add(Me.txtBuscar)
+        Me.Panel2.Controls.Add(Me.lblBuscar)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.txtEmail)
+        Me.Panel2.Controls.Add(Me.lbl_email)
+        Me.Panel2.Controls.Add(Me.btn_vaciar_campos)
+        Me.Panel2.Controls.Add(Me.btn_eliminar)
+        Me.Panel2.Controls.Add(Me.btn_editar)
+        Me.Panel2.Controls.Add(Me.txtTelefono)
+        Me.Panel2.Controls.Add(Me.txtDireccion)
+        Me.Panel2.Controls.Add(Me.txtNombre)
+        Me.Panel2.Controls.Add(Me.btn_guardar)
+        Me.Panel2.Controls.Add(Me.lbl_telefono)
+        Me.Panel2.Controls.Add(Me.lbl_direccion)
+        Me.Panel2.Controls.Add(Me.lbl_nombre)
+        Me.Panel2.Location = New System.Drawing.Point(16, 14)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1013, 300)
+        Me.Panel2.TabIndex = 1
+        '
+        'lblId
+        '
+        Me.lblId.AutoSize = True
+        Me.lblId.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TallerBindingSource1, "id_taller", True))
+        Me.lblId.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblId.Location = New System.Drawing.Point(568, 92)
+        Me.lblId.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblId.Name = "lblId"
+        Me.lblId.Size = New System.Drawing.Size(0, 17)
+        Me.lblId.TabIndex = 31
+        '
+        'btnRefrescar
+        '
+        Me.btnRefrescar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnRefrescar.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.btnRefrescar.Location = New System.Drawing.Point(872, 256)
+        Me.btnRefrescar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnRefrescar.Name = "btnRefrescar"
+        Me.btnRefrescar.Size = New System.Drawing.Size(100, 30)
+        Me.btnRefrescar.TabIndex = 11
+        Me.btnRefrescar.Text = "Refrescar"
+        Me.btnRefrescar.UseVisualStyleBackColor = True
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.btnBuscar.Location = New System.Drawing.Point(675, 256)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(100, 28)
+        Me.btnBuscar.TabIndex = 10
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'txtBuscar
+        '
+        Me.txtBuscar.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.txtBuscar.Location = New System.Drawing.Point(660, 224)
+        Me.txtBuscar.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(132, 24)
+        Me.txtBuscar.TabIndex = 9
+        '
+        'lblBuscar
+        '
+        Me.lblBuscar.AutoSize = True
+        Me.lblBuscar.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.lblBuscar.Location = New System.Drawing.Point(581, 224)
+        Me.lblBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblBuscar.Name = "lblBuscar"
+        Me.lblBuscar.Size = New System.Drawing.Size(69, 20)
+        Me.lblBuscar.TabIndex = 27
+        Me.lblBuscar.Text = "Buscar:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(15, 12)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(104, 38)
+        Me.Label4.TabIndex = 26
+        Me.Label4.Text = "Taller"
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.lblTelefono)
+        Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1045, 690)
+        Me.Panel1.TabIndex = 1
+        '
+        'TallerTableAdapter
+        '
+        Me.TallerTableAdapter.ClearBeforeFill = True
+        '
+        'TallerBindingSource2
+        '
+        Me.TallerBindingSource2.DataMember = "taller"
+        Me.TallerBindingSource2.DataSource = Me.MAPADataSet
+        '
         'Frm_Taller
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1045, 690)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Frm_Taller"
         Me.Text = "Form4"
         CType(Me.TallerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

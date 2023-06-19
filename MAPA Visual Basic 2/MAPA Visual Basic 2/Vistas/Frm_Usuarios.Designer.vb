@@ -54,14 +54,14 @@ Partial Class Frm_Usuarios
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.UsuariosBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.UsuariosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.usuariosTableAdapter()
-        Me.RolesTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.rolesTableAdapter()
         Me.IdusuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClaveDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CorreoelectronicoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdrolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsuariosBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UsuariosTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.usuariosTableAdapter()
+        Me.RolesTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.rolesTableAdapter()
         CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuariosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuariosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -100,7 +100,7 @@ Partial Class Frm_Usuarios
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(16, 345)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(1013, 331)
@@ -141,7 +141,7 @@ Partial Class Frm_Usuarios
         Me.Panel2.Controls.Add(Me.txt_usuario)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(16, 53)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1013, 315)
         Me.Panel2.TabIndex = 28
@@ -150,10 +150,10 @@ Partial Class Frm_Usuarios
         '
         Me.bt_buscar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_buscar.Location = New System.Drawing.Point(515, 269)
-        Me.bt_buscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_buscar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_buscar.Name = "bt_buscar"
         Me.bt_buscar.Size = New System.Drawing.Size(129, 38)
-        Me.bt_buscar.TabIndex = 48
+        Me.bt_buscar.TabIndex = 10
         Me.bt_buscar.Text = "Buscar"
         Me.bt_buscar.UseVisualStyleBackColor = True
         '
@@ -161,10 +161,10 @@ Partial Class Frm_Usuarios
         '
         Me.txt_buscar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_buscar.Location = New System.Drawing.Point(103, 277)
-        Me.txt_buscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_buscar.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_buscar.Name = "txt_buscar"
         Me.txt_buscar.Size = New System.Drawing.Size(391, 24)
-        Me.txt_buscar.TabIndex = 47
+        Me.txt_buscar.TabIndex = 9
         '
         'Label7
         '
@@ -182,10 +182,10 @@ Partial Class Frm_Usuarios
         Me.bt_refrescar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_refrescar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_refrescar.Location = New System.Drawing.Point(826, 264)
-        Me.bt_refrescar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_refrescar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_refrescar.Name = "bt_refrescar"
         Me.bt_refrescar.Size = New System.Drawing.Size(173, 36)
-        Me.bt_refrescar.TabIndex = 45
+        Me.bt_refrescar.TabIndex = 11
         Me.bt_refrescar.Text = "Refrescar"
         Me.bt_refrescar.UseVisualStyleBackColor = True
         '
@@ -194,10 +194,10 @@ Partial Class Frm_Usuarios
         Me.bt_vaciar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_vaciar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_vaciar.Location = New System.Drawing.Point(826, 220)
-        Me.bt_vaciar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_vaciar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_vaciar.Name = "bt_vaciar"
         Me.bt_vaciar.Size = New System.Drawing.Size(173, 36)
-        Me.bt_vaciar.TabIndex = 44
+        Me.bt_vaciar.TabIndex = 8
         Me.bt_vaciar.Text = "Vaciar Campos"
         Me.bt_vaciar.UseVisualStyleBackColor = True
         '
@@ -206,10 +206,10 @@ Partial Class Frm_Usuarios
         Me.bt_guardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_guardar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_guardar.Location = New System.Drawing.Point(826, 88)
-        Me.bt_guardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_guardar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_guardar.Name = "bt_guardar"
         Me.bt_guardar.Size = New System.Drawing.Size(173, 36)
-        Me.bt_guardar.TabIndex = 41
+        Me.bt_guardar.TabIndex = 5
         Me.bt_guardar.Text = "Guardar"
         Me.bt_guardar.UseVisualStyleBackColor = True
         '
@@ -218,10 +218,10 @@ Partial Class Frm_Usuarios
         Me.bt_editar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_editar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_editar.Location = New System.Drawing.Point(826, 176)
-        Me.bt_editar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_editar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_editar.Name = "bt_editar"
         Me.bt_editar.Size = New System.Drawing.Size(173, 36)
-        Me.bt_editar.TabIndex = 43
+        Me.bt_editar.TabIndex = 7
         Me.bt_editar.Text = "Editar"
         Me.bt_editar.UseVisualStyleBackColor = True
         '
@@ -230,10 +230,10 @@ Partial Class Frm_Usuarios
         Me.bt_eliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_eliminar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_eliminar.Location = New System.Drawing.Point(826, 132)
-        Me.bt_eliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_eliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_eliminar.Name = "bt_eliminar"
         Me.bt_eliminar.Size = New System.Drawing.Size(173, 36)
-        Me.bt_eliminar.TabIndex = 42
+        Me.bt_eliminar.TabIndex = 6
         Me.bt_eliminar.Text = "Eliminar"
         Me.bt_eliminar.UseVisualStyleBackColor = True
         '
@@ -242,10 +242,10 @@ Partial Class Frm_Usuarios
         Me.txt_correo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource4, "correo_electronico", True))
         Me.txt_correo.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_correo.Location = New System.Drawing.Point(113, 118)
-        Me.txt_correo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_correo.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_correo.Name = "txt_correo"
         Me.txt_correo.Size = New System.Drawing.Size(531, 24)
-        Me.txt_correo.TabIndex = 39
+        Me.txt_correo.TabIndex = 3
         '
         'UsuariosBindingSource4
         '
@@ -278,10 +278,10 @@ Partial Class Frm_Usuarios
         Me.txt_clave.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource4, "clave", True))
         Me.txt_clave.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_clave.Location = New System.Drawing.Point(113, 76)
-        Me.txt_clave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_clave.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_clave.Name = "txt_clave"
         Me.txt_clave.Size = New System.Drawing.Size(531, 24)
-        Me.txt_clave.TabIndex = 37
+        Me.txt_clave.TabIndex = 2
         '
         'Label5
         '
@@ -302,10 +302,10 @@ Partial Class Frm_Usuarios
         Me.cb_rol.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.cb_rol.FormattingEnabled = True
         Me.cb_rol.Location = New System.Drawing.Point(113, 156)
-        Me.cb_rol.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cb_rol.Margin = New System.Windows.Forms.Padding(4)
         Me.cb_rol.Name = "cb_rol"
         Me.cb_rol.Size = New System.Drawing.Size(531, 24)
-        Me.cb_rol.TabIndex = 36
+        Me.cb_rol.TabIndex = 4
         Me.cb_rol.ValueMember = "id_rol"
         '
         'RolesBindingSource1
@@ -331,7 +331,7 @@ Partial Class Frm_Usuarios
         Me.txt_id.Enabled = False
         Me.txt_id.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_id.Location = New System.Drawing.Point(113, 4)
-        Me.txt_id.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_id.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_id.Name = "txt_id"
         Me.txt_id.Size = New System.Drawing.Size(109, 24)
         Me.txt_id.TabIndex = 27
@@ -352,10 +352,10 @@ Partial Class Frm_Usuarios
         Me.txt_usuario.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource4, "nombre", True))
         Me.txt_usuario.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_usuario.Location = New System.Drawing.Point(113, 40)
-        Me.txt_usuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_usuario.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_usuario.Name = "txt_usuario"
         Me.txt_usuario.Size = New System.Drawing.Size(531, 24)
-        Me.txt_usuario.TabIndex = 29
+        Me.txt_usuario.TabIndex = 1
         '
         'Label2
         '
@@ -375,7 +375,7 @@ Partial Class Frm_Usuarios
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1045, 690)
         Me.Panel1.TabIndex = 30
@@ -390,24 +390,11 @@ Partial Class Frm_Usuarios
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdusuarioDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ClaveDataGridViewTextBoxColumn, Me.CorreoelectronicoDataGridViewTextBoxColumn, Me.IdrolDataGridViewTextBoxColumn})
         Me.DataGridView2.DataSource = Me.UsuariosBindingSource4
         Me.DataGridView2.Location = New System.Drawing.Point(16, 375)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowHeadersWidth = 51
         Me.DataGridView2.Size = New System.Drawing.Size(1013, 300)
         Me.DataGridView2.TabIndex = 30
-        '
-        'UsuariosBindingSource3
-        '
-        Me.UsuariosBindingSource3.DataMember = "usuarios"
-        Me.UsuariosBindingSource3.DataSource = Me.MAPADataSet
-        '
-        'UsuariosTableAdapter
-        '
-        Me.UsuariosTableAdapter.ClearBeforeFill = True
-        '
-        'RolesTableAdapter
-        '
-        Me.RolesTableAdapter.ClearBeforeFill = True
         '
         'IdusuarioDataGridViewTextBoxColumn
         '
@@ -450,6 +437,19 @@ Partial Class Frm_Usuarios
         Me.IdrolDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdrolDataGridViewTextBoxColumn.Name = "IdrolDataGridViewTextBoxColumn"
         '
+        'UsuariosBindingSource3
+        '
+        Me.UsuariosBindingSource3.DataMember = "usuarios"
+        Me.UsuariosBindingSource3.DataSource = Me.MAPADataSet
+        '
+        'UsuariosTableAdapter
+        '
+        Me.UsuariosTableAdapter.ClearBeforeFill = True
+        '
+        'RolesTableAdapter
+        '
+        Me.RolesTableAdapter.ClearBeforeFill = True
+        '
         'Frm_Usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -457,7 +457,7 @@ Partial Class Frm_Usuarios
         Me.ClientSize = New System.Drawing.Size(1045, 690)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Frm_Usuarios"
         Me.Text = "Usuarios"
         CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

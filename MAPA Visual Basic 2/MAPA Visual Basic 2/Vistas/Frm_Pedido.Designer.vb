@@ -105,7 +105,7 @@ Partial Class Frm_Pedido
         Me.ComboBox2.Location = New System.Drawing.Point(165, 183)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(437, 24)
-        Me.ComboBox2.TabIndex = 52
+        Me.ComboBox2.TabIndex = 4
         '
         'ComboBox1
         '
@@ -115,7 +115,7 @@ Partial Class Frm_Pedido
         Me.ComboBox1.Location = New System.Drawing.Point(356, 12)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(164, 24)
-        Me.ComboBox1.TabIndex = 51
+        Me.ComboBox1.TabIndex = 1
         '
         'PedidosBindingSource
         '
@@ -171,7 +171,7 @@ Partial Class Frm_Pedido
         Me.DateTimePicker1.MinimumSize = New System.Drawing.Size(300, 30)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(437, 30)
-        Me.DateTimePicker1.TabIndex = 46
+        Me.DateTimePicker1.TabIndex = 2
         '
         'Label5
         '
@@ -194,7 +194,7 @@ Partial Class Frm_Pedido
         Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(646, 62)
-        Me.RichTextBox1.TabIndex = 44
+        Me.RichTextBox1.TabIndex = 3
         Me.RichTextBox1.Text = ""
         '
         'Label3
@@ -216,7 +216,7 @@ Partial Class Frm_Pedido
         Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(207, 36)
-        Me.Button4.TabIndex = 34
+        Me.Button4.TabIndex = 8
         Me.Button4.Text = "Vaciar Campos"
         Me.Button4.UseVisualStyleBackColor = True
         '
@@ -228,7 +228,7 @@ Partial Class Frm_Pedido
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(207, 36)
-        Me.Button1.TabIndex = 31
+        Me.Button1.TabIndex = 5
         Me.Button1.Text = "Guardar"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -240,7 +240,7 @@ Partial Class Frm_Pedido
         Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(207, 36)
-        Me.Button3.TabIndex = 33
+        Me.Button3.TabIndex = 6
         Me.Button3.Text = "Editar"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -267,7 +267,7 @@ Partial Class Frm_Pedido
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(207, 36)
-        Me.Button2.TabIndex = 32
+        Me.Button2.TabIndex = 7
         Me.Button2.Text = " Eliminar"
         Me.Button2.UseVisualStyleBackColor = True
         '

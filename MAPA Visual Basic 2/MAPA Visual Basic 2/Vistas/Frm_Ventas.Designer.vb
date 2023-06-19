@@ -43,15 +43,15 @@ Partial Class Frm_Ventas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.VentasTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.ventasTableAdapter()
-        Me.btn_guardar = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.IdventaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CantidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdtiendaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdfacturaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VentasTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.ventasTableAdapter()
+        Me.btn_guardar = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.VentasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MAPADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,7 +64,7 @@ Partial Class Frm_Ventas
         Me.Button6.Margin = New System.Windows.Forms.Padding(4)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(134, 36)
-        Me.Button6.TabIndex = 92
+        Me.Button6.TabIndex = 12
         Me.Button6.Text = "Refrescar"
         Me.Button6.UseVisualStyleBackColor = True
         '
@@ -76,7 +76,7 @@ Partial Class Frm_Ventas
         Me.RichTextBox8.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox8.Name = "RichTextBox8"
         Me.RichTextBox8.Size = New System.Drawing.Size(351, 24)
-        Me.RichTextBox8.TabIndex = 91
+        Me.RichTextBox8.TabIndex = 9
         Me.RichTextBox8.Text = ""
         '
         'Button5
@@ -85,7 +85,7 @@ Partial Class Frm_Ventas
         Me.Button5.Margin = New System.Windows.Forms.Padding(4)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(169, 36)
-        Me.Button5.TabIndex = 90
+        Me.Button5.TabIndex = 10
         Me.Button5.Text = "Buscar"
         Me.Button5.UseVisualStyleBackColor = True
         '
@@ -98,7 +98,7 @@ Partial Class Frm_Ventas
         Me.IDFVenta.Margin = New System.Windows.Forms.Padding(4)
         Me.IDFVenta.Name = "IDFVenta"
         Me.IDFVenta.Size = New System.Drawing.Size(93, 24)
-        Me.IDFVenta.TabIndex = 89
+        Me.IDFVenta.TabIndex = 4
         Me.IDFVenta.Text = ""
         '
         'VentasBindingSource
@@ -131,7 +131,7 @@ Partial Class Frm_Ventas
         Me.IDTVenta.Margin = New System.Windows.Forms.Padding(4)
         Me.IDTVenta.Name = "IDTVenta"
         Me.IDTVenta.Size = New System.Drawing.Size(88, 24)
-        Me.IDTVenta.TabIndex = 87
+        Me.IDTVenta.TabIndex = 3
         Me.IDTVenta.Text = ""
         '
         'Label6
@@ -177,7 +177,7 @@ Partial Class Frm_Ventas
         Me.CantidadVenta.Margin = New System.Windows.Forms.Padding(4)
         Me.CantidadVenta.Name = "CantidadVenta"
         Me.CantidadVenta.Size = New System.Drawing.Size(302, 24)
-        Me.CantidadVenta.TabIndex = 83
+        Me.CantidadVenta.TabIndex = 1
         Me.CantidadVenta.Text = ""
         '
         'DescripcionVenta
@@ -188,7 +188,7 @@ Partial Class Frm_Ventas
         Me.DescripcionVenta.Margin = New System.Windows.Forms.Padding(4)
         Me.DescripcionVenta.Name = "DescripcionVenta"
         Me.DescripcionVenta.Size = New System.Drawing.Size(302, 51)
-        Me.DescripcionVenta.TabIndex = 82
+        Me.DescripcionVenta.TabIndex = 2
         Me.DescripcionVenta.Text = ""
         '
         'Button4
@@ -198,7 +198,7 @@ Partial Class Frm_Ventas
         Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(169, 36)
-        Me.Button4.TabIndex = 81
+        Me.Button4.TabIndex = 8
         Me.Button4.Text = "Vaciar Campos"
         Me.Button4.UseVisualStyleBackColor = True
         '
@@ -209,7 +209,7 @@ Partial Class Frm_Ventas
         Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(169, 36)
-        Me.Button3.TabIndex = 80
+        Me.Button3.TabIndex = 7
         Me.Button3.Text = "Eliminar"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -220,7 +220,7 @@ Partial Class Frm_Ventas
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(169, 36)
-        Me.Button2.TabIndex = 79
+        Me.Button2.TabIndex = 6
         Me.Button2.Text = "Editar"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -231,7 +231,7 @@ Partial Class Frm_Ventas
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(169, 36)
-        Me.Button1.TabIndex = 78
+        Me.Button1.TabIndex = 5
         Me.Button1.Text = "Guardar"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -273,44 +273,6 @@ Partial Class Frm_Ventas
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(1028, 293)
         Me.DataGridView1.TabIndex = 75
-        '
-        'VentasTableAdapter
-        '
-        Me.VentasTableAdapter.ClearBeforeFill = True
-        '
-        'btn_guardar
-        '
-        Me.btn_guardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_guardar.Font = New System.Drawing.Font("Inter", 8.0!)
-        Me.btn_guardar.Location = New System.Drawing.Point(671, 332)
-        Me.btn_guardar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btn_guardar.Name = "btn_guardar"
-        Me.btn_guardar.Size = New System.Drawing.Size(134, 36)
-        Me.btn_guardar.TabIndex = 93
-        Me.btn_guardar.Text = "Reporte"
-        Me.btn_guardar.UseVisualStyleBackColor = True
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Inter", 10.2!)
-        Me.Label4.Location = New System.Drawing.Point(33, 292)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(69, 20)
-        Me.Label4.TabIndex = 94
-        Me.Label4.Text = "Buscar:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Inter Medium", 19.8!, System.Drawing.FontStyle.Bold)
-        Me.Label5.Location = New System.Drawing.Point(13, 9)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(132, 40)
-        Me.Label5.TabIndex = 27
-        Me.Label5.Text = "Ventas"
         '
         'IdventaDataGridViewTextBoxColumn
         '
@@ -356,6 +318,44 @@ Partial Class Frm_Ventas
         Me.IdfacturaDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdfacturaDataGridViewTextBoxColumn.Name = "IdfacturaDataGridViewTextBoxColumn"
         Me.IdfacturaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'VentasTableAdapter
+        '
+        Me.VentasTableAdapter.ClearBeforeFill = True
+        '
+        'btn_guardar
+        '
+        Me.btn_guardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_guardar.Font = New System.Drawing.Font("Inter", 8.0!)
+        Me.btn_guardar.Location = New System.Drawing.Point(671, 332)
+        Me.btn_guardar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_guardar.Name = "btn_guardar"
+        Me.btn_guardar.Size = New System.Drawing.Size(134, 36)
+        Me.btn_guardar.TabIndex = 11
+        Me.btn_guardar.Text = "Reporte"
+        Me.btn_guardar.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Inter", 10.2!)
+        Me.Label4.Location = New System.Drawing.Point(33, 292)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(69, 20)
+        Me.Label4.TabIndex = 94
+        Me.Label4.Text = "Buscar:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Inter Medium", 19.8!, System.Drawing.FontStyle.Bold)
+        Me.Label5.Location = New System.Drawing.Point(13, 9)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(132, 40)
+        Me.Label5.TabIndex = 27
+        Me.Label5.Text = "Ventas"
         '
         'Frm_Ventas
         '

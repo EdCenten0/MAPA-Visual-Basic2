@@ -107,7 +107,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.btn_vaciar_campos.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_vaciar_campos.Name = "btn_vaciar_campos"
         Me.btn_vaciar_campos.Size = New System.Drawing.Size(160, 36)
-        Me.btn_vaciar_campos.TabIndex = 35
+        Me.btn_vaciar_campos.TabIndex = 6
         Me.btn_vaciar_campos.Text = "Vaciar Campos"
         Me.btn_vaciar_campos.UseVisualStyleBackColor = True
         '
@@ -119,7 +119,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.btn_eliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_eliminar.Name = "btn_eliminar"
         Me.btn_eliminar.Size = New System.Drawing.Size(160, 36)
-        Me.btn_eliminar.TabIndex = 34
+        Me.btn_eliminar.TabIndex = 5
         Me.btn_eliminar.Text = "Eliminar"
         Me.btn_eliminar.UseVisualStyleBackColor = True
         '
@@ -131,7 +131,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.btn_editar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_editar.Name = "btn_editar"
         Me.btn_editar.Size = New System.Drawing.Size(160, 36)
-        Me.btn_editar.TabIndex = 33
+        Me.btn_editar.TabIndex = 4
         Me.btn_editar.Text = "Editar"
         Me.btn_editar.UseVisualStyleBackColor = True
         '
@@ -143,7 +143,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.btn_guardar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_guardar.Name = "btn_guardar"
         Me.btn_guardar.Size = New System.Drawing.Size(160, 36)
-        Me.btn_guardar.TabIndex = 32
+        Me.btn_guardar.TabIndex = 3
         Me.btn_guardar.Text = "Guardar"
         Me.btn_guardar.UseVisualStyleBackColor = True
         '
@@ -174,7 +174,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.ComboBox2.Location = New System.Drawing.Point(118, 69)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(256, 24)
-        Me.ComboBox2.TabIndex = 7
+        Me.ComboBox2.TabIndex = 2
         '
         'MaterialesporproveedorBindingSource
         '
@@ -198,7 +198,7 @@ Partial Class Frm_Materiales_Por_Proveedor
         Me.ComboBox1.Location = New System.Drawing.Point(118, 15)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(256, 24)
-        Me.ComboBox1.TabIndex = 6
+        Me.ComboBox1.TabIndex = 1
         '
         'Label4
         '

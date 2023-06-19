@@ -38,14 +38,14 @@ Partial Class Frm_Rol
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdrolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombrerolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.bt_buscar = New System.Windows.Forms.Button()
         Me.txt_buscar = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.RolesTableAdapter = New MAPA_Visual_Basic_2.MAPADataSetTableAdapters.rolesTableAdapter()
-        Me.IdrolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombrerolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.RolesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,10 +68,10 @@ Partial Class Frm_Rol
         Me.bt_refrescar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_refrescar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_refrescar.Location = New System.Drawing.Point(828, 187)
-        Me.bt_refrescar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_refrescar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_refrescar.Name = "bt_refrescar"
         Me.bt_refrescar.Size = New System.Drawing.Size(173, 36)
-        Me.bt_refrescar.TabIndex = 35
+        Me.bt_refrescar.TabIndex = 8
         Me.bt_refrescar.Text = "Refrescar"
         Me.bt_refrescar.UseVisualStyleBackColor = True
         '
@@ -80,10 +80,10 @@ Partial Class Frm_Rol
         Me.bt_vaciar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_vaciar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_vaciar.Location = New System.Drawing.Point(828, 143)
-        Me.bt_vaciar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_vaciar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_vaciar.Name = "bt_vaciar"
         Me.bt_vaciar.Size = New System.Drawing.Size(173, 36)
-        Me.bt_vaciar.TabIndex = 34
+        Me.bt_vaciar.TabIndex = 5
         Me.bt_vaciar.Text = "Vaciar Campos"
         Me.bt_vaciar.UseVisualStyleBackColor = True
         '
@@ -92,10 +92,10 @@ Partial Class Frm_Rol
         Me.bt_guardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_guardar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_guardar.Location = New System.Drawing.Point(832, 11)
-        Me.bt_guardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_guardar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_guardar.Name = "bt_guardar"
         Me.bt_guardar.Size = New System.Drawing.Size(173, 36)
-        Me.bt_guardar.TabIndex = 31
+        Me.bt_guardar.TabIndex = 2
         Me.bt_guardar.Text = "Guardar"
         Me.bt_guardar.UseVisualStyleBackColor = True
         '
@@ -104,10 +104,10 @@ Partial Class Frm_Rol
         Me.bt_editar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_editar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_editar.Location = New System.Drawing.Point(828, 99)
-        Me.bt_editar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_editar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_editar.Name = "bt_editar"
         Me.bt_editar.Size = New System.Drawing.Size(173, 36)
-        Me.bt_editar.TabIndex = 33
+        Me.bt_editar.TabIndex = 4
         Me.bt_editar.Text = "Editar"
         Me.bt_editar.UseVisualStyleBackColor = True
         '
@@ -118,7 +118,7 @@ Partial Class Frm_Rol
         Me.txt_id.Enabled = False
         Me.txt_id.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_id.Location = New System.Drawing.Point(79, 58)
-        Me.txt_id.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_id.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_id.Name = "txt_id"
         Me.txt_id.Size = New System.Drawing.Size(125, 24)
         Me.txt_id.TabIndex = 27
@@ -138,10 +138,10 @@ Partial Class Frm_Rol
         Me.bt_eliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_eliminar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_eliminar.Location = New System.Drawing.Point(832, 55)
-        Me.bt_eliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_eliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_eliminar.Name = "bt_eliminar"
         Me.bt_eliminar.Size = New System.Drawing.Size(173, 36)
-        Me.bt_eliminar.TabIndex = 32
+        Me.bt_eliminar.TabIndex = 3
         Me.bt_eliminar.Text = "Eliminar"
         Me.bt_eliminar.UseVisualStyleBackColor = True
         '
@@ -161,10 +161,10 @@ Partial Class Frm_Rol
         Me.txt_rol.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RolesBindingSource2, "nombre_rol", True))
         Me.txt_rol.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_rol.Location = New System.Drawing.Point(79, 132)
-        Me.txt_rol.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_rol.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_rol.Name = "txt_rol"
         Me.txt_rol.Size = New System.Drawing.Size(599, 24)
-        Me.txt_rol.TabIndex = 29
+        Me.txt_rol.TabIndex = 1
         '
         'Label2
         '
@@ -186,7 +186,7 @@ Partial Class Frm_Rol
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Location = New System.Drawing.Point(11, 10)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1045, 690)
         Me.Panel1.TabIndex = 27
@@ -201,11 +201,28 @@ Partial Class Frm_Rol
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdrolDataGridViewTextBoxColumn, Me.NombrerolDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.RolesBindingSource2
         Me.DataGridView1.Location = New System.Drawing.Point(16, 327)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(1009, 348)
         Me.DataGridView1.TabIndex = 29
+        '
+        'IdrolDataGridViewTextBoxColumn
+        '
+        Me.IdrolDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.IdrolDataGridViewTextBoxColumn.DataPropertyName = "id_rol"
+        Me.IdrolDataGridViewTextBoxColumn.HeaderText = "Rol ID"
+        Me.IdrolDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdrolDataGridViewTextBoxColumn.Name = "IdrolDataGridViewTextBoxColumn"
+        Me.IdrolDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombrerolDataGridViewTextBoxColumn
+        '
+        Me.NombrerolDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NombrerolDataGridViewTextBoxColumn.DataPropertyName = "nombre_rol"
+        Me.NombrerolDataGridViewTextBoxColumn.HeaderText = "Nombre del Rol"
+        Me.NombrerolDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombrerolDataGridViewTextBoxColumn.Name = "NombrerolDataGridViewTextBoxColumn"
         '
         'Panel2
         '
@@ -225,7 +242,7 @@ Partial Class Frm_Rol
         Me.Panel2.Controls.Add(Me.txt_rol)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(16, 53)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1013, 266)
         Me.Panel2.TabIndex = 28
@@ -234,10 +251,10 @@ Partial Class Frm_Rol
         '
         Me.bt_buscar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.bt_buscar.Location = New System.Drawing.Point(549, 174)
-        Me.bt_buscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bt_buscar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_buscar.Name = "bt_buscar"
         Me.bt_buscar.Size = New System.Drawing.Size(129, 40)
-        Me.bt_buscar.TabIndex = 54
+        Me.bt_buscar.TabIndex = 7
         Me.bt_buscar.Text = "Buscar"
         Me.bt_buscar.UseVisualStyleBackColor = True
         '
@@ -245,10 +262,10 @@ Partial Class Frm_Rol
         '
         Me.txt_buscar.Font = New System.Drawing.Font("Inter", 8.0!)
         Me.txt_buscar.Location = New System.Drawing.Point(79, 183)
-        Me.txt_buscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_buscar.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_buscar.Name = "txt_buscar"
         Me.txt_buscar.Size = New System.Drawing.Size(443, 24)
-        Me.txt_buscar.TabIndex = 53
+        Me.txt_buscar.TabIndex = 6
         '
         'Label9
         '
@@ -276,30 +293,13 @@ Partial Class Frm_Rol
         '
         Me.RolesTableAdapter.ClearBeforeFill = True
         '
-        'IdrolDataGridViewTextBoxColumn
-        '
-        Me.IdrolDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.IdrolDataGridViewTextBoxColumn.DataPropertyName = "id_rol"
-        Me.IdrolDataGridViewTextBoxColumn.HeaderText = "Rol ID"
-        Me.IdrolDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdrolDataGridViewTextBoxColumn.Name = "IdrolDataGridViewTextBoxColumn"
-        Me.IdrolDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombrerolDataGridViewTextBoxColumn
-        '
-        Me.NombrerolDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.NombrerolDataGridViewTextBoxColumn.DataPropertyName = "nombre_rol"
-        Me.NombrerolDataGridViewTextBoxColumn.HeaderText = "Nombre del Rol"
-        Me.NombrerolDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.NombrerolDataGridViewTextBoxColumn.Name = "NombrerolDataGridViewTextBoxColumn"
-        '
         'Frm_Rol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1045, 690)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Frm_Rol"
         Me.Text = "Rol"
         CType(Me.RolesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()

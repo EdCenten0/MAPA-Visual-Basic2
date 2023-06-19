@@ -160,7 +160,7 @@ Partial Class Frm_Clientes
         Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(207, 36)
-        Me.Button4.TabIndex = 64
+        Me.Button4.TabIndex = 9
         Me.Button4.Text = "Vaciar Campos"
         Me.Button4.UseVisualStyleBackColor = True
         '
@@ -172,7 +172,7 @@ Partial Class Frm_Clientes
         Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(207, 36)
-        Me.Button3.TabIndex = 63
+        Me.Button3.TabIndex = 8
         Me.Button3.Text = "Eliminar"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -184,7 +184,7 @@ Partial Class Frm_Clientes
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(207, 36)
-        Me.Button2.TabIndex = 62
+        Me.Button2.TabIndex = 7
         Me.Button2.Text = "Editar"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -196,7 +196,7 @@ Partial Class Frm_Clientes
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(207, 36)
-        Me.Button1.TabIndex = 61
+        Me.Button1.TabIndex = 6
         Me.Button1.Text = "Guardar"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -232,7 +232,7 @@ Partial Class Frm_Clientes
         Me.NombreCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.NombreCliente.Name = "NombreCliente"
         Me.NombreCliente.Size = New System.Drawing.Size(214, 24)
-        Me.NombreCliente.TabIndex = 97
+        Me.NombreCliente.TabIndex = 1
         Me.NombreCliente.Text = ""
         '
         'CedulaCliente
@@ -243,7 +243,7 @@ Partial Class Frm_Clientes
         Me.CedulaCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.CedulaCliente.Name = "CedulaCliente"
         Me.CedulaCliente.Size = New System.Drawing.Size(213, 24)
-        Me.CedulaCliente.TabIndex = 96
+        Me.CedulaCliente.TabIndex = 3
         Me.CedulaCliente.Text = ""
         '
         'TelefonoCliente
@@ -254,7 +254,7 @@ Partial Class Frm_Clientes
         Me.TelefonoCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TelefonoCliente.Name = "TelefonoCliente"
         Me.TelefonoCliente.Size = New System.Drawing.Size(214, 24)
-        Me.TelefonoCliente.TabIndex = 95
+        Me.TelefonoCliente.TabIndex = 5
         Me.TelefonoCliente.Text = ""
         '
         'EmailCliente
@@ -265,7 +265,7 @@ Partial Class Frm_Clientes
         Me.EmailCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.EmailCliente.Name = "EmailCliente"
         Me.EmailCliente.Size = New System.Drawing.Size(213, 24)
-        Me.EmailCliente.TabIndex = 94
+        Me.EmailCliente.TabIndex = 4
         Me.EmailCliente.Text = ""
         '
         'ApellidoCliente
@@ -276,7 +276,7 @@ Partial Class Frm_Clientes
         Me.ApellidoCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.ApellidoCliente.Name = "ApellidoCliente"
         Me.ApellidoCliente.Size = New System.Drawing.Size(214, 24)
-        Me.ApellidoCliente.TabIndex = 93
+        Me.ApellidoCliente.TabIndex = 2
         Me.ApellidoCliente.Text = ""
         '
         'Label4
@@ -341,7 +341,7 @@ Partial Class Frm_Clientes
         Me.Button6.Margin = New System.Windows.Forms.Padding(4)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(100, 36)
-        Me.Button6.TabIndex = 104
+        Me.Button6.TabIndex = 13
         Me.Button6.Text = "Refrescar"
         Me.Button6.UseVisualStyleBackColor = True
         '
@@ -353,7 +353,7 @@ Partial Class Frm_Clientes
         Me.Busqueda.Margin = New System.Windows.Forms.Padding(4)
         Me.Busqueda.Name = "Busqueda"
         Me.Busqueda.Size = New System.Drawing.Size(437, 24)
-        Me.Busqueda.TabIndex = 103
+        Me.Busqueda.TabIndex = 11
         Me.Busqueda.Text = ""
         '
         'Button5
@@ -363,7 +363,7 @@ Partial Class Frm_Clientes
         Me.Button5.Margin = New System.Windows.Forms.Padding(4)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(100, 36)
-        Me.Button5.TabIndex = 102
+        Me.Button5.TabIndex = 12
         Me.Button5.Text = "Buscar"
         Me.Button5.UseVisualStyleBackColor = True
         '
@@ -390,7 +390,7 @@ Partial Class Frm_Clientes
         Me.Button7.Margin = New System.Windows.Forms.Padding(4)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(207, 36)
-        Me.Button7.TabIndex = 106
+        Me.Button7.TabIndex = 10
         Me.Button7.Text = "Reporte"
         Me.Button7.UseVisualStyleBackColor = True
         '

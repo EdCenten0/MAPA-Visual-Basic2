@@ -134,7 +134,7 @@ Partial Class Frm_Materiales
         Me.cbIdPedido.Margin = New System.Windows.Forms.Padding(4)
         Me.cbIdPedido.Name = "cbIdPedido"
         Me.cbIdPedido.Size = New System.Drawing.Size(160, 24)
-        Me.cbIdPedido.TabIndex = 36
+        Me.cbIdPedido.TabIndex = 6
         '
         'lblIdPedido
         '
@@ -154,7 +154,7 @@ Partial Class Frm_Materiales
         Me.btnRefrescar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRefrescar.Name = "btnRefrescar"
         Me.btnRefrescar.Size = New System.Drawing.Size(100, 30)
-        Me.btnRefrescar.TabIndex = 34
+        Me.btnRefrescar.TabIndex = 12
         Me.btnRefrescar.Text = "Refrescar"
         Me.btnRefrescar.UseVisualStyleBackColor = True
         '
@@ -165,7 +165,7 @@ Partial Class Frm_Materiales
         Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(100, 28)
-        Me.btnBuscar.TabIndex = 33
+        Me.btnBuscar.TabIndex = 13
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
@@ -176,7 +176,7 @@ Partial Class Frm_Materiales
         Me.txtBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBuscar.Name = "txtBuscar"
         Me.txtBuscar.Size = New System.Drawing.Size(160, 24)
-        Me.txtBuscar.TabIndex = 32
+        Me.txtBuscar.TabIndex = 11
         '
         'lblBuscar
         '
@@ -208,7 +208,7 @@ Partial Class Frm_Materiales
         Me.txt_descripcion.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_descripcion.Name = "txt_descripcion"
         Me.txt_descripcion.Size = New System.Drawing.Size(351, 62)
-        Me.txt_descripcion.TabIndex = 15
+        Me.txt_descripcion.TabIndex = 2
         Me.txt_descripcion.Text = ""
         '
         'txt_precio_total
@@ -230,7 +230,7 @@ Partial Class Frm_Materiales
         Me.txt_cantidad.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_cantidad.Name = "txt_cantidad"
         Me.txt_cantidad.Size = New System.Drawing.Size(80, 24)
-        Me.txt_cantidad.TabIndex = 13
+        Me.txt_cantidad.TabIndex = 4
         '
         'txt_precio_unidad
         '
@@ -240,7 +240,7 @@ Partial Class Frm_Materiales
         Me.txt_precio_unidad.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_precio_unidad.Name = "txt_precio_unidad"
         Me.txt_precio_unidad.Size = New System.Drawing.Size(166, 24)
-        Me.txt_precio_unidad.TabIndex = 12
+        Me.txt_precio_unidad.TabIndex = 3
         '
         'txt_material
         '
@@ -250,7 +250,7 @@ Partial Class Frm_Materiales
         Me.txt_material.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_material.Name = "txt_material"
         Me.txt_material.Size = New System.Drawing.Size(351, 24)
-        Me.txt_material.TabIndex = 10
+        Me.txt_material.TabIndex = 1
         '
         'btn_vaciar_campos
         '
@@ -260,7 +260,7 @@ Partial Class Frm_Materiales
         Me.btn_vaciar_campos.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_vaciar_campos.Name = "btn_vaciar_campos"
         Me.btn_vaciar_campos.Size = New System.Drawing.Size(169, 36)
-        Me.btn_vaciar_campos.TabIndex = 9
+        Me.btn_vaciar_campos.TabIndex = 10
         Me.btn_vaciar_campos.Text = "Vaciar Campos"
         Me.btn_vaciar_campos.UseVisualStyleBackColor = True
         '
@@ -272,7 +272,7 @@ Partial Class Frm_Materiales
         Me.btn_eliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_eliminar.Name = "btn_eliminar"
         Me.btn_eliminar.Size = New System.Drawing.Size(169, 36)
-        Me.btn_eliminar.TabIndex = 8
+        Me.btn_eliminar.TabIndex = 9
         Me.btn_eliminar.Text = "Eliminar"
         Me.btn_eliminar.UseVisualStyleBackColor = True
         '
@@ -284,7 +284,7 @@ Partial Class Frm_Materiales
         Me.btn_editar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_editar.Name = "btn_editar"
         Me.btn_editar.Size = New System.Drawing.Size(169, 36)
-        Me.btn_editar.TabIndex = 7
+        Me.btn_editar.TabIndex = 8
         Me.btn_editar.Text = "Editar"
         Me.btn_editar.UseVisualStyleBackColor = True
         '
@@ -296,7 +296,7 @@ Partial Class Frm_Materiales
         Me.btn_guardar.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_guardar.Name = "btn_guardar"
         Me.btn_guardar.Size = New System.Drawing.Size(169, 36)
-        Me.btn_guardar.TabIndex = 6
+        Me.btn_guardar.TabIndex = 7
         Me.btn_guardar.Text = "Guardar"
         Me.btn_guardar.UseVisualStyleBackColor = True
         '
@@ -365,7 +365,7 @@ Partial Class Frm_Materiales
         Me.cb_unidad_medida.Margin = New System.Windows.Forms.Padding(4)
         Me.cb_unidad_medida.Name = "cb_unidad_medida"
         Me.cb_unidad_medida.Size = New System.Drawing.Size(92, 24)
-        Me.cb_unidad_medida.TabIndex = 0
+        Me.cb_unidad_medida.TabIndex = 5
         Me.cb_unidad_medida.Text = "Unidades"
         '
         'DataGridView1

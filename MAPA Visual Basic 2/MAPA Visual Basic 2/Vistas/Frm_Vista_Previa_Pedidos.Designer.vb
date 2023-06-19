@@ -80,7 +80,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(184, 49)
-        Me.Button2.TabIndex = 16
+        Me.Button2.TabIndex = 4
         Me.Button2.Text = "Ver todo"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -164,7 +164,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(137, 36)
-        Me.Button1.TabIndex = 41
+        Me.Button1.TabIndex = 3
         Me.Button1.Text = "Crear Factura"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -204,7 +204,7 @@ Partial Class Frm_Vista_Previa_Pedidos
         Me.bt_agregar_materiales.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_agregar_materiales.Name = "bt_agregar_materiales"
         Me.bt_agregar_materiales.Size = New System.Drawing.Size(207, 36)
-        Me.bt_agregar_materiales.TabIndex = 34
+        Me.bt_agregar_materiales.TabIndex = 2
         Me.bt_agregar_materiales.Text = "Agregar Materiales al Pedido"
         Me.bt_agregar_materiales.UseVisualStyleBackColor = True
         '

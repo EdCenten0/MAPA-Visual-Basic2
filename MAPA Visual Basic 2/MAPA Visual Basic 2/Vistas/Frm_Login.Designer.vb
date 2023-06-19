@@ -68,7 +68,7 @@ Partial Class Frm_Login
         Me.check_Mostrar.Margin = New System.Windows.Forms.Padding(4)
         Me.check_Mostrar.Name = "check_Mostrar"
         Me.check_Mostrar.Size = New System.Drawing.Size(153, 21)
-        Me.check_Mostrar.TabIndex = 21
+        Me.check_Mostrar.TabIndex = 3
         Me.check_Mostrar.Text = "Mostrar contraseña"
         Me.check_Mostrar.UseVisualStyleBackColor = True
         '
@@ -81,7 +81,7 @@ Partial Class Frm_Login
         Me.txt_Clave.MaximumSize = New System.Drawing.Size(532, 35)
         Me.txt_Clave.Name = "txt_Clave"
         Me.txt_Clave.Size = New System.Drawing.Size(329, 22)
-        Me.txt_Clave.TabIndex = 20
+        Me.txt_Clave.TabIndex = 2
         '
         'bt_Ingresar
         '
@@ -94,7 +94,7 @@ Partial Class Frm_Login
         Me.bt_Ingresar.MaximumSize = New System.Drawing.Size(533, 43)
         Me.bt_Ingresar.Name = "bt_Ingresar"
         Me.bt_Ingresar.Size = New System.Drawing.Size(333, 43)
-        Me.bt_Ingresar.TabIndex = 19
+        Me.bt_Ingresar.TabIndex = 5
         Me.bt_Ingresar.Text = "Iniciar sesión"
         Me.bt_Ingresar.UseVisualStyleBackColor = False
         '
@@ -108,7 +108,7 @@ Partial Class Frm_Login
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(173, 20)
-        Me.Label6.TabIndex = 18
+        Me.Label6.TabIndex = 4
         Me.Label6.Text = "Crear un nuevo usuario"
         '
         'Label5
@@ -142,7 +142,7 @@ Partial Class Frm_Login
         Me.txt_Usuario.MaximumSize = New System.Drawing.Size(532, 35)
         Me.txt_Usuario.Name = "txt_Usuario"
         Me.txt_Usuario.Size = New System.Drawing.Size(329, 22)
-        Me.txt_Usuario.TabIndex = 15
+        Me.txt_Usuario.TabIndex = 1
         '
         'Label3
         '

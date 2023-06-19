@@ -91,7 +91,7 @@ Partial Class Frm_Principal
         Me.Button8.Margin = New System.Windows.Forms.Padding(10)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(227, 45)
-        Me.Button8.TabIndex = 36
+        Me.Button8.TabIndex = 8
         Me.Button8.Text = "Ajustes"
         Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button8.UseVisualStyleBackColor = False
@@ -113,7 +113,7 @@ Partial Class Frm_Principal
         Me.Button7.Margin = New System.Windows.Forms.Padding(10)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(227, 45)
-        Me.Button7.TabIndex = 35
+        Me.Button7.TabIndex = 7
         Me.Button7.Text = "Taller"
         Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button7.UseVisualStyleBackColor = False
@@ -135,7 +135,7 @@ Partial Class Frm_Principal
         Me.Button4.Margin = New System.Windows.Forms.Padding(10)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(227, 45)
-        Me.Button4.TabIndex = 34
+        Me.Button4.TabIndex = 6
         Me.Button4.Text = "Ventas"
         Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button4.UseVisualStyleBackColor = False
@@ -157,7 +157,7 @@ Partial Class Frm_Principal
         Me.Button9.Margin = New System.Windows.Forms.Padding(10)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(227, 45)
-        Me.Button9.TabIndex = 30
+        Me.Button9.TabIndex = 5
         Me.Button9.Text = "Facturas"
         Me.Button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button9.UseVisualStyleBackColor = False
@@ -179,7 +179,7 @@ Partial Class Frm_Principal
         Me.Button5.Margin = New System.Windows.Forms.Padding(10)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(227, 45)
-        Me.Button5.TabIndex = 24
+        Me.Button5.TabIndex = 5
         Me.Button5.Text = "Materiales Por Proveed."
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button5.UseVisualStyleBackColor = False
@@ -201,7 +201,7 @@ Partial Class Frm_Principal
         Me.Button6.Margin = New System.Windows.Forms.Padding(10)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(227, 45)
-        Me.Button6.TabIndex = 16
+        Me.Button6.TabIndex = 4
         Me.Button6.Text = "Materiales"
         Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button6.UseVisualStyleBackColor = False
@@ -231,7 +231,7 @@ Partial Class Frm_Principal
         Me.Button3.Margin = New System.Windows.Forms.Padding(10)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(227, 45)
-        Me.Button3.TabIndex = 5
+        Me.Button3.TabIndex = 3
         Me.Button3.Text = "Proveedores"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button3.UseVisualStyleBackColor = False
@@ -252,7 +252,7 @@ Partial Class Frm_Principal
         Me.Button2.Margin = New System.Windows.Forms.Padding(10)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(227, 46)
-        Me.Button2.TabIndex = 4
+        Me.Button2.TabIndex = 2
         Me.Button2.Text = "Clientes"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.UseVisualStyleBackColor = False
@@ -275,7 +275,7 @@ Partial Class Frm_Principal
         Me.Button1.Margin = New System.Windows.Forms.Padding(10)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(227, 46)
-        Me.Button1.TabIndex = 3
+        Me.Button1.TabIndex = 1
         Me.Button1.Text = "Pedidos"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.UseVisualStyleBackColor = False
